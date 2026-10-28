@@ -1,6 +1,6 @@
 # Adaptive advocacy instructions — DRAFT v0.1
 
-NOT ACTIVE. Requires the human reviewer's explicit approval of this exact text before wiring or execution. Existing runtime remains mia-journey-live-v1.3-dual. No paid replay has been dispatched for this draft. The blocks below are proposed instruction text; surrounding notes are review metadata, not model instructions.
+NOT ACTIVE. Requires Fizza's explicit approval of this exact text before wiring or execution. Existing runtime remains mia-journey-live-v1.3-dual. No paid replay has been dispatched for this draft. The blocks below are proposed instruction text; surrounding notes are review metadata, not model instructions.
 
 ## Core prompt: mia-core-v0.1-draft
 

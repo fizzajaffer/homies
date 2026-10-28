@@ -1,0 +1,94 @@
+{
+  "frozenAt": "2026-10-25T23:09:47.762111+00:00",
+  "reviewer": "assistant retrospective review; provisional, not human calibrated",
+  "weights": {
+    "correctness_evidence_math": 25,
+    "strategy_uncertainty": 25,
+    "continuity_tools": 20,
+    "writing": 15,
+    "feedback_trust": 15
+  },
+  "anchors": {
+    "1": "material failure",
+    "2": "major repair",
+    "3": "meaningful edits",
+    "4": "minor issues",
+    "5": "strong across observed criteria"
+  },
+  "missing": "NE; no aggregate if any required dimension unobserved",
+  "comparison": "Whole configuration, not skills-only causation. Same original supplied facts/settings as reproducible. Legal cases separate new coverage.",
+  "ratings": [
+    {
+      "runId": "dual-live-checkpoint-1-recommend",
+      "scores": {
+        "correctness_evidence_math": 4,
+        "strategy_uncertainty": 3,
+        "continuity_tools": 4,
+        "writing": 4,
+        "feedback_trust": "NE"
+      },
+      "evidence": [
+        "Amounts and exclusions match supplied fixture; no independent legal capability exercised.",
+        "Strategy was constrained to prescribed winner; no independent choice demonstrated.",
+        "No user correction or trust interaction in this isolated output; feedback/trust unobserved."
+      ],
+      "aggregate": null,
+      "hardGates": "Original validators passed; not comprehensive semantic verification",
+      "humanAcceptance": "pending"
+    },
+    {
+      "runId": "dual-live-checkpoint-2-recommend-repair",
+      "scores": {
+        "correctness_evidence_math": 4,
+        "strategy_uncertainty": 3,
+        "continuity_tools": 4,
+        "writing": 4,
+        "feedback_trust": "NE"
+      },
+      "evidence": [
+        "Amounts and exclusions match supplied fixture; no independent legal capability exercised.",
+        "Strategy was constrained to prescribed winner; no independent choice demonstrated.",
+        "No user correction or trust interaction in this isolated output; feedback/trust unobserved."
+      ],
+      "aggregate": null,
+      "hardGates": "Original validators passed; not comprehensive semantic verification",
+      "humanAcceptance": "pending"
+    },
+    {
+      "runId": "dual-live-checkpoint-3-recommend",
+      "scores": {
+        "correctness_evidence_math": 4,
+        "strategy_uncertainty": 3,
+        "continuity_tools": 4,
+        "writing": 4,
+        "feedback_trust": "NE"
+      },
+      "evidence": [
+        "Amounts and exclusions match supplied fixture; no independent legal capability exercised.",
+        "Strategy was constrained to prescribed winner; no independent choice demonstrated.",
+        "No user correction or trust interaction in this isolated output; feedback/trust unobserved."
+      ],
+      "aggregate": null,
+      "hardGates": "Original validators passed; not comprehensive semantic verification",
+      "humanAcceptance": "pending"
+    },
+    {
+      "runId": "happy-live-draft-v1",
+      "scores": {
+        "correctness_evidence_math": 4,
+        "strategy_uncertainty": "NE",
+        "continuity_tools": "NE",
+        "writing": 3,
+        "feedback_trust": "NE"
+      },
+      "evidence": [
+        "Amounts and exclusions match supplied fixture; no independent legal capability exercised.",
+        "Draft contains clear requested terms but raw internal citation and generic premise; no supported incident facts supplied.",
+        "No user correction or trust interaction in this isolated output; feedback/trust unobserved."
+      ],
+      "aggregate": null,
+      "hardGates": "Original validators passed; not comprehensive semantic verification",
+      "humanAcceptance": "pending"
+    }
+  ]
+}

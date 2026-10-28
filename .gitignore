@@ -11,7 +11,10 @@ secrets/
 # Local evidence and publication-sensitive artifacts
 .credentials/
 **/.credentials/
-verification/
+verification/*
+!verification/adaptive-baseline/
+verification/adaptive-baseline/*
+!verification/adaptive-baseline/rubric-and-before-ratings.json
 exports/
 screenshots/
 *.png
