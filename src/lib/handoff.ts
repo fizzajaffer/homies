@@ -1,0 +1,4 @@
+/** Persisted message boundary inside one app; no microservice or autonomous send. */
+export type A1Selection={schemaVersion:1;researchRunId:string;listingId:string;sourceIds:string[];selectedAt:string;selectedBy:'Mia'};
+export type A3Consent={schemaVersion:1;selection:A1Selection;revision:number;allowedActions:('clarify-costs'|'request-viewing')[];availabilityWindows:{start:string;end:string}[];revokedAt:string|null;simulationOnly:true};
+export type A3Record={schemaVersion:1;consentRevision:number;listingId:string;status:'awaiting-consent'|'awaiting-reply'|'costs-confirmed'|'viewing-requested'|'viewing-confirmed'|'blocked';base:number|null;recurringFees:number|null;nonRefundable:number|null;refundableDeposit:number|null;termMonths:number|null;quoteExpiresAt:string|null;sourceIds:string[];appointment:{start:string;end:string}|null;simulationOnly:true};

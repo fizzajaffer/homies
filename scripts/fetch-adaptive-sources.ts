@@ -1,0 +1,1 @@
+import{fetchOfficial,registry}from'../src/server/journey/legal.ts';import{writeFileSync}from'node:fs';for(const r of registry){const s=await fetchOfficial(r.id);writeFileSync(`verification/adaptive-sources/${r.id}.json`,JSON.stringify(s,null,2));console.log(JSON.stringify({id:s.id,status:s.status,chars:s.text.length,hash:s.contentHash,error:s.error}));}

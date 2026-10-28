@@ -1,0 +1,28 @@
+node_modules
+.next/
+*.tsbuildinfo
+.env*
+data/
+backups/
+*.sqlite*
+*.db*
+secrets/
+
+# Local evidence and publication-sensitive artifacts
+.credentials/
+**/.credentials/
+verification/
+exports/
+screenshots/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.mov
+*.mp4
+*.key
+*.pem
+*.p12
+*.pfx
+*.log
+# Source may contain local path metadata; sanitize before public sharing.

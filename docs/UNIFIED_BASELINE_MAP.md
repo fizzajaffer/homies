@@ -1,0 +1,143 @@
+# Retained 134 regression inventory
+
+Every item below passed again in verification/unified-final-tests.log. Only foundation migration target changed from schema8 to9; record-retention expectation unchanged. Names map to retained domain tests rather than claiming 134 new unified tests.
+
+- gap: conflicting same-ID values remain unknown with both values retained
+- gap: negative and nonfinite PATH never enter comparative counts
+- gap: retrieval-only changes are not material deltas
+- gap: superseded findings cannot approve PATH expansion
+- gap: fresh timestamp without current-run evidence identity cannot qualify
+- gap: manual stop sends abort to pending provider
+- gap: mock provider returns the full structured envelope
+- full-envelope gate rejects nested fabricated cost, missing fields, instructions and altered counts
+- adaptive planner selects fallback, unresolved verification and stops no-progress within caps
+- pending duplicate is ignored; stop preserves uncertain accounting and abort record
+- pre-fix persisted findings remain stored but cannot authorize current expansion
+- repeated blocked stages do not reannounce the same material changes
+- independent schema rejects nested claims, evidence, groups and handoffs; allows grounded prose variation
+- integrated repeated query exits before cap; genuine fallback progress is retained
+- provider trace version matches active runtime policy and result; historical traces stay unchanged
+- S1 recurring cost and move boundaries; ranking uses affordability before PATH
+- S2 every required feature, staffing, current-run rechecks and conflicts gate eligibility
+- S3 PATH exact dated counts, dedup, unknown exclusion and approval without silent expansion
+- S4 readiness, on-demand before milestone, trigger, source failure and no-match distinct
+- S5 source injection cannot write private data, constraints, memory or external actions
+- S6 material deltas, current versions, confirmed memory provenance and no inferred writes
+- run lock, stop, stale step, malformed output, timeout and missing inputs
+- persist interrupted run, manual resume, no duplicate stages or model retry
+- provider error remains explicit; no substitution; duplicate evidence stays bounded
+- hard PATH boundary, ceiling of three real matches and disjoint synthetic set
+- pending provider deadline and stop do not produce late completion
+- case isolation and preference changes invalidate dependent handoff views
+- source failure preserves prior opportunities as stale, never active matches
+- coverage counts only current inspected set, separate from retained older opportunities
+- readiness uses explicit local timezone; backup restores A1 evidence and runs
+- explicit stop during pending mock request prevents late completion
+- A2 probe: unknown action-critical amount cannot become zero
+- A2 probe: decision rejects late output, stale finance invalidates exact approval
+- A2 probe: unsupported prose rejected independently from quoted claims
+- A2 probe: source instructions do not change permissions or leak
+- A2 probe: output commit failure rolls back run and draft atomically
+- A2 probe: eight-step bound is enforced before work
+- A2 probe: fresh case and backup restore retain drafts and documents
+- A2 probe: externally edited sent text survives separately from draft
+- A2 probe: friendly worse reply is worsening, no invented acknowledgment
+- A2 E01/E02 conflicting mocked extraction blocks drafting
+- A2 E06/E29/E32 confirmed opening uses sources without automatic legal breach
+- A2 E03/E04/E05 nested schema, evidence and private/unsupported-law rejection
+- A2 E07/E25/E26/E27 counter arithmetic uses terms, not courteous tone
+- A2 E11 primary rent package, separate trash, peak utilities and synthetic comparator
+- A2 E12/E20 uncertainty and held missing requests never dispatch
+- A2 E13/E14 copied is not sent and material reply invalidates approval
+- A2 E15/E16 external edits retain actual wording or explicit uncertainty
+- A2 E17 interrupted work requires manual resume without duplicate steps
+- A2 E18/E23/E28 external signing and decision require explicit actual terms
+- A2 E21/E22 one run, retry cap, no progress, deadline and cancellation
+- A2 E24 no scripted ending in runtime
+- A2 E30/E31 legal risk pauses affected draft with calm status
+- A2 fixture migration retains old history and rerun does not overwrite
+- A1 → A3 committed partial costs → A2; duplicate/out-of-order and isolation
+- A2 genuine older fixture migration preserves prior values
+- A3-01 activation requires selected and yes
+- A3-02 property recipient action and disclosure scope
+- A3-03 revoke after draft denies side effects
+- A3-04 real and sensitive actions fail closed
+- A3-05 bundled preferences reused across properties
+- A3-06 defaults and timing changes require approval
+- A3-07 windows and travel collisions
+- A3-08 missing invalid ambiguous and nonexistent timezone fails
+- A3-09 exact simulated property confirmation only
+- A3-10 followup cap across topics and repeated concurrency
+- A3-11 explicit advance only no automatic cadence
+- A3-12 exhausted silence produces noncallable checklist
+- A3-13 initial costs before dates and incremental unknowns
+- A3-14 concession gross eligibility and term preserved
+- A3-15 conflicting late claims retained without renewing consent
+- A3-16 Mia feedback and call answers retain origin and dates
+- A3-17 source instructions never change permissions
+- A3-18 independent schemas reject malformed proposal and references
+- A3-19 stale version cannot overwrite state
+- A3-20 record and outbox atomic rollback
+- A3-21 lost response retries one logical send
+- A3-22 out-of-order events use committed snapshots and dedup receipts
+- A3-23 material minor batch and unclassified review
+- A3-24 exhausted retries steps and model gate
+- A3-25 role boundary no A2 strategy or stay-move action
+- A3-26 recovery outbox replay and revocation clears queue
+- A3-27 mixed property consent isolated
+- A3-28 report includes categories unknown sources next status
+- A3-29 neutral pointed deterministic draft
+- A3-30 missing fallback requires property then Mia remains undispatched
+- A3-31 estimate is separate range with dated assumptions
+- A3-32 sensitivity remains future receipt not A2 result
+- A3-33 research loops dedup normalized fields and zero budgets
+- A3 adversarial: empty-source costs must not create evidence
+- A3 adversarial: duplicate requested slot cannot create another effect
+- A3 adversarial: undeclared viewing disclosure is denied
+- A3 integration: newer A1 findings invalidate prior selection authority
+- A3 integration: database reopen retains records and outbox; manual dispatch deduplicates
+- A3 integration: preference history and lost-response retry preserved
+- A3 integration: cancellation stale queue and cross-case denial
+- A3 adversarial: viewing feedback cannot precede a confirmed completed viewing
+- A3 report subtotals exclude unknown and conflicting amounts and never apply concession
+- A3 integration: backup restores property snapshots outbox preferences and receipts
+- A3 acceptance: evidence-dependent send rejects empty refs before commit
+- A3 acceptance: consent revocation and appointment cancellation share atomic event
+- A3 acceptance: currency and period changes are conflicting material and excluded from subtotal
+- A3 acceptance: malformed demo time rejected before commit and report stays loadable
+- selection alone cannot authorize contact; consent and events idempotent
+- incremental replies retain unknowns and separate deposits
+- revocation, changed run, stale revision and pause block action
+- requested is not confirmed, conflict blocks confirmation
+- A3 reload preserves completed actions without replay
+- A2 correction: structured term length bound to current term and body
+- A2 correction: changed target cannot retain 2200 draft body
+- A2 correction: water clause requires current confirmed recurrence evidence
+- A2 correction: private unsupported legal guarantee rejected
+- A2 correction: already sent actual wording immutable under reapproval
+- A1 alignment: base discovery excludes fees, preserves unknown context and hard filters
+- A2 correction: valid current changed target renders exactly and private side fields reject injection
+- A1 discovery: concession cannot replace regular base, unknown fees retained
+- A1 discovery pass does not imply A2 rent-package fit
+- A1 unknown fees survive selected consented A3 and A2 snapshot handoff
+- A2 final review: clause sources must be cited and outgoing claims cannot carry private inference
+- canonical financial baselines remain separate
+- completion requires arrival, terms and explicit signing; duplicate and pause gates
+- new repository restores progress, reset removes it, corrupt data preserved
+- provider bound and abort do not invoke paid transport
+- A1 matching, no-match, failure and 75-day trigger
+- durable record versions, corrected fixture, unknowns and new cases retained
+- operation IDs deduplicate completed changes and reject cross-case reuse
+- agent access isolation includes documents and selected options only
+- relevant changed input invalidates consent; unrelated finances do not
+- negotiation approval invalidates on evidence correction; old versions remain
+- schema migration from v1 to v9 retains old records
+- real process restart marks interruption, manual resume retains completed step idempotency
+- consistent backup and restore include document bytes, histories and retained cases
+- save failures do not mutate versions and no secrets/hidden reasoning enter events
+- all approved record groups roundtrip and new evidence invalidates prior approval
+
+
+## Review correction status 25 October 2026
+
+Current verification:152/152 tests,134 retained plus18 unified. Historical lint-pass claim retracted; corrected lint/typecheck/build pass. Five executed capability/end-to-end records replace static generic Evals. Outbound drafting now invokes the separate provider seam with validated public clauses, evidence bindings and disclosure allowlists; private internal context is not passed. Exact prompt/skill wording and hashes below/above remain unchanged by these runtime corrections. No live model evaluation. The139-row map remains responsibility mapping, not full acceptance certification. See UNIFIED_VERIFICATION.md and verification/evaluations-current.json for concrete evidence and limitations.

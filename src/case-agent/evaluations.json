@@ -1,0 +1,111 @@
+{
+  "runId": "unified-suite-20261025-148",
+  "source": "verification/unified-final-tests.log",
+  "total": 148,
+  "retained": 134,
+  "unified": 14,
+  "passed": 148,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "unified: genuine stdio MCP initialize/discovery/search/read; no generic file or URL tools",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: task projection and outbound context exclude private finance canary",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: provider cannot elevate tools, unknown fields rejected, live Astra blocked",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: research runs once through MCP and domain guards; duplicate start/step and case isolation",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: cancellation aborts pending model seam and no late commit",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: restart marks interrupted; explicit resume retains committed MCP step without duplicate",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: stale dependency and elapsed deadline pause before mutation",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: research to selected-property consent, exact approval, simulated cost event to negotiation",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: revocation after exact approval blocks execution; cross-property cannot substitute",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: correction75→125 invalidates approval, recomputes50delta, undo preserves history and actual sent",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: backup restore preserves new runner receipts and corrections alongside old documents",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: one active case invocation, operation fingerprints and source instructions cannot grant privileges",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: actual loaded instructions preserve writing, legal, policy and authority requirements",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    },
+    {
+      "name": "unified: crash after committed negotiation result reconciles receipt without duplicate draft",
+      "expected": "Independent assertions in tests/unified.test.ts hold",
+      "actual": "PASS",
+      "mode": "deterministic mock / local stdio",
+      "liveModel": "NOT RUN"
+    }
+  ],
+  "liveModel": "NOT RUN",
+  "humanQuality": "NOT RUN"
+}

@@ -1,0 +1,21 @@
+import {readFileSync} from 'node:fs';
+function evaluations(){try{return JSON.parse(readFileSync('verification/evaluations-current.json','utf8'));}catch{return {outcome:'NOT RUN',checks:[],liveModel:'NOT RUN'};}}
+import {NextRequest,NextResponse} from 'next/server';
+import {repository} from '../../../server/runtime';
+import {CaseRunner} from '../../../server/case-agent/runner';
+import {correctAmenity} from '../../../server/case-agent/corrections';
+import {object,text,integer,type Capability} from '../../../case-agent/contracts';
+import {catalog} from '../../../case-agent/skills';
+import {A1Service} from '../../../server/a1/service';
+import {A2Service} from '../../../server/a2/service';
+import {A3Service} from '../../../server/a3/service';
+export const runtime='nodejs';export const dynamic='force-dynamic';
+const cache=globalThis as typeof globalThis&{miaCaseRunner?:CaseRunner};
+function runner(){return cache.miaCaseRunner??(cache.miaCaseRunner=new CaseRunner(repository()));}
+function guard(r:NextRequest,write=false){const host=r.headers.get('host')??'';if(!/^(127\.0\.0\.1|localhost)(:\d+)?$/.test(host))throw Error('Local only');if(write&&(!r.headers.get('origin')||new URL(r.headers.get('origin')!).host!==host||!r.headers.get('content-type')?.startsWith('application/json')))throw Error('Same-origin JSON required');}
+function view(id:string){const repo=repository(),r=runner(),a2=new A2Service(repo),a3=new A3Service(repo),properties=a3.list(id);return {caseId:id,cases:repo.listCases(),mode:'MOCK ONLY · live model evaluation NOT RUN · $0',runs:r.list(id),skills:catalog,housing:repo.records(id).find(x=>x.group==='housing-case'),dependencies:{research:r.dependency(id,'research',null),negotiation:r.dependency(id,'negotiation',null)},findings:new A1Service(repo).list(id).filter(x=>x.valid),negotiation:a2.view(id),properties:properties.map(p=>({...p,dependency:r.dependency(id,'coordination',p.id)})),proposals:r.proposals(id),corrections:repo.db.prepare('SELECT data FROM case_agent_corrections WHERE case_id=? ORDER BY rowid DESC').all(id).map(x=>JSON.parse(String(x.data))),evaluations:evaluations()};}
+export async function GET(r:NextRequest){try{guard(r);return NextResponse.json(view(r.nextUrl.searchParams.get('case')||String(repository().bootstrap().id)),{headers:{'Cache-Control':'no-store'}});}catch{return NextResponse.json({error:'Case unavailable'},{status:400});}}
+export async function POST(r:NextRequest){try{guard(r,true);const body=await r.text();if(body.length>10000)throw Error('Request too large');const raw=JSON.parse(body),base=object(raw,['action','caseId','input']);const action=text(base.action),id=text(base.caseId),s=runner();const keys:Record<string,string[]>={start:['capability','propertyId','operationId','expected'],advance:['runId','step'],stop:['runId'],resume:['runId'],correct:['fee','version','operationId','confirmed'],approve:['proposalId','hash','confirmed'],execute:['proposalId','hash'],select:['runId','candidateId'],consent:['propertyId','yes','version','operationId'],confirm:['version','operationId','confirmed']};if(!keys[action])throw Error('Action denied');const b=object(base.input,keys[action]);
+ switch(action){case 'start':s.start(id,text(b.capability) as Capability,b.propertyId===null?null:text(b.propertyId),text(b.operationId),text(b.expected));break;case 'advance':await s.advance(id,text(b.runId),integer(b.step));break;case 'stop':s.stop(id,text(b.runId));break;case 'resume':s.resume(id,text(b.runId));break;case 'correct':correctAmenity(repository(),id,b.fee as number,integer(b.version),text(b.operationId),b.confirmed===true);break;case 'approve':s.approveProposal(id,text(b.proposalId),text(b.hash),b.confirmed===true);break;case 'execute':s.executeProposal(id,text(b.proposalId),text(b.hash));break;case 'select':new A3Service(repository()).select(id,text(b.runId),text(b.candidateId));break;case 'consent':if(typeof b.yes!=='boolean')throw Error('Yes/no required');new A3Service(repository()).consent(id,text(b.propertyId),b.yes,text(b.operationId),integer(b.version));break;case 'confirm':new A2Service(repository()).confirm(id,b.confirmed===true,text(b.operationId),integer(b.version));break;}
+ return NextResponse.json(view(id),{headers:{'Cache-Control':'no-store'}});
+ }catch(e){return NextResponse.json({error:e instanceof Error?e.message:'Blocked'},{status:400});}}

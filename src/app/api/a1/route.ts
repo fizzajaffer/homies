@@ -1,0 +1,10 @@
+import {NextRequest,NextResponse} from 'next/server';
+import {repository} from '../../../server/runtime';
+import {A1Service} from '../../../server/a1/service';
+export const runtime='nodejs';export const dynamic='force-dynamic';
+const cache=globalThis as typeof globalThis & {tenantA1?:A1Service};
+function service(){return cache.tenantA1??(cache.tenantA1=new A1Service(repository()));}
+function guard(r:NextRequest,write=false){const host=r.headers.get('host')??'';if(!/^(127\.0\.0\.1|localhost)(:\d+)?$/.test(host))throw Error('Local access only');if(write&&(!r.headers.get('origin')||new URL(r.headers.get('origin')!).host!==host||!r.headers.get('content-type')?.startsWith('application/json')))throw Error('Same-origin JSON required');}
+function view(caseId:string){const repo=repository();return {cases:repo.listCases(),caseId,preferences:repo.readForAgent(caseId,'A1').find(r=>r.group==='search-profile'),runs:service().list(caseId)};}
+export async function GET(r:NextRequest){try{guard(r);return NextResponse.json(view(r.nextUrl.searchParams.get('case')||String(repository().bootstrap().id)),{headers:{'Cache-Control':'no-store'}});}catch(e){return NextResponse.json({error:e instanceof Error?e.message:'Read failed'},{status:400});}}
+export async function POST(r:NextRequest){try{guard(r,true);const text=await r.text();if(text.length>5000)throw Error('Request too large');const b=JSON.parse(text),s=service();switch(b.action){case 'start':s.start(b.caseId,b.operationId,b.scenario,b.trigger,b.expectedVersion);break;case 'advance':await s.advance(b.caseId,b.runId,b.expectedStep);break;case 'stop':s.stop(b.caseId,b.runId);break;case 'resume':s.resume(b.caseId,b.runId);break;case 'approve-expansion':s.approveExpansion(b.caseId,b.runId,b.expectedVersion,b.confirmed,b.operationId);break;default:throw Error('Unsupported A1 action');}return NextResponse.json(view(b.caseId),{headers:{'Cache-Control':'no-store'}});}catch(e){return NextResponse.json({error:e instanceof Error?e.message:'A1 check failed'},{status:400});}}
