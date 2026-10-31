@@ -95,6 +95,7 @@
 #homies-authority-preview .ha-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:43px;border:1px solid var(--ha-teal);border-radius:11px;background:var(--ha-teal);color:#fff;padding:9px 14px;font-size:15px;font-weight:700;line-height:1.3;text-align:center;max-width:100%;overflow-wrap:anywhere}
 #homies-authority-preview .ha-btn:hover:not(:disabled){background:var(--ha-dark)}
 #homies-authority-preview .ha-btn.ha-secondary{background:var(--ha-paper);color:var(--ha-teal);border-color:#a8c1b2}
+#homies-authority-preview .ha-btn.ha-secondary:hover:not(:disabled){background:var(--ha-dark);color:#fff;border-color:var(--ha-dark)}
 #homies-authority-preview .ha-link{border:0;background:none;padding:4px 0;min-height:29px;color:var(--ha-teal);font-size:14px;font-weight:700;text-align:left;line-height:1.3;max-width:100%}
 #homies-authority-preview .ha-link:hover{text-decoration:underline}
 #homies-authority-preview .ha-badge{display:inline-flex;align-items:center;gap:5px;align-self:start;border:0;border-radius:7px;padding:4px 7px;background:#ecebe5;color:#4c5d50;font-size:13px;line-height:1.3;font-weight:550;white-space:normal}
@@ -142,8 +143,11 @@
 #homies-authority-preview .ha-evidence-row .ha-badge{justify-content:center}
 #homies-authority-preview .ha-draft-grid{grid-template-columns:minmax(0,1.85fr) minmax(250px,.9fr)}
 #homies-authority-preview .ha-draft-panel{gap:8px;padding:14px 15px}
-#homies-authority-preview .ha-tone{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ha-muted)}
-#homies-authority-preview .ha-tone select{width:143px}
+#homies-authority-preview .ha-tone{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:650;color:#000}
+#homies-authority-preview .ha-tone select{width:160px;min-height:44px;padding:9px 12px;border:1px solid #a3a3a3;border-radius:10px;background:#fff;color:#000;font-weight:650;cursor:pointer}
+#homies-authority-preview .ha-tone select:hover:not(:disabled){border-color:#000}
+#homies-authority-preview .ha-tone select:focus-visible{outline:2px solid #000;outline-offset:3px}
+#homies-authority-preview .ha-tone select option{background:#fff;color:#000}
 #homies-authority-preview textarea{display:block;width:100%;height:278px;min-height:0;resize:none;border:1px solid #b7cdb6;border-radius:11px;background:#fffefa;padding:10px 12px;font-size:16px;line-height:1.38;color:var(--ha-ink);overflow-wrap:anywhere}
 #homies-authority-preview .ha-edit-status{font-size:13px;font-weight:600;color:var(--ha-teal)}
 #homies-authority-preview .ha-edit-status.is-edited{color:#644780}
@@ -192,13 +196,41 @@
 #homies-authority-preview .ha-source dt{color:var(--ha-muted)}
 #homies-authority-preview .ha-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 #homies-authority-preview[data-standalone]{border-radius:0}
+#homies-authority-preview[data-standalone] .ha-modal-root{position:fixed;inset:0;overflow:auto;overscroll-behavior:contain;border-radius:0;align-items:safe center}
 #homies-authority-preview[data-standalone] .ha-header{padding-right:0}
 @media(min-width:1150px){#homies-authority-preview .ha-shell{padding:18px 28px;gap:12px}#homies-authority-preview h1{font-size:29px}#homies-authority-preview .ha-panel{padding:17px}#homies-authority-preview textarea{height:270px}}
 @media(max-width:850px){#homies-authority-preview .ha-shell{padding:14px 16px;gap:10px}#homies-authority-preview .ha-header{gap:12px}#homies-authority-preview .ha-header-actions{gap:10px}#homies-authority-preview .ha-columns{gap:11px}#homies-authority-preview .ha-panel{padding:14px}#homies-authority-preview h1{font-size:25px}#homies-authority-preview .ha-draft-grid{grid-template-columns:minmax(0,1.55fr) minmax(230px,.9fr)}#homies-authority-preview .ha-fields{grid-template-columns:1fr}#homies-authority-preview .ha-nav button{gap:7px;padding:8px}#homies-authority-preview .ha-nav-emoji{width:25px;font-size:18px}}
 @media(max-width:700px){#homies-authority-preview .ha-header{padding-right:0;align-items:start;flex-direction:column;gap:9px}#homies-authority-preview .ha-brand{padding-right:78px}#homies-authority-preview[data-standalone] .ha-brand{padding-right:0}#homies-authority-preview .ha-header-actions{width:100%;justify-content:space-between}#homies-authority-preview .ha-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}#homies-authority-preview .ha-heading{align-items:start;flex-direction:column;gap:9px}#homies-authority-preview .ha-deadline{width:100%;display:flex;justify-content:space-between}#homies-authority-preview .ha-columns,#homies-authority-preview .ha-columns.ha-equal,#homies-authority-preview .ha-draft-grid,#homies-authority-preview .ha-choices{grid-template-columns:1fr}#homies-authority-preview .ha-fields{grid-template-columns:repeat(2,minmax(0,1fr))}#homies-authority-preview .ha-footer{align-items:stretch;flex-direction:column;gap:8px}#homies-authority-preview .ha-footer>.ha-btn{width:100%}#homies-authority-preview .ha-panel-head{flex-wrap:wrap;align-items:start}#homies-authority-preview .ha-movement{align-items:start;flex-direction:column;gap:3px}#homies-authority-preview .ha-movement strong{text-align:left}#homies-authority-preview .ha-stat-row{grid-template-columns:1fr}#homies-authority-preview .ha-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}#homies-authority-preview .ha-timeline li:after{display:none}#homies-authority-preview .ha-timeline li:nth-child(odd):after{display:block}#homies-authority-preview textarea{height:300px}#homies-authority-preview .ha-modal-root{padding:10px;align-items:start}#homies-authority-preview .ha-dialog{padding:14px}#homies-authority-preview .ha-source{grid-template-columns:1fr;gap:3px}#homies-authority-preview .ha-source dd{margin-bottom:8px}#homies-authority-preview table,#homies-authority-preview tbody,#homies-authority-preview tr,#homies-authority-preview th,#homies-authority-preview td{display:block;width:100%!important}#homies-authority-preview thead{display:none}#homies-authority-preview tr{padding:8px 0;border-bottom:1px solid var(--ha-line)}#homies-authority-preview th{padding:4px 6px;border:0}#homies-authority-preview td{display:grid;grid-template-columns:44% minmax(0,1fr);gap:8px;padding:5px 6px;border:0}#homies-authority-preview td:before{content:attr(data-home);font-size:13px;color:var(--ha-muted)}#homies-authority-preview .ha-celebrate{align-items:start}#homies-authority-preview .ha-dialog-actions .ha-btn{flex:1}}
 @media(max-width:400px){#homies-authority-preview .ha-fields,#homies-authority-preview .ha-money-pair,#homies-authority-preview .ha-cost-row{grid-template-columns:1fr}#homies-authority-preview .ha-evidence-row{grid-template-columns:98px minmax(0,1fr)}#homies-authority-preview .ha-money-input input{font-size:22px}}
 @media(pointer:coarse){#homies-authority-preview .ha-link,#homies-authority-preview button.ha-badge,#homies-authority-preview select,#homies-authority-preview .ha-demo,#homies-authority-preview .ha-close{min-height:44px}}
-@media(prefers-reduced-motion:no-preference){#homies-authority-preview button{transition:background-color .14s,border-color .14s}}
+
+/* Completion: the outcome, supporting achievements, and one clear next action. */
+@media(min-width:701px){#homies-authority-preview .ha-completion-shell{gap:10px;padding-top:14px;padding-bottom:14px}}
+#homies-authority-preview .ha-achievement-overview{padding:22px 20px;border:1px solid #d9ddce;border-radius:16px;background:linear-gradient(115deg,#fff8e7,#fffefd 48%,#f4eff9)}
+#homies-authority-preview .ha-achievement-heading{text-align:center;display:grid;gap:8px}
+#homies-authority-preview .ha-achievement-heading h1{font-size:32px;line-height:1.15}
+#homies-authority-preview .ha-achievement-heading .ha-kicker{font-size:11px}
+#homies-authority-preview .ha-achievement-heading .ha-subtitle{font-size:14px}
+#homies-authority-preview .ha-achievement-heading .ha-celebrate-mark{display:inline-grid;vertical-align:middle;width:30px;height:30px;margin-right:9px;font-size:18px;background:#e2efdf;color:var(--ha-dark)}
+#homies-authority-preview .ha-completion-shell .ha-footer-left .ha-caption{max-width:720px}
+#homies-authority-preview .ha-achievements{gap:14px;margin:0}
+#homies-authority-preview .ha-achievements .ha-stat{border:2px solid #a6c3b1;border-top:4px solid var(--ha-teal);border-radius:15px;padding:13px 16px;background:#fbfdf9;box-shadow:0 3px 10px #233e3807}
+#homies-authority-preview .ha-achievements .ha-stat:nth-child(2){border-color:#c8b9db;border-top-color:#8a72a3;background:#f7f3fb}
+#homies-authority-preview .ha-achievements .ha-stat:nth-child(3){border-color:#dfc6a9;border-top-color:#b88957;background:#fff8ed}
+#homies-authority-preview .ha-achievements .ha-stat>strong{font-size:30px;margin:6px 0}
+#homies-authority-preview .ha-stat .ha-backup-value{display:flex;align-items:center;gap:12px}
+#homies-authority-preview .ha-backup-value>span:last-child{font-size:17px;line-height:1.25;letter-spacing:0;max-width:230px}
+#homies-authority-preview .ha-close-loop{display:flex;align-items:center;justify-content:space-between;gap:24px;border:1px solid #d9ded1;background:#fffefd;border-radius:15px;padding:13px 16px}
+#homies-authority-preview .ha-close-loop>div{display:grid;gap:5px;max-width:760px}
+#homies-authority-preview .ha-close-loop h2{font-size:20px}
+#homies-authority-preview .ha-close-loop .ha-kicker{color:var(--ha-teal);font-size:11px}
+#homies-authority-preview .ha-close-loop>.ha-btn{flex:none}
+@media(max-width:700px){
+ #homies-authority-preview .ha-achievement-overview{padding:16px 14px}
+ #homies-authority-preview .ha-achievement-heading h1{font-size:26px}
+ #homies-authority-preview .ha-close-loop{flex-direction:column;align-items:stretch;gap:14px}
+ #homies-authority-preview .ha-close-loop>.ha-btn{width:100%}
+}
 </style>
 
 <style id="homies-evals-styles">
@@ -350,6 +382,112 @@
 @media(max-width:700px){#homies-authority-preview .ha-evals-shell .ha-nav{grid-template-columns:1fr}#homies-authority-preview .ha-evals-shell .ha-nav button:not(.ha-evals-nav){display:none}#homies-authority-preview .ha-evals-shell .ha-nav .ha-evals-nav{min-height:36px;justify-content:flex-start}#homies-authority-preview .ha-evals-shell .ha-nav .ha-evals-nav>span{display:flex;gap:8px;align-items:center}#homies-authority-preview .ha-evals-shell .ha-nav small{margin:0}#homies-authority-preview .ha-evals-shell .ha-header{flex-direction:row;align-items:center}#homies-authority-preview .ha-evals-shell .ha-header-actions{width:auto}#homies-authority-preview .ha-evals-shell .ha-demo{display:none}#homies-evals-preview .hm-back{font-size:11px;padding:7px 9px}}
 @media(max-width:380px){#homies-authority-preview .ha-evals-shell .ha-tagline{display:none!important}#homies-evals-preview .hm-back{padding:6px 8px}}
 
+</style>
+<style id="homies-viewport-layout">
+/* Keep navigation and the next action in view. Long content remains reachable
+   in a named, keyboard-accessible panel; it is never clipped or paginated. */
+html,body{height:100%;overflow:hidden}
+#homies-authority-preview:not([data-evals])[data-standalone]{height:var(--ha-viewport-height,100dvh);overflow:hidden}
+#homies-authority-preview:not([data-evals]) .ha-mainui{min-height:0;overflow:hidden}
+#homies-authority-preview:not([data-evals]) .ha-shell{height:100%;width:100%;display:flex;flex-direction:column;min-height:0}
+#homies-authority-preview:not([data-evals]) .ha-body{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;align-content:start;scrollbar-gutter:stable;padding:1px 2px}
+#homies-authority-preview:not([data-evals]) .ha-body:focus-visible,#homies-authority-preview:not([data-evals]) .ha-dialog-content:focus-visible{outline:2px solid var(--ha-teal);outline-offset:-2px}
+#homies-authority-preview:not([data-evals]) .ha-footer{background:var(--ha-canvas);padding-bottom:1px}
+#homies-authority-preview:not([data-evals]) .ha-body:has(.ha-draft-grid){display:flex;flex-direction:column;overflow:hidden;scrollbar-gutter:auto}
+#homies-authority-preview:not([data-evals]) .ha-draft-grid{flex:1;min-height:0;align-items:stretch}
+#homies-authority-preview:not([data-evals]) .ha-draft-panel{display:flex;flex-direction:column;min-height:0}
+#homies-authority-preview:not([data-evals]) .ha-draft-panel textarea{flex:1;min-height:100px;height:0;overflow:auto}
+#homies-authority-preview:not([data-evals]) .ha-draft-panel> :not(textarea){flex:none}
+#homies-authority-preview:not([data-evals]) .ha-strategy{display:block;min-height:0;overflow:auto;align-self:start;max-height:100%}
+#homies-authority-preview:not([data-evals]) .ha-strategy>summary{font-size:19px;font-weight:700;cursor:pointer}
+#homies-authority-preview:not([data-evals]) .ha-strategy>div{display:grid;gap:11px;padding-top:11px}
+#homies-authority-preview:not([data-evals]) .ha-draft-panel .ha-caption{margin:0}
+#homies-authority-preview:not([data-evals]) .ha-draft-history{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#homies-authority-preview:not([data-evals]) .ha-draft-history .ha-link{white-space:nowrap}
+#homies-authority-preview:not([data-evals]) textarea{max-width:100%;overflow:auto}
+#homies-authority-preview:not([data-evals])[data-standalone] .ha-modal-root{height:var(--ha-viewport-height,100dvh);top:var(--ha-viewport-top,0px);bottom:auto;overflow:hidden;align-items:center}
+#homies-authority-preview:not([data-evals]) .ha-dialog{max-height:100%;min-height:0;grid-template-rows:auto minmax(0,1fr) auto}
+#homies-authority-preview:not([data-evals]) .ha-dialog-content{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:2px;align-content:start}
+#homies-authority-preview:not([data-evals]) .ha-dialog-content:has(textarea){display:flex;flex-direction:column}
+#homies-authority-preview:not([data-evals]) .ha-dialog-content textarea{height:min(330px,46dvh);min-height:130px;flex:1 1 auto}
+#homies-authority-preview:not([data-evals]) .ha-dialog-content> :not(textarea){flex:none}
+#homies-authority-preview:not([data-evals]) .ha-dialog-actions{margin:0}
+@media(max-height:750px) and (min-width:701px){
+ #homies-authority-preview:not([data-evals]) .ha-shell{padding:12px 22px;gap:9px}
+ #homies-authority-preview:not([data-evals]) .ha-panel{padding:14px;gap:9px}
+ #homies-authority-preview:not([data-evals]) .ha-heading h1{font-size:27px}
+ #homies-authority-preview:not([data-evals]) .ha-draft-panel{gap:7px}
+ #homies-authority-preview:not([data-evals]) .ha-shell:has(.ha-draft-grid){padding-top:8px;padding-bottom:8px;gap:6px}
+}
+@media(max-width:700px){
+ #homies-authority-preview:not([data-evals]) .ha-shell{padding:10px;gap:8px}
+ #homies-authority-preview:not([data-evals]) .ha-header{flex-direction:row;align-items:center;gap:8px}
+ #homies-authority-preview:not([data-evals]) .ha-header-actions{width:auto;gap:8px}
+ #homies-authority-preview:not([data-evals]) .ha-home-mark{width:32px;height:32px;font-size:22px}
+ #homies-authority-preview:not([data-evals]) .ha-wordmark{font-size:24px}
+ #homies-authority-preview:not([data-evals]) .ha-tagline{display:none!important}
+ #homies-authority-preview:not([data-evals]) .ha-account-toggle{min-width:61px;padding:7px 9px}
+ #homies-authority-preview:not([data-evals]) .ha-demo{font-size:11px}
+ #homies-authority-preview:not([data-evals]) .ha-nav{grid-template-columns:repeat(4,minmax(0,1fr)) 48px;gap:4px}
+ #homies-authority-preview:not([data-evals]) .ha-nav button{min-height:44px;padding:5px;font-size:11px;justify-content:center;text-align:center}
+ #homies-authority-preview:not([data-evals]) .ha-nav .ha-evals-nav{grid-column:auto}
+ #homies-authority-preview:not([data-evals]) .ha-nav .ha-nav-emoji,#homies-authority-preview:not([data-evals]) .ha-nav small{display:none}
+ #homies-authority-preview:not([data-evals]) .ha-heading{gap:7px;flex-direction:column}
+ #homies-authority-preview:not([data-evals]) .ha-kicker{font-size:10px;letter-spacing:.7px}
+ #homies-authority-preview:not([data-evals]) .ha-heading h1{font-size:23px}
+ #homies-authority-preview:not([data-evals]) .ha-subtitle{font-size:13px;margin-top:4px}
+ #homies-authority-preview:not([data-evals]) .ha-deadline{padding:5px 9px;font-size:11px;min-height:30px}
+ #homies-authority-preview:not([data-evals]) .ha-deadline strong{font-size:12px}
+ #homies-authority-preview:not([data-evals]) .ha-footer{gap:6px;padding-top:8px}
+ #homies-authority-preview:not([data-evals]) .ha-footer-left{justify-content:space-between;gap:9px}
+ #homies-authority-preview:not([data-evals]) .ha-footer .ha-caption{font-size:11px;line-height:1.3}
+ #homies-authority-preview:not([data-evals]) .ha-footer .ha-link{white-space:nowrap}
+ #homies-authority-preview:not([data-evals]) .ha-draft-grid{display:flex;flex-direction:column;gap:7px}
+ #homies-authority-preview:not([data-evals]) .ha-draft-panel{flex:1;padding:11px;gap:7px}
+ #homies-authority-preview:not([data-evals]) .ha-draft-panel .ha-panel-head{flex-wrap:nowrap;gap:7px}
+ #homies-authority-preview:not([data-evals]) .ha-draft-panel h2{font-size:17px}
+ #homies-authority-preview:not([data-evals]) .ha-tone{gap:5px;font-size:12px;flex-direction:column;align-items:start}
+ #homies-authority-preview:not([data-evals]) .ha-tone select{width:123px;min-height:38px;padding:6px;font-size:13px}
+ #homies-authority-preview:not([data-evals]) .ha-draft-panel .ha-between{gap:5px}
+ #homies-authority-preview:not([data-evals]) .ha-draft-history{flex-direction:column;align-items:start;gap:5px}
+ #homies-authority-preview:not([data-evals]) .ha-draft-panel .ha-edit-status,#homies-authority-preview:not([data-evals]) .ha-draft-panel .ha-caption{font-size:11px}
+ #homies-authority-preview:not([data-evals]) .ha-strategy{flex:none;width:100%;padding:9px 12px;max-height:35%}
+ #homies-authority-preview:not([data-evals]) .ha-strategy>summary{font-size:14px;min-height:26px}
+ #homies-authority-preview:not([data-evals]) .ha-strategy[open]{max-height:35%;overflow:auto}
+ #homies-authority-preview:not([data-evals]) .ha-modal-root{padding:8px}
+ #homies-authority-preview:not([data-evals]) .ha-dialog{padding:12px;gap:8px}
+ #homies-authority-preview:not([data-evals]) .ha-dialog-head{padding-bottom:8px}
+ #homies-authority-preview:not([data-evals]) .ha-dialog-content{gap:8px}
+ #homies-authority-preview:not([data-evals]) .ha-dialog-content textarea{height:35dvh;min-height:100px}
+ #homies-authority-preview:not([data-evals]) .ha-achievement-overview{padding:13px}
+ #homies-authority-preview:not([data-evals]) .ha-achievement-heading h1{font-size:25px}
+ #homies-authority-preview:not([data-evals]) .ha-achievements{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ #homies-authority-preview:not([data-evals]) .ha-achievements .ha-stat:last-child{grid-column:1/-1}
+ #homies-authority-preview:not([data-evals]) .ha-achievements .ha-label{font-size:12px}
+ #homies-authority-preview:not([data-evals]) .ha-achievements .ha-stat{padding:10px 12px}
+ #homies-authority-preview:not([data-evals]) .ha-achievements .ha-stat>strong{font-size:26px;margin:4px 0}
+ #homies-authority-preview:not([data-evals]) .ha-close-loop{padding:12px;gap:10px}
+}
+@media(max-height:540px){
+ #homies-authority-preview:not([data-evals]) .ha-shell{gap:6px;padding:8px 12px}
+ #homies-authority-preview:not([data-evals]) .ha-tagline{display:none!important}
+ #homies-authority-preview:not([data-evals]) .ha-header-actions{gap:8px}
+ #homies-authority-preview:not([data-evals]) .ha-draft-panel textarea{min-height:60px}
+}
+
+/* Short windows and an open phone keyboard keep the action bar available.
+   The editor panel can scroll instead of overflowing a hidden ancestor. */
+#homies-authority-preview:not([data-evals]).ha-short-viewport .ha-body:has(.ha-draft-grid){overflow:auto;display:grid}
+#homies-authority-preview:not([data-evals]).ha-short-viewport .ha-draft-grid{min-height:390px}
+#homies-authority-preview:not([data-evals]).ha-short-viewport .ha-draft-panel textarea{min-height:160px}
+#homies-authority-preview:not([data-evals]).ha-short-viewport .ha-strategy{max-height:180px}
+/* Evals retains the original expandable, scrolling evidence view. */
+html:has(#homies-authority-preview[data-evals]),body:has(#homies-authority-preview[data-evals]){height:auto;overflow:auto}
+#homies-authority-preview[data-evals]{height:auto;overflow:visible}
+#homies-authority-preview[data-evals] .ha-mainui{overflow:visible}
+#homies-authority-preview[data-evals] .ha-shell{height:auto;display:grid;gap:12px;padding:18px 28px}
+@media(max-width:1149px){#homies-authority-preview[data-evals] .ha-shell{gap:10px;padding:14px 20px}}
+@media(max-width:850px){#homies-authority-preview[data-evals] .ha-shell{padding:14px 16px}}
 </style>
 </head>
 <body>
@@ -857,9 +995,10 @@ function createHomiesModel() {
   const initialState = () => ({
     plan:freeze({requestedBase:2200,ceiling:2265}),planSaved:false,planLocked:false,
     facts:{water:false,amenities:false},shortlist:[],preferredId:null,
-    propertyReviews:{grove:{fit:false,conditions:false},newport:{fit:false,conditions:false}},
     drafts:{initial:freshDraft(),followup:freshDraft(),further:freshDraft()},
+    // Legacy snapshot key: these are approved manual-send drafts, not delivery receipts.
     sent:{initial:null,followup:null,further:null},pendingReviews:{initial:null,followup:null,further:null},
+    approvedVersions:{initial:[],followup:[],further:[]},
     firstOffer:null,finalOffer:null,outcome:'success',decision:null,completion:null,
     contextVersion:0,sequence:0
   });
@@ -869,7 +1008,7 @@ function createHomiesModel() {
   const property = id => properties.find(item => item.id===id) || null;
   const selectedProperties = () => state.shortlist.map(property).filter(Boolean);
   const preferredProperty = () => state.shortlist.includes(state.preferredId) ? property(state.preferredId) : null;
-  const isBackupReviewed = (id=state.preferredId) => !!(state.shortlist.includes(id) && state.propertyReviews[id]?.fit && state.propertyReviews[id]?.conditions);
+  const isBackupSelected = (id=state.preferredId) => state.shortlist.includes(id);
   const latestOffer = () => state.finalOffer || state.firstOffer || original;
   const nextCounterBase = () => cents(Math.floor(((original.base+state.plan.requestedBase)/2)*100 + 1e-7)/100);
   const evidenceText = tone => {
@@ -938,7 +1077,7 @@ function createHomiesModel() {
     }
   }
   function setPlan(input) {
-    if(state.planLocked)return fail('Your plan is attached to the first sent demo message. Start a new journey to change these amounts.');
+    if(state.planLocked)return fail('Your plan is attached to the first approved message. Start a new journey to change these amounts.');
     const requestedBase=Number(input?.requestedBase),ceiling=Number(input?.ceiling);
     if(!Number.isFinite(requestedBase)||!Number.isFinite(ceiling)||requestedBase<=0||ceiling<=0)return fail('Enter a positive requested base rent and a positive private ceiling.');
     if(!Number.isSafeInteger(Math.round(requestedBase*100))||!Number.isSafeInteger(Math.round(ceiling*100)))return fail('Enter valid monthly dollar amounts.');
@@ -963,11 +1102,6 @@ function createHomiesModel() {
     if(state.preferredId!==id){state.preferredId=id;state.decision=null;state.completion=null;invalidateContext();}
     return ok({property:preferredProperty()});
   }
-  function setPropertyReview(id,key,value) {
-    if(!state.shortlist.includes(id)||!['fit','conditions'].includes(key))return fail('Review a shortlisted home.');
-    state.propertyReviews[id][key]=!!value;
-    return ok({reviewed:isBackupReviewed(id)});
-  }
   function setFact(key,value) {
     if(!Object.hasOwn(state.facts,key))return fail('Choose a listed fact.');
     if(state.facts[key]!==!!value){state.facts[key]=!!value;invalidateContext();}
@@ -976,8 +1110,11 @@ function createHomiesModel() {
   function setDraft(round,text) {
     round=normalizeRound(round);
     if(!roundNames.includes(round))return fail('Unknown draft round.');
-    if(state.sent[round])return fail('This sent version is preserved in history.');
     if(typeof text!=='string')return fail('Enter your message as text.');
+    if(state.sent[round]&&state.sent[round].text!==text){
+      if(round==='further')return fail('This approved version is preserved in history.');
+      reviseDraft(round);
+    }
     const draft=getDraft(round);
     if(draft.text!==text){draft.text=text;draft.edited=true;draft.revision++;state.pendingReviews[round]=null;}
     return ok({draft});
@@ -985,7 +1122,10 @@ function createHomiesModel() {
   function setTone(round,tone) {
     round=normalizeRound(round);
     if(!roundNames.includes(round)||!Object.hasOwn(tones,tone))return fail('Choose Warm, Professional, or Firm.');
-    if(state.sent[round])return fail('The tone of a sent message is part of its history.');
+    if(state.sent[round]&&state.sent[round].tone!==tone){
+      if(round==='further')return fail('The tone of an approved message is part of its history.');
+      reviseDraft(round);
+    }
     const draft=getDraft(round);
     if(draft.tone===tone)return ok({draft});
     draft.cache[draft.tone]={text:draft.text,edited:draft.edited,needsReview:draft.needsReview};
@@ -994,18 +1134,33 @@ function createHomiesModel() {
     state.pendingReviews[round]=null;
     return ok({draft});
   }
+  function reviseDraft(round) {
+    const approved=state.sent[round];
+    if(!approved||!['initial','followup'].includes(round))return;
+    // Editing reopens the draft directly. Immutable approved copies stay in history.
+    const affected=round==='initial'?roundNames:['followup','further'];
+    for(const name of affected){
+      state.sent[name]=null;state.pendingReviews[name]=null;
+      if(name!==round)state.drafts[name]=freshDraft();
+    }
+    if(round==='initial')state.firstOffer=null;
+    state.finalOffer=null;state.decision=null;state.completion=null;
+    const draft=state.drafts[round];
+    draft.text=approved.text;draft.tone=approved.tone;draft.edited=true;
+    invalidateContext();
+  }
   function restoreSample(round) {
     round=normalizeRound(round);
     if(!roundNames.includes(round))return fail('Unknown draft round.');
-    if(state.sent[round])return fail('This sent version is preserved in history.');
+    if(state.sent[round])return fail('This approved version is preserved in history.');
     const draft=getDraft(round);draft.text=sampleDraft(round,draft.tone);draft.edited=false;draft.needsReview=false;draft.revision++;delete draft.cache[draft.tone];state.pendingReviews[round]=null;
     return ok({draft});
   }
   function prepareReview(round) {
     round=normalizeRound(round);
     if(!roundNames.includes(round))return fail('Unknown draft round.');
-    if(state.sent[round])return fail('This message has already been sent in the demo.');
-    if(round==='followup'&&!state.sent.initial)return fail('Review and send the first request before preparing its follow-up.');
+    if(state.sent[round])return fail('This message has already been approved for you to send.');
+    if(round==='followup'&&!state.sent.initial)return fail('Review and approve the first request before preparing its follow-up.');
     if(round==='further'&&!state.sent.initial)return fail('Complete your first request before negotiating further.');
     const draft=getDraft(round);
     if(draft.text.trim().length<35)return fail('Add a complete message before reviewing it.');
@@ -1013,19 +1168,18 @@ function createHomiesModel() {
     state.pendingReviews[round]=review;
     return ok({review});
   }
-  function approveAndSendDemo(round,review,checked) {
+  function approveForManualSend(round,review) {
     round=normalizeRound(round);
     if(!roundNames.includes(round))return fail('Unknown draft round.');
-    if(!checked)return fail('Confirm that you reviewed this exact wording and recipient.');
-    if(state.sent[round])return fail('This message has already been sent in the demo.');
-    if(round==='followup'&&!state.sent.initial)return fail('The first sent request must come before its follow-up.');
-    if(round==='further'&&!state.sent.initial)return fail('Send the first request before negotiating further.');
+    if(state.sent[round])return fail('This message has already been approved for you to send.');
+    if(round==='followup'&&!state.sent.initial)return fail('The first approved request must come before its follow-up.');
+    if(round==='further'&&!state.sent.initial)return fail('Approve the first request before negotiating further.');
     const draft=getDraft(round);
-    if(!review||review!==state.pendingReviews[round]||review.round!==round||review.text!==draft.text||review.tone!==draft.tone||review.revision!==draft.revision||review.contextVersion!==state.contextVersion)return fail('The message or its context changed. Review the current version before sending.');
+    if(!review||review!==state.pendingReviews[round]||review.round!==round||review.text!==draft.text||review.tone!==draft.tone||review.revision!==draft.revision||review.contextVersion!==state.contextVersion)return fail('The message or its context changed. Review the current version before approving.');
     if(draft.text.trim().length<35)return fail('Add a complete message before reviewing it.');
-    // The outgoing record deliberately contains no private-ceiling field.
-    const sent=freeze({id:`message-${++state.sequence}`,round,text:review.text,tone:review.tone,revision:review.revision,edited:review.edited,recipient:review.recipient,requestedBase:review.requestedBase,simulated:true});
-    state.sent[round]=sent;state.pendingReviews[round]=null;draft.needsReview=false;
+    // Preserve the approved copy without claiming delivery or adding the private ceiling.
+    const sent=freeze({id:`message-${++state.sequence}`,round,text:review.text,tone:review.tone,revision:review.revision,edited:review.edited,recipient:review.recipient,requestedBase:review.requestedBase,delivery:'manual',sent:false,simulated:true});
+    state.sent[round]=sent;state.approvedVersions[round].push(sent);state.pendingReviews[round]=null;draft.needsReview=false;
     state.decision=null;state.completion=null;
     let offer=null;
     if(round==='initial'){
@@ -1076,12 +1230,12 @@ function createHomiesModel() {
   function comparison() {
     const offer=latestOffer();
     const stay={id:'renew',name:'Your home',base:offer.base,annualBase:cents(offer.base*12),moving:0,firstYear:cents(offer.base*12)};
-    const options=selectedProperties().map(item=>({...item,annualBase:cents(item.base*12),moving:movingCost,firstYear:cents(item.base*12+movingCost),differenceVsStay:cents(item.base*12+movingCost-stay.firstYear),baseWithinCeiling:item.base<=state.plan.ceiling,reviewed:isBackupReviewed(item.id)}));
+    const options=selectedProperties().map(item=>({...item,annualBase:cents(item.base*12),moving:movingCost,firstYear:cents(item.base*12+movingCost),differenceVsStay:cents(item.base*12+movingCost-stay.firstYear),baseWithinCeiling:item.base<=state.plan.ceiling,shortlisted:isBackupSelected(item.id)}));
     const preferred=options.find(item=>item.id===state.preferredId)||null;
     return {stay,options,preferred,difference:preferred?preferred.differenceVsStay:null,movingCost,period:'January 16, 2027–January 15, 2028',basis:'Base rent for 12 months, plus estimated moving once'};
   }
   function recommendation() {
-    const f=financials(),c=comparison(),backup=c.preferred,prepared=!!(backup&&backup.reviewed&&backup.baseWithinCeiling);
+    const f=financials(),c=comparison(),backup=c.preferred,prepared=!!(backup&&backup.shortlisted&&backup.baseWithinCeiling);
     const caution=state.shortlist.length?'Another round can add delay while shortlisted homes may become unavailable. Those alternatives are not reserved.':'Another round adds time while your renewal-response deadline approaches. Confirm the current offer before asking again.';
     if(f.withinCeiling){
       const reasons=[`${money(f.offer.total)}/month is ${f.headroom?money(f.headroom)+' below':'at'} your private ceiling.`];
@@ -1095,7 +1249,7 @@ function createHomiesModel() {
       return {choice:'renew',title:"I'd renew on these terms.",reasons,discourageFurther:true,caution,backupPrepared:prepared};
     }
     if(state.finalOffer&&prepared){
-      return {choice:'move',title:'Your reviewed backup deserves the next look.',reasons:[`The renewal is ${money(-f.headroom)}/month above your private ceiling.`,`${backup.name} has a ${money(backup.base)} base rent; confirm its availability and written terms before relying on it.`,backup.differenceVsStay<0?`Moving is about ${money(-backup.differenceVsStay)} lower over the first year, including the estimated ${money(movingCost)} move.`:'Compare the complete base-rent and moving figures before deciding.'],discourageFurther:false,caution,backupPrepared:true};
+      return {choice:'move',title:'Your shortlisted backup deserves the next look.',reasons:[`The renewal is ${money(-f.headroom)}/month above your private ceiling.`,`${backup.name} has a ${money(backup.base)} base rent; confirm its availability and written terms before relying on it.`,backup.differenceVsStay<0?`Moving is about ${money(-backup.differenceVsStay)} lower over the first year, including the estimated ${money(movingCost)} move.`:'Compare the complete base-rent and moving figures before deciding.'],discourageFurther:false,caution,backupPrepared:true};
     }
     return {choice:'negotiate',title:'Keep negotiating with a clear limit.',reasons:[`The offer is ${money(-f.headroom)}/month above your private ceiling.`,backup?(backup.baseWithinCeiling?`Keep ${backup.name} in view while you confirm its availability and written terms.`:`${backup.name} also has a base rent above your ceiling. Refine your options before treating it as a fallback.`):'Shortlist an alternative so you can judge the renewal against a real next option.'],discourageFurther:false,caution,backupPrepared:prepared};
   }
@@ -1103,7 +1257,7 @@ function createHomiesModel() {
     if(!['renew','move','negotiate'].includes(choice))return fail('Choose your next step.');
     const f=financials(),c=comparison();
     if(choice==='renew'&&!f.withinCeiling)return fail('This offer is above your private ceiling. Revisit the terms before choosing to renew.');
-    if(choice==='move'&&(!c.preferred||!isBackupReviewed(c.preferred.id)))return fail('Choose and review a backup before pursuing a move.');
+    if(choice==='move'&&(!c.preferred||!isBackupSelected(c.preferred.id)))return fail('Choose a backup before pursuing a move.');
     if(choice==='move'&&!c.preferred.baseWithinCeiling)return fail('This backup’s base rent exceeds your private ceiling. Revisit the plan before pursuing it.');
     if(choice==='negotiate'&&!state.sent.further)return fail('Review and approve the further request before saving that next step.');
     const completion=freeze({id:`completion-${++state.sequence}`,choice,offer:clone(f.offer),plan:clone(state.plan),potentialAnnualBaseSavings:f.annualBaseSavings,monthlyBaseReduction:f.originalReduction,baseReductionPct:f.originalReductionPct,headroom:f.headroom,achievedTerms:f.requestedTermsMet,withinCeiling:f.withinCeiling,backup:c.preferred?clone(c.preferred):null,shortlist:clone(selectedProperties()),simulated:true,signed:false});
@@ -1117,11 +1271,11 @@ function createHomiesModel() {
     ];
     const backup=preferredProperty();
     if(backup)entries.push({id:'backup',kind:'backup',title:'You kept an exit option',value:backup.name,detail:money(backup.base)+' base · shortlisted, not reserved',status:'done'});
-    if(state.sent.initial)entries.push({id:'initial',kind:'human',title:'You approved the first ask',value:'Version '+state.sent.initial.revision,detail:state.sent.initial.edited?'Your edited wording · demo sent':'Your chosen wording · demo sent',status:'done'});
+    if(state.sent.initial)entries.push({id:'initial',kind:'human',title:'You approved the first ask',value:'Version '+state.sent.initial.revision,detail:state.sent.initial.edited?'Your edited wording · ready for you to send':'Your chosen wording · ready for you to send',status:'done'});
     if(state.firstOffer)entries.push({id:'first',kind:'offer',title:'The first counteroffer',value:money(state.firstOffer.total),detail:money(state.firstOffer.base)+' base + '+money(state.firstOffer.amenity)+' amenity',status:'done'});
-    if(state.sent.followup)entries.push({id:'followup',kind:'human',title:'You shaped the follow-up',value:'Version '+state.sent.followup.revision,detail:state.sent.followup.edited?'Your edits approved and demo sent':'Your chosen wording approved and demo sent',status:'done'});
+    if(state.sent.followup)entries.push({id:'followup',kind:'human',title:'You shaped the follow-up',value:'Version '+state.sent.followup.revision,detail:state.sent.followup.edited?'Your edits approved · you send the message':'Your chosen wording approved · you send the message',status:'done'});
     if(state.finalOffer)entries.push({id:'final',kind:'offer',title:financials().withinCeiling?'Your limit was met':'You assessed the final reply',value:money(state.finalOffer.total),detail:money(state.finalOffer.base)+' base · '+(state.finalOffer.amenity?'amenity retained':'amenity waived'),status:'done'});
-    if(state.completion)entries.push({id:'decision',kind:'decision',title:'You chose your next step',value:{renew:state.completion.achievedTerms?'Renew on your terms':'Renew within your limit',move:'Pursue your backup',negotiate:'Continue negotiating'}[state.completion.choice],detail:state.completion.choice==='negotiate'&&state.sent.further?(state.sent.further.edited?'Your exact edited further request approved and demo sent':'Your exact further request approved and demo sent')+' · reply pending':'Your decision · written terms still to confirm',status:'done'});
+    if(state.completion)entries.push({id:'decision',kind:'decision',title:'You chose your next step',value:{renew:state.completion.achievedTerms?'Renew on your terms':'Renew within your limit',move:'Pursue your backup',negotiate:'Continue negotiating'}[state.completion.choice],detail:state.completion.choice==='negotiate'&&state.sent.further?(state.sent.further.edited?'Your edited further request · ready for you to send':'Your further request · ready for you to send')+' · send from your email':'Your decision · written terms still to confirm',status:'done'});
     return entries;
   }
   function restart() {
@@ -1131,8 +1285,8 @@ function createHomiesModel() {
     return ok({state});
   }
   return {state,current,original,properties,movingCost,deadline,tones,money,pct,property,
-    setPlan,toggleShortlist,setPreferred,setPropertyReview,setFact,getDraft,setDraft,setTone,restoreSample,sampleDraft,prepareReview,approveAndSendDemo,
-    setOutcome,previewOtherOutcome,complete,restart,selectedProperties,preferredProperty,isBackupReviewed,latestOffer,financials,comparison,recommendation,timeline};
+    setPlan,toggleShortlist,setPreferred,setFact,getDraft,setDraft,setTone,restoreSample,sampleDraft,prepareReview,approveForManualSend,
+    setOutcome,previewOtherOutcome,complete,restart,selectedProperties,preferredProperty,isBackupSelected,latestOffer,financials,comparison,recommendation,timeline};
 }
 if(typeof module!=='undefined'&&module.exports)module.exports={createHomiesModel};
 
@@ -1141,7 +1295,7 @@ const root=document.getElementById('homies-authority-preview');
 if(!root)return;
 const main=root.querySelector('.ha-mainui'),modal=root.querySelector('.ha-modal-root'),live=root.querySelector('.ha-live');
 const m=createHomiesModel(),s=m.state;
-const ui={page:0,resumePage:0,evals:false,evalsScroll:0,choice:null,review:null,modalTrigger:null,modalKind:null};
+const ui={page:0,resumePage:0,evals:false,evalsScroll:0,choice:null,review:null,modalTrigger:null,modalKind:null,viewingCopied:{},confirmationCopiedFor:null,confirmationDraft:null};
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cash=m.money;
 const btn=(label,action,secondary=false,disabled=false,extra='')=>`<button type="button" class="ha-btn ${secondary?'ha-secondary':''} cursor-interaction" data-act="${action}" ${disabled?'disabled':''} ${extra}>${label}</button>`;
@@ -1154,7 +1308,7 @@ const signedPct=(n,base)=>(n>0?'+':n<0?'−':'')+m.pct(Math.abs(n),base);
 const preferred=()=>m.preferredProperty();
 const within=()=>m.financials().withinCeiling;
 const currentStage=()=>ui.page===0?0:ui.page<5&&ui.page>=1?1:ui.page<9&&ui.page>=5?2:3;
-const latestPage=()=>s.finalOffer?8:s.firstOffer?6:5;
+const latestPage=()=>s.finalOffer?8:s.approvedVersions.followup.length&&!s.sent.followup?7:s.firstOffer?6:5;
 const offerTerms=o=>`${cash(o.base)} base${o.amenity?' + '+cash(o.amenity)+' amenity':' · amenity waived'}`;
 const getRound=()=>ui.page===5?'initial':ui.page===7?'followup':null;
 function getTitle(){
@@ -1167,10 +1321,10 @@ function getTitle(){
   ['02 / YOUR CASE · YOUR EVIDENCE','Your experience strengthens the ask.','Choose what belongs in your request. I’ll keep the wording grounded in those facts.'],
   ['03 / YOUR NEGOTIATION · FIRST REQUEST','Make the first ask yours.','Choose a tone, edit the wording, then approve the exact message.'],
   ['03 / YOUR NEGOTIATION · FIRST REPLY',s.firstOffer&&s.firstOffer.total<=s.plan.ceiling?'Within your limit. Your target is still ahead.':'Progress. Keep your target in view.','Here is what the first counteroffer changes—and what it still leaves to resolve.'],
-  ['03 / YOUR NEGOTIATION · FOLLOW-UP','Your words lead the next step.','Edit this follow-up. Your exact version goes into review and the demo’s sent history.'],
-  ['03 / YOUR NEGOTIATION · LATEST REPLY',f.withinCeiling?'Your ceiling is met.':'Your limit still matters.','You have a clear offer, a private limit, and another option to consider.'],
+  ['03 / YOUR NEGOTIATION · FOLLOW-UP','Your words lead the next step.','Edit this follow-up, then approve and copy your exact wording to send yourself.'],
+  ['03 / YOUR NEGOTIATION · LATEST REPLY',f.withinCeiling?'Your ceiling is met.':'Your limit still matters.','Your landlord responded to your follow-up. Here’s the simulated reply and what it means for your plan.'],
   ['04 / YOUR DECISION','Choose what happens next.','I’ll explain the tradeoffs. You decide the direction.'],
-  ['YOUR JOURNEY',c?.choice==='renew'&&c.achievedTerms?'Your terms, achieved.':c?.choice==='renew'?'A renewal within your limit.':c?.choice==='move'?'Your next home is a choice.':'Your next move is deliberate.',c?.choice==='renew'?'You set your limits, kept alternatives in view, and chose your next step.':c?.choice==='move'?'You have a conditional backup and a practical plan to verify it.':'Your approved words are preserved. Keep your limit and alternatives in view.']
+  ['YOUR JOURNEY',c?.choice==='renew'&&c.achievedTerms?'Your terms, achieved!':c?.choice==='renew'?'A renewal within your limit.':c?.choice==='move'?'Your next home is a choice.':'Your next move is deliberate.',c?.choice==='renew'?'You set your limits, kept alternatives in view, and chose your next step.':c?.choice==='move'?'You have a conditional backup and a practical plan to verify it.':'Your approved words are preserved. Keep your limit and alternatives in view.']
  ];
  return ui.page===-1?['YOUR HOME','Welcome back, Mia.',s.completion?'Your decision is saved here. Your journey and shortlist are ready to revisit.':'Your renewal, your private plan, and your alternatives—in one place.']:titles[ui.page];
 }
@@ -1183,18 +1337,18 @@ function header(){
 function footer(){
  if(ui.page===-1)return '';
  const labels=['Save my terms & explore →','Compare my shortlist →','Review my preferred backup →','Build my request →','Prepare my first request →','Review & approve →','Prepare my follow-up →','Review & approve →','Compare my choices →','Choose a direction','Back to home'];
- const hints=['Your ceiling stays private. You approve what is shared.','Choose one or both. Availability still needs confirmation.','Compare base rent and the estimated move over the same year.','These acknowledgments record your review, not a booking.','Only selected facts are inserted into the samples.','No message is used without your approval.','Your exact first message is preserved in history.','Your edits are the version you approve.','A proposal becomes an agreement only after written confirmation.','The recommendation is guidance. The decision stays yours.','Potential savings depend on the final written terms.'];
+ const hints=['Your ceiling stays private. You approve what is shared.','Choose one or both. Availability still needs confirmation.','Compare base rent and the estimated move over the same year.','Email the property to arrange a viewing. Your backup stays in the comparison.','Only selected facts are inserted into the samples.','No message is used without your approval.','Your exact first message is preserved in history.','Your edits are the version you approve.','A proposal becomes an agreement only after written confirmation.','The recommendation is guidance. The decision stays yours.','Potential savings depend on the final written terms.'];
  let action='next',label=labels[ui.page],disabled=false;
  if(ui.page===0){action='save-plan';if(s.planLocked)label='Explore my options →';}
  if(ui.page===1)disabled=!s.shortlist.length;
- if(ui.page===3)disabled=!m.isBackupReviewed();
  if(ui.page===5||ui.page===7){const round=getRound();action=s.sent[round]?'view-reply':'review';label=s.sent[round]?'View the '+(round==='initial'?'first':'latest')+' reply →':'Review & approve →';}
  if(ui.page===6&&s.firstOffer.total<=s.plan.ceiling){action='decision-page';label='Compare my choices →';}
  if(ui.page===9){action='decision';disabled=!ui.choice;label=ui.choice==='renew'?'Confirm my renewal direction →':ui.choice==='move'?'Plan my next step →':ui.choice==='negotiate'?'Review another request →':'Choose a direction';}
  if(ui.page===10)action='home';
- return `<footer class="ha-footer"><div class="ha-footer-left">${ui.page>0&&ui.page<10?link('← Back','back'):''}<span class="ha-caption">${ui.page===10?(s.completion?.choice==='renew'?'Next: confirm written terms by December 8. No lease is signed in this demo.':s.completion?.choice==='move'?'Next: verify the home and written terms. Your renewal response is due December 8.':'Next: await a reply and keep your backup ready. Your final response is due December 8.'):hints[ui.page]}</span></div>${btn(label,action,false,disabled)}</footer>`;
+ return `<footer class="ha-footer"><div class="ha-footer-left">${ui.page>0&&ui.page<10?link('← Back','back'):''}<span class="ha-caption">${ui.page===10?('Your journey is saved. You send the final message; no lease is signed in this demo.'):hints[ui.page]}</span></div>${btn(label,action,false,disabled)}</footer>`;
 }
 function render(){
+ root.toggleAttribute('data-evals',ui.evals);
  if(ui.evals){
   main.innerHTML=`<div class="ha-shell ha-evals-shell">${header()}<section id="homies-evals-preview" aria-label="Recorded backend evaluations"></section></div>`;
   const evalsRoot=main.querySelector('#homies-evals-preview');
@@ -1205,12 +1359,12 @@ function render(){
  const [k,title,sub]=getTitle();
  const win=ui.page===10&&s.completion?.choice==='renew'&&s.completion?.achievedTerms;
  const pages=[renewal,discovery,comparison,diligence,evidence,()=>draftPage('initial'),firstReply,()=>draftPage('followup'),finalReply,decision,completion];
- main.innerHTML=`<div class="ha-shell">${header()}<div class="ha-heading ${win?'ha-celebrate':''}"><div><p class="ha-kicker">${k}</p><h1>${title}</h1><p class="ha-subtitle">${sub}</p></div>${win?'<span class="ha-celebrate-mark" aria-hidden="true">✓</span>':ui.page>=0&&ui.page<10?'<button type="button" class="ha-deadline cursor-interaction" data-act="deadline"><span>Final response due</span><strong>December 8, 2026</strong></button>':''}</div><main class="ha-body" aria-label="${esc(title)}">${ui.page===-1?home():pages[ui.page]()}</main>${footer()}</div>`;
+ main.innerHTML=`<div class="ha-shell ${ui.page===10?'ha-completion-shell':''}">${header()}${ui.page===10?'':`<div class="ha-heading ${win?'ha-celebrate ha-completion-win':''}"><div><p class="ha-kicker">${k}</p><h1>${title}</h1><p class="ha-subtitle">${sub}</p></div>${win?'<span class="ha-celebrate-mark" aria-hidden="true">✓</span>':ui.page>=0&&ui.page<10?'<button type="button" class="ha-deadline cursor-interaction" data-act="deadline"><span>Final response due</span><strong>December 8, 2026</strong></button>':''}</div>`}<main class="ha-body" tabindex="0" aria-label="${esc(title)}">${ui.page===-1?home():pages[ui.page]()}</main>${footer()}</div>`;
  const editor=main.querySelector('[data-draft]');if(editor){const round=editor.dataset.draft;editor.value=s.sent[round]?.text??m.getDraft(round).text;fitEditor(editor);}
 }
 function renewal(){
  const rise=m.original.base-m.current.base,target=m.financials();
- return `<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><div><h2>Your ${cash(m.original.total)} renewal offer</h2><p class="ha-caption">${offerTerms(m.original)} · received November 8</p></div>${badge('Calculated','calculated','opening')}</div><div class="ha-money-pair"><div class="ha-money-box"><span class="ha-label">Current base rent</span><strong class="ha-money">${cash(m.current.base)}</strong><span class="ha-caption">per month</span></div><div class="ha-money-box"><span class="ha-label">Renewal base rent</span><strong class="ha-money">${cash(m.original.base)}</strong><span class="ha-caption">per month</span></div></div>${insight('That is '+cash(rise)+' more each month · '+m.pct(rise,m.current.base),'The base increase would add '+cash(rise*12)+' over 12 months.',true,'👀')}<div class="ha-between"><p class="ha-caption">I’ll assess every offer against your plan.</p>${link('See the numbers →','math-opening')}</div></section><section class="ha-panel ha-peach" aria-label="Your private rent plan"><h2>Your ask. Your private ceiling.</h2><div class="ha-fields"><label class="ha-field"><span class="ha-label">Requested base rent</span><span class="ha-money-input"><span aria-hidden="true">$</span><input type="number" id="ha-request" data-goal="requestedBase" min="0.01" max="2599.99" step="0.01" inputmode="decimal" value="${s.plan.requestedBase}" aria-label="Requested base rent per month" ${s.planLocked?'disabled':''}></span><small>Per month · ask for a 12-month term and the fee waived.</small></label><label class="ha-field"><span class="ha-label">Private ceiling</span><span class="ha-money-input"><span aria-hidden="true">$</span><input type="number" id="ha-ceiling" data-goal="ceiling" min="0.01" step="0.01" inputmode="decimal" value="${s.plan.ceiling}" aria-label="Private monthly ceiling" ${s.planLocked?'disabled':''}></span><small>Rent + amenity per month. For Homies only.</small></label></div><p class="ha-error" id="ha-plan-error" role="alert"></p>${insight('Your ceiling is never shared.','Your requested rent appears only in a message you approve.',false,'🔒')}<p class="ha-caption" id="ha-plan-preview">At your target: <strong>${cash(target.targetReduction)}/month less base rent</strong> than the original offer.</p>${s.planLocked?'<p class="ha-caption">These terms belong to your sent request. Start a new demo to change the plan.</p>':'<p class="ha-caption">You can edit both amounts before sending your first request.</p>'}</section></div>`;
+ return `<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><div><h2>Your ${cash(m.original.total)} renewal offer</h2><p class="ha-caption">${offerTerms(m.original)} · received November 8</p></div>${badge('Calculated','calculated','opening')}</div><div class="ha-money-pair"><div class="ha-money-box"><span class="ha-label">Current base rent</span><strong class="ha-money">${cash(m.current.base)}</strong><span class="ha-caption">per month</span></div><div class="ha-money-box"><span class="ha-label">Renewal base rent</span><strong class="ha-money">${cash(m.original.base)}</strong><span class="ha-caption">per month</span></div></div>${insight('That is '+cash(rise)+' more each month · '+m.pct(rise,m.current.base),'The base increase would add '+cash(rise*12)+' over 12 months.',true,'👀')}<div class="ha-between"><p class="ha-caption">I’ll assess every offer against your plan.</p>${link('See the numbers →','math-opening')}</div></section><section class="ha-panel ha-peach" aria-label="Your private rent plan"><h2>Your ask. Your private ceiling.</h2><div class="ha-fields"><label class="ha-field"><span class="ha-label">Requested base rent</span><span class="ha-money-input"><span aria-hidden="true">$</span><input type="number" id="ha-request" data-goal="requestedBase" min="0.01" max="2599.99" step="0.01" inputmode="decimal" value="${s.plan.requestedBase}" aria-label="Requested base rent per month" ${s.planLocked?'disabled':''}></span><small>Per month · ask for a 12-month term and the fee waived.</small></label><label class="ha-field"><span class="ha-label">Private ceiling</span><span class="ha-money-input"><span aria-hidden="true">$</span><input type="number" id="ha-ceiling" data-goal="ceiling" min="0.01" step="0.01" inputmode="decimal" value="${s.plan.ceiling}" aria-label="Private monthly ceiling" ${s.planLocked?'disabled':''}></span><small>Rent + amenity per month. For Homies only.</small></label></div><p class="ha-error" id="ha-plan-error" role="alert"></p>${insight('Your ceiling is never shared.','Your requested rent appears only in a message you approve.',false,'🔒')}<p class="ha-caption" id="ha-plan-preview">At your target: <strong>${cash(target.targetReduction)}/month less base rent</strong> than the original offer.</p>${s.planLocked?'<p class="ha-caption">These terms belong to your approved request. Start a new demo to change the plan.</p>':'<p class="ha-caption">You can edit both amounts before approving your first request.</p>'}</section></div>`;
 }
 function discovery(){
  return `<div class="ha-between"><p class="ha-discovery-note">Studios near PATH · base rent shown consistently · ${cash(m.movingCost)} estimated moving cost, once.</p>${badge('Demo search results','simulated','discovery')}</div><div class="ha-columns ha-equal">${m.properties.map((p,i)=>{const selected=s.shortlist.includes(p.id),fits=p.base<=s.plan.ceiling;return `<article class="ha-panel ha-property ${selected?'is-shortlisted':''}"><div class="ha-property-top"><span class="ha-property-mark" aria-hidden="true">${i?'🏙️':'🏘️'}</span><div><h2>${p.name}</h2><p class="ha-caption">${p.locality} · ${p.size} sq ft studio</p></div></div><div><strong class="ha-money">${cash(p.base)}<small> base/month</small></strong><span class="ha-caption">Stated ${p.pathMinutes}-minute walk to PATH</span></div><p class="ha-discovery-note">${i?'A second option with more floor area and a stated shorter PATH walk.':'A nearby base-rent benchmark and a practical alternative to explore.'}</p><div class="ha-between"><span class="ha-badge ${fits?'ha-positive':'ha-caution'}">${fits?'Base fits your ceiling':'Base is above your ceiling'}</span>${link('Details →','property',`data-property="${p.id}"`)}</div>${btn(selected?'✓ Shortlisted':'Add to shortlist','shortlist',!selected,false,`data-property="${p.id}" aria-pressed="${selected}"`)}</article>`;}).join('')}</div><div class="ha-between"><p class="ha-caption" aria-live="polite"><strong>${s.shortlist.length} ${s.shortlist.length===1?'home':'homes'} shortlisted.</strong> These are options to verify, not reservations.</p>${s.shortlist.length?link('My shortlist is ready →','next'):''}</div>`;
@@ -1223,30 +1377,29 @@ function comparison(){
 }
 function diligence(){
  const p=preferred();if(!p)return insight('Choose a backup first.','Return to your options and shortlist a home.');
- const checks=s.propertyReviews[p.id];
  const items=[['📍','Check the stated fit',`${p.locality} · ${p.size} sq ft studio · stated ${p.pathMinutes}-minute PATH walk.`],['📅','Confirm the move date',`Demo availability: ${p.availability}. Your current lease ends January 15.`],['🔎','Arrange a viewing','Assess the unit’s condition, noise and your actual commute.'],['🗝️','Get the terms in writing','Confirm the unit, base rent, availability and application requirements.']];
- return `<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><div><h2>${p.name}</h2><p class="ha-caption">${cash(p.base)} base/month · ≈ ${cash(m.movingCost)} moving once</p></div>${badge('Demo listing','simulated',p.id)}</div><div class="ha-checklist">${items.map(([icon,title,copy])=>`<div class="ha-check-item"><span class="ha-check-mark" aria-hidden="true">${icon}</span><div><h3>${title}</h3><p>${copy}</p></div></div>`).join('')}</div></section><aside class="ha-panel ha-lilac"><h2>Your backup stays in view.</h2><p class="ha-muted">If renewal stays above your limit, you have a next option to verify.</p><label class="ha-check"><input type="checkbox" data-check="fit" ${checks.fit?'checked':''}><span>I’ve reviewed the stated location, size and PATH access.</span></label><label class="ha-check"><input type="checkbox" data-check="conditions" ${checks.conditions?'checked':''}><span>I’ll confirm availability and written terms before relying on this home.</span></label>${insight('Shortlisted, not reserved.','I’ll keep this home in your decision comparison. No viewing or booking has been made.',false,'🧭')}</aside></div>`;
+ return `<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><div><h2>${p.name}</h2><p class="ha-caption">${cash(p.base)} base/month · ≈ ${cash(m.movingCost)} moving once</p></div>${badge('Demo listing','simulated',p.id)}</div><div class="ha-checklist">${items.map(([icon,title,copy])=>`<div class="ha-check-item"><span class="ha-check-mark" aria-hidden="true">${icon}</span><div><h3>${title}</h3><p>${copy}</p></div></div>`).join('')}</div></section><aside class="ha-panel ha-lilac"><h2>Your backup stays in view.</h2><p class="ha-muted">If renewal stays above your limit, you have a next option to verify.</p><p class="ha-caption">Email ${p.name} to arrange a viewing and confirm availability, fees and written terms.</p>${ui.viewingCopied[p.id]?'':btn('Email property to schedule a viewing','viewing-email')}<p class="ha-caption">${ui.viewingCopied[p.id]?'Viewing email copied. Paste it into your email and send.':'I’ll prepare the message. You copy it and send it from your email.'}</p>${insight('Shortlisted, not reserved.','I’ll keep this home in your decision comparison. No viewing or booking has been made.',false,'🧭')}</aside></div>`;
 }
 function evidence(){
  return `<div class="ha-columns"><section class="ha-panel"><h2>Facts behind your ask</h2><p class="ha-caption">Both begin unselected. Choose either, both, or neither.</p><div class="ha-fact"><label class="ha-check"><input type="checkbox" data-fact="water" ${s.facts.water?'checked':''}><span><strong>Hot-water disruption</strong><small>Six months of disruption, resolved in July. A past experience to ask the landlord to consider.</small></span></label>${badge('Tenant-reported','reported','water')}</div><div class="ha-fact"><label class="ha-check"><input type="checkbox" data-fact="amenities" ${s.facts.amenities?'checked':''}><span><strong>Continuing amenity gaps</strong><small>Relevant to the fee-waiver request. Specific facilities and dates still need supporting records.</small></span></label>${badge('Tenant-reported','reported','amenities')}</div><p class="ha-caption">I won’t invent a payment history or claim automatic compensation.</p></section><aside class="ha-panel ha-peach"><h2>What the evidence can support</h2><div><div class="ha-evidence-row"><span class="ha-badge">Verified</span><p><strong>None yet.</strong> No original documents have been checked.</p></div><div class="ha-evidence-row"><span class="ha-badge ha-reported">Tenant-reported</span><p>The experiences you choose to include.</p></div><div class="ha-evidence-row"><span class="ha-badge ha-calculated">Calculated</span><p>Base-rent changes and the same-year comparison.</p></div><div class="ha-evidence-row"><span class="ha-badge ha-caution">Estimate</span><p>The ${cash(m.movingCost)} one-time moving allowance.</p></div><div class="ha-evidence-row"><span class="ha-badge ha-simulated">Simulated</span><p>Search results and landlord responses.</p></div></div>${link('See the evidence standard →','standards')}</aside></div>`;
 }
 function toneControl(round){
  const d=m.getDraft(round),sent=s.sent[round],value=sent?.tone||d.tone;
- return `<label class="ha-tone">Tone<select data-tone="${round}" aria-label="${round==='initial'?'First request':round==='followup'?'Follow-up':'Further request'} tone" ${sent?'disabled':''}>${Object.entries(m.tones).map(([id,t])=>`<option value="${id}" ${value===id?'selected':''}>${t.label}</option>`).join('')}</select></label>`;
+ return `<label class="ha-tone">Tone<select data-tone="${round}" aria-label="${round==='initial'?'First request':round==='followup'?'Follow-up':'Further request'} tone" ${sent&&round==='further'?'disabled':''}>${Object.entries(m.tones).map(([id,t])=>`<option value="${id}" ${value===id?'selected':''}>${t.label}</option>`).join('')}</select></label>`;
 }
-function draftStatus(round){const d=m.getDraft(round);return s.sent[round]?'Exact sent version · preserved':d.edited?'Edited by you · exact wording kept':'Sample draft · ready for your edits';}
+function draftStatus(round){const d=m.getDraft(round);return s.sent[round]?'Approved copy saved · you can keep editing':d.edited?'Edited by you · exact wording kept':'Sample draft · ready for your edits';}
 function draftPage(round){
  const d=m.getDraft(round),sent=s.sent[round],p=preferred(),f=m.financials();
- return `<div class="ha-columns ha-draft-grid"><section class="ha-panel ha-draft-panel"><div class="ha-panel-head"><div><h2>${round==='initial'?'Your first request':'Your follow-up'}</h2><p class="ha-caption">To: Fictional Leasing Team · ${sent?'sent in demo':'not sent'}</p></div>${toneControl(round)}</div><textarea data-draft="${round}" aria-label="${round==='initial'?'First request':'Follow-up'} draft" spellcheck="true" ${sent?'readonly':''}></textarea><div class="ha-between"><span class="ha-edit-status ${d.edited?'is-edited':''}" data-edit-status aria-live="polite">${draftStatus(round)}</span>${sent?'':link('Restore sample','restore',`data-round="${round}"`)}</div>${d.needsReview&&!sent?'<p class="ha-caption">Your plan or evidence changed. Your edits are intact; check that this wording still reflects your intent.</p>':''}</section><aside class="ha-panel ha-lilac"><h2>Your private strategy.</h2><div>${row('Your requested base',cash(s.plan.requestedBase)+'/month')}${row('Your private ceiling',cash(s.plan.ceiling)+'/month')}${row('Current offer',cash(m.latestOffer().total)+'/month')}</div><p class="ha-caption">The ceiling includes the amenity fee. It stays private.</p>${insight(round==='initial'?'You approve every word.':'Your exact words, sent.',round==='initial'?'Choose a tone, then make it yours.':'Review your edits and approve this version.',false,'✎')}<p class="ha-caption"><strong>Your exit option:</strong> ${p?p.name+' · shortlisted, not reserved.':'No backup selected yet.'}</p>${round==='followup'?link('Read your first sent message →','history','data-round="initial"'):link('Review selected evidence →','evidence')}</aside></div>`;
+ return `<div class="ha-columns ha-draft-grid"><section class="ha-panel ha-draft-panel"><div class="ha-panel-head"><div><h2>${round==='initial'?'Your first request':'Your follow-up'}</h2><p class="ha-caption">To: Fictional Leasing Team · ${sent?'approved · you send it yourself':'draft · not sent'}</p></div>${toneControl(round)}</div><textarea data-draft="${round}" aria-label="${round==='initial'?'First request':'Follow-up'} draft" spellcheck="true" ></textarea><div class="ha-between"><span class="ha-edit-status ${d.edited?'is-edited':''}" data-edit-status aria-live="polite">${draftStatus(round)}</span>${sent?'':link('Restore sample','restore',`data-round="${round}"`)}</div>${round==='followup'&&s.approvedVersions.followup.length?'<div class="ha-draft-history"><p class="ha-caption">Your approved copies stay in history while you edit the wording or try another tone.</p>'+link('Read approved follow-up versions →','history','data-round="followup"')+'</div>':''}${d.needsReview&&!sent?'<p class="ha-caption">Check the wording against your current plan and evidence before approving.</p>':''}</section><details class="ha-panel ha-lilac ha-strategy" ${root.ownerDocument.defaultView?.matchMedia('(min-width:701px)').matches?'open':''}><summary>Your private strategy.</summary><div><div>${row('Your requested base',cash(s.plan.requestedBase)+'/month')}${row('Your private ceiling',cash(s.plan.ceiling)+'/month')}${row('Current offer',cash(m.latestOffer().total)+'/month')}</div><p class="ha-caption">The ceiling includes the amenity fee. It stays private.</p>${insight(round==='initial'?'You approve every word.':'Your words. You send them.',round==='initial'?'Choose a tone, then make it yours.':'Approve and copy this version, then send it from your email.',false,'✎')}<p class="ha-caption"><strong>Your exit option:</strong> ${p?p.name+' · shortlisted, not reserved.':'No backup selected yet.'}</p>${round==='followup'?link('Read your approved first message →','history','data-round="initial"'):link('Review selected evidence →','evidence')}</div></details></div>`;
 }
-function sentReceipt(round){const sent=s.sent[round];return `<div class="ha-receipt"><span aria-hidden="true">✓</span><div><strong>${sent?.edited?'Your edited '+(round==='initial'?'request':'follow-up'):'Your '+(round==='initial'?'request':'follow-up')} was sent exactly as approved in the demo.</strong>${link('Read the exact message →','history',`data-round="${round}"`)}</div></div>`;}
+function sentReceipt(round){return `<div class="ha-receipt"><span aria-hidden="true">✎</span><div><strong>Your approved request is saved. You send it from your own email.</strong>${link('Read the exact message →','history',`data-round="${round}"`)}</div></div>`;}
 function firstReply(){
  const o=s.firstOffer,f=m.financials(),p=preferred(),cut=m.original.base-o.base,head=s.plan.ceiling-o.total;
  return `${sentReceipt('initial')}<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><h2>The first counteroffer</h2>${badge('Simulated response','simulated','first-reply')}</div><div><strong class="ha-money">${cash(o.total)}<small>/month offered</small></strong><p class="ha-caption">${offerTerms(o)}</p></div><div>${row('Base reduction vs original',cash(cut)+'/month · '+m.pct(cut,m.original.base))}${row('Base increase vs current',signedMoney(o.base-m.current.base)+'/month · '+signedPct(o.base-m.current.base,m.current.base))}${row('Potential annual base savings',cash(cut*12))}</div>${link('See each calculation →','math-first')}</section><aside class="ha-panel ${head>=0?'ha-sage':'ha-peach'}"><h2>${head>=0?'Your limit is met.':'Your ceiling still protects you.'}</h2><p>${head>=0?cash(o.total)+' is within your ceiling. Your original target and fee waiver are still worth weighing.':cash(o.total)+' remains '+cash(-head)+'/month above your private ceiling.'}</p>${insight(head>=0?'Renewing is now an option.':'You have a reason to ask again.',head>=0?'Compare the offer with your target and your shortlisted home before deciding.':'A separate follow-up can ask for '+cash(s.plan.requestedBase)+' base rent and the amenity fee waived.',head<0)}<p class="ha-caption">${p?'<strong>'+p.name+'</strong> remains shortlisted at '+cash(p.base)+' base/month. Availability is not confirmed.':'Shortlist a home to keep another path in view.'}</p>${head>=0?link('I still want to prepare a follow-up →','followup'):link('Revisit my backup →','backup')}</aside></div>`;
 }
 function finalReply(){
  const f=m.financials(),p=preferred(),o=f.offer;
- return `${sentReceipt('followup')}${f.withinCeiling?`<section class="ha-celebrate"><span class="ha-celebrate-mark" aria-hidden="true">✓</span><div><h2>${f.requestedTermsMet?'Your requested terms are on the table.':'Within your limit. Review the remaining terms.'}</h2><p>${cash(o.total)} per month is ${f.headroom?cash(f.headroom)+' below':'at'} your private ceiling.${f.requestedTermsMet?' Your requested base rent is met, and the amenity fee is waived.':''}</p></div></section>`:insight('This offer is still above your ceiling.',cash(o.total)+' is '+cash(-f.headroom)+'/month beyond your limit. You can keep negotiating or pursue your shortlisted backup.',true,'🧭')}<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><h2>${cash(o.total)}<span class="ha-caption"> /month offered</span></h2>${badge('Simulated response','simulated','final-reply')}</div><p class="ha-caption">${offerTerms(o)}</p><div><div class="ha-movement"><span>Base reduction since first counteroffer</span><strong>${cash(f.previousReduction)}/month · ${f.previousReductionPct}</strong></div><div class="ha-movement"><span>Base reduction since original offer</span><strong>${cash(f.originalReduction)}/month · ${f.originalReductionPct}</strong></div><div class="ha-movement"><span>Base change from your current lease</span><strong>${signedMoney(f.currentIncrease)}/month · ${signedPct(f.currentIncrease,m.current.base)}</strong></div></div>${link('See the calculation →','math-final')}</section><aside class="ha-panel ha-lilac"><span class="ha-label">Potential annual base savings</span><strong class="ha-money">${cash(f.annualBaseSavings)}</strong><p class="ha-caption">Vs the original demand, if these terms are accepted for 12 months.</p><p>${f.withinCeiling?'You can make this decision from a stronger position.':'Your limit gives you a clear reason to keep another path open.'}</p><p class="ha-caption">${p?'<strong>'+p.name+'</strong> is still in your shortlist. Confirm its availability before committing.':'Your next step can include shortlisting a backup.'}</p>${link('Preview the other demo reply →','other-outcome')}</aside></div>`;
+ return `${f.withinCeiling?`<section class="ha-celebrate"><span class="ha-celebrate-mark" aria-hidden="true">✓</span><div><h2>${f.requestedTermsMet?'Your requested terms are on the table.':'Within your limit. Review the remaining terms.'}</h2><p>${cash(o.total)} per month is ${f.headroom?cash(f.headroom)+' below':'at'} your private ceiling.${f.requestedTermsMet?' Your requested base rent is met, and the amenity fee is waived.':''}</p></div></section>`:insight('This offer is still above your ceiling.',cash(o.total)+' is '+cash(-f.headroom)+'/month beyond your limit. You can keep negotiating or pursue your shortlisted backup.',true,'🧭')}<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><h2>${cash(o.total)}<span class="ha-caption"> /month offered</span></h2>${badge('Simulated response','simulated','final-reply')}</div><p class="ha-caption">${offerTerms(o)}</p><div><div class="ha-movement"><span>Base reduction since first counteroffer</span><strong>${cash(f.previousReduction)}/month · ${f.previousReductionPct}</strong></div><div class="ha-movement"><span>Base reduction since original offer</span><strong>${cash(f.originalReduction)}/month · ${f.originalReductionPct}</strong></div><div class="ha-movement"><span>Base change from your current lease</span><strong>${signedMoney(f.currentIncrease)}/month · ${signedPct(f.currentIncrease,m.current.base)}</strong></div></div>${link('See the calculation →','math-final')}</section><aside class="ha-panel ha-lilac"><span class="ha-label">Potential annual base savings</span><strong class="ha-money">${cash(f.annualBaseSavings)}</strong><p class="ha-caption">Vs the original demand, if these terms are accepted for 12 months.</p><p>${f.withinCeiling?'You can make this decision from a stronger position.':'Your limit gives you a clear reason to keep another path open.'}</p><p class="ha-caption">${p?'<strong>'+p.name+'</strong> is still in your shortlist. Confirm its availability before committing.':'Your next step can include shortlisting a backup.'}</p>${link('Preview the other demo reply →','other-outcome')}</aside></div>`;
 }
 function decision(){
  const f=m.financials(),c=m.comparison(),p=c.preferred,r=m.recommendation();
@@ -1257,18 +1410,21 @@ function completion(){
  const c=s.completion;if(!c)return insight('Choose your direction first.','Your decision screen will help you compare the next steps.');
  const count=c.shortlist.length,renew=c.choice==='renew',move=c.choice==='move',moveFirstYear=c.backup?.firstYear,moveDifference=move?m.original.base*12-moveFirstYear:0;
  const moveDifferenceText=moveDifference>0?cash(moveDifference)+' less':moveDifference<0?cash(-moveDifference)+' more':'Same estimated cost';
- const shortTitles={offer:'Offer arrived',plan:'You set the ask',backup:'Backup shortlisted',initial:'First request',first:'First counteroffer',followup:'Your follow-up',final:'Latest terms',decision:'Your decision'};
- const entries=m.timeline();
- return `<div class="ha-stat-row"><div class="ha-stat"><span class="ha-label">${move?'Estimated first year of your move':renew?'Potential annual base savings':'Latest renewal: annual base reduction'}</span><strong>${move?'≈ '+cash(moveFirstYear):cash(c.potentialAnnualBaseSavings)}</strong><small>${move?cash(c.backup.base)+' base × 12 + ≈ '+cash(m.movingCost)+' moving once':cash(c.monthlyBaseReduction)+'/month · '+c.baseReductionPct+' below the original renewal base'}</small></div><div class="ha-stat"><span class="ha-label">${move?'Compared with the original renewal':'Your private ceiling'}</span><strong>${move?moveDifferenceText:c.withinCeiling?(c.headroom?cash(c.headroom)+' below':'Met exactly'):cash(-c.headroom)+' above'}</strong><small>${move?'Vs '+cash(m.original.base*12)+' original base rent over 12 months. Moving is an estimate.':c.withinCeiling?'The latest offer fits the limit you set.':'The renewal still exceeds your limit; your chosen next step reflects that.'}</small></div><div class="ha-stat"><span class="ha-label">Your alternatives</span><strong>${count} ${count===1?'home':'homes'} kept</strong><small>${c.backup?c.backup.name+' is your preferred backup.':'You can return to options to choose a backup.'} Availability needs confirmation.</small></div></div><div class="ha-between"><h2>How you got here</h2><span class="ha-badge ha-positive">${renew?'Renewal direction confirmed':move?'Move direction confirmed':'Further request sent in demo'}</span></div><ol class="ha-timeline" aria-label="Your complete renewal journey">${entries.map(e=>`<li><span class="ha-time-title">${shortTitles[e.id]||esc(e.title)}</span><strong>${e.kind==='human'?(e.id==='followup'&&s.sent.followup?.edited?'Your edited words':'Approved by you'):esc(e.value)}</strong><small>${esc(e.detail)}</small></li>`).join('')}</ol>`;
+ const copied=ui.confirmationCopiedFor===c.id;
+ const nextTitle=renew?'Make it official, on your terms.':move?'Take the next step with your backup.':'Keep the conversation moving.';
+ const nextCopy=renew?`Email your landlord to confirm ${cash(c.offer.base)} base rent, ${c.offer.amenity?cash(c.offer.amenity)+' amenity fee':'the amenity fee waiver'} and the 12-month term in writing. Review their confirmation before signing.`:move?`Email ${esc(c.backup.name)} to arrange a viewing and confirm availability and written terms before you commit.`:'Paste your approved request into your email and send it yourself. Ask for written terms and keep your backup in view.';
+ const nextAction=renew?(copied?'':btn('Prepare my confirmation email →','confirmation-email')):move?(ui.viewingCopied[c.backup.id]?'':btn('Prepare my viewing email →','viewing-email')):link('Read my approved request →','history','data-round="further"');
+ const nextStatus=renew&&copied?'Confirmation email copied. Send it from your own email, then review the written terms.':move&&ui.viewingCopied[c.backup.id]?'Viewing email copied. Send it from your own email to arrange the viewing.':'';
+ return `<section class="ha-achievement-overview" aria-label="Your achievement"><div class="ha-achievement-heading"><h1>${renew&&c.achievedTerms?'<span class="ha-celebrate-mark" aria-hidden="true">✓</span>':''}${getTitle()[1]}</h1><p class="ha-subtitle">${getTitle()[2]}</p></div></section><div class="ha-stat-row ha-achievements" aria-label="Your journey results"><div class="ha-stat"><span class="ha-label">${move?'Estimated first year of your move':renew?'Potential annual base savings':'Latest renewal: annual base reduction'}</span><strong>${move?'≈ '+cash(moveFirstYear):cash(c.potentialAnnualBaseSavings)}</strong><small>${move?cash(c.backup.base)+' base × 12 + ≈ '+cash(m.movingCost)+' moving once':cash(c.monthlyBaseReduction)+'/month · '+c.baseReductionPct+' below the original renewal base'}</small></div><div class="ha-stat"><span class="ha-label">${move?'Compared with the original renewal':'Your private ceiling'}</span><strong>${move?moveDifferenceText:c.withinCeiling?(c.headroom?cash(c.headroom)+' below':'Met exactly'):cash(-c.headroom)+' above'}</strong><small>${move?'Vs '+cash(m.original.base*12)+' original base rent over 12 months. Moving is an estimate.':c.withinCeiling?'The latest offer fits the limit you set.':'The renewal still exceeds your limit; your chosen next step reflects that.'}</small></div><div class="ha-stat"><span class="ha-label">Your alternatives</span><strong class="ha-backup-value"><span>${count}</span><span>Additional Backup ${count===1?'Home':'Homes'} Kept</span></strong><small>${c.backup?c.backup.name+' is your preferred backup.':'You can return to options to choose a backup.'} Availability needs confirmation.</small></div></div><section class="ha-close-loop" aria-label="Your next step"><div><p class="ha-kicker">YOUR NEXT STEP · BEFORE DECEMBER 8</p><h2>${nextTitle}</h2><p class="ha-caption">${nextCopy}</p>${nextStatus?`<p class="ha-edit-status" role="status">${nextStatus}</p>`:''}</div>${nextAction}</section>`;
 }
 function home(){
  const f=m.financials(),c=s.completion,p=preferred();
  const move=c?.choice==='move',moveDifference=move?m.original.base*12-c.backup.firstYear:0;
- const outcomeCopy=!c?'I’ll help you compare the increase, set your limits, and choose your next step.':move?(moveDifference>0?'Approximately '+cash(moveDifference)+' lower':moveDifference<0?'Approximately '+cash(-moveDifference)+' higher':'The same estimated first-year cost')+' than the original '+cash(m.original.base*12)+' annual renewal base. Confirm the home and moving quote before committing.':c.choice==='renew'?(c.achievedTerms?'Your requested terms were achieved in the demo. ':'')+cash(c.potentialAnnualBaseSavings)+' potential annual base savings versus the original demand.':'The latest renewal offer carries '+cash(c.potentialAnnualBaseSavings)+' potential annual base savings versus the original demand. Your further request is awaiting a reply.';
- return `<div class="ha-columns"><section class="ha-panel ${c?'ha-sage':''}"><div class="ha-panel-head"><h2>${c?c.choice==='renew'?'Your renewal direction is confirmed.':move?'Your next step: explore your backup.':'Your further request was sent.' :'Your renewal is in progress.'}</h2><span class="ha-badge ${c?'ha-positive':'ha-simulated'}">${c?'Journey saved':'Demo journey'}</span></div><div><span class="ha-label">${move?'Estimated first year at '+c.backup.name:'Latest proposed rent + amenity'}</span><strong class="ha-money">${move?'≈ '+cash(c.backup.firstYear):cash(f.offer.total)}${move?'':'<small>/month</small>'}</strong><p class="ha-caption">${move?cash(c.backup.base)+' base × 12 + ≈ '+cash(m.movingCost)+' moving once':offerTerms(f.offer)}</p></div><p>${outcomeCopy}</p><div class="ha-flex">${btn(c?'View my journey →':'Continue my journey →','resume')}${link('Start a new demo','restart')}</div></section><aside class="ha-panel ha-peach"><h2>Your options stay with you.</h2>${p?`<div>${row('Preferred backup',p.name)}${row('Base rent',cash(p.base)+'/month')}${row('One-time moving estimate','≈ '+cash(m.movingCost))}</div><p class="ha-caption">Shortlisted, not reserved. Confirm availability before relying on this alternative.</p>${link('Review my shortlist →','options')}`:'<p>No home is shortlisted yet. Choose an alternative so the renewal is not your only path.</p>'+link('Explore my options →','options')}</aside></div>`;
+ const outcomeCopy=!c?'I’ll help you compare the increase, set your limits, and choose your next step.':move?(moveDifference>0?'Approximately '+cash(moveDifference)+' lower':moveDifference<0?'Approximately '+cash(-moveDifference)+' higher':'The same estimated first-year cost')+' than the original '+cash(m.original.base*12)+' annual renewal base. Confirm the home and moving quote before committing.':c.choice==='renew'?(c.achievedTerms?'Your requested terms were achieved in the demo. ':'')+cash(c.potentialAnnualBaseSavings)+' potential annual base savings versus the original demand.':'The latest renewal offer carries '+cash(c.potentialAnnualBaseSavings)+' potential annual base savings versus the original demand. Send your copied further request from your email, then await a reply.';
+ return `<div class="ha-columns"><section class="ha-panel ${c?'ha-sage':''}"><div class="ha-panel-head"><h2>${c?c.choice==='renew'?'Your renewal direction is confirmed.':move?'Your next step: explore your backup.':'Your further request is ready to send.' :'Your renewal is in progress.'}</h2><span class="ha-badge ${c?'ha-positive':'ha-simulated'}">${c?'Journey saved':'Demo journey'}</span></div><div><span class="ha-label">${move?'Estimated first year at '+c.backup.name:'Latest proposed rent + amenity'}</span><strong class="ha-money">${move?'≈ '+cash(c.backup.firstYear):cash(f.offer.total)}${move?'':'<small>/month</small>'}</strong><p class="ha-caption">${move?cash(c.backup.base)+' base × 12 + ≈ '+cash(m.movingCost)+' moving once':offerTerms(f.offer)}</p></div><p>${outcomeCopy}</p><div class="ha-flex">${btn(c?'View my journey →':'Continue my journey →','resume')}${link('Start a new demo','restart')}</div></section><aside class="ha-panel ha-peach"><h2>Your options stay with you.</h2>${p?`<div>${row('Preferred backup',p.name)}${row('Base rent',cash(p.base)+'/month')}${row('One-time moving estimate','≈ '+cash(m.movingCost))}</div><p class="ha-caption">Shortlisted, not reserved. Confirm availability before relying on this alternative.</p>${link('Review my shortlist →','options')}`:'<p>No home is shortlisted yet. Choose an alternative so the renewal is not your only path.</p>'+link('Explore my options →','options')}</aside></div>`;
 }
-function fitEditor(editor){if(!editor)return;editor.style.height='';const needed=editor.scrollHeight+2;if(needed>editor.clientHeight+2)editor.style.height=needed+'px';}
-function fitEditors(){root.querySelectorAll('textarea[data-draft]').forEach(fitEditor);}
+function fitEditor(editor){if(editor)editor.style.removeProperty('height');}
+function fitEditors(){root.querySelectorAll('textarea[data-draft],textarea[data-viewing-email],textarea[data-confirmation-email]').forEach(fitEditor);}
 function captureEditor(){const editor=root.querySelector('textarea[data-draft]:not([readonly])');if(editor)m.setDraft(editor.dataset.draft,editor.value);}
 function savePlan(){
  if(s.planLocked)return true;
@@ -1293,7 +1449,8 @@ function go(page){
 function showModal(title,content,actions='',kind='detail'){
  if(!modal.firstElementChild)ui.modalTrigger=root.ownerDocument.activeElement;
  ui.modalKind=kind;main.inert=true;
- modal.innerHTML=`<section class="ha-dialog" role="dialog" aria-modal="true" aria-labelledby="ha-dialog-title"><div class="ha-dialog-head"><div><p class="ha-kicker">${kind==='review'?'YOUR APPROVAL':kind==='editor'?'YOUR NEXT REQUEST':'A CLOSER LOOK'}</p><h2 id="ha-dialog-title">${title}</h2></div><button type="button" class="ha-close cursor-interaction" data-act="close" aria-label="Close panel">×</button></div><div class="ha-dialog-content">${content}</div><div class="ha-dialog-actions">${actions||btn('Back to my journey','close',true)}</div></section>`;
+ modal.innerHTML=`<section class="ha-dialog" role="dialog" aria-modal="true" aria-labelledby="ha-dialog-title"><div class="ha-dialog-head"><div><p class="ha-kicker">${kind==='review'?'YOUR APPROVAL':kind==='editor'?'YOUR NEXT REQUEST':'A CLOSER LOOK'}</p><h2 id="ha-dialog-title">${title}</h2></div><button type="button" class="ha-close cursor-interaction" data-act="close" aria-label="Close panel">×</button></div><div class="ha-dialog-content" role="region" tabindex="0" aria-label="${esc(title)} details">${content}</div><div class="ha-dialog-actions">${actions||btn('Back to my journey','close',true)}</div></section>`;
+ modal.scrollTop=0;
  modal.querySelector('.ha-close').focus({preventScroll:true});
 }
 function closeModal(restore=true){modal.innerHTML='';main.inert=false;ui.modalKind=null;if(restore&&ui.modalTrigger?.isConnected)ui.modalTrigger.focus({preventScroll:true});ui.modalTrigger=null;}
@@ -1302,7 +1459,46 @@ function showReview(round){
  captureEditor();const result=m.prepareReview(round);
  if(!result.ok){showModal('Check your request',`<p>${esc(result.error)}</p>`);return;}
  ui.review=result.review;const d=result.review;
- showModal(d.edited?'Approve your edited '+(round==='followup'?'follow-up':round==='initial'?'first request':'request'):'Approve this exact '+(round==='followup'?'follow-up':'request'),`<div class="ha-between"><p class="ha-caption">To: ${d.recipient}</p><span class="ha-badge ${d.edited?'ha-reported':'ha-positive'}">${d.edited?'Edited by you':'Your chosen wording'}</span></div><p class="ha-caption">${d.edited?'This is the exact text you edited.':'This is the exact wording that will be used.'} ${d.needsReview?'Your context changed; check the facts and terms before approving.':''}</p><div class="ha-letter" data-reviewed-text>${esc(d.text)}</div><label class="ha-check"><input type="checkbox" id="ha-approve-confirm"><span>I approve this exact wording and recipient.</span></label><p class="ha-error" role="alert" id="ha-review-error"></p><p class="ha-caption">This records a demo message. No real email is sent.</p>`,btn('Keep editing','keep-editing',true)+btn('Approve & send in demo','send-approved'), 'review');
+ showModal(d.edited?'Approve your edited '+(round==='followup'?'follow-up':round==='initial'?'first request':'request'):'Approve this exact '+(round==='followup'?'follow-up':'request'),`<div class="ha-between"><p class="ha-caption">To: ${d.recipient}</p><span class="ha-badge ${d.edited?'ha-reported':'ha-positive'}">${d.edited?'Edited by you':'Your chosen wording'}</span></div><p class="ha-caption">${d.edited?'This is the exact text you edited.':'This is the exact wording that will be used.'} ${d.needsReview?'Your context changed; check the facts and terms before approving.':''}</p><div class="ha-letter" data-reviewed-text>${esc(d.text)}</div><p class="ha-error" role="alert" id="ha-review-error"></p><p class="ha-caption">You approve this wording and recipient, then copy the message to send from your own email.${round==='further'?'':' The demo continues with a simulated reply.'}</p>`,btn('Keep editing','keep-editing',true)+btn('Approve & copy','copy-approved'), 'review');
+}
+function showViewingEmail(){
+ const p=preferred();if(!p)return;
+ const text=`Subject: Viewing request — ${p.name} studio
+
+Hello ${p.name} team,
+
+I’m interested in the studio listed at ${cash(p.base)} base rent per month. Could we schedule a viewing? Please let me know the available times.
+
+Could you also confirm availability around ${p.availability}, the full fee schedule and the written rental terms?
+
+Thank you,
+Mia`;
+ showModal('Schedule a viewing at '+p.name,`<p class="ha-caption">Copy this email into your mail app, add the property’s verified email address, and send it yourself.</p><textarea data-viewing-email aria-label="Viewing email draft" spellcheck="true"></textarea><p class="ha-caption">Demo listing · no viewing is booked by Homies.</p><p class="ha-error" role="alert" data-copy-error></p>`,btn('Back to my backup','close',true)+btn('Copy viewing email','copy-viewing'));
+ const editor=modal.querySelector('[data-viewing-email]');editor.value=text;fitEditor(editor);
+}
+function showConfirmationEmail(){
+ const c=s.completion;if(c?.choice!=='renew')return;
+ const terms=`${cash(c.offer.base)} base rent per month, ${c.offer.amenity?'plus the '+cash(c.offer.amenity)+' monthly amenity fee':'with the amenity fee waived'}`;
+ if(ui.confirmationDraft?.completionId!==c.id)ui.confirmationDraft={completionId:c.id,text:`Subject: Written renewal terms
+
+Dear Leasing Team,
+
+Please send the written renewal reflecting your proposed terms: ${terms}, for 12 months from January 16, 2027 to January 15, 2028. Please include the full fee schedule.
+
+I’ll review the written terms and confirm my decision directly before signing. Please send them before my final-response deadline of ${m.deadline}.
+
+Kind regards,
+Mia`};
+ showModal('Close the loop with your landlord',`<p class="ha-caption">To: Fictional Leasing Team · edit this email, then copy it to send yourself.</p><textarea data-confirmation-email aria-label="Written confirmation email draft" spellcheck="true"></textarea><p class="ha-caption">Request the written terms for your review. This does not send an email or accept a lease.</p><p class="ha-error" role="alert" data-copy-error></p>`,btn('Keep reviewing','close',true)+btn('Copy confirmation email','copy-confirmation'));
+ const editor=modal.querySelector('[data-confirmation-email]');editor.value=ui.confirmationDraft.text;fitEditor(editor);
+}
+async function copyMessage(text){
+ try {if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text);return true;}}catch{}
+ const field=root.ownerDocument.createElement('textarea'),active=root.ownerDocument.activeElement;
+ field.value=text;field.setAttribute('aria-label','Message to copy');field.style.cssText='position:fixed;top:0;left:0;width:1px;height:1px;opacity:0';
+ modal.append(field);field.select();
+ let copied=false;try{copied=root.ownerDocument.execCommand('copy');}catch{}
+ field.remove();active?.focus({preventScroll:true});return copied;
 }
 function showFurther(){
  if(!s.sent.initial){go(5);return;}
@@ -1312,7 +1508,12 @@ function showFurther(){
  showModal('Your further request',`<div class="ha-panel-head"><p class="ha-caption">To: Fictional Leasing Team · not sent</p>${toneControl('further')}</div><textarea data-draft="further" aria-label="Further request draft" spellcheck="true"></textarea><div class="ha-between"><span class="ha-edit-status ${d.edited?'is-edited':''}" data-edit-status>${draftStatus('further')}</span>${link('Restore sample','restore','data-round="further"')}</div><p class="ha-caption">Your current offer and shortlist remain in view. This request needs a fresh approval.</p>`,btn('Keep my options open','close',true)+btn('Review this draft →','review-further'),'editor');
  const editor=modal.querySelector('textarea');editor.value=d.text;fitEditor(editor);
 }
-function showHistory(round){const sent=s.sent[round];showModal(sent?'The exact '+(round==='initial'?'first request':round==='followup'?'follow-up':'further request')+' used':'No sent message yet',sent?`<div class="ha-between"><p class="ha-caption">To: ${sent.recipient} · sent in demo</p><span class="ha-badge ha-positive">${sent.edited?'Your edited wording':'Approved by you'}</span></div><div class="ha-letter" data-history-text>${esc(sent.text)}</div><p class="ha-caption">This record preserves the exact text you approved. Your private ceiling is not added to it.</p>`:'<p>Review and approve a request to create its sent history.</p>');}
+function showHistory(round){
+ const versions=s.approvedVersions[round]||[],current=s.sent[round];
+ const name=round==='initial'?'first request':round==='followup'?'follow-up':'further request';
+ const content=versions.length?versions.slice().reverse().map((approved,index)=>`<section aria-label="Approved ${name} version ${approved.revision}"><div class="ha-between"><p class="ha-caption">${approved===current?'Current approved copy':'Previous approved copy'} · version ${approved.revision} · ${m.tones[approved.tone].label}</p><span class="ha-badge ha-positive">${approved.edited?'Your edited wording':'Approved by you'}</span></div><p class="ha-caption">To: ${approved.recipient} · approved for you to send</p><div class="ha-letter" data-history-text>${esc(approved.text)}</div></section>`).join('')+'<p class="ha-caption">These copies preserve the exact text you approved. They do not confirm an email was sent. Your private ceiling is not added.</p>':'<p>Review and approve a request to preserve its exact wording.</p>';
+ showModal(versions.length?'Your approved '+name+(versions.length>1?' versions':''):'No approved message yet',content);
+}
 function showMath(stage){
  const o=stage==='opening'?m.original:stage==='first'?s.firstOffer:m.latestOffer(),previous=stage==='opening'?null:stage==='first'?m.original:s.firstOffer;
  const reduction=m.original.base-o.base,increase=o.base-m.current.base;
@@ -1340,7 +1541,7 @@ function decide(){
   const f=m.financials();showModal('Confirm your renewal direction',`<p>You choose to renew at the proposed <strong>${cash(f.offer.total)}/month</strong>, subject to confirming the written terms.</p>${insight('Your next step is clear.','Check the base rent, '+(f.offer.amenity?'retained '+cash(f.offer.amenity)+' amenity fee':'amenity waiver')+' and 12-month term in writing, then respond by December 8.')}<p class="ha-caption">This records your direction. It does not sign or accept a lease.</p>`,btn('Keep considering','close',true)+btn('Confirm my direction','complete-renew'));return;
  }
  if(ui.choice==='move'){
-  const p=preferred();if(!p||!m.isBackupReviewed()){showModal('Get your backup ready to verify',`<p>${p?'Review '+p.name+' before pursuing the move.':'Shortlist a home before choosing to pursue a move.'} Keep your renewal response date in view.</p>`,btn(p?'Review my backup':'Choose a backup',p?'backup':'options'));return;}
+  const p=preferred();if(!p){showModal('Get your backup ready to verify',`<p>${p?'Review '+p.name+' before pursuing the move.':'Shortlist a home before choosing to pursue a move.'} Keep your renewal response date in view.</p>`,btn(p?'Review my backup':'Choose a backup',p?'backup':'options'));return;}
   if(p.base>s.plan.ceiling){showModal('This backup exceeds your ceiling',`<p>${p.name} has a ${cash(p.base)} base rent, above your ${cash(s.plan.ceiling)} private ceiling. Reconsider the shortlist before choosing this move.</p>`,btn('Review my shortlist','options'));return;}
   showModal('Pursue '+p.name+' with a clear plan',`<div class="ha-checklist"><p><strong>1.</strong> Arrange a viewing and confirm the move date.</p><p><strong>2.</strong> Get the unit’s written terms and a moving quote.</p><p><strong>3.</strong> Review the application and lease before committing.</p></div><p class="ha-caption">Plan for the estimated ${cash(m.movingCost)} move once. Your renewal response is still due December 8. No home has been booked.</p>`,btn('Keep considering','close',true)+btn('Confirm my move direction','complete-move'));return;
  }
@@ -1366,8 +1567,8 @@ function closeEvals(){
  root.ownerDocument.defaultView?.scrollTo({top:ui.evalsScroll,left:0,behavior:'instant'});
  live.textContent='Returned to your journey.';
 }
-function showDemo(){if(ui.page===0&&!savePlan())return;showModal('Demo controls',`<p>This is a local, simulated journey. No live search, real email, booking or lease acceptance takes place.</p><p class="ha-caption">Your edits are preserved exactly. The demo response uses your saved requested rent and the selected path.</p>${s.finalOffer?'<p>The final response is already shown. You can preview the alternate response while preserving the first two sent messages.</p>':`<label class="ha-preference">Simulated final response<select id="ha-outcome"><option value="success" ${s.outcome==='success'?'selected':''}>Requested terms met</option><option value="hold" ${s.outcome==='hold'?'selected':''}>Landlord holds the counteroffer</option></select></label>`}`,btn('Restart demo','restart',true)+btn(s.finalOffer?'Preview other response':'Apply response path',s.finalOffer?'other-outcome':'apply-outcome'));}
-root.addEventListener('click',e=>{
+function showDemo(){if(ui.page===0&&!savePlan())return;showModal('Demo controls',`<p>This is a local, simulated journey. No live search, real email, booking or lease acceptance takes place.</p><p class="ha-caption">Your edits are preserved exactly. The demo response uses your saved requested rent and the selected path.</p>${s.finalOffer?'<p>The final response is already shown. You can preview the alternate response while preserving the first two approved messages.</p>':`<label class="ha-preference">Simulated final response<select id="ha-outcome"><option value="success" ${s.outcome==='success'?'selected':''}>Requested terms met</option><option value="hold" ${s.outcome==='hold'?'selected':''}>Landlord holds the counteroffer</option></select></label>`}`,btn('Restart demo','restart',true)+btn(s.finalOffer?'Preview other response':'Apply response path',s.finalOffer?'other-outcome':'apply-outcome'));}
+root.addEventListener('click',async e=>{
  if(!e.target.closest('.ha-account'))closeAccount();
  const b=e.target.closest('button');if(!b||b.disabled)return;
  if(b.dataset.page!==undefined){go(Number(b.dataset.page));return;}
@@ -1378,10 +1579,10 @@ root.addEventListener('click',e=>{
  if(a==='close'){captureEditor();closeModal();return;}
  if(a==='home'){go(-1);return;}
  if(a==='resume'){go(s.completion?10:ui.resumePage);return;}
- if(a==='restart'){closeModal(false);ui.evals=false;m.restart();ui.choice=null;ui.review=null;ui.page=0;ui.resumePage=0;render();live.textContent='New demo started. Your plan and shortlist have been reset.';return;}
+ if(a==='restart'){closeModal(false);ui.evals=false;m.restart();ui.viewingCopied={};ui.confirmationCopiedFor=null;ui.confirmationDraft=null;ui.choice=null;ui.review=null;ui.page=0;ui.resumePage=0;render();live.textContent='New demo started. Your plan and shortlist have been reset.';return;}
  if(a==='back'){go(Math.max(0,ui.page-1));return;}
  if(a==='save-plan'){if(savePlan())go(1);return;}
- if(a==='next'){if(ui.page===1&&!s.shortlist.length)return;if(ui.page===3&&!m.isBackupReviewed())return;go(ui.page+1);return;}
+ if(a==='next'){if(ui.page===1&&!s.shortlist.length)return;go(ui.page+1);return;}
  if(a==='options'){go(1);return;}if(a==='compare'){go(2);return;}if(a==='backup'){go(3);return;}if(a==='evidence'){go(4);return;}if(a==='followup'){go(7);return;}if(a==='decision-page'){go(9);return;}
  if(a==='shortlist'){m.toggleShortlist(b.dataset.property);ui.choice=null;render();main.querySelector(`[data-act="shortlist"][data-property="${b.dataset.property}"]`)?.focus({preventScroll:true});return;}
  if(a==='property'){showSource(b.dataset.property);return;}if(a==='source'){showSource(b.dataset.source);return;}if(a==='standards'){showSource('standards');return;}
@@ -1390,10 +1591,36 @@ root.addEventListener('click',e=>{
  if(a==='review'){showReview(getRound());return;}if(a==='review-further'){showReview('further');return;}
  if(a==='keep-editing'){const round=ui.review?.round;if(round==='further')showFurther();else{closeModal();main.querySelector('textarea')?.focus();}return;}
  if(a==='restore'){const round=b.dataset.round;m.restoreSample(round);if(round==='further'){showFurther();modal.querySelector('textarea').focus();}else{render();main.querySelector('textarea').focus();}return;}
- if(a==='send-approved'){
-  const review=ui.review,result=m.approveAndSendDemo(review?.round,review,!!modal.querySelector('#ha-approve-confirm')?.checked);
+ if(a==='confirmation-email'){showConfirmationEmail();return;}
+ if(a==='copy-confirmation'){
+  const editor=modal.querySelector('[data-confirmation-email]'),completionId=s.completion?.id;
+  if(!editor||!completionId)return;
+  b.disabled=true;const copied=await copyMessage(editor.value);b.disabled=false;
+  if(!editor.isConnected)return;
+  if(!copied){modal.querySelector('[data-copy-error]').textContent='Copy was unavailable. Select the draft above and copy it with your keyboard.';return;}
+  ui.confirmationCopiedFor=completionId;closeModal(false);render();
+  main.querySelector('.ha-footer .ha-btn')?.focus({preventScroll:true});
+  live.textContent='Confirmation email copied. Send it from your own email, then review the written terms.';return;
+ }
+ if(a==='viewing-email'){showViewingEmail();return;}
+ if(a==='copy-viewing'){
+  const editor=modal.querySelector('[data-viewing-email]'),propertyId=s.preferredId;
+  b.disabled=true;const copied=await copyMessage(editor.value);b.disabled=false;
+  if(!editor.isConnected)return;
+  if(!copied){modal.querySelector('[data-copy-error]').textContent='Copy was unavailable. Select the draft above and copy it with your keyboard.';return;}
+  ui.viewingCopied[propertyId]=true;closeModal(false);render();
+  main.querySelector('.ha-footer .ha-btn')?.focus({preventScroll:true});
+  live.textContent='Viewing email copied. Paste it into your email, add the property’s address and send.';return;
+ }
+ if(a==='copy-approved'){
+  const review=ui.review;if(!review)return;
+  b.disabled=true;const copied=await copyMessage(review.text);b.disabled=false;
+  if(ui.review!==review||ui.modalKind!=='review')return;
+  if(!copied){const error=modal.querySelector('#ha-review-error');if(error)error.textContent='Copy was unavailable. Please try again; your draft has not been approved.';return;}
+  const result=m.approveForManualSend(review.round,review);
   if(!result.ok){const error=modal.querySelector('#ha-review-error');if(error)error.textContent=result.error;return;}
-  ui.choice=null;ui.review=null;if(result.sent.round==='further'){m.complete('negotiate');go(10);}else go(result.sent.round==='initial'?6:8);return;
+  ui.choice=null;ui.review=null;if(result.sent.round==='further'){m.complete('negotiate');go(10);}else go(result.sent.round==='initial'?6:8);
+  live.textContent='Approved message copied. You send it from your own email. '+getTitle()[1];return;
  }
  if(a==='view-reply'){go(ui.page===5?6:8);return;}if(a==='history'){showHistory(b.dataset.round);return;}
  if(a==='other-outcome'){const r=m.previewOtherOutcome();if(r.ok){ui.choice=null;go(8);}return;}
@@ -1406,14 +1633,25 @@ root.addEventListener('click',e=>{
 root.addEventListener('change',e=>{
  const el=e.target;
  if(el.dataset.preferred!==undefined){m.setPreferred(el.value);ui.choice=null;render();main.querySelector('[data-preferred]')?.focus({preventScroll:true});return;}
- if(el.dataset.check){m.setPropertyReview(s.preferredId,el.dataset.check,el.checked);render();main.querySelector(`[data-check="${el.dataset.check}"]`)?.focus({preventScroll:true});return;}
  if(el.dataset.fact){m.setFact(el.dataset.fact,el.checked);return;}
- if(el.dataset.tone){captureEditor();const round=el.dataset.tone;m.setTone(round,el.value);if(round==='further'){showFurther();modal.querySelector('[data-tone]')?.focus({preventScroll:true});}else{render();main.querySelector('[data-tone]')?.focus({preventScroll:true});}return;}
+ if(el.dataset.tone){captureEditor();const round=el.dataset.tone,wasApproved=!!s.sent[round];m.setTone(round,el.value);if(wasApproved&&!s.sent[round]){ui.choice=null;ui.review=null;}if(round==='further'){showFurther();modal.querySelector('[data-tone]')?.focus({preventScroll:true});}else{render();main.querySelector('[data-tone]')?.focus({preventScroll:true});}return;}
  if(el.name==='ha-decision'){ui.choice=el.value;render();main.querySelector(`[name="ha-decision"][value="${ui.choice}"]`)?.focus({preventScroll:true});}
 });
 root.addEventListener('input',e=>{
  const el=e.target;
- if(el.dataset.draft&&!el.readOnly){m.setDraft(el.dataset.draft,el.value);const scope=ui.modalKind==='editor'?modal:main;const status=scope.querySelector('[data-edit-status]');if(status){status.textContent=draftStatus(el.dataset.draft);status.classList.add('is-edited');}fitEditor(el);}
+ if(el.hasAttribute('data-viewing-email'))fitEditor(el);
+ if(el.hasAttribute('data-confirmation-email')){ui.confirmationDraft.text=el.value;fitEditor(el);}
+ if(el.dataset.draft&&!el.readOnly){
+  const round=el.dataset.draft,wasApproved=!!s.sent[round],selection=[el.selectionStart,el.selectionEnd];
+  m.setDraft(round,el.value);
+  if(wasApproved&&!s.sent[round]){
+   ui.choice=null;ui.review=null;render();
+   const editor=main.querySelector(`[data-draft="${round}"]`);editor?.focus({preventScroll:true});editor?.setSelectionRange(...selection);
+  }else{
+   const scope=ui.modalKind==='editor'?modal:main,status=scope.querySelector('[data-edit-status]');
+   if(status){status.textContent=draftStatus(round);status.classList.add('is-edited');}fitEditor(el);
+  }
+ }
  if(el.dataset.goal){const target=Number(main.querySelector('#ha-request')?.value),output=main.querySelector('#ha-plan-preview');if(output&&target>0&&target<m.original.base)output.textContent='At your target: '+cash(m.original.base-target)+'/month less base rent than the original offer.';const error=main.querySelector('#ha-plan-error');if(error)error.textContent='';}
 });
 root.addEventListener('keydown',e=>{
@@ -1423,7 +1661,18 @@ root.addEventListener('keydown',e=>{
 root.addEventListener('focusout',e=>{if(e.target.closest('.ha-account')&&!e.relatedTarget?.closest('.ha-account'))closeAccount();});
 root.ownerDocument.addEventListener('click',e=>{if(!root.contains(e.target))closeAccount();});
 const view=root.ownerDocument.defaultView;
-view?.addEventListener('resize',fitEditors,{passive:true});
+function syncViewport(){
+ if(!root.hasAttribute('data-standalone'))return;
+ const viewport=view?.visualViewport;
+ root.style.setProperty('--ha-viewport-height',(viewport?.height||view.innerHeight)+'px');
+ root.style.setProperty('--ha-viewport-top',(viewport?.offsetTop||0)+'px');
+ root.classList.toggle('ha-short-viewport',(viewport?.height||view.innerHeight)<600);
+ fitEditors();
+}
+syncViewport();
+view?.addEventListener('resize',syncViewport,{passive:true});
+view?.visualViewport?.addEventListener('resize',syncViewport,{passive:true});
+view?.visualViewport?.addEventListener('scroll',syncViewport,{passive:true});
 if(view?.ResizeObserver){let lastWidth=0;const observer=new view.ResizeObserver(entries=>{const width=entries[0].contentRect.width;if(Math.abs(width-lastWidth)>.5){lastWidth=width;fitEditors();}});observer.observe(root);}
 render();
 })();
