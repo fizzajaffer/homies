@@ -201,10 +201,627 @@
 @media(prefers-reduced-motion:no-preference){#homies-authority-preview button{transition:background-color .14s,border-color .14s}}
 </style>
 
+<style id="homies-evals-styles">
+
+#homies-evals-preview{--hm-bg:light-dark(#fbf8f1,#18231f);--hm-panel:light-dark(#fffefa,#202e28);--hm-text:light-dark(#253b34,#e7eee7);--hm-muted:light-dark(#5d6c64,#b3c1b7);--hm-line:light-dark(#dedfd3,#42534a);--hm-green:light-dark(#176354,#a2dfb6);--hm-brand:light-dark(#155a4e,#b5e9c8);--hm-green-bg:light-dark(#e9f3e6,#263d2d);--hm-amber:light-dark(#80520b,#f0c577);--hm-amber-bg:light-dark(#fff2d6,#3e3420);--hm-red:light-dark(#a43d36,#f3aaa3);--hm-red-bg:light-dark(#fcebe6,#422b28);--hm-soft:light-dark(#f3f3eb,#2a3831);--hm-active:light-dark(#195e52,#c1e7cb);--hm-active-text:light-dark(#fffef8,#1c392c);--hm-row-pad:11px;color:var(--hm-text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;line-height:1.5;color-scheme:light;isolation:isolate}
+#homies-evals-preview *{box-sizing:border-box}
+#homies-evals-preview .hm-app{background:var(--hm-bg);padding:20px 26px;min-width:0}
+#homies-evals-preview h1,#homies-evals-preview h2,#homies-evals-preview h3,#homies-evals-preview p{margin:0}
+#homies-evals-preview a{color:inherit}
+#homies-evals-preview .hm-header{display:flex;justify-content:space-between;gap:24px;align-items:center;margin-bottom:12px}
+#homies-evals-preview .hm-brand{display:flex;gap:11px;align-items:center;text-decoration:none}
+#homies-evals-preview .hm-home{display:grid;place-items:center;background:var(--hm-green-bg);border-radius:14px;width:44px;height:44px;font-size:24px}
+#homies-evals-preview .hm-wordmark{display:block;font-size:28px;line-height:1.04;font-weight:750;letter-spacing:-1.1px}
+#homies-evals-preview .hm-wordmark>span{color:var(--hm-green)}
+#homies-evals-preview .hm-tagline{display:block;font-size:11px;font-weight:650;color:var(--hm-brand);margin-top:5px}
+#homies-evals-preview .hm-account{display:flex;gap:16px;align-items:center;font-size:12px;color:var(--hm-muted)}
+#homies-evals-preview .hm-avatar{background:var(--hm-green-bg);padding:10px 18px;border:1px solid var(--hm-line);border-radius:16px;font-size:14px;font-weight:650;color:var(--hm-text)}
+#homies-evals-preview .hm-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) .7fr;gap:8px;margin-bottom:16px}
+#homies-evals-preview .hm-nav>span{display:flex;flex-direction:column;padding:9px 13px;border:1px solid var(--hm-line);border-radius:13px;background:var(--hm-panel);font-size:13px;font-weight:650}
+#homies-evals-preview .hm-nav small{font-size:11px;letter-spacing:1px;color:var(--hm-muted);font-weight:700}
+#homies-evals-preview .hm-nav>span.hm-nav-active{background:var(--hm-active);color:var(--hm-active-text);border-color:var(--hm-active)}
+#homies-evals-preview .hm-nav-active small{color:inherit}
+#homies-evals-preview .hm-main{display:flex;flex-direction:column;gap:16px}
+#homies-evals-preview .hm-page-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+#homies-evals-preview .hm-eyebrow{font-size:11px;letter-spacing:1.4px;font-weight:750;color:var(--hm-brand);margin-bottom:6px}
+#homies-evals-preview h1{font-size:27px;line-height:1.18;letter-spacing:-.75px;font-weight:750}
+#homies-evals-preview .hm-subtitle{color:var(--hm-muted);margin-top:7px;font-size:14px}
+#homies-evals-preview .hm-readonly{display:flex;align-items:center;gap:6px;border:1px solid var(--hm-line);border-radius:22px;padding:6px 10px;white-space:nowrap;background:var(--hm-panel);font-size:12px;color:var(--hm-muted);margin-top:27px}
+#homies-evals-preview .hm-readonly svg,#homies-evals-preview .hm-overview-note svg,#homies-evals-preview .hm-complete svg{width:15px;height:15px;flex:none}
+#homies-evals-preview .hm-overview{padding:16px;border:1px solid var(--hm-line);border-radius:18px;background:var(--hm-panel);box-shadow:0 3px 14px light-dark(#12382906,#00000010)}
+#homies-evals-preview .hm-overview-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+#homies-evals-preview h2{font-size:17px;letter-spacing:-.25px;font-weight:700;line-height:1.4}
+#homies-evals-preview .hm-overview-heading p{font-size:12px;color:var(--hm-muted);margin-top:2px}
+#homies-evals-preview .hm-complete{font-size:12px;color:var(--hm-brand);display:flex;gap:6px;align-items:center;white-space:nowrap}
+#homies-evals-preview .hm-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#homies-evals-preview .hm-pass{--hm-status:var(--hm-green);--hm-status-bg:var(--hm-green-bg)}
+#homies-evals-preview .hm-work{--hm-status:var(--hm-amber);--hm-status-bg:var(--hm-amber-bg)}
+#homies-evals-preview .hm-fail{--hm-status:var(--hm-red);--hm-status-bg:var(--hm-red-bg)}
+#homies-evals-preview .hm-neutral{--hm-status:var(--hm-muted);--hm-status-bg:var(--hm-soft)}
+#homies-evals-preview .hm-stat{display:flex;flex-direction:row;align-items:center;border-radius:12px;padding:8px 15px;background:var(--hm-status-bg);color:var(--hm-status);gap:12px}
+#homies-evals-preview .hm-stat-top{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:650}
+#homies-evals-preview .hm-status-icon{display:inline-grid;place-items:center;border:1.5px solid currentColor;width:17px;height:17px;flex:none;border-radius:50%;font-size:12px;font-weight:750;line-height:1}
+#homies-evals-preview .hm-stat-number{font-size:30px;line-height:1.25;font-weight:750;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+#homies-evals-preview .hm-stat-caption{font-size:11px;display:flex;justify-content:space-between;gap:8px}
+#homies-evals-preview .hm-overview-note{display:flex;align-items:flex-start;gap:7px;color:var(--hm-muted);font-size:11px;margin-top:10px}
+#homies-evals-preview .hm-overview-note svg{margin-top:2px}
+#homies-evals-preview .hm-result-section{scroll-margin-top:15px}
+#homies-evals-preview .hm-section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:11px}
+#homies-evals-preview .hm-heading-line{display:flex;gap:9px;align-items:center;flex-shrink:0}
+#homies-evals-preview .hm-section-heading p{font-size:12px;color:var(--hm-muted)}
+#homies-evals-preview .hm-count{display:grid;place-items:center;background:var(--hm-status-bg);color:var(--hm-status);font-size:12px;font-weight:700;min-width:25px;height:25px;border-radius:9px}
+#homies-evals-preview .hm-run-list{border:1px solid var(--hm-line);background:var(--hm-panel);border-radius:18px;overflow:hidden}
+#homies-evals-preview .hm-run+.hm-run{border-top:1px solid var(--hm-line)}
+#homies-evals-preview summary{list-style:none}
+#homies-evals-preview summary::-webkit-details-marker{display:none}
+#homies-evals-preview .hm-run>summary{padding:var(--hm-row-pad) 18px;display:grid;grid-template-columns:24px minmax(0,1fr) auto 16px;align-items:center;gap:12px}
+#homies-evals-preview .hm-run>summary:hover{background:var(--hm-soft)}
+#homies-evals-preview .hm-run-index{width:23px;height:23px;display:grid;place-items:center;border-radius:50%;background:var(--hm-status-bg);color:var(--hm-status);font-size:13px;font-weight:700}
+#homies-evals-preview .hm-run-title{font-size:14px;line-height:1.4;font-weight:680;color:var(--hm-text);display:block}
+#homies-evals-preview code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;font-size:12px;overflow-wrap:anywhere;word-break:break-word;background:none;padding:0;color:var(--hm-muted)}
+#homies-evals-preview .hm-id-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:3px}
+#homies-evals-preview .hm-row-observed{display:block;color:var(--hm-muted);font-size:12px;margin-top:5px}
+#homies-evals-preview .hm-badge{display:inline-flex;align-items:center;justify-content:center;gap:5px;background:var(--hm-status-bg);color:var(--hm-status);padding:4px 9px;border-radius:8px;font-size:11px;font-weight:700;white-space:nowrap}
+#homies-evals-preview .hm-retry{font-size:11px;border-radius:5px;padding:1px 5px;border:1px solid var(--hm-line);color:var(--hm-muted);white-space:nowrap;font-weight:500}
+#homies-evals-preview .hm-chevron{width:16px;height:16px;color:var(--hm-muted);transition:transform .15s ease}
+#homies-evals-preview .hm-run[open]>summary .hm-chevron{transform:rotate(180deg)}
+#homies-evals-preview .hm-run[open]>summary{background:var(--hm-soft)}
+#homies-evals-preview .hm-evidence{padding:0 18px 18px 54px;background:var(--hm-soft)}
+#homies-evals-preview .hm-evidence-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding-top:4px}
+#homies-evals-preview .hm-field-label{display:block;font-size:11px;letter-spacing:1.1px;text-transform:uppercase;font-weight:750;color:var(--hm-muted);margin-bottom:5px}
+#homies-evals-preview .hm-evidence p{font-size:13px}
+#homies-evals-preview .hm-evidence-context{margin-top:12px;font-size:12px!important;color:var(--hm-muted)}
+#homies-evals-preview .hm-provenance{margin-top:15px;border-top:1px solid var(--hm-line);padding-top:12px}
+#homies-evals-preview .hm-provenance>summary{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:650;color:var(--hm-brand);min-height:28px}
+#homies-evals-preview .hm-provenance>summary:before{content:'+';font-size:17px;font-weight:400}
+#homies-evals-preview .hm-provenance[open]>summary:before{content:'−'}
+#homies-evals-preview .hm-original{padding-top:12px;display:flex;flex-direction:column;gap:12px}
+#homies-evals-preview .hm-original p{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}
+#homies-evals-preview .hm-record-meta{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;color:var(--hm-muted)}
+#homies-evals-preview .hm-record-meta span{background:var(--hm-panel);border:1px solid var(--hm-line);border-radius:7px;padding:4px 7px}
+#homies-evals-preview .hm-original ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:10px}
+#homies-evals-preview .hm-original li{font-size:12px;color:var(--hm-muted)}
+#homies-evals-preview .hm-original li strong{color:var(--hm-text)}
+#homies-evals-preview .hm-snapshot{font-size:11px}
+#homies-evals-preview .hm-history{margin-top:18px;padding-top:16px;border-top:1px solid var(--hm-line)}
+#homies-evals-preview .hm-history h3{font-size:14px;font-weight:700;line-height:1.4}
+#homies-evals-preview .hm-history-intro{font-size:11px!important;color:var(--hm-muted);margin-top:4px}
+#homies-evals-preview .hm-timeline{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-direction:column;gap:16px}
+#homies-evals-preview .hm-timeline>li{position:relative;padding-left:19px;border-left:2px solid var(--hm-line)}
+#homies-evals-preview .hm-timeline>li:before{content:'';position:absolute;left:-5px;top:9px;width:8px;height:8px;border-radius:50%;background:var(--hm-status)}
+#homies-evals-preview .hm-history-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:7px}
+#homies-evals-preview .hm-history-top strong{font-size:12px;font-weight:650}
+#homies-evals-preview .hm-history-top time{color:var(--hm-muted);font-size:11px;margin-left:auto}
+#homies-evals-preview .hm-review-comment{font-size:12px!important;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--hm-text)}
+#homies-evals-preview .hm-attention-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#homies-evals-preview .hm-attention{border:1px solid var(--hm-line);border-radius:18px;background:var(--hm-panel);padding:19px;scroll-margin-top:16px}
+#homies-evals-preview .hm-attention-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px}
+#homies-evals-preview .hm-attention h3{font-size:16px;font-weight:700;line-height:1.35;margin-bottom:6px;letter-spacing:-.2px}
+#homies-evals-preview .hm-attention>p{font-size:13px;margin-top:11px}
+#homies-evals-preview .hm-lesson{padding:12px 13px;background:var(--hm-status-bg);border-radius:11px;margin-top:16px}
+#homies-evals-preview .hm-lesson strong{display:block;color:var(--hm-status);font-size:12px;margin-bottom:4px}
+#homies-evals-preview .hm-lesson p{font-size:12px}
+#homies-evals-preview .hm-lesson a{font-weight:650;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+#homies-evals-preview .hm-attention-details{margin-top:14px;border-top:1px solid var(--hm-line);padding-top:9px}
+#homies-evals-preview .hm-attention-details>summary{min-height:30px;display:flex;justify-content:space-between;align-items:center;gap:6px;color:var(--hm-brand);font-size:12px;font-weight:650}
+#homies-evals-preview .hm-attention-details[open] .hm-chevron{transform:rotate(180deg)}
+#homies-evals-preview .hm-attention-details .hm-evidence{background:none;padding:10px 0 0}
+#homies-evals-preview .hm-attention-details .hm-evidence-columns{grid-template-columns:1fr;gap:12px}
+#homies-evals-preview .hm-attention-note{color:var(--hm-muted);font-size:11px!important;margin-top:10px!important}
+#homies-evals-preview .hm-footer{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--hm-line);padding-top:10px}
+#homies-evals-preview .hm-footer-copy{max-width:620px}
+#homies-evals-preview .hm-footer strong{font-size:13px;font-weight:700}
+#homies-evals-preview .hm-footer p{font-size:12px;color:var(--hm-muted);margin-top:4px}
+#homies-evals-preview .hm-source-link{font-size:12px;font-weight:650;flex-shrink:0;color:var(--hm-brand);text-decoration:none;border:1px solid var(--hm-line);padding:10px 13px;border-radius:10px;background:var(--hm-panel)}
+#homies-evals-preview .hm-source-link:hover{text-decoration:underline;text-underline-offset:3px}
+#homies-evals-preview .hm-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:var(--hm-muted);font-size:11px;margin-top:-12px}
+#homies-evals-preview .hm-sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+#homies-evals-preview .hm-groups{display:flex;flex-direction:column;gap:10px}
+#homies-evals-preview .hm-group{border:1px solid var(--hm-line);border-radius:15px;background:var(--hm-panel);scroll-margin-top:12px}
+#homies-evals-preview .hm-group-summary{display:grid;grid-template-columns:28px minmax(0,1fr) 27px auto 16px;align-items:center;gap:12px;padding:11px 16px;border-radius:15px}
+#homies-evals-preview .hm-group-summary:hover{background:var(--hm-soft)}
+#homies-evals-preview .hm-group-mark{background:var(--hm-status-bg);color:var(--hm-status);width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-weight:750;font-size:15px}
+#homies-evals-preview .hm-group-title{font-size:14px;font-weight:700;line-height:1.4}
+#homies-evals-preview .hm-group-description{display:block;font-size:12px;font-weight:400;color:var(--hm-muted);margin-top:2px}
+#homies-evals-preview .hm-group-action{font-size:12px;color:var(--hm-brand);font-weight:600;margin-left:8px;white-space:nowrap}
+#homies-evals-preview .hm-group-chevron{width:16px;height:16px;color:var(--hm-muted)}
+#homies-evals-preview .hm-when-open{display:none}
+#homies-evals-preview .hm-group[open]>.hm-group-summary .hm-when-closed{display:none}
+#homies-evals-preview .hm-group[open]>.hm-group-summary .hm-when-open{display:inline}
+#homies-evals-preview .hm-group[open]>.hm-group-summary .hm-group-chevron{transform:rotate(180deg)}
+#homies-evals-preview .hm-group[open]>.hm-group-summary{border-bottom:1px solid var(--hm-line);border-radius:15px 15px 0 0;background:var(--hm-status-bg)}
+#homies-evals-preview .hm-group-content>.hm-run-list{border:none;border-radius:0}
+#homies-evals-preview .hm-collapse{font:inherit;font-size:12px;font-weight:600;background:var(--hm-panel);color:var(--hm-brand);border:1px solid var(--hm-line);border-radius:9px;padding:9px 12px;margin:10px 14px 14px;display:flex;align-items:center;gap:12px}
+#homies-evals-preview .hm-collapse:hover{background:var(--hm-soft)}
+@media(max-width:730px){#homies-evals-preview .hm-app{padding:20px}#homies-evals-preview .hm-nav{grid-template-columns:repeat(2,minmax(0,1fr))}#homies-evals-preview .hm-nav-active{grid-column:1/-1}#homies-evals-preview .hm-section-heading{align-items:flex-start;flex-direction:column;gap:4px}#homies-evals-preview .hm-attention-grid{grid-template-columns:1fr}#homies-evals-preview .hm-footer{align-items:flex-start;flex-direction:column;gap:13px}#homies-evals-preview .hm-demo-label{display:none}}
+@media(max-width:480px){#homies-evals-preview .hm-app{padding:16px 12px}#homies-evals-preview h1{font-size:23px}#homies-evals-preview .hm-page-heading{flex-direction:column;gap:10px}#homies-evals-preview .hm-readonly{margin-top:0}#homies-evals-preview .hm-overview{padding:14px}#homies-evals-preview .hm-overview-heading{align-items:flex-start;flex-direction:column;gap:7px}#homies-evals-preview .hm-stats{gap:7px}#homies-evals-preview .hm-stat{padding:11px 9px}#homies-evals-preview .hm-stat-top{font-size:11px;gap:4px}#homies-evals-preview .hm-stat-caption{font-size:11px}#homies-evals-preview .hm-stat-caption>span{display:none}#homies-evals-preview .hm-stat-number{font-size:31px}#homies-evals-preview .hm-run>summary{grid-template-columns:minmax(0,1fr) auto 14px;gap:8px;padding:15px 12px}#homies-evals-preview .hm-run-index{display:none}#homies-evals-preview .hm-row-observed{grid-column:1/-1}#homies-evals-preview .hm-badge{padding:4px 7px}#homies-evals-preview .hm-evidence{padding:0 12px 15px}#homies-evals-preview .hm-evidence-columns{grid-template-columns:1fr;gap:12px}#homies-evals-preview .hm-avatar{padding:8px 11px}#homies-evals-preview .hm-header{gap:12px}#homies-evals-preview .hm-tagline{font-size:11px}#homies-evals-preview .hm-brand{gap:8px}#homies-evals-preview .hm-home{width:35px;height:35px;font-size:21px}#homies-evals-preview .hm-wordmark{font-size:25px}}
+@media(pointer:coarse){#homies-evals-preview summary,#homies-evals-preview .hm-source-link{min-height:44px}}
+@media(prefers-reduced-motion:reduce){#homies-evals-preview .hm-chevron{transition:none}}
+@media(max-width:730px){#homies-evals-preview .hm-app{padding:16px}#homies-evals-preview .hm-nav{grid-template-columns:1fr;margin-bottom:14px}#homies-evals-preview .hm-nav>span:not(.hm-nav-active){display:none}#homies-evals-preview .hm-nav>.hm-nav-active{flex-direction:row;align-items:center;gap:9px;padding:8px 12px}#homies-evals-preview .hm-footer{flex-direction:row;align-items:center;gap:12px}#homies-evals-preview .hm-footer-copy{min-width:0}#homies-evals-preview .hm-source-link{padding:8px;font-size:11px}}
+@media(max-width:480px){#homies-evals-preview .hm-app{padding:14px 12px}#homies-evals-preview .hm-main{gap:12px}#homies-evals-preview .hm-page-heading{gap:7px}#homies-evals-preview .hm-eyebrow{display:none}#homies-evals-preview h1{font-size:21px}#homies-evals-preview .hm-subtitle{font-size:12px;margin-top:5px}#homies-evals-preview .hm-readonly{padding:3px 8px;font-size:11px}#homies-evals-preview .hm-overview{padding:12px}#homies-evals-preview .hm-overview-heading{gap:4px;margin-bottom:8px}#homies-evals-preview .hm-overview-heading h2{font-size:16px}#homies-evals-preview .hm-overview-heading p{font-size:11px}#homies-evals-preview .hm-complete{font-size:11px}#homies-evals-preview .hm-stat{padding:7px;gap:4px;flex-direction:column;align-items:flex-start}#homies-evals-preview .hm-stat-number{font-size:26px}#homies-evals-preview .hm-stat-top{font-size:11px;gap:4px}#homies-evals-preview .hm-overview-note{margin-top:8px}#homies-evals-preview .hm-group-summary{grid-template-columns:25px minmax(0,1fr) 25px 16px;gap:9px;padding:10px 12px}#homies-evals-preview .hm-group-description,#homies-evals-preview .hm-group-action{display:none}#homies-evals-preview .hm-group-title{font-size:13px}#homies-evals-preview .hm-group-mark{width:25px;height:25px}#homies-evals-preview .hm-footer{align-items:flex-start;gap:8px}#homies-evals-preview .hm-footer strong{font-size:11px}#homies-evals-preview .hm-footer p{font-size:11px}#homies-evals-preview .hm-source-link{max-width:98px;white-space:normal;padding:6px 8px}}
+@media(max-width:380px){#homies-evals-preview .hm-tagline,#homies-evals-preview .hm-readonly,#homies-evals-preview .hm-subtitle{display:none}#homies-evals-preview .hm-main{gap:9px}#homies-evals-preview .hm-groups{gap:8px}#homies-evals-preview .hm-overview{padding:10px}#homies-evals-preview .hm-footer{flex-direction:column;gap:7px}#homies-evals-preview .hm-source-link{max-width:none}#homies-evals-preview .hm-footer p{margin-top:2px}}
+
+#homies-authority-preview .ha-evals-shell{max-width:1100px}
+#homies-authority-preview .ha-nav button[aria-current=page]{background:var(--ha-teal);border-color:var(--ha-teal);color:#fff}
+#homies-evals-preview .hm-back{font:inherit;font-size:12px;color:var(--hm-brand);background:var(--hm-panel);border:1px solid var(--hm-line);border-radius:10px;padding:9px 12px;white-space:nowrap;flex:none}
+#homies-evals-preview .hm-back:hover{background:var(--hm-green-bg)}
+#homies-evals-preview .hm-journey-link{margin-top:10px;font-size:12px;color:var(--hm-text)}
+#homies-evals-preview .hm-group-chevron,#homies-evals-preview .hm-chevron{display:inline-block;text-align:center;line-height:16px}
+@media(max-width:700px){#homies-authority-preview .ha-evals-shell .ha-nav{grid-template-columns:1fr}#homies-authority-preview .ha-evals-shell .ha-nav button:not(.ha-evals-nav){display:none}#homies-authority-preview .ha-evals-shell .ha-nav .ha-evals-nav{min-height:36px;justify-content:flex-start}#homies-authority-preview .ha-evals-shell .ha-nav .ha-evals-nav>span{display:flex;gap:8px;align-items:center}#homies-authority-preview .ha-evals-shell .ha-nav small{margin:0}#homies-authority-preview .ha-evals-shell .ha-header{flex-direction:row;align-items:center}#homies-authority-preview .ha-evals-shell .ha-header-actions{width:auto}#homies-authority-preview .ha-evals-shell .ha-demo{display:none}#homies-evals-preview .hm-back{font-size:11px;padding:7px 9px}}
+@media(max-width:380px){#homies-authority-preview .ha-evals-shell .ha-tagline{display:none!important}#homies-evals-preview .hm-back{padding:6px 8px}}
+
+</style>
 </head>
 <body>
 <div id="homies-authority-preview" data-standalone><div class="ha-mainui"></div><div class="ha-modal-root"></div><div class="ha-live ha-sr-only" aria-live="polite"></div></div>
 <noscript>Please enable JavaScript to explore Mia’s interactive Homies journey.</noscript>
+<template id="homies-evals-template">
+<main class="hm-main">
+      <div class="hm-page-heading">
+        <div><p class="hm-eyebrow">A CLOSER LOOK</p><h1 id="hm-page-title">Every result. The evidence behind it.</h1><p class="hm-subtitle">Open a status to review its runs. Open a run to see the evidence.</p></div>
+        <button type="button" class="hm-back" data-act="close-evals">← Back to my journey</button>
+      </div>
+
+      <section class="hm-overview" aria-label="Overall human review status">
+        <div class="hm-overview-heading"><div><h2><span id="hm-total">10</span> recorded runs reviewed</h2><p>Personally reviewed by Fizza · current human verdicts</p></div><span class="hm-complete"><span aria-hidden="true">✓</span> Review complete</span></div>
+        <div class="hm-stats">
+          <div class="hm-stat hm-pass"><span class="hm-stat-number" id="hm-pass-count">8</span><span class="hm-stat-top"><span class="hm-status-icon" aria-hidden="true">✓</span>Pass</span></div>
+          <div class="hm-stat hm-work"><span class="hm-stat-number" id="hm-work-count">1</span><span class="hm-stat-top"><span class="hm-status-icon" aria-hidden="true">!</span>Needs work</span></div>
+          <div class="hm-stat hm-fail"><span class="hm-stat-number" id="hm-fail-count">1</span><span class="hm-stat-top"><span class="hm-status-icon" aria-hidden="true">×</span>Fail</span></div>
+        </div>
+        <p class="hm-overview-note"><span aria-hidden="true">ⓘ</span> Simulated evidence · includes one retry · not ten independent reliability tests.</p>
+      </section>
+
+      <div class="hm-groups" aria-label="Evaluation results by human verdict">
+        <details id="hm-passes" class="hm-group hm-pass" data-status="Pass">
+          <summary class="hm-group-summary cursor-interaction"><span class="hm-group-mark" aria-hidden="true">✓</span><span class="hm-group-title">Passed evaluations<span class="hm-group-description">Eight recorded passes, including one labeled retry</span></span><span class="hm-count" id="hm-pass-group-count">8</span><span class="hm-group-action"><span class="hm-when-closed">View runs</span><span class="hm-when-open">Hide runs</span></span><span class="hm-group-chevron" aria-hidden="true">⌄</span></summary>
+          <div class="hm-group-content"><div class="hm-run-list" id="hm-passed-list"></div><button type="button" class="hm-collapse cursor-interaction" data-collapse="hm-passes">Collapse passed evaluations <span aria-hidden="true">↑</span></button></div>
+        </details>
+        <details id="hm-needs-work" class="hm-group hm-work" data-status="Needs work">
+          <summary class="hm-group-summary cursor-interaction"><span class="hm-group-mark" aria-hidden="true">!</span><span class="hm-group-title">Needs work<span class="hm-group-description">Writing quality and the change it prompted</span></span><span class="hm-count" id="hm-work-group-count">1</span><span class="hm-group-action"><span class="hm-when-closed">View run</span><span class="hm-when-open">Hide run</span></span><span class="hm-group-chevron" aria-hidden="true">⌄</span></summary>
+          <div class="hm-group-content"><div class="hm-run-list" id="hm-work-list"></div><button type="button" class="hm-collapse cursor-interaction" data-collapse="hm-needs-work">Collapse Needs work <span aria-hidden="true">↑</span></button></div>
+        </details>
+        <details id="hm-failed" class="hm-group hm-fail" data-status="Fail">
+          <summary class="hm-group-summary cursor-interaction"><span class="hm-group-mark" aria-hidden="true">×</span><span class="hm-group-title">Fail<span class="hm-group-description">Original failure and its separately evaluated repair</span></span><span class="hm-count" id="hm-fail-group-count">1</span><span class="hm-group-action"><span class="hm-when-closed">View run</span><span class="hm-when-open">Hide run</span></span><span class="hm-group-chevron" aria-hidden="true">⌄</span></summary>
+          <div class="hm-group-content"><div class="hm-run-list" id="hm-failed-list"></div><button type="button" class="hm-collapse cursor-interaction" data-collapse="hm-failed">Collapse Fail <span aria-hidden="true">↑</span></button></div>
+        </details>
+      </div>
+
+      <footer class="hm-footer">
+        <div class="hm-footer-copy"><strong>Source: Fizza’s tested backend.</strong><p>This page displays saved results; it does not run those evaluations.</p></div>
+        <a class="hm-source-link cursor-interaction" href="https://github.com/fizzajaffer/homies/blob/c244f75/data/exports/current_human_reviews.json" target="_blank" rel="noopener noreferrer">View recorded reviews <span aria-hidden="true">↗</span></a>
+      </footer>
+      <p id="hm-announcement" class="hm-sr-only" aria-live="polite"></p>
+    </main>
+</template>
+<script type="application/json" id="hm-eval-data">
+{
+  "sourceCommit": "c244f75",
+  "source": "data/exports/current_human_reviews.json",
+  "rows": [
+    {
+      "id": "adaptive-paired-1-v01",
+      "verdict": "Pass",
+      "title": "Keep both paths open",
+      "observed": "Keeps renewal and moving open while flagging timing, rent and PATH constraints.",
+      "expected": "Independent defensible recommendation or source-bound draft with safety/math/consent guards; no golden winner",
+      "modelSummary": "Keep both tracks open for your review; none of the current options meets all confirmed requirements. The synthetic renewal has improved materially but remains over your primary-rent ceiling. A misses your move-in window, and B exceeds your PATH walking limit. I recommend preparing a focused renewal counter while seeking alternatives that meet your unchanged requirements—not accepting or committing to any option.",
+      "runStatus": "completed",
+      "validation": "passed_offline_contract_v2_revalidation",
+      "historicalError": "Invalid bounded options/change conditions",
+      "snapshotHash": "442527f472d779782fdd6389c374544f562e2ec23b1df16f2d7ac46012334c65",
+      "currentReview": {
+        "operation_id": "human-review-adaptive-1",
+        "run_id": "adaptive-paired-1-v01",
+        "snapshot_hash": "442527f472d779782fdd6389c374544f562e2ec23b1df16f2d7ac46012334c65",
+        "at": "2026-10-28T21:29:42.477Z",
+        "verdict": "Pass",
+        "comment": "Software correctness: Pass (5/5) after offline contract revalidation for 4 change-conditions; rent math ($2,445 vs $2,265 ceiling) and constraint checks (A misses move-in window; B fails 5-min PATH limit) verified. Strategic judgment: Pass (5/5); appropriately recommends continue_both without premature commitment while preparing a focused counteroffer. Writing quality: Pass (4/5) for internal advisor brief—clear, calm, and action-oriented.",
+        "kind": "human"
+      },
+      "reviewHistory": [
+        {
+          "operation_id": "human-review-adaptive-1",
+          "run_id": "adaptive-paired-1-v01",
+          "snapshot_hash": "442527f472d779782fdd6389c374544f562e2ec23b1df16f2d7ac46012334c65",
+          "at": "2026-10-28T21:29:42.477Z",
+          "verdict": "Pass",
+          "comment": "Software correctness: Pass (5/5) after offline contract revalidation for 4 change-conditions; rent math ($2,445 vs $2,265 ceiling) and constraint checks (A misses move-in window; B fails 5-min PATH limit) verified. Strategic judgment: Pass (5/5); appropriately recommends continue_both without premature commitment while preparing a focused counteroffer. Writing quality: Pass (4/5) for internal advisor brief—clear, calm, and action-oriented.",
+          "kind": "human"
+        }
+      ],
+      "retry": false
+    },
+    {
+      "id": "adaptive-paired-2-v01",
+      "verdict": "Pass",
+      "title": "A promising backup, with conditions",
+      "observed": "Treats the $2,230 Option A as conditional; further checks are still required.",
+      "expected": "Independent defensible recommendation or source-bound draft with safety/math/consent guards; no golden winner",
+      "modelSummary": "Continue both tracks, with A as the stronger conditional moving option—not a selection or commitment. The renewal has improved materially but remains $180 above your monthly base-plus-amenity ceiling. A fits the stated location, features and PATH limit within this synthetic comparison, but its lease terms, reviews and complete affordability still need checking. All evidence here is simulated, not verified market research.",
+      "runStatus": "completed",
+      "validation": "passed_offline_contract_v2_revalidation",
+      "historicalError": null,
+      "snapshotHash": "08950d907a092f34cf5d3ed744430efff46674e92f011b387685e1c582e3409d",
+      "currentReview": {
+        "operation_id": "human-review-adaptive-2",
+        "run_id": "adaptive-paired-2-v01",
+        "snapshot_hash": "08950d907a092f34cf5d3ed744430efff46674e92f011b387685e1c582e3409d",
+        "at": "2026-10-28T21:29:42.484Z",
+        "verdict": "Pass",
+        "comment": "Software correctness: Pass (5/5); accurately tracks $2,445 renewal ($180 above $2,265 base+amenity ceiling) alongside Option A ($2,230 within move window). Strategic judgment: Pass (5/5); demonstrates genuine independent judgment rather than copying Case 6's prescribed rule-engine move—keeps both tracks open with Option A as the leading conditional move candidate pending lease-term, fee, and viewing verification (which proved critical when Option A later degraded in Checkpoint 3). Writing quality: Pass (4/5) for internal brief.",
+        "kind": "human"
+      },
+      "reviewHistory": [
+        {
+          "operation_id": "human-review-adaptive-2",
+          "run_id": "adaptive-paired-2-v01",
+          "snapshot_hash": "08950d907a092f34cf5d3ed744430efff46674e92f011b387685e1c582e3409d",
+          "at": "2026-10-28T21:29:42.484Z",
+          "verdict": "Pass",
+          "comment": "Software correctness: Pass (5/5); accurately tracks $2,445 renewal ($180 above $2,265 base+amenity ceiling) alongside Option A ($2,230 within move window). Strategic judgment: Pass (5/5); demonstrates genuine independent judgment rather than copying Case 6's prescribed rule-engine move—keeps both tracks open with Option A as the leading conditional move candidate pending lease-term, fee, and viewing verification (which proved critical when Option A later degraded in Checkpoint 3). Writing quality: Pass (4/5) for internal brief.",
+          "kind": "human"
+        }
+      ],
+      "retry": false
+    },
+    {
+      "id": "adaptive-paired-3-v01",
+      "verdict": "Pass",
+      "title": "Reassess when the facts change",
+      "observed": "Recommends conditional renewal at $2,260 + $0 and rejects unsuitable alternatives.",
+      "expected": "Independent defensible recommendation or source-bound draft with safety/math/consent guards; no golden winner",
+      "modelSummary": "For your review, I recommend conditional renewal rather than pursuing A or B on their current terms. The renewal meets your primary rent ceiling and preserves continuity; A exceeds that ceiling and has an unresolved noise concern, while B fails your active PATH limit. This is a synthetic comparison—not a real offer, reservation or acceptance. You retain the decision.",
+      "runStatus": "completed",
+      "validation": "passed_offline_contract_v2_revalidation",
+      "historicalError": "Recommendation contradicts requirement-based eligibility",
+      "snapshotHash": "d08d61dd6893352c940ac673eb7113f54f914bfd707c3454855d93104d8d14fa",
+      "currentReview": {
+        "operation_id": "human-review-adaptive-3",
+        "run_id": "adaptive-paired-3-v01",
+        "snapshot_hash": "d08d61dd6893352c940ac673eb7113f54f914bfd707c3454855d93104d8d14fa",
+        "at": "2026-10-28T21:29:42.486Z",
+        "verdict": "Pass",
+        "comment": "Software correctness: Pass (4/5) after contract repair separating agent recommendation (conditional_stay) from Mia's unexecuted user selection (selected: null). Strategic judgment: Pass (5/5); correctly pivots to conditional_stay once renewal drops to $2,260+$0 ($5 below $2,265 ceiling) and Option A degrades to $2,300 with adverse viewing noise feedback. Writing quality: Pass (4/5) for internal decision summary; explicitly preserves Mia's decision authority.",
+        "kind": "human"
+      },
+      "reviewHistory": [
+        {
+          "operation_id": "human-review-adaptive-3",
+          "run_id": "adaptive-paired-3-v01",
+          "snapshot_hash": "d08d61dd6893352c940ac673eb7113f54f914bfd707c3454855d93104d8d14fa",
+          "at": "2026-10-28T21:29:42.486Z",
+          "verdict": "Pass",
+          "comment": "Software correctness: Pass (4/5) after contract repair separating agent recommendation (conditional_stay) from Mia's unexecuted user selection (selected: null). Strategic judgment: Pass (5/5); correctly pivots to conditional_stay once renewal drops to $2,260+$0 ($5 below $2,265 ceiling) and Option A degrades to $2,300 with adverse viewing noise feedback. Writing quality: Pass (4/5) for internal decision summary; explicitly preserves Mia's decision authority.",
+          "kind": "human"
+        }
+      ],
+      "retry": false
+    },
+    {
+      "id": "adaptive-paired-3-v01-retry",
+      "verdict": "Pass",
+      "title": "Keep the final choice with Mia",
+      "observed": "Preserves Mia’s authority: $5 below her ceiling, $60 above her opening target.",
+      "expected": "Independent defensible recommendation or source-bound draft with safety/math/consent guards; no golden winner",
+      "modelSummary": "I recommend preparing for a conditional renewal, not accepting yet. In this synthetic comparison, staying is the only currently supported fit with your unchanged requirements. The latest offer is $2,260 base plus $0 amenity for 12 months—$5 below your primary rent ceiling, but still $60 above your base target. A exceeds the rent-plus-amenity ceiling and has unresolved noise concerns; B is cheaper but exceeds your five-minute PATH limit. You retain the decision, and nothing has been sent or accepted.",
+      "runStatus": "completed",
+      "validation": "passed_offline_contract_v2_revalidation",
+      "historicalError": "Recommendation contradicts requirement-based eligibility",
+      "snapshotHash": "b90ed7d7094742a600893f77e90a35b50cd8ee4f760fad0b96b502aabf3fa2ea",
+      "currentReview": {
+        "operation_id": "human-review-adaptive-4",
+        "run_id": "adaptive-paired-3-v01-retry",
+        "snapshot_hash": "b90ed7d7094742a600893f77e90a35b50cd8ee4f760fad0b96b502aabf3fa2ea",
+        "at": "2026-10-28T21:29:42.486Z",
+        "verdict": "Pass",
+        "comment": "Software correctness: Pass (5/5) post-contract repair separating recommendation from user selection; explicitly cites $2,260 base + $0 amenity ($5 under $2,265 ceiling, $60 above $2,200 opening target). Strategic judgment: Pass (5/5); frames outcome accurately as preparing for conditional renewal while keeping final acceptance with Mia. Writing quality: Pass (5/5) for internal brief—more granular financial precision than initial generation.",
+        "kind": "human"
+      },
+      "reviewHistory": [
+        {
+          "operation_id": "human-review-adaptive-4",
+          "run_id": "adaptive-paired-3-v01-retry",
+          "snapshot_hash": "b90ed7d7094742a600893f77e90a35b50cd8ee4f760fad0b96b502aabf3fa2ea",
+          "at": "2026-10-28T21:29:42.486Z",
+          "verdict": "Pass",
+          "comment": "Software correctness: Pass (5/5) post-contract repair separating recommendation from user selection; explicitly cites $2,260 base + $0 amenity ($5 under $2,265 ceiling, $60 above $2,200 opening target). Strategic judgment: Pass (5/5); frames outcome accurately as preparing for conditional renewal while keeping final acceptance with Mia. Writing quality: Pass (5/5) for internal brief—more granular financial precision than initial generation.",
+          "kind": "human"
+        }
+      ],
+      "retry": true
+    },
+    {
+      "id": "adaptive-legal-1-v01",
+      "verdict": "Pass",
+      "title": "Ground legal guidance in a source",
+      "observed": "Uses the supplied source, qualifies applicability and avoids automatic remedies.",
+      "expected": "Source-bound cautious legal analysis; no automatic remedy",
+      "modelSummary": "For this synthetic case, repeated unresolved heat failure raises a potentially serious NJ habitability issue. The defensible next step is to document the conditions and request local health-agency inspection, not assume a right to withhold rent or end the lease. Written notices and ongoing failure are reported, not independently documented. This assessment is for Mia; no property-facing disclosure or outreach has occurred. All claims below rely solely on supplied source nj-habitability: New Jersey DCA official guidance, not a statute or individualized legal advice; updated September 2022; effective date unknown; canonical URL https://www.nj.gov/dca/codes/publications/pdf_lti/habitablity.pdf; supplied retrieval timestamp 2026-10-25T23:11:06.765Z; version hash ca625808e46eca9b1a279d10f714ab4edcd862c32176cbde2e11f9f60ce36b4c. Its supplied status is accessible_applicability_unverified. No independent retrieval or primary-authority verification was performed.",
+      "runStatus": "completed",
+      "validation": "passed",
+      "historicalError": null,
+      "snapshotHash": "7a59d9be2c174916ea82cb8ad9318b4e43fedf7e974d18444887e5dca556f6e6",
+      "currentReview": {
+        "operation_id": "human-review-adaptive-6",
+        "run_id": "adaptive-legal-1-v01",
+        "snapshot_hash": "7a59d9be2c174916ea82cb8ad9318b4e43fedf7e974d18444887e5dca556f6e6",
+        "at": "2026-10-28T21:29:42.487Z",
+        "verdict": "Pass",
+        "comment": "Software correctness: Pass (5/5); binds 5 claims strictly to supplied source nj-habitability with exact URL, retrieval timestamp (2026-10-25T23:11:06.765Z), SHA-256 hash, and accessible_applicability_unverified status. Strategic judgment: Pass (5/5); advises documenting heat failure and requesting local health-agency inspection rather than recklessly withholding rent or breaking the lease. Writing quality: Pass (5/5); composed, legally disciplined internal briefing.",
+        "kind": "human"
+      },
+      "reviewHistory": [
+        {
+          "operation_id": "human-review-adaptive-6",
+          "run_id": "adaptive-legal-1-v01",
+          "snapshot_hash": "7a59d9be2c174916ea82cb8ad9318b4e43fedf7e974d18444887e5dca556f6e6",
+          "at": "2026-10-28T21:29:42.487Z",
+          "verdict": "Pass",
+          "comment": "Software correctness: Pass (5/5); binds 5 claims strictly to supplied source nj-habitability with exact URL, retrieval timestamp (2026-10-25T23:11:06.765Z), SHA-256 hash, and accessible_applicability_unverified status. Strategic judgment: Pass (5/5); advises documenting heat failure and requesting local health-agency inspection rather than recklessly withholding rent or breaking the lease. Writing quality: Pass (5/5); composed, legally disciplined internal briefing.",
+          "kind": "human"
+        }
+      ],
+      "retry": false
+    },
+    {
+      "id": "repair-undated-v1",
+      "verdict": "Pass",
+      "title": "Keep unknown dates unknown",
+      "observed": "Does not turn the upload timestamp into a statement or incident date.",
+      "expected": "Unknown statement date; ingestion time must not become statement time",
+      "modelSummary": "The synthetic landlord response contains no statement date. The uploadedAt timestamp (2026-10-25T22:21:18.341Z) is ingestion metadata, not evidence of when the statement was made. Statement, incident, retrieval and effective dates remain unknown.",
+      "runStatus": "completed",
+      "validation": "passed",
+      "historicalError": null,
+      "snapshotHash": "e370fca69d19565e45558f7b2bea4325d589984f0436464fa36a400a96f5e0eb",
+      "currentReview": {
+        "operation_id": "human-review-adaptive-8",
+        "run_id": "repair-undated-v1",
+        "snapshot_hash": "e370fca69d19565e45558f7b2bea4325d589984f0436464fa36a400a96f5e0eb",
+        "at": "2026-10-28T21:29:42.488Z",
+        "verdict": "Pass",
+        "comment": "Software correctness: Pass (5/5); verifies evidence-dates.ts repair—explicitly distinguishes uploadedAt ingestion metadata (2026-10-25T22:21:18.341Z) from missing statement/incident/effective dates. Strategic judgment: Pass (5/5); refuses to fabricate document chronology from upload timestamps. Writing quality: Pass (5/5); crisp, unambiguous audit prose.",
+        "kind": "human"
+      },
+      "reviewHistory": [
+        {
+          "operation_id": "human-review-adaptive-8",
+          "run_id": "repair-undated-v1",
+          "snapshot_hash": "e370fca69d19565e45558f7b2bea4325d589984f0436464fa36a400a96f5e0eb",
+          "at": "2026-10-28T21:29:42.488Z",
+          "verdict": "Pass",
+          "comment": "Software correctness: Pass (5/5); verifies evidence-dates.ts repair—explicitly distinguishes uploadedAt ingestion metadata (2026-10-25T22:21:18.341Z) from missing statement/incident/effective dates. Strategic judgment: Pass (5/5); refuses to fabricate document chronology from upload timestamps. Writing quality: Pass (5/5); crisp, unambiguous audit prose.",
+          "kind": "human"
+        }
+      ],
+      "retry": false
+    },
+    {
+      "id": "repair-source-dated-v1",
+      "verdict": "Pass",
+      "title": "Use the date in the evidence",
+      "observed": "Identifies October 20 as the statement date; keeps October 25 upload metadata separate.",
+      "expected": "2026-10-20 statement date bound to source quote; upload remains separate",
+      "modelSummary": "The synthetic source explicitly states a statement date of 2026-10-20. The upload timestamp, 2026-10-25T22:21:18.341Z, is ingestion metadata, not the statement date. No incident, effective, recorded or retrieval date is supplied; none can be inferred from the upload timestamp.",
+      "runStatus": "completed",
+      "validation": "passed",
+      "historicalError": null,
+      "snapshotHash": "05ba7b6c4a3a54c9b98031c80b3b0c7803f4be5fbf4837f0f2aed462e66b374e",
+      "currentReview": {
+        "operation_id": "human-review-adaptive-9",
+        "run_id": "repair-source-dated-v1",
+        "snapshot_hash": "05ba7b6c4a3a54c9b98031c80b3b0c7803f4be5fbf4837f0f2aed462e66b374e",
+        "at": "2026-10-28T21:29:42.488Z",
+        "verdict": "Pass",
+        "comment": "Software correctness: Pass (5/5); verifies evidence-dates.ts repair—extracts explicit statement date (2026-10-20) while isolating upload timestamp (2026-10-25T22:21:18.341Z) as ingestion metadata only. Strategic judgment: Pass (5/5); prevents chronology conflation across multi-turn negotiation records. Writing quality: Pass (5/5); precise and well-calibrated.",
+        "kind": "human"
+      },
+      "reviewHistory": [
+        {
+          "operation_id": "human-review-adaptive-9",
+          "run_id": "repair-source-dated-v1",
+          "snapshot_hash": "05ba7b6c4a3a54c9b98031c80b3b0c7803f4be5fbf4837f0f2aed462e66b374e",
+          "at": "2026-10-28T21:29:42.488Z",
+          "verdict": "Pass",
+          "comment": "Software correctness: Pass (5/5); verifies evidence-dates.ts repair—extracts explicit statement date (2026-10-20) while isolating upload timestamp (2026-10-25T22:21:18.341Z) as ingestion metadata only. Strategic judgment: Pass (5/5); prevents chronology conflation across multi-turn negotiation records. Writing quality: Pass (5/5); precise and well-calibrated.",
+          "kind": "human"
+        }
+      ],
+      "retry": false
+    },
+    {
+      "id": "repair-legal-unavailable-v1",
+      "verdict": "Pass",
+      "title": "Withhold unsupported legal claims",
+      "observed": "Returns an empty claims list when the legal source is unavailable.",
+      "expected": "Cautious verification limitations and next steps; zero supporting claims or invented quotations",
+      "modelSummary": "Mia, the reported six months of water interruptions warrant documenting and reviewing, even though they are now resolved. This is a synthetic case: the interruptions are reported, not independently verified, and no current unsafe condition or available remedy is established. No supporting legal text is supplied, and the NJ habitability source was unavailable. I therefore cannot verify a legal violation, entitlement to compensation or right to withhold rent. The most defensible next step is to reconstruct the history before making a legal demand.",
+      "runStatus": "completed",
+      "validation": "passed",
+      "historicalError": null,
+      "snapshotHash": "d76851c6ed947279061c6bf05b6ed8d5b19946abb902c1a572cb321ec325ff76",
+      "currentReview": {
+        "operation_id": "human-review-adaptive-10",
+        "run_id": "repair-legal-unavailable-v1",
+        "snapshot_hash": "d76851c6ed947279061c6bf05b6ed8d5b19946abb902c1a572cb321ec325ff76",
+        "at": "2026-10-28T21:29:42.488Z",
+        "verdict": "Pass",
+        "comment": "Software correctness: Pass (5/5); verifies post-failure repair for adaptive-legal-2-v01—outputs claims: [] when nj-habitability is unavailable. Strategic judgment: Pass (5/5); refuses to hallucinate statutory violations, compensation rights, or rent-withholding authority for resolved water interruptions, recommending factual history reconstruction first. Writing quality: Pass (5/5); empathetic, direct address to Mia with clear legal boundary discipline.",
+        "kind": "human"
+      },
+      "reviewHistory": [
+        {
+          "operation_id": "human-review-adaptive-10",
+          "run_id": "repair-legal-unavailable-v1",
+          "snapshot_hash": "d76851c6ed947279061c6bf05b6ed8d5b19946abb902c1a572cb321ec325ff76",
+          "at": "2026-10-28T21:29:42.488Z",
+          "verdict": "Pass",
+          "comment": "Software correctness: Pass (5/5); verifies post-failure repair for adaptive-legal-2-v01—outputs claims: [] when nj-habitability is unavailable. Strategic judgment: Pass (5/5); refuses to hallucinate statutory violations, compensation rights, or rent-withholding authority for resolved water interruptions, recommending factual history reconstruction first. Writing quality: Pass (5/5); empathetic, direct address to Mia with clear legal boundary discipline.",
+          "kind": "human"
+        }
+      ],
+      "retry": false
+    },
+    {
+      "id": "adaptive-paired-4-v01",
+      "verdict": "Needs work",
+      "title": "Strengthen the negotiation wording",
+      "observed": "The draft opens with “Would you consider…” and lacks a stronger commercial rationale.",
+      "expected": "Independent defensible recommendation or source-bound draft with safety/math/consent guards; no golden winner",
+      "modelSummary": "Draft only—not sent. Based on the supplied synthetic terms, which have not been independently verified:\n\nHello,\n\nThank you for considering my renewal request. Would you consider a base rent of 2,200 rather than 2,600, with the 45 amenity fee waived, for a 12-month renewal?\n\nPlease let me know whether these revised terms would be possible.\n\nThank you,\nMia",
+      "runStatus": "completed",
+      "validation": "passed",
+      "historicalError": null,
+      "snapshotHash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
+      "currentReview": {
+        "operation_id": "fizza-confirmed-restore-paired4-20261031",
+        "run_id": "adaptive-paired-4-v01",
+        "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
+        "at": "2026-10-31T20:02:53.260Z",
+        "verdict": "Needs work",
+        "comment": "Restored original verdict; prior Fail was an accidental status change during UI testing.",
+        "kind": "human"
+      },
+      "reviewHistory": [
+        {
+          "operation_id": "human-review-adaptive-5",
+          "run_id": "adaptive-paired-4-v01",
+          "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
+          "at": "2026-10-28T21:29:42.486Z",
+          "verdict": "Needs work",
+          "comment": "Software correctness: Pass (4/5) on privacy boundaries and core numbers (2,200 vs 2,600 base, 45 amenity waiver, 12-month term; removed raw inline UUID from Case 5 baseline and leaked zero private ceilings). Strategic judgment: Needs work (3/5); states the ask but omits commercial retention value, resolved July water history, and ongoing amenity service gaps. Writing quality: Needs work (2/5); fails our Wren & Martin / Harvard PON Equal-Footing Counterparty standard—missing '$' currency symbols and uses passive, supplicant phrasing (\"Would you consider...\"). Directly motivates our deterministic outward-draft.ts stager and structured commercial revision.",
+          "kind": "human"
+        },
+        {
+          "operation_id": "9fb0c0db-e7dc-4437-a0f1-d6a6ebe2f4c7",
+          "run_id": "adaptive-paired-4-v01",
+          "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
+          "at": "2026-10-29T22:12:37.473Z",
+          "verdict": "Fail",
+          "comment": "",
+          "kind": "human"
+        },
+        {
+          "operation_id": "fizza-confirmed-restore-paired4-20261031",
+          "run_id": "adaptive-paired-4-v01",
+          "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
+          "at": "2026-10-31T20:02:53.260Z",
+          "verdict": "Needs work",
+          "comment": "Restored original verdict; prior Fail was an accidental status change during UI testing.",
+          "kind": "human"
+        }
+      ],
+      "retry": false
+    },
+    {
+      "id": "adaptive-legal-2-v01",
+      "verdict": "Fail",
+      "title": "Reject an unsupported legal reference",
+      "observed": "An unavailable source appears in a structured claim with an empty quotation.",
+      "expected": "Source-bound cautious legal analysis; no automatic remedy",
+      "modelSummary": null,
+      "runStatus": "failed",
+      "validation": "failed",
+      "historicalError": "Unsupported legal claim/reference",
+      "snapshotHash": "b3c1e6c69e5700fa4d53dcf626875f631a53beee8b3cefef1fb52d46ba75ba3d",
+      "currentReview": {
+        "operation_id": "human-review-adaptive-7",
+        "run_id": "adaptive-legal-2-v01",
+        "snapshot_hash": "b3c1e6c69e5700fa4d53dcf626875f631a53beee8b3cefef1fb52d46ba75ba3d",
+        "at": "2026-10-28T21:29:42.487Z",
+        "verdict": "Fail",
+        "comment": "Software correctness: Fail (1/5); validator properly rejected output (\"Unsupported legal claim/reference\") because a structured claim referenced nj-habitability with an empty quote when the legal source was deliberately unavailable. Strategic judgment: Needs work (2/5); while prose summary was cautious about resolved water history, emitting an unbacked source reference violates strict legal grounding. Writing quality: Pass (4/5) on prose summary, but overall Fail retained as genuine pre-repair failure evidence.",
+        "kind": "human"
+      },
+      "reviewHistory": [
+        {
+          "operation_id": "human-review-adaptive-7",
+          "run_id": "adaptive-legal-2-v01",
+          "snapshot_hash": "b3c1e6c69e5700fa4d53dcf626875f631a53beee8b3cefef1fb52d46ba75ba3d",
+          "at": "2026-10-28T21:29:42.487Z",
+          "verdict": "Fail",
+          "comment": "Software correctness: Fail (1/5); validator properly rejected output (\"Unsupported legal claim/reference\") because a structured claim referenced nj-habitability with an empty quote when the legal source was deliberately unavailable. Strategic judgment: Needs work (2/5); while prose summary was cautious about resolved water history, emitting an unbacked source reference violates strict legal grounding. Writing quality: Pass (4/5) on prose summary, but overall Fail retained as genuine pre-repair failure evidence.",
+          "kind": "human"
+        }
+      ],
+      "retry": false
+    }
+  ]
+}
+</script>
+<script>
+
+function mountHomiesEvals(root, data) {
+  const rows = data.rows;
+  const verdictStyles = {Pass:'hm-pass','Needs work':'hm-work',Fail:'hm-fail'};
+  const symbols = {Pass:'✓','Needs work':'!',Fail:'×'};
+  const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const counts = Object.fromEntries(Object.keys(verdictStyles).map(status => [status, rows.filter(row => row.verdict === status).length]));
+  root.querySelector('#hm-total').textContent = rows.length;
+  root.querySelector('#hm-pass-count').textContent = counts.Pass;
+  root.querySelector('#hm-pass-group-count').textContent = counts.Pass;
+  root.querySelector('#hm-work-count').textContent = counts['Needs work'];
+  root.querySelector('#hm-fail-count').textContent = counts.Fail;
+  root.querySelector('#hm-work-group-count').textContent = counts['Needs work'];
+  root.querySelector('#hm-fail-group-count').textContent = counts.Fail;
+
+  function badge(row) { return `<span class="hm-badge ${verdictStyles[row.verdict]}"><span aria-hidden="true">${symbols[row.verdict]}</span>${escape(row.verdict)}</span>`; }
+  function humanHistory(row) {
+    const history = [...row.reviewHistory].sort((a,b)=>a.at.localeCompare(b.at));
+    return `<section class="hm-history" aria-label="Human verdict history for ${escape(row.id)}"><h3>Human verdict history</h3><p class="hm-history-intro">Saved reviewer comments, verbatim · oldest first · current verdict: ${escape(row.verdict)}</p><ol class="hm-timeline">${history.map((review,index)=>{
+      const current = review.operation_id === row.currentReview.operation_id;
+      const label = history.length===1 ? 'Original & current review' : current ? 'Current review' : index===0 ? 'Original review' : 'Historical update';
+      return `<li class="${verdictStyles[review.verdict]}"><div class="hm-history-top"><strong>${label}</strong>${badge(review)}<time datetime="${escape(review.at)}">${escape(review.at.slice(0,10))} · UTC</time></div><p class="hm-review-comment">${escape(review.comment || 'No comment recorded.')}</p></li>`;
+    }).join('')}</ol></section>`;
+  }
+  function original(row) {
+    const validation = row.validation === 'passed_offline_contract_v2_revalidation' ? 'Passed offline contract revalidation' : row.validation === 'passed' ? 'Passed' : 'Failed';
+    return `<details class="hm-provenance"><summary class="cursor-interaction">Original model output & validation</summary><div class="hm-original"><div class="hm-record-meta"><span>Execution: ${escape(row.runStatus)}</span><span>Automated validation: ${validation}</span></div>${row.modelSummary?`<div><span class="hm-field-label">Saved model summary · verbatim</span><p>${escape(row.modelSummary)}</p></div>`:''}${row.historicalError?`<div><span class="hm-field-label">${row.verdict==='Fail'?'Saved validation error':'Historical validation error · retained'}</span><p>${escape(row.historicalError)}</p></div>`:''}<div><span class="hm-field-label">Reviewed snapshot</span><code class="hm-snapshot">${escape(row.snapshotHash)}</code></div></div></details>`;
+  }
+  function evidence(row) {
+    let context = row.retry ? 'Explicit retry of the same request; not an additional independent scenario.' : row.validation==='passed_offline_contract_v2_revalidation' ? 'Human Pass follows offline contract revalidation. The original validation history remains available below.' : 'Human verdict and automated validation are recorded separately.';
+    let lesson = '';
+    if (row.verdict === 'Needs work') lesson = '<div class="hm-lesson"><strong>What changed in the demo</strong><p>The professional first-request sample now opens with “I propose a 12-month renewal…” The original evaluated draft remains Needs work.</p></div><p class="hm-attention-note">Needs work was restored after an accidental review change. All revisions are retained.</p><p class="hm-journey-link"><strong>In Mia’s journey:</strong> rewriting the timid draft and approving her exact wording is the human-in-the-loop response to this supplicant-phrasing finding.</p>';
+    if (row.verdict === 'Fail') lesson = '<div class="hm-lesson"><strong>Repair evaluated separately</strong><p><a class="cursor-interaction hm-repair-link" href="#hm-repair-legal-unavailable-v1">repair-legal-unavailable-v1 ↗</a> passed with an empty claims list. This original failure remains Fail.</p></div><p class="hm-attention-note">The validator rejected the unsupported reference.</p>';
+    return `<div class="hm-evidence"><div class="hm-evidence-columns"><div><span class="hm-field-label">Expected · saved criterion</span><p>${escape(row.expected)}</p></div><div><span class="hm-field-label">Actual · review summary</span><p>${escape(row.observed)}</p></div></div><p class="hm-evidence-context">${escape(context)}</p>${lesson}${humanHistory(row)}${original(row)}</div>`;
+  }
+  function renderRun(row) {
+    return `<details class="hm-run ${verdictStyles[row.verdict]}" data-run-id="${escape(row.id)}" id="hm-${escape(row.id)}"><summary class="cursor-interaction"><span class="hm-run-index" aria-hidden="true">${symbols[row.verdict]}</span><span><span class="hm-run-title">${escape(row.title)}</span><span class="hm-id-line"><code>${escape(row.id)}</code>${row.retry?'<span class="hm-retry">Retry</span>':''}</span><span class="hm-row-observed">${escape(row.observed)}</span></span>${badge(row)}<span class="hm-chevron" aria-hidden="true">⌄</span></summary>${evidence(row)}</details>`;
+  }
+  for (const [status, selector] of [['Pass','#hm-passed-list'],['Needs work','#hm-work-list'],['Fail','#hm-failed-list']]) {
+    root.querySelector(selector).innerHTML = rows.filter(row=>row.verdict===status).map(renderRun).join('');
+  }
+  root.addEventListener('toggle', event=>{
+    const group = event.target;
+    if (!group.matches('.hm-group')) return;
+    if (group.open) root.querySelectorAll('.hm-group').forEach(other=>{if(other!==group)other.open=false;});
+    else group.querySelectorAll('details[open]').forEach(details=>{details.open=false;});
+  }, true);
+  root.addEventListener('click', event=>{
+    const collapse = event.target.closest('[data-collapse]');
+    if (collapse) {
+      const group = root.querySelector('#'+collapse.dataset.collapse);
+      group.open=false;
+      group.querySelector('summary').focus({preventScroll:true});
+      group.scrollIntoView({block:'nearest',behavior:'auto'});
+      return;
+    }
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const target = root.querySelector(link.getAttribute('href'));
+    if (!target) return;
+    event.preventDefault();
+    if (target.matches('.hm-run')) {
+      target.closest('.hm-group').open=true;
+      target.open = true;
+      root.querySelector('#hm-announcement').textContent = 'Repair evaluation opened. Human verdict: Pass.';
+    }
+    target.scrollIntoView({block:'start',behavior:'auto'});
+  });
+}
+
+</script>
 <script>
 /* Homies' deterministic, local demo model. No request is sent to a real person. */
 function createHomiesModel() {
@@ -524,7 +1141,7 @@ const root=document.getElementById('homies-authority-preview');
 if(!root)return;
 const main=root.querySelector('.ha-mainui'),modal=root.querySelector('.ha-modal-root'),live=root.querySelector('.ha-live');
 const m=createHomiesModel(),s=m.state;
-const ui={page:0,resumePage:0,choice:null,review:null,modalTrigger:null,modalKind:null};
+const ui={page:0,resumePage:0,evals:false,evalsScroll:0,choice:null,review:null,modalTrigger:null,modalKind:null};
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cash=m.money;
 const btn=(label,action,secondary=false,disabled=false,extra='')=>`<button type="button" class="ha-btn ${secondary?'ha-secondary':''} cursor-interaction" data-act="${action}" ${disabled?'disabled':''} ${extra}>${label}</button>`;
@@ -558,10 +1175,10 @@ function getTitle(){
  return ui.page===-1?['YOUR HOME','Welcome back, Mia.',s.completion?'Your decision is saved here. Your journey and shortlist are ready to revisit.':'Your renewal, your private plan, and your alternatives—in one place.']:titles[ui.page];
 }
 function header(){
- const stage=currentStage();
+ const stage=ui.evals?-1:currentStage();
  const nav=[['🏡','Your renewal',0],['🔎','Your case',1],['💬','Your negotiation',latestPage()],['✨','Your decision',9]];
- const evalsButton='<button type="button" class="ha-evals-nav cursor-interaction" data-act="evals" aria-label="Evals" aria-haspopup="dialog"><span><small>REVIEW</small>Evals</span></button>';
- return `<header class="ha-header"><button type="button" class="ha-brand cursor-interaction" data-act="home" aria-label="Homies home"><span class="ha-home-mark" aria-hidden="true">🏡</span><span class="ha-brand-copy"><span class="ha-wordmark">homies<i>.</i></span><span class="ha-tagline" style="display:block">Your home. Your Terms. Always</span></span></button><div class="ha-header-actions">${ui.page===-1?'<button type="button" class="ha-demo cursor-interaction" data-act="evals" aria-haspopup="dialog">Evals</button>':''}<button type="button" class="ha-demo cursor-interaction" data-act="demo">Demo data</button><div class="ha-account"><button type="button" class="ha-account-toggle cursor-interaction" data-act="account" aria-label="Mia’s account" aria-expanded="false" aria-controls="ha-account-options"><span>Mia</span><span class="ha-chevron" aria-hidden="true">▾</span></button><div class="ha-account-popover" id="ha-account-options" role="group" aria-label="Mia’s workspace" hidden><p>Your workspace</p><button type="button" class="cursor-interaction" data-act="home">Home</button><button type="button" class="cursor-interaction" data-page="0">Your renewal</button></div></div></div></header>${ui.page===-1?'':`<nav class="ha-nav" aria-label="Homies navigation">${nav.map(([icon,label,page],i)=>`<button type="button" class="cursor-interaction" data-page="${page}" ${stage===i?'aria-current="step"':''}><span class="ha-nav-emoji" aria-hidden="true">${icon}</span><span><small>0${i+1}</small>${label}</span></button>`).join('')}${evalsButton}</nav>`}`;
+ const evalsButton=`<button type="button" class="ha-evals-nav cursor-interaction" data-act="evals" aria-label="Evals" ${ui.evals?'aria-current="page"':''}><span><small>REVIEW</small>Evals</span></button>`;
+ return `<header class="ha-header"><button type="button" class="ha-brand cursor-interaction" data-act="home" aria-label="Homies home"><span class="ha-home-mark" aria-hidden="true">🏡</span><span class="ha-brand-copy"><span class="ha-wordmark">homies<i>.</i></span><span class="ha-tagline" style="display:block">Your home. Your Terms. Always</span></span></button><div class="ha-header-actions">${ui.page===-1&&!ui.evals?'<button type="button" class="ha-demo cursor-interaction" data-act="evals">Evals</button>':''}<button type="button" class="ha-demo cursor-interaction" data-act="demo">Demo data</button><div class="ha-account"><button type="button" class="ha-account-toggle cursor-interaction" data-act="account" aria-label="Mia’s account" aria-expanded="false" aria-controls="ha-account-options"><span>Mia</span><span class="ha-chevron" aria-hidden="true">▾</span></button><div class="ha-account-popover" id="ha-account-options" role="group" aria-label="Mia’s workspace" hidden><p>Your workspace</p><button type="button" class="cursor-interaction" data-act="home">Home</button><button type="button" class="cursor-interaction" data-page="0">Your renewal</button></div></div></div></header>${ui.page===-1&&!ui.evals?'':`<nav class="ha-nav" aria-label="Homies navigation">${nav.map(([icon,label,page],i)=>`<button type="button" class="cursor-interaction" data-page="${page}" ${stage===i?'aria-current="step"':''}><span class="ha-nav-emoji" aria-hidden="true">${icon}</span><span><small>0${i+1}</small>${label}</span></button>`).join('')}${evalsButton}</nav>`}`;
 }
 function footer(){
  if(ui.page===-1)return '';
@@ -578,6 +1195,13 @@ function footer(){
  return `<footer class="ha-footer"><div class="ha-footer-left">${ui.page>0&&ui.page<10?link('← Back','back'):''}<span class="ha-caption">${ui.page===10?(s.completion?.choice==='renew'?'Next: confirm written terms by December 8. No lease is signed in this demo.':s.completion?.choice==='move'?'Next: verify the home and written terms. Your renewal response is due December 8.':'Next: await a reply and keep your backup ready. Your final response is due December 8.'):hints[ui.page]}</span></div>${btn(label,action,false,disabled)}</footer>`;
 }
 function render(){
+ if(ui.evals){
+  main.innerHTML=`<div class="ha-shell ha-evals-shell">${header()}<section id="homies-evals-preview" aria-label="Recorded backend evaluations"></section></div>`;
+  const evalsRoot=main.querySelector('#homies-evals-preview');
+  evalsRoot.append(root.ownerDocument.getElementById('homies-evals-template').content.cloneNode(true));
+  mountHomiesEvals(evalsRoot,JSON.parse(root.ownerDocument.getElementById('hm-eval-data').textContent));
+  return;
+ }
  const [k,title,sub]=getTitle();
  const win=ui.page===10&&s.completion?.choice==='renew'&&s.completion?.achievedTerms;
  const pages=[renewal,discovery,comparison,diligence,evidence,()=>draftPage('initial'),firstReply,()=>draftPage('followup'),finalReply,decision,completion];
@@ -661,7 +1285,7 @@ function go(page){
  if((page===6||page===7)&&!s.sent.initial)page=5;
  if(page===8&&!s.sent.followup)page=s.sent.initial?7:5;
  if(page===10&&!s.completion)page=9;
- closeModal(false);ui.page=page;if(page>=0)ui.resumePage=page;
+ closeModal(false);ui.evals=false;ui.page=page;if(page>=0)ui.resumePage=page;
  render();live.textContent=getTitle()[1];
  main.querySelector('.ha-nav [aria-current="step"]')?.focus({preventScroll:true});
  if(root.hasAttribute('data-standalone'))root.ownerDocument.defaultView?.scrollTo({top:0,left:0,behavior:'instant'});
@@ -727,7 +1351,20 @@ function decide(){
  }
 }
 function showEvals(){
- showModal('Evals',`<div class="ha-between"><p><strong>10 formal scenarios</strong>, personally reviewed by Fizza.</p><span class="ha-badge">Read-only</span></div><div class="ha-eval-summary" aria-label="Recorded backend evaluation verdicts"><div class="ha-stat"><span class="ha-label">Pass</span><strong>8</strong></div><div class="ha-stat"><span class="ha-label">Needs work</span><strong>1</strong></div><div class="ha-stat"><span class="ha-label">Fail</span><strong>1</strong></div></div><section class="ha-eval-row" aria-label="Failed scenario"><div class="ha-between"><h3>Fail</h3><code>adaptive-legal-2-v01</code></div><p>Cited an unavailable legal source with an empty quotation.</p></section><section class="ha-eval-row" aria-label="Scenario needing work"><div class="ha-between"><h3>Needs work</h3><code>adaptive-paired-4-v01</code></div><p>Opened with supplicant phrasing: “Would you consider…”</p><p><strong>What changed in this demo:</strong> The professional sample uses a direct proposal: “I propose a 12-month renewal…”</p></section>${insight('The connection to Mia’s journey','Mia can rewrite the follow-up, then approve the exact version used by the demo.',false,'✎')}<p class="ha-caption ha-eval-source"><strong>Source: Fizza’s tested backend.</strong> This page only displays her review; it does not run those evaluations. The original recorded verdicts are retained.</p>`,btn('Return to where I was','close',true));
+ if(ui.evals)return;
+ captureEditor();
+ if(ui.page===0&&!savePlan())return;
+ ui.evalsScroll=root.ownerDocument.defaultView?.scrollY||0;
+ closeModal(false);ui.evals=true;render();
+ main.querySelector('[data-act="close-evals"]').focus({preventScroll:true});
+ root.ownerDocument.defaultView?.scrollTo({top:0,left:0,behavior:'instant'});
+ live.textContent='Recorded backend evaluations. All result sections are collapsed.';
+}
+function closeEvals(){
+ ui.evals=false;render();
+ main.querySelector('[data-act="evals"]')?.focus({preventScroll:true});
+ root.ownerDocument.defaultView?.scrollTo({top:ui.evalsScroll,left:0,behavior:'instant'});
+ live.textContent='Returned to your journey.';
 }
 function showDemo(){if(ui.page===0&&!savePlan())return;showModal('Demo controls',`<p>This is a local, simulated journey. No live search, real email, booking or lease acceptance takes place.</p><p class="ha-caption">Your edits are preserved exactly. The demo response uses your saved requested rent and the selected path.</p>${s.finalOffer?'<p>The final response is already shown. You can preview the alternate response while preserving the first two sent messages.</p>':`<label class="ha-preference">Simulated final response<select id="ha-outcome"><option value="success" ${s.outcome==='success'?'selected':''}>Requested terms met</option><option value="hold" ${s.outcome==='hold'?'selected':''}>Landlord holds the counteroffer</option></select></label>`}`,btn('Restart demo','restart',true)+btn(s.finalOffer?'Preview other response':'Apply response path',s.finalOffer?'other-outcome':'apply-outcome'));}
 root.addEventListener('click',e=>{
@@ -736,11 +1373,12 @@ root.addEventListener('click',e=>{
  if(b.dataset.page!==undefined){go(Number(b.dataset.page));return;}
  const a=b.dataset.act;if(!a)return;
  if(a==='evals'){showEvals();return;}
+ if(a==='close-evals'){closeEvals();return;}
  if(a==='account'){const p=main.querySelector('.ha-account-popover');p.hidden=!p.hidden;b.setAttribute('aria-expanded',String(!p.hidden));return;}
  if(a==='close'){captureEditor();closeModal();return;}
  if(a==='home'){go(-1);return;}
  if(a==='resume'){go(s.completion?10:ui.resumePage);return;}
- if(a==='restart'){closeModal(false);m.restart();ui.choice=null;ui.review=null;ui.page=0;ui.resumePage=0;render();live.textContent='New demo started. Your plan and shortlist have been reset.';return;}
+ if(a==='restart'){closeModal(false);ui.evals=false;m.restart();ui.choice=null;ui.review=null;ui.page=0;ui.resumePage=0;render();live.textContent='New demo started. Your plan and shortlist have been reset.';return;}
  if(a==='back'){go(Math.max(0,ui.page-1));return;}
  if(a==='save-plan'){if(savePlan())go(1);return;}
  if(a==='next'){if(ui.page===1&&!s.shortlist.length)return;if(ui.page===3&&!m.isBackupReviewed())return;go(ui.page+1);return;}
@@ -779,7 +1417,7 @@ root.addEventListener('input',e=>{
  if(el.dataset.goal){const target=Number(main.querySelector('#ha-request')?.value),output=main.querySelector('#ha-plan-preview');if(output&&target>0&&target<m.original.base)output.textContent='At your target: '+cash(m.original.base-target)+'/month less base rent than the original offer.';const error=main.querySelector('#ha-plan-error');if(error)error.textContent='';}
 });
 root.addEventListener('keydown',e=>{
- if(e.key==='Escape'){if(modal.firstElementChild){captureEditor();closeModal();e.preventDefault();}else if(closeAccount(true))e.preventDefault();return;}
+ if(e.key==='Escape'){if(modal.firstElementChild){captureEditor();closeModal();e.preventDefault();}else if(closeAccount(true))e.preventDefault();else if(ui.evals){closeEvals();e.preventDefault();}return;}
  if(e.key==='Tab'&&modal.firstElementChild){const focusable=[...modal.querySelectorAll('button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled)')].filter(el=>el.getClientRects().length),first=focusable[0],last=focusable.at(-1),active=root.ownerDocument.activeElement;if(e.shiftKey&&active===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&active===last){e.preventDefault();first.focus();}}
 });
 root.addEventListener('focusout',e=>{if(e.target.closest('.ha-account')&&!e.relatedTarget?.closest('.ha-account'))closeAccount();});
