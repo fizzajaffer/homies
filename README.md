@@ -4,7 +4,7 @@
 
 Homies helps Mia compare a rent renewal with possible alternatives, prepare a request, and choose her next step. The submitted prototype is an interactive, simulated browser walkthrough. It includes editable drafts, a consent checkpoint for the exact wording and recipient before each simulated send, and a read-only Evals section. No live property search, model call, real email, booking, or lease acceptance occurs in this static demo.
 
-The submitted artifact is preserved unchanged in [`demo/index.html`](demo/index.html). Its application content matches the live site; Netlify adds hosting markup. The separate Next.js console retains the recorded model evaluations, review revisions, and synthetic Case 6 evidence in [`data/`](data/README.md).
+The Netlify-ready demo artifact is [`demo/index.html`](demo/index.html). The separate Next.js console retains the recorded model evaluations, review revisions, and synthetic Case 6 evidence in [`data/`](data/README.md).
 
 ## Mia's case
 
@@ -42,9 +42,7 @@ Recorded **Case 6** has different versioned options: Option A was **$2,230/month
 | `repair-source-dated-v1` | Pass | Separates the explicit statement date from the upload timestamp. |
 | `repair-legal-unavailable-v1` | Pass | Uses an empty claims list when the legal source is unavailable. |
 
-**Known discrepancy in the unchanged demo:** its Evals section labels `adaptive-paired-3-v01` as Fail and says it “Recommended an ineligible property.” The stored human review is Pass; the saved response recommends conditional renewal and rejects the ineligible alternatives. The genuine documented Fail is `adaptive-legal-2-v01`, which the demo does not identify. Thus the demo's claim to retain the original backend verdicts is inaccurate for the failure ID and reason, even though its aggregate 8/1/1 counts now agree. The modal names only the Fail and Needs work entries; it does not list all ten IDs or reasons. Its paired-4 wording criticism and direct-proposal sample are consistent with the evidence.
-
-Fizza confirmed that paired-4's October 29 change from Needs work to Fail was accidental UI testing. A new human review revision restores Needs work with the note: “Restored original verdict; prior Fail was an accidental status change during UI testing.” All prior revisions remain. No other verdict or saved model output was changed. The [consistency report](docs/DEMO_CONSISTENCY.md) lists every Evals discrepancy and the demo-versus-console differences.
+Fizza confirmed that paired-4's October 29 change from Needs work to Fail was accidental UI testing. A new human review revision restores Needs work with the note: “Restored original verdict; prior Fail was an accidental status change during UI testing.” All prior revisions remain. No other verdict or saved model output was changed.
 
 ## Architecture and verification
 
