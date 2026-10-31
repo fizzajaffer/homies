@@ -1,34 +1,36 @@
-# Recorded Homies data — 2026-10-31
+# Recorded Homies data
 
-This is a complete, consistent snapshot of the recorded synthetic capstone data, not a new evaluation run. It contains 46 tables, 7 cases, 10 adaptive benchmark records, 17 journey runs, and all 12 review-history entries (11 human entries covering 10 runs, plus one explicitly labeled UI test). Case 6 is `8050cf7d-496a-48b3-9d0d-c2101de28387`.
+This is the complete recorded synthetic capstone dataset, with one reviewer-authorized correction appended on October 31, 2026. It contains **46 tables, 7 cases, 10 adaptive benchmark runs, 17 journey runs, and 13 review-history entries**: 12 human entries across 10 runs plus one explicitly labeled UI test. Case 6 is `8050cf7d-496a-48b3-9d0d-c2101de28387`.
 
-The SQLite online backup included committed WAL records without writing to the source database. All 46 tables were compared with the source; integrity, foreign-key checks, and the referenced document checksum passed. File checksums and table counts are in [provenance.json](provenance.json). The original working directory is `/Users/fizzajaffer/Documents/Codex/2026-10-25/task-4/working-data`.
+## Current human verdicts
 
-- [foundation.sqlite](foundation.sqlite): complete database, including benchmark outputs, human review history, recorded runs, uploaded source bytes, and Case 6.
-- [Current human verdicts and their history](exports/current_human_reviews.json): latest human review matching each saved output's SHA-256, using the same selection rule as the app.
-- [All review entries](exports/eval_reviews.json), [benchmark records](exports/adaptive_benchmarks.json), [journey runs](exports/journey_runs.json), and [Case 6 records](exports/case6.json): readable exports. Database JSON columns remain exact strings to retain snapshot-hash fidelity; the SQLite file is authoritative.
-- [Original human-review receipts](human-review-receipts.json): the original insertion receipts, not the latest-verdict index.
-- `documents/`: referenced immutable synthetic evidence bytes; other uploads are stored inside SQLite.
+**8 Pass, 1 Needs work, 1 Fail.**
 
-## Human verdicts
-
-| Run | Recorded execution status | Current human verdict |
+| Run | Execution status | Current human verdict |
 | --- | --- | --- |
 | adaptive-paired-1-v01 | completed | Pass |
 | adaptive-paired-2-v01 | completed | Pass |
 | adaptive-paired-3-v01 | completed | Pass |
 | adaptive-paired-3-v01-retry | completed | Pass |
-| adaptive-paired-4-v01 | completed | Fail |
+| adaptive-paired-4-v01 | completed | Needs work |
 | adaptive-legal-1-v01 | completed | Pass |
 | adaptive-legal-2-v01 | failed | Fail |
 | repair-undated-v1 | completed | Pass |
 | repair-source-dated-v1 | completed | Pass |
 | repair-legal-unavailable-v1 | completed | Pass |
 
-There are 8 current Pass verdicts and 2 Fail verdicts. The draft run `adaptive-paired-4-v01` was revised from Needs work to Fail on October 29; both entries are preserved. The retry remains labeled as a retry, not an extra independent paired sample. Human verdicts are separate from the older assistant rubric scores and the original benchmark `humanReview: pending` metadata; neither was rewritten. A passing automated test suite does not turn a failed human evaluation into a pass.
+Paired-4's history is **Needs work → Fail → Needs work**. Fizza, its original reviewer, confirmed the October 29 Fail was accidental UI testing. The final entry was appended through the app's `EvalReviews.save` mechanism, bound to the unchanged benchmark snapshot hash, with this exact note: “Restored original verdict; prior Fail was an accidental status change during UI testing.” Both earlier entries remain.
 
-## Running with this data
+Paired-3 remains Pass following the documented recommendation/selection contract repair. The genuine Fail is `adaptive-legal-2-v01`, which emitted an unavailable-source reference with an empty quotation. The unchanged static demo misattributes this failure to paired-3; see the [consistency report](../docs/DEMO_CONSISTENCY.md). The retry is not an additional independent paired sample. The older assistant scores and benchmark `humanReview: pending` metadata remain unchanged; current human verdicts come from `eval_reviews`.
 
-The app defaults to this `data/` directory. `TENANT_DATA_DIR` still overrides it, including values in an existing `.env.local`. Keep the committed snapshot as a reference; to retain new sessions across deployments, copy its contents to persistent writable storage and set `TENANT_DATA_DIR` to that directory. Do not overwrite existing runtime data with a fresh clone. SQLite requires a Node runtime with filesystem access; static hosting alone is insufficient.
+## Files and provenance
 
-No model calls, new human reviews, or source-data edits were made for this snapshot. Credential-signature scans of the database, evidence, and tracked source found no credentials; JSON-field inspection found token-usage counters, not authentication tokens. The local backup includes private local configuration and must not be uploaded as a public artifact.
+- [foundation.sqlite](foundation.sqlite): complete database, including all benchmark outputs, review history, journey runs, uploaded source bytes, and Case 6.
+- [Current human reviews](exports/current_human_reviews.json): latest human entry matching each saved output's SHA-256, with matching revision history; uses the same selection rule as the app.
+- [All review entries](exports/eval_reviews.json), [benchmark records](exports/adaptive_benchmarks.json), [journey runs](exports/journey_runs.json), and [Case 6](exports/case6.json): readable exports. Database JSON columns remain exact strings to preserve snapshot hashes; BLOB values use an explicit base64 wrapper.
+- [Original review receipts](human-review-receipts.json): original insertion receipts, intentionally preserved, not a current-verdict index. The correction receipt is in [provenance.json](provenance.json).
+- `documents/`: immutable referenced synthetic evidence bytes. Other uploaded evidence is stored in SQLite.
+
+The corrected snapshot is a byte-identical copy of the closed, fully checkpointed working database. There was no uncheckpointed WAL, and its SHA-256 matched before and after copying. Immutable read-only integrity and foreign-key checks passed. All 45 non-review tables and all 12 earlier review rows match the pre-correction snapshot exactly. Only the authorized new review row was added. Benchmark, journey-run, and Case 6 exports are unchanged; review exports and checksums were regenerated. No model calls or rescoring occurred.
+
+The app defaults to `./data`; `TENANT_DATA_DIR` overrides it. Use a persistent writable copy for further sessions and keep one server per database. Historical local paths and backup details are in [HISTORY.md](../docs/HISTORY.md). The full local backup includes private local configuration and is not a publication artifact.

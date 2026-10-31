@@ -104,12 +104,12 @@
     "run_status": "completed",
     "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
     "current_human_review": {
-      "operation_id": "9fb0c0db-e7dc-4437-a0f1-d6a6ebe2f4c7",
+      "operation_id": "fizza-confirmed-restore-paired4-20261031",
       "run_id": "adaptive-paired-4-v01",
       "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
-      "at": "2026-10-29T22:12:37.473Z",
-      "verdict": "Fail",
-      "comment": "",
+      "at": "2026-10-31T20:02:53.260Z",
+      "verdict": "Needs work",
+      "comment": "Restored original verdict; prior Fail was an accidental status change during UI testing.",
       "kind": "human"
     },
     "human_review_history": [
@@ -129,6 +129,15 @@
         "at": "2026-10-29T22:12:37.473Z",
         "verdict": "Fail",
         "comment": "",
+        "kind": "human"
+      },
+      {
+        "operation_id": "fizza-confirmed-restore-paired4-20261031",
+        "run_id": "adaptive-paired-4-v01",
+        "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
+        "at": "2026-10-31T20:02:53.260Z",
+        "verdict": "Needs work",
+        "comment": "Restored original verdict; prior Fail was an accidental status change during UI testing.",
         "kind": "human"
       }
     ]

@@ -1,8 +1,8 @@
 {
   "snapshot_date": "2026-10-31",
   "source": "/Users/fizzajaffer/Documents/Codex/2026-10-25/task-4/working-data",
-  "method": "SQLite online backup from a read-only source connection, including committed WAL records; every table compared with source in rowid order.",
-  "source_database_modified": false,
+  "method": "Byte-identical copy of the closed, fully checkpointed authoritative database after one reviewer-authorized EvalReviews.save revision. No uncheckpointed WAL existed; source hash matched before and after copying. Immutable read-only integrity checks and table comparisons verified 45 other tables and all 12 prior review rows unchanged.",
+  "source_database_modified": true,
   "integrity_check": "ok",
   "foreign_key_check": [],
   "sqlite_user_version": 13,
@@ -128,8 +128,8 @@
       "sha256": "4dcc37b4fea543f7ebe7400ce8502179d7213ce37961afcc34948c94d595e46c"
     },
     "eval_reviews": {
-      "rows": 12,
-      "sha256": "8641f577f8458a215165768fc5a2017fefd495464f62690b15c62780a77d878f"
+      "rows": 13,
+      "sha256": "68554ecffe511b6b6c5bd0e38832e716558127f0faa1a0dd87fbe4347b8e1531"
     },
     "events": {
       "rows": 33,
@@ -206,12 +206,12 @@
       "sha256": "91a6f65ebd50814e487810209365d0d3030bee8df0f1d11c039f6ed61ce9b940"
     },
     "exports/current_human_reviews.json": {
-      "bytes": 17642,
-      "sha256": "029982f07599495e81c28921c29817c974a81a68b968a31d00f8b3840c10ce4b"
+      "bytes": 18171,
+      "sha256": "5ba0cf58d6eae478f78973932684433f1817df310dc6c0ff7778f60356b0fa17"
     },
     "exports/eval_reviews.json": {
-      "bytes": 8298,
-      "sha256": "f186190e2a6c0a97b483832cfd30d2e473972c5167f6aa99b06eaed5eeef21f8"
+      "bytes": 8693,
+      "sha256": "11297ed93ba447050a52e2081095577fd522e1e4a65ba448d3b807185397d077"
     },
     "exports/journey_runs.json": {
       "bytes": 38072,
@@ -219,11 +219,30 @@
     },
     "foundation.sqlite": {
       "bytes": 2887680,
-      "sha256": "37cebdb04896932be9b9b2337c6c956bbb47146f4560b8ecbf49ec4998e97be3"
+      "sha256": "2e760d36b4312339940e8a08c0466de15188561c0f74ecdd007b1c01c1f2e71a"
     },
     "human-review-receipts.json": {
       "bytes": 7577,
       "sha256": "9596a8926d25c3fc0f33f7fb3543158703badd841371ed8b18ce5e7331f094fe"
     }
-  }
+  },
+  "review_correction": {
+    "mechanism": "EvalReviews.save",
+    "authorizedBy": "Fizza, the original reviewer, confirmed the October 29 change was accidental in this chat",
+    "saved": {
+      "operation_id": "fizza-confirmed-restore-paired4-20261031",
+      "run_id": "adaptive-paired-4-v01",
+      "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
+      "at": "2026-10-31T20:02:53.260Z",
+      "verdict": "Needs work",
+      "comment": "Restored original verdict; prior Fail was an accidental status change during UI testing.",
+      "kind": "human"
+    },
+    "counts": {
+      "Pass": 8,
+      "Needs work": 1,
+      "Fail": 1
+    }
+  },
+  "pre_correction_database_sha256": "37cebdb04896932be9b9b2337c6c956bbb47146f4560b8ecbf49ec4998e97be3"
 }

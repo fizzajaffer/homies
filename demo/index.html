@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Homies — an interactive renter renewal demo with private goals, approved messages, ready alternatives, and a clear decision.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Homies · Your home. Your Terms. Always</title>
+<style>html,body{margin:0;padding:0;min-width:0;background:#fff9f2}body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button{cursor:pointer}noscript{display:block;padding:24px;color:#233e38;font-size:18px}</style>
+<style>
+#homies-authority-preview{--ha-ink:#233e38;--ha-text:#3d554d;--ha-muted:#53665c;--ha-teal:#14695c;--ha-dark:#105548;--ha-paper:#fffefd;--ha-canvas:#fff9f2;--ha-line:#d7e2d7;--ha-sage:#e5f3e9;--ha-peach:#fde9dc;--ha-lilac:#eee8f8;--ha-butter:#fff1c7;--ha-sky:#e8f2f6;color-scheme:light;color:var(--ha-ink);background:radial-gradient(ellipse at 0 0,#edf8ec,transparent 42%),var(--ha-canvas);font:15px/1.4 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;position:relative;isolation:isolate;display:grid;width:100%;min-width:0;border-radius:18px;-webkit-font-smoothing:antialiased}
+#homies-authority-preview *{box-sizing:border-box}
+#homies-authority-preview :is(h1,h2,h3,p,dl,dd,ul,ol){margin:0}
+#homies-authority-preview :is(button,input,select,textarea){font:inherit;color:inherit;min-width:0}
+#homies-authority-preview button{touch-action:manipulation}
+#homies-authority-preview button:disabled{background:#e6e9e1;color:#53614e;border-color:#ccd3c5;cursor:not-allowed}
+#homies-authority-preview [hidden]{display:none!important}
+#homies-authority-preview .ha-mainui,#homies-authority-preview .ha-modal-root{grid-area:1/1;min-width:0}
+#homies-authority-preview .ha-modal-root:empty{display:none}
+#homies-authority-preview .ha-shell{max-width:1340px;margin:auto;padding:14px 20px;display:grid;gap:10px;min-width:0}
+#homies-authority-preview .ha-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-right:84px}
+#homies-authority-preview .ha-brand{display:flex;gap:10px;align-items:center;border:0;background:none;padding:0;text-align:left;max-width:100%;min-width:0}
+#homies-authority-preview .ha-brand-copy{min-width:0}
+#homies-authority-preview .ha-home-mark{font-size:27px;display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#e2efdf;flex:none}
+#homies-authority-preview .ha-wordmark{font-size:27px;line-height:1.05;letter-spacing:-1px;font-weight:800}
+#homies-authority-preview .ha-wordmark i{color:#ad684a;font-style:normal}
+#homies-authority-preview .ha-tagline{font-size:13px;color:var(--ha-teal);font-weight:650;margin-top:3px}
+#homies-authority-preview .ha-header-actions{display:flex;align-items:center;gap:16px;flex:none}
+#homies-authority-preview .ha-demo{padding:4px 0;border:0;background:none;font-size:13px;color:var(--ha-muted);min-height:36px}
+#homies-authority-preview .ha-demo:hover{text-decoration:underline}
+#homies-authority-preview .ha-account{position:relative}
+#homies-authority-preview .ha-account-toggle{display:flex;align-items:center;justify-content:center;gap:12px;min-height:44px;min-width:80px;padding:8px 12px;border:1px solid #cddfcb;border-radius:14px;background:#eff6e9;font-weight:650}
+#homies-authority-preview .ha-account-toggle[aria-expanded=true]{background:var(--ha-sage)}
+#homies-authority-preview .ha-chevron{font-size:13px;color:var(--ha-muted)}
+#homies-authority-preview .ha-account-popover{position:absolute;right:0;top:calc(100% + 7px);z-index:20;width:190px;border:1px solid var(--ha-line);border-radius:14px;padding:6px;background:var(--ha-paper);box-shadow:0 10px 28px #233e3820}
+#homies-authority-preview .ha-account-popover p{font-size:13px;color:var(--ha-muted);padding:8px 10px}
+#homies-authority-preview .ha-account-popover button{display:block;width:100%;min-height:44px;border:0;border-radius:8px;background:none;text-align:left;padding:9px 10px}
+#homies-authority-preview .ha-account-popover button:hover{background:var(--ha-sage)}
+#homies-authority-preview .ha-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) 88px;gap:9px}
+#homies-authority-preview .ha-nav .ha-evals-nav{justify-content:center;text-align:center}
+#homies-authority-preview .ha-eval-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#homies-authority-preview .ha-eval-row{display:grid;gap:7px;padding-top:11px;border-top:1px solid var(--ha-line)}
+#homies-authority-preview .ha-eval-row code{font-size:13px;overflow-wrap:anywhere}
+#homies-authority-preview .ha-eval-row p{font-size:14px;line-height:1.4}
+#homies-authority-preview .ha-eval-source{padding-top:9px;border-top:1px solid var(--ha-line)}
+@media(max-width:700px){#homies-authority-preview .ha-nav .ha-evals-nav{grid-column:1/-1}}
+#homies-authority-preview .ha-nav button{display:flex;align-items:center;gap:9px;min-height:53px;padding:8px 11px;border:1px solid var(--ha-line);border-radius:14px;background:var(--ha-paper);font-size:14px;font-weight:650;text-align:left}
+#homies-authority-preview .ha-nav button[aria-current=step]{background:var(--ha-teal);border-color:var(--ha-teal);color:#fff}
+#homies-authority-preview .ha-nav-emoji{display:grid;place-items:center;width:29px;height:30px;flex:none;border-radius:9px;background:#fff0c7;font-size:21px}
+#homies-authority-preview .ha-nav button:nth-child(2) .ha-nav-emoji{background:var(--ha-peach)}
+#homies-authority-preview .ha-nav button:nth-child(3) .ha-nav-emoji{background:var(--ha-lilac)}
+#homies-authority-preview .ha-nav small{display:block;font-size:12px;letter-spacing:.7px;line-height:1.15;margin-bottom:2px}
+#homies-authority-preview .ha-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
+#homies-authority-preview .ha-kicker{font-size:12px;font-weight:750;letter-spacing:1px;color:var(--ha-teal);text-transform:uppercase;margin-bottom:4px}
+#homies-authority-preview h1{font-size:27px;line-height:1.13;letter-spacing:-.65px;font-weight:750}
+#homies-authority-preview h2{font-size:19px;line-height:1.25;letter-spacing:-.25px;font-weight:700}
+#homies-authority-preview h3{font-size:16px;line-height:1.3;font-weight:700}
+#homies-authority-preview .ha-subtitle{font-size:14px;color:var(--ha-muted);margin-top:5px}
+#homies-authority-preview .ha-deadline{flex:none;display:grid;gap:2px;border:1px solid #e6d9b1;border-radius:12px;padding:8px 11px;background:var(--ha-butter);font-size:13px;color:#684d25;text-align:left}
+#homies-authority-preview .ha-deadline strong{font-size:14px;color:#5c4522}
+#homies-authority-preview .ha-body{display:grid;gap:11px;min-width:0}
+#homies-authority-preview .ha-columns{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:14px;align-items:start}
+#homies-authority-preview .ha-columns.ha-equal{grid-template-columns:repeat(2,minmax(0,1fr))}
+#homies-authority-preview .ha-panel{display:grid;gap:11px;min-width:0;padding:16px;border:1px solid var(--ha-line);border-radius:18px;background:var(--ha-paper);box-shadow:0 3px 14px #364c3805}
+#homies-authority-preview .ha-panel.ha-peach{background:var(--ha-peach);border-color:#f0d7c4}
+#homies-authority-preview .ha-panel.ha-lilac{background:var(--ha-lilac);border-color:#ded3ed}
+#homies-authority-preview .ha-panel.ha-sage{background:var(--ha-sage);border-color:#c7dfcc}
+#homies-authority-preview .ha-panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
+#homies-authority-preview .ha-caption{font-size:13px;line-height:1.36;color:var(--ha-muted)}
+#homies-authority-preview .ha-muted{color:var(--ha-muted)}
+#homies-authority-preview .ha-label{font-size:14px;font-weight:650;color:var(--ha-muted)}
+#homies-authority-preview .ha-money{font-size:35px;line-height:1.08;font-weight:760;letter-spacing:-.8px;font-variant-numeric:tabular-nums;display:block;margin:3px 0}
+#homies-authority-preview .ha-money small{font-size:14px;letter-spacing:0;font-weight:450}
+#homies-authority-preview .ha-money-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#homies-authority-preview .ha-money-box{padding:12px;border-radius:13px;background:var(--ha-sky)}
+#homies-authority-preview .ha-money-box:last-child{background:var(--ha-peach)}
+#homies-authority-preview .ha-money-box .ha-money{font-size:32px}
+#homies-authority-preview .ha-insight{display:flex;gap:9px;align-items:start;border:1px solid #d2e2d4;border-radius:12px;padding:10px 12px;background:#edf6eb;color:#355443;font-size:14px;line-height:1.4}
+#homies-authority-preview .ha-insight strong{display:block;margin-bottom:2px;color:var(--ha-ink)}
+#homies-authority-preview .ha-insight.ha-amber{background:#fff2d6;border-color:#e9dbb6;color:#715126}
+#homies-authority-preview .ha-insight-mark{font-size:18px;line-height:1.4;flex:none}
+#homies-authority-preview .ha-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#homies-authority-preview .ha-field{display:grid;gap:5px;min-width:0}
+#homies-authority-preview .ha-money-input{display:flex;align-items:center;gap:6px;background:var(--ha-paper);border:1px solid #a5bdaa;border-radius:11px;padding:7px 11px;min-height:47px}
+#homies-authority-preview .ha-money-input>span{font-size:21px;color:var(--ha-muted)}
+#homies-authority-preview .ha-money-input input{width:100%;border:0;background:none;padding:0;font-size:24px;font-weight:650;line-height:1.2;font-variant-numeric:tabular-nums}
+#homies-authority-preview .ha-field small{font-size:13px;line-height:1.35;color:var(--ha-muted)}
+#homies-authority-preview .ha-field input:disabled{color:var(--ha-ink);opacity:1}
+#homies-authority-preview .ha-error{font-size:13px;color:#923f30;line-height:1.4}
+#homies-authority-preview .ha-error:empty{display:none}
+#homies-authority-preview .ha-row{display:flex;justify-content:space-between;gap:15px;padding:7px 0;border-bottom:1px solid #3551461a;font-size:14px}
+#homies-authority-preview .ha-row:last-child{border:0}
+#homies-authority-preview .ha-row>span{color:var(--ha-muted)}
+#homies-authority-preview .ha-row>strong{text-align:right;font-variant-numeric:tabular-nums}
+#homies-authority-preview .ha-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:43px;border:1px solid var(--ha-teal);border-radius:11px;background:var(--ha-teal);color:#fff;padding:9px 14px;font-size:15px;font-weight:700;line-height:1.3;text-align:center;max-width:100%;overflow-wrap:anywhere}
+#homies-authority-preview .ha-btn:hover:not(:disabled){background:var(--ha-dark)}
+#homies-authority-preview .ha-btn.ha-secondary{background:var(--ha-paper);color:var(--ha-teal);border-color:#a8c1b2}
+#homies-authority-preview .ha-link{border:0;background:none;padding:4px 0;min-height:29px;color:var(--ha-teal);font-size:14px;font-weight:700;text-align:left;line-height:1.3;max-width:100%}
+#homies-authority-preview .ha-link:hover{text-decoration:underline}
+#homies-authority-preview .ha-badge{display:inline-flex;align-items:center;gap:5px;align-self:start;border:0;border-radius:7px;padding:4px 7px;background:#ecebe5;color:#4c5d50;font-size:13px;line-height:1.3;font-weight:550;white-space:normal}
+#homies-authority-preview button.ha-badge{min-height:29px}
+#homies-authority-preview .ha-badge.ha-simulated{background:var(--ha-sky);color:#3d5a66}
+#homies-authority-preview .ha-badge.ha-reported{background:var(--ha-lilac);color:#5b496e}
+#homies-authority-preview .ha-badge.ha-calculated,#homies-authority-preview .ha-badge.ha-positive{background:#dceede;color:#24533c}
+#homies-authority-preview .ha-badge.ha-caution{background:#ffedc4;color:#735122}
+#homies-authority-preview .ha-flex{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+#homies-authority-preview .ha-between{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+#homies-authority-preview .ha-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;border-top:1px solid var(--ha-line);padding-top:10px}
+#homies-authority-preview .ha-footer-left{display:flex;gap:14px;align-items:center;min-width:0}
+#homies-authority-preview .ha-footer-left .ha-caption{max-width:480px}
+#homies-authority-preview .ha-footer>.ha-btn{flex:none}
+#homies-authority-preview .ha-discovery-note{font-size:14px;color:var(--ha-muted)}
+#homies-authority-preview .ha-property-top{display:flex;align-items:center;gap:10px}
+#homies-authority-preview .ha-property-mark{width:44px;height:44px;border-radius:13px;background:#e3eedf;display:grid;place-items:center;font-size:27px;flex:none}
+#homies-authority-preview .ha-property:nth-child(2) .ha-property-mark{background:var(--ha-peach)}
+#homies-authority-preview .ha-property.is-shortlisted{border-color:#7da98c;background:#f6fbf2}
+#homies-authority-preview .ha-property .ha-btn{width:100%}
+#homies-authority-preview .ha-preference{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ha-muted);flex-wrap:wrap}
+#homies-authority-preview select{border:1px solid #a8c0ad;border-radius:9px;background:#f8fbf4;padding:7px 10px;font-size:14px;min-height:38px;max-width:100%}
+#homies-authority-preview table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:14px;line-height:1.35}
+#homies-authority-preview th,#homies-authority-preview td{padding:8px 10px;text-align:left;vertical-align:top;border-bottom:1px solid #35514619;overflow-wrap:anywhere}
+#homies-authority-preview th{font-weight:650}
+#homies-authority-preview th:first-child{width:28%;color:var(--ha-muted);font-weight:500}
+#homies-authority-preview td{font-variant-numeric:tabular-nums}
+#homies-authority-preview td small{display:block;font-size:13px;color:var(--ha-muted);margin-top:3px}
+#homies-authority-preview tr.ha-total{background:#eaf4e7}
+#homies-authority-preview tr.ha-total :is(th,td){font-weight:750;color:var(--ha-ink)}
+#homies-authority-preview .ha-checklist{display:grid;gap:9px}
+#homies-authority-preview .ha-check-item{display:flex;gap:10px;align-items:start;border-bottom:1px solid #35514619;padding-bottom:9px}
+#homies-authority-preview .ha-check-item:last-child{padding-bottom:0;border:0}
+#homies-authority-preview .ha-check-mark{display:grid;place-items:center;flex:none;width:25px;height:25px;background:#e7eee0;border-radius:8px;font-size:14px}
+#homies-authority-preview .ha-check-item p{font-size:14px;color:var(--ha-muted);margin-top:3px}
+#homies-authority-preview .ha-check{display:flex;align-items:start;gap:9px;font-size:15px;line-height:1.4}
+#homies-authority-preview input[type=checkbox],#homies-authority-preview input[type=radio]{accent-color:var(--ha-teal);width:18px;height:18px;flex:none;margin:2px 0 0}
+#homies-authority-preview .ha-fact{display:grid;gap:8px;padding:12px;border:1px solid #d7e2d0;border-radius:13px;background:#f1f7ed}
+#homies-authority-preview .ha-fact+.ha-fact{background:#fcf2e8;border-color:#eadac8}
+#homies-authority-preview .ha-fact .ha-check span{display:grid;gap:3px}
+#homies-authority-preview .ha-fact small{font-size:13px;line-height:1.4;color:var(--ha-muted)}
+#homies-authority-preview .ha-evidence-row{display:grid;grid-template-columns:112px minmax(0,1fr);gap:10px;padding:8px 0;border-bottom:1px solid #35514619}
+#homies-authority-preview .ha-evidence-row:last-child{border:0}
+#homies-authority-preview .ha-evidence-row p{font-size:14px;color:var(--ha-muted)}
+#homies-authority-preview .ha-evidence-row .ha-badge{justify-content:center}
+#homies-authority-preview .ha-draft-grid{grid-template-columns:minmax(0,1.85fr) minmax(250px,.9fr)}
+#homies-authority-preview .ha-draft-panel{gap:8px;padding:14px 15px}
+#homies-authority-preview .ha-tone{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ha-muted)}
+#homies-authority-preview .ha-tone select{width:143px}
+#homies-authority-preview textarea{display:block;width:100%;height:278px;min-height:0;resize:none;border:1px solid #b7cdb6;border-radius:11px;background:#fffefa;padding:10px 12px;font-size:16px;line-height:1.38;color:var(--ha-ink);overflow-wrap:anywhere}
+#homies-authority-preview .ha-edit-status{font-size:13px;font-weight:600;color:var(--ha-teal)}
+#homies-authority-preview .ha-edit-status.is-edited{color:#644780}
+#homies-authority-preview .ha-receipt{display:flex;gap:9px;align-items:start;padding:9px 11px;border:1px solid #ccdfcc;border-radius:11px;background:#eef7e9;font-size:14px}
+#homies-authority-preview .ha-receipt>div{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px}
+#homies-authority-preview .ha-receipt strong{display:block}
+#homies-authority-preview .ha-movement{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:8px 0;border-bottom:1px solid #35514619;font-size:14px}
+#homies-authority-preview .ha-movement>span{color:var(--ha-muted)}
+#homies-authority-preview .ha-movement strong{text-align:right;font-variant-numeric:tabular-nums;flex:none}
+#homies-authority-preview .ha-movement:last-child{border:0}
+#homies-authority-preview .ha-celebrate{display:flex;gap:12px;align-items:center;padding:14px 16px;border:1px solid #a8ccb2;border-radius:16px;background:linear-gradient(105deg,#e1f2e6,#f1f8e5)}
+#homies-authority-preview .ha-celebrate-mark{width:44px;height:44px;display:grid;place-items:center;flex:none;border-radius:50%;background:#c9e7cf;font-size:25px;color:var(--ha-dark);font-weight:750}
+#homies-authority-preview .ha-celebrate h2{font-size:22px}
+#homies-authority-preview .ha-celebrate p{font-size:14px;color:var(--ha-text);margin-top:3px}
+#homies-authority-preview .ha-cost-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#homies-authority-preview .ha-cost{border:1px solid var(--ha-line);border-radius:13px;padding:11px 13px;background:var(--ha-paper)}
+#homies-authority-preview .ha-cost strong{display:block;font-size:27px;letter-spacing:-.5px;line-height:1.15;margin:3px 0;font-variant-numeric:tabular-nums}
+#homies-authority-preview .ha-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+#homies-authority-preview .ha-choice{display:grid;align-content:start;gap:8px;padding:13px;border:1px solid var(--ha-line);border-radius:15px;background:var(--ha-paper);min-width:0}
+#homies-authority-preview .ha-choice.is-recommended{border-color:#82ad8d;background:#edf7e9}
+#homies-authority-preview .ha-choice:has(input:checked){border-color:var(--ha-teal);box-shadow:inset 0 0 0 1px var(--ha-teal)}
+#homies-authority-preview .ha-choice:has(input:disabled){background:#f0eee8}
+#homies-authority-preview .ha-choice-head{display:flex;gap:8px;align-items:start;font-size:16px;font-weight:750}
+#homies-authority-preview .ha-choice p{font-size:14px;line-height:1.35;color:var(--ha-muted)}
+#homies-authority-preview .ha-stat-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+#homies-authority-preview .ha-stat{padding:12px;border:1px solid var(--ha-line);border-radius:13px;background:var(--ha-paper)}
+#homies-authority-preview .ha-stat strong{display:block;font-size:28px;line-height:1.15;letter-spacing:-.5px;margin:4px 0;font-variant-numeric:tabular-nums}
+#homies-authority-preview .ha-stat small{display:block;font-size:13px;color:var(--ha-muted);line-height:1.35}
+#homies-authority-preview .ha-timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;list-style:none;padding:0;counter-reset:journey}
+#homies-authority-preview .ha-timeline li{position:relative;display:grid;align-content:start;gap:4px;padding:10px;border:1px solid var(--ha-line);border-radius:12px;background:var(--ha-paper);min-width:0}
+#homies-authority-preview .ha-time-title{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--ha-muted)}
+#homies-authority-preview .ha-time-title:before{counter-increment:journey;content:counter(journey);display:grid;place-items:center;flex:none;width:21px;height:21px;border-radius:50%;background:#e3eee1;color:var(--ha-teal);font-size:12px;font-weight:700}
+#homies-authority-preview .ha-timeline strong{font-size:16px;line-height:1.25;letter-spacing:-.2px;overflow-wrap:anywhere}
+#homies-authority-preview .ha-timeline small{font-size:13px;line-height:1.3;color:var(--ha-muted)}
+#homies-authority-preview .ha-timeline li:last-child{background:#e5f3e9;border-color:#a8ccb2}
+#homies-authority-preview .ha-timeline li:not(:nth-child(4n)):after{content:'→';position:absolute;right:-10px;top:22px;z-index:1;color:#648270;font-size:15px}
+#homies-authority-preview .ha-completion-note{font-size:13px;color:var(--ha-muted)}
+#homies-authority-preview .ha-modal-root{z-index:50;display:grid;background:#243f3866;backdrop-filter:blur(3px);padding:16px;border-radius:18px;align-items:center}
+#homies-authority-preview .ha-dialog{display:grid;gap:11px;width:min(810px,100%);margin:0 auto;min-width:0;padding:19px;border:1px solid #d2dfcb;border-radius:20px;background:#fffefa;box-shadow:0 14px 48px #233e3826}
+#homies-authority-preview .ha-dialog-head{display:flex;align-items:start;justify-content:space-between;gap:15px;padding-bottom:10px;border-bottom:1px solid var(--ha-line)}
+#homies-authority-preview .ha-close{width:40px;height:40px;flex:none;border:1px solid var(--ha-line);border-radius:10px;background:#f2f3eb;font-size:24px;line-height:1}
+#homies-authority-preview .ha-dialog-content{display:grid;gap:10px;min-width:0}
+#homies-authority-preview .ha-dialog-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap;padding-top:10px;border-top:1px solid var(--ha-line)}
+#homies-authority-preview .ha-letter{border:1px solid #cddfc7;border-radius:11px;background:#f5f9ef;padding:11px 14px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:16px;line-height:1.38}
+#homies-authority-preview .ha-source{display:grid;grid-template-columns:120px minmax(0,1fr);gap:10px 14px;font-size:14px}
+#homies-authority-preview .ha-source dt{color:var(--ha-muted)}
+#homies-authority-preview .ha-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+#homies-authority-preview[data-standalone]{border-radius:0}
+#homies-authority-preview[data-standalone] .ha-header{padding-right:0}
+@media(min-width:1150px){#homies-authority-preview .ha-shell{padding:18px 28px;gap:12px}#homies-authority-preview h1{font-size:29px}#homies-authority-preview .ha-panel{padding:17px}#homies-authority-preview textarea{height:270px}}
+@media(max-width:850px){#homies-authority-preview .ha-shell{padding:14px 16px;gap:10px}#homies-authority-preview .ha-header{gap:12px}#homies-authority-preview .ha-header-actions{gap:10px}#homies-authority-preview .ha-columns{gap:11px}#homies-authority-preview .ha-panel{padding:14px}#homies-authority-preview h1{font-size:25px}#homies-authority-preview .ha-draft-grid{grid-template-columns:minmax(0,1.55fr) minmax(230px,.9fr)}#homies-authority-preview .ha-fields{grid-template-columns:1fr}#homies-authority-preview .ha-nav button{gap:7px;padding:8px}#homies-authority-preview .ha-nav-emoji{width:25px;font-size:18px}}
+@media(max-width:700px){#homies-authority-preview .ha-header{padding-right:0;align-items:start;flex-direction:column;gap:9px}#homies-authority-preview .ha-brand{padding-right:78px}#homies-authority-preview[data-standalone] .ha-brand{padding-right:0}#homies-authority-preview .ha-header-actions{width:100%;justify-content:space-between}#homies-authority-preview .ha-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}#homies-authority-preview .ha-heading{align-items:start;flex-direction:column;gap:9px}#homies-authority-preview .ha-deadline{width:100%;display:flex;justify-content:space-between}#homies-authority-preview .ha-columns,#homies-authority-preview .ha-columns.ha-equal,#homies-authority-preview .ha-draft-grid,#homies-authority-preview .ha-choices{grid-template-columns:1fr}#homies-authority-preview .ha-fields{grid-template-columns:repeat(2,minmax(0,1fr))}#homies-authority-preview .ha-footer{align-items:stretch;flex-direction:column;gap:8px}#homies-authority-preview .ha-footer>.ha-btn{width:100%}#homies-authority-preview .ha-panel-head{flex-wrap:wrap;align-items:start}#homies-authority-preview .ha-movement{align-items:start;flex-direction:column;gap:3px}#homies-authority-preview .ha-movement strong{text-align:left}#homies-authority-preview .ha-stat-row{grid-template-columns:1fr}#homies-authority-preview .ha-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}#homies-authority-preview .ha-timeline li:after{display:none}#homies-authority-preview .ha-timeline li:nth-child(odd):after{display:block}#homies-authority-preview textarea{height:300px}#homies-authority-preview .ha-modal-root{padding:10px;align-items:start}#homies-authority-preview .ha-dialog{padding:14px}#homies-authority-preview .ha-source{grid-template-columns:1fr;gap:3px}#homies-authority-preview .ha-source dd{margin-bottom:8px}#homies-authority-preview table,#homies-authority-preview tbody,#homies-authority-preview tr,#homies-authority-preview th,#homies-authority-preview td{display:block;width:100%!important}#homies-authority-preview thead{display:none}#homies-authority-preview tr{padding:8px 0;border-bottom:1px solid var(--ha-line)}#homies-authority-preview th{padding:4px 6px;border:0}#homies-authority-preview td{display:grid;grid-template-columns:44% minmax(0,1fr);gap:8px;padding:5px 6px;border:0}#homies-authority-preview td:before{content:attr(data-home);font-size:13px;color:var(--ha-muted)}#homies-authority-preview .ha-celebrate{align-items:start}#homies-authority-preview .ha-dialog-actions .ha-btn{flex:1}}
+@media(max-width:400px){#homies-authority-preview .ha-fields,#homies-authority-preview .ha-money-pair,#homies-authority-preview .ha-cost-row{grid-template-columns:1fr}#homies-authority-preview .ha-evidence-row{grid-template-columns:98px minmax(0,1fr)}#homies-authority-preview .ha-money-input input{font-size:22px}}
+@media(pointer:coarse){#homies-authority-preview .ha-link,#homies-authority-preview button.ha-badge,#homies-authority-preview select,#homies-authority-preview .ha-demo,#homies-authority-preview .ha-close{min-height:44px}}
+@media(prefers-reduced-motion:no-preference){#homies-authority-preview button{transition:background-color .14s,border-color .14s}}
+</style>
+
+</head>
+<body>
+<div id="homies-authority-preview" data-standalone><div class="ha-mainui"></div><div class="ha-modal-root"></div><div class="ha-live ha-sr-only" aria-live="polite"></div></div>
+<noscript>Please enable JavaScript to explore Mia’s interactive Homies journey.</noscript>
+<script>
+/* Homies' deterministic, local demo model. No request is sent to a real person. */
+function createHomiesModel() {
+  const freeze = value => {
+    if (value && typeof value === 'object' && !Object.isFrozen(value)) {
+      Object.values(value).forEach(freeze);
+      Object.freeze(value);
+    }
+    return value;
+  };
+  const clone = value => JSON.parse(JSON.stringify(value));
+  const cents = value => Math.round((value + Number.EPSILON) * 100) / 100;
+  const money = value => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD',minimumFractionDigits:0,maximumFractionDigits:2}).format(value);
+  const pct = (change, benchmark) => (change / benchmark * 100).toFixed(1) + '%';
+  const makeOffer = (base, amenity, stage) => freeze({base:cents(base),amenity:cents(amenity),total:cents(base+amenity),stage,simulated:true});
+  const current = makeOffer(2100,45,'current');
+  const original = makeOffer(2600,45,'original');
+  const movingCost = 1200;
+  const deadline = 'December 8, 2026';
+  const properties = freeze([
+    {id:'grove',name:'Grove Courtyard',base:2200,locality:'Grove Street',size:475,unit:'Studio',pathMinutes:4,availability:'January 7–15, 2027',simulated:true},
+    {id:'newport',name:'Newport Terrace',base:2240,locality:'Newport',size:510,unit:'Studio',pathMinutes:3,availability:'January 10, 2027',simulated:true}
+  ]);
+  const tones = freeze({
+    warm:{label:'Warm',description:'Cooperative and personable'},
+    professional:{label:'Professional',description:'Balanced and precise'},
+    firm:{label:'Firm',description:'Direct and courteous'}
+  });
+  const roundNames = ['initial','followup','further'];
+  const normalizeRound = round => ({1:'initial',2:'followup',3:'further'})[round] || round;
+  const normalizeOutcome = outcome => ({stay:'success',move:'hold'})[outcome] || outcome;
+  const freshDraft = () => ({text:null,tone:'professional',revision:0,edited:false,needsReview:false,cache:{}});
+  const initialState = () => ({
+    plan:freeze({requestedBase:2200,ceiling:2265}),planSaved:false,planLocked:false,
+    facts:{water:false,amenities:false},shortlist:[],preferredId:null,
+    propertyReviews:{grove:{fit:false,conditions:false},newport:{fit:false,conditions:false}},
+    drafts:{initial:freshDraft(),followup:freshDraft(),further:freshDraft()},
+    sent:{initial:null,followup:null,further:null},pendingReviews:{initial:null,followup:null,further:null},
+    firstOffer:null,finalOffer:null,outcome:'success',decision:null,completion:null,
+    contextVersion:0,sequence:0
+  });
+  const state = initialState();
+  const ok = value => ({ok:true,...value});
+  const fail = error => ({ok:false,error});
+  const property = id => properties.find(item => item.id===id) || null;
+  const selectedProperties = () => state.shortlist.map(property).filter(Boolean);
+  const preferredProperty = () => state.shortlist.includes(state.preferredId) ? property(state.preferredId) : null;
+  const isBackupReviewed = (id=state.preferredId) => !!(state.shortlist.includes(id) && state.propertyReviews[id]?.fit && state.propertyReviews[id]?.conditions);
+  const latestOffer = () => state.finalOffer || state.firstOffer || original;
+  const nextCounterBase = () => cents(Math.floor(((original.base+state.plan.requestedBase)/2)*100 + 1e-7)/100);
+  const evidenceText = tone => {
+    const facts=[];
+    if(state.facts.water)facts.push('the six-month hot-water disruption that was resolved in July');
+    if(state.facts.amenities)facts.push('the continuing amenity gaps');
+    if(!facts.length)return '';
+    const value=facts.join(' and ');
+    return {warm:`I hope you can take ${value} into account.`,professional:`My request also reflects ${value}.`,firm:`Please take ${value} into account when reviewing these terms.`}[tone];
+  };
+  function sampleDraft(round,tone='professional') {
+    round=normalizeRound(round);
+    if(!roundNames.includes(round))throw new Error('Unknown draft round.');
+    if(!Object.hasOwn(tones,tone))tone='professional';
+    const request=money(state.plan.requestedBase),originalBase=money(original.base),fee=money(original.amenity);
+    const counter=money(state.firstOffer?.base ?? nextCounterBase());
+    const salutation=tone==='warm'?'Hello Leasing Team,':'Dear Leasing Team,';
+    const closing=tone==='warm'?'Best,\nMia':tone==='professional'?'Kind regards,\nMia':'Regards,\nMia';
+    const ending={warm:`Could you let me know before my final response is due on ${deadline}?`,professional:`Please reply before my final-response deadline of ${deadline}.`,firm:`Please provide your decision before my final-response deadline of ${deadline}.`}[tone];
+    if(round==='further') {
+      const offer=latestOffer();
+      const terms=`${money(offer.base)} base rent${offer.amenity?` plus the ${money(offer.amenity)} amenity fee`:', with the amenity fee waived'}`;
+      const body={
+        warm:`Thank you for your latest proposal of ${terms}. I appreciate your consideration. Could we explore a further reduction in base rent or a one-time concession?`,
+        professional:`Thank you for your latest proposal of ${terms}. Before deciding, I would like to explore a further reduction in base rent or a one-time concession.`,
+        firm:`Your latest proposal is ${terms}. I am requesting a further reduction in base rent or a one-time concession before making my decision.`
+      }[tone];
+      const end={warm:`Could you confirm the full fee schedule and any revised written terms before my final response is due on ${deadline}?`,professional:`Please confirm the full fee schedule and any revised written terms before my final-response deadline of ${deadline}.`,firm:`Please provide the full fee schedule and any revised written terms before my final-response deadline of ${deadline}.`}[tone];
+      return [salutation,body,[evidenceText(tone),end].filter(Boolean).join(' '),closing].join('\n\n');
+    }
+    const first={
+      warm:`Thank you for the renewal offer of ${originalBase} base rent plus the ${fee} amenity fee. I would be glad to renew for 12 months at ${request} base rent, with the amenity fee waived.`,
+      professional:`After reviewing your offer of ${originalBase} base rent plus the ${fee} amenity fee, I propose a 12-month renewal at ${request} base rent, with the amenity fee waived.`,
+      firm:`The renewal offer is ${originalBase} base rent plus the ${fee} amenity fee. I am requesting revised terms: ${request} base rent for 12 months, with the amenity fee waived.`
+    }[tone];
+    const followIntro={
+      warm:`Thank you for lowering the base rent from ${originalBase} to ${counter}. I appreciate your flexibility; the ${fee} amenity fee remains.`,
+      professional:`Thank you for the revised offer: base rent reduced from ${originalBase} to ${counter}, with the ${fee} amenity fee retained.`,
+      firm:`I acknowledge the base-rent reduction from ${originalBase} to ${counter}. The ${fee} amenity fee remains.`
+    }[tone];
+    const followAsk={warm:`Could we revisit a 12-month renewal at ${request} base rent, with the amenity fee waived?`,professional:`I would like you to reconsider ${request} base rent for a 12-month renewal, with the amenity fee waived.`,firm:`My request remains ${request} base rent for 12 months, with the amenity fee waived.`}[tone];
+    return [salutation,round==='initial'?first:followIntro,[round==='initial'?'':followAsk,evidenceText(tone),ending].filter(Boolean).join(' '),closing].join('\n\n');
+  }
+  function getDraft(round) {
+    round=normalizeRound(round);
+    if(!roundNames.includes(round))throw new Error('Unknown draft round.');
+    const draft=state.drafts[round];
+    if(draft.text===null) {draft.text=sampleDraft(round,draft.tone);draft.revision=1;}
+    return draft;
+  }
+  function invalidateContext() {
+    state.contextVersion++;
+    for(const round of roundNames) {
+      if(state.sent[round])continue;
+      const draft=state.drafts[round];
+      state.pendingReviews[round]=null;
+      for(const tone of Object.keys(draft.cache)) {
+        const cached=draft.cache[tone];
+        if(cached.edited)cached.needsReview=true;
+        else delete draft.cache[tone];
+      }
+      if(draft.text===null)continue;
+      if(draft.edited)draft.needsReview=true;
+      else {draft.text=sampleDraft(round,draft.tone);draft.needsReview=false;}
+      draft.revision++;
+    }
+  }
+  function setPlan(input) {
+    if(state.planLocked)return fail('Your plan is attached to the first sent demo message. Start a new journey to change these amounts.');
+    const requestedBase=Number(input?.requestedBase),ceiling=Number(input?.ceiling);
+    if(!Number.isFinite(requestedBase)||!Number.isFinite(ceiling)||requestedBase<=0||ceiling<=0)return fail('Enter a positive requested base rent and a positive private ceiling.');
+    if(!Number.isSafeInteger(Math.round(requestedBase*100))||!Number.isSafeInteger(Math.round(ceiling*100)))return fail('Enter valid monthly dollar amounts.');
+    if(Math.abs(cents(requestedBase)-requestedBase)>1e-7||Math.abs(cents(ceiling)-ceiling)>1e-7)return fail('Use no more than two decimal places.');
+    if(requestedBase>=original.base)return fail(`Set your requested base rent below the ${money(original.base)} renewal base.`);
+    if(requestedBase>ceiling)return fail('Your private ceiling must cover your requested base rent.');
+    const changed=state.plan.requestedBase!==requestedBase||state.plan.ceiling!==ceiling;
+    state.plan=freeze({requestedBase:cents(requestedBase),ceiling:cents(ceiling)});state.planSaved=true;
+    if(changed)invalidateContext();
+    return ok({plan:state.plan,changed});
+  }
+  function toggleShortlist(id) {
+    if(!property(id))return fail('Choose one of the listed homes.');
+    if(state.shortlist.includes(id))state.shortlist=state.shortlist.filter(value=>value!==id);
+    else state.shortlist=[...state.shortlist,id];
+    if(!state.shortlist.includes(state.preferredId))state.preferredId=state.shortlist[0]||null;
+    state.decision=null;state.completion=null;invalidateContext();
+    return ok({shortlist:[...state.shortlist],preferredId:state.preferredId});
+  }
+  function setPreferred(id) {
+    if(!state.shortlist.includes(id))return fail('Shortlist this home before choosing it as your preferred backup.');
+    if(state.preferredId!==id){state.preferredId=id;state.decision=null;state.completion=null;invalidateContext();}
+    return ok({property:preferredProperty()});
+  }
+  function setPropertyReview(id,key,value) {
+    if(!state.shortlist.includes(id)||!['fit','conditions'].includes(key))return fail('Review a shortlisted home.');
+    state.propertyReviews[id][key]=!!value;
+    return ok({reviewed:isBackupReviewed(id)});
+  }
+  function setFact(key,value) {
+    if(!Object.hasOwn(state.facts,key))return fail('Choose a listed fact.');
+    if(state.facts[key]!==!!value){state.facts[key]=!!value;invalidateContext();}
+    return ok({facts:{...state.facts}});
+  }
+  function setDraft(round,text) {
+    round=normalizeRound(round);
+    if(!roundNames.includes(round))return fail('Unknown draft round.');
+    if(state.sent[round])return fail('This sent version is preserved in history.');
+    if(typeof text!=='string')return fail('Enter your message as text.');
+    const draft=getDraft(round);
+    if(draft.text!==text){draft.text=text;draft.edited=true;draft.revision++;state.pendingReviews[round]=null;}
+    return ok({draft});
+  }
+  function setTone(round,tone) {
+    round=normalizeRound(round);
+    if(!roundNames.includes(round)||!Object.hasOwn(tones,tone))return fail('Choose Warm, Professional, or Firm.');
+    if(state.sent[round])return fail('The tone of a sent message is part of its history.');
+    const draft=getDraft(round);
+    if(draft.tone===tone)return ok({draft});
+    draft.cache[draft.tone]={text:draft.text,edited:draft.edited,needsReview:draft.needsReview};
+    const cached=draft.cache[tone];
+    draft.tone=tone;draft.text=cached?.text??sampleDraft(round,tone);draft.edited=cached?.edited??false;draft.needsReview=cached?.needsReview??false;draft.revision++;
+    state.pendingReviews[round]=null;
+    return ok({draft});
+  }
+  function restoreSample(round) {
+    round=normalizeRound(round);
+    if(!roundNames.includes(round))return fail('Unknown draft round.');
+    if(state.sent[round])return fail('This sent version is preserved in history.');
+    const draft=getDraft(round);draft.text=sampleDraft(round,draft.tone);draft.edited=false;draft.needsReview=false;draft.revision++;delete draft.cache[draft.tone];state.pendingReviews[round]=null;
+    return ok({draft});
+  }
+  function prepareReview(round) {
+    round=normalizeRound(round);
+    if(!roundNames.includes(round))return fail('Unknown draft round.');
+    if(state.sent[round])return fail('This message has already been sent in the demo.');
+    if(round==='followup'&&!state.sent.initial)return fail('Review and send the first request before preparing its follow-up.');
+    if(round==='further'&&!state.sent.initial)return fail('Complete your first request before negotiating further.');
+    const draft=getDraft(round);
+    if(draft.text.trim().length<35)return fail('Add a complete message before reviewing it.');
+    const review=freeze({id:`review-${++state.sequence}`,round,text:draft.text,tone:draft.tone,revision:draft.revision,edited:draft.edited,needsReview:draft.needsReview,recipient:'Fictional Leasing Team',requestedBase:state.plan.requestedBase,contextVersion:state.contextVersion,simulated:true});
+    state.pendingReviews[round]=review;
+    return ok({review});
+  }
+  function approveAndSendDemo(round,review,checked) {
+    round=normalizeRound(round);
+    if(!roundNames.includes(round))return fail('Unknown draft round.');
+    if(!checked)return fail('Confirm that you reviewed this exact wording and recipient.');
+    if(state.sent[round])return fail('This message has already been sent in the demo.');
+    if(round==='followup'&&!state.sent.initial)return fail('The first sent request must come before its follow-up.');
+    if(round==='further'&&!state.sent.initial)return fail('Send the first request before negotiating further.');
+    const draft=getDraft(round);
+    if(!review||review!==state.pendingReviews[round]||review.round!==round||review.text!==draft.text||review.tone!==draft.tone||review.revision!==draft.revision||review.contextVersion!==state.contextVersion)return fail('The message or its context changed. Review the current version before sending.');
+    if(draft.text.trim().length<35)return fail('Add a complete message before reviewing it.');
+    // The outgoing record deliberately contains no private-ceiling field.
+    const sent=freeze({id:`message-${++state.sequence}`,round,text:review.text,tone:review.tone,revision:review.revision,edited:review.edited,recipient:review.recipient,requestedBase:review.requestedBase,simulated:true});
+    state.sent[round]=sent;state.pendingReviews[round]=null;draft.needsReview=false;
+    state.decision=null;state.completion=null;
+    let offer=null;
+    if(round==='initial'){
+      state.planLocked=true;state.planSaved=true;
+      state.firstOffer=makeOffer(nextCounterBase(),45,'first');offer=state.firstOffer;
+      const followup=state.drafts.followup;
+      if(followup.text===null&&!followup.edited)followup.tone=sent.tone;
+      invalidateContext();
+    } else if(round==='followup'){
+      state.finalOffer=state.outcome==='success'?makeOffer(state.plan.requestedBase,0,'final'):makeOffer(state.firstOffer.base,state.firstOffer.amenity,'final');offer=state.finalOffer;
+      const further=state.drafts.further;
+      if(further.text===null&&!further.edited)further.tone=sent.tone;
+      invalidateContext();
+    }
+    return ok({sent,offer});
+  }
+  function setOutcome(value) {
+    const outcome=normalizeOutcome(value);
+    if(!['success','hold'].includes(outcome))return fail('Choose a supported demo response.');
+    if(state.finalOffer)return fail('Use the alternate-response preview to change a response already shown.');
+    if(state.outcome!==outcome){state.outcome=outcome;state.decision=null;state.completion=null;invalidateContext();}
+    return ok({outcome});
+  }
+  function previewOtherOutcome() {
+    if(!state.sent.followup)return fail('Complete the approved follow-up before previewing the other response.');
+    state.outcome=state.outcome==='success'?'hold':'success';
+    state.finalOffer=state.outcome==='success'?makeOffer(state.plan.requestedBase,0,'final'):makeOffer(state.firstOffer.base,state.firstOffer.amenity,'final');
+    state.decision=null;state.completion=null;
+    // A further message belongs to its response branch. Restart it for the alternate preview.
+    state.sent.further=null;state.pendingReviews.further=null;state.drafts.further=freshDraft();state.drafts.further.tone=state.sent.followup.tone;
+    invalidateContext();
+    return ok({outcome:state.outcome,offer:state.finalOffer});
+  }
+  function financials() {
+    const offer=latestOffer(),previous=state.finalOffer?state.firstOffer:state.firstOffer?original:null;
+    const originalReduction=cents(original.base-offer.base),currentIncrease=cents(offer.base-current.base),previousReduction=previous?cents(previous.base-offer.base):0;
+    return {
+      offer,previous,currentBase:current.base,originalBase:original.base,
+      currentIncrease,currentIncreasePct:pct(currentIncrease,current.base),
+      originalReduction,originalReductionPct:pct(originalReduction,original.base),
+      previousReduction,previousReductionPct:previous?pct(previousReduction,previous.base):'0.0%',
+      annualBaseSavings:cents(originalReduction*12),annualBaseIncrease:cents(currentIncrease*12),
+      withinCeiling:offer.total<=state.plan.ceiling,headroom:cents(state.plan.ceiling-offer.total),
+      requestedTermsMet:offer.base<=state.plan.requestedBase&&offer.amenity===0,
+      targetReduction:cents(original.base-state.plan.requestedBase),targetReductionPct:pct(original.base-state.plan.requestedBase,original.base),targetAnnualSavings:cents((original.base-state.plan.requestedBase)*12)
+    };
+  }
+  function comparison() {
+    const offer=latestOffer();
+    const stay={id:'renew',name:'Your home',base:offer.base,annualBase:cents(offer.base*12),moving:0,firstYear:cents(offer.base*12)};
+    const options=selectedProperties().map(item=>({...item,annualBase:cents(item.base*12),moving:movingCost,firstYear:cents(item.base*12+movingCost),differenceVsStay:cents(item.base*12+movingCost-stay.firstYear),baseWithinCeiling:item.base<=state.plan.ceiling,reviewed:isBackupReviewed(item.id)}));
+    const preferred=options.find(item=>item.id===state.preferredId)||null;
+    return {stay,options,preferred,difference:preferred?preferred.differenceVsStay:null,movingCost,period:'January 16, 2027–January 15, 2028',basis:'Base rent for 12 months, plus estimated moving once'};
+  }
+  function recommendation() {
+    const f=financials(),c=comparison(),backup=c.preferred,prepared=!!(backup&&backup.reviewed&&backup.baseWithinCeiling);
+    const caution=state.shortlist.length?'Another round can add delay while shortlisted homes may become unavailable. Those alternatives are not reserved.':'Another round adds time while your renewal-response deadline approaches. Confirm the current offer before asking again.';
+    if(f.withinCeiling){
+      const reasons=[`${money(f.offer.total)}/month is ${f.headroom?money(f.headroom)+' below':'at'} your private ceiling.`];
+      if(f.requestedTermsMet)reasons.push('The proposed base rent and amenity waiver meet your requested terms.');
+      else reasons.push('Your limit is met, although your requested base rent or fee waiver is still lower.');
+      if(backup){
+        if(backup.differenceVsStay>0)reasons.push(`Staying is about ${money(backup.differenceVsStay)} lower over the first year than moving to ${backup.name}.`);
+        else if(backup.differenceVsStay<0)reasons.push(`${backup.name} is about ${money(-backup.differenceVsStay)} lower over the first year; renewing prioritizes staying in your familiar home.`);
+        else reasons.push(`The illustrated first-year costs match ${backup.name}; renewing avoids the move itself.`);
+      }else reasons.push('Renewing avoids a move; no alternative has been shortlisted for comparison yet.');
+      return {choice:'renew',title:"I'd renew on these terms.",reasons,discourageFurther:true,caution,backupPrepared:prepared};
+    }
+    if(state.finalOffer&&prepared){
+      return {choice:'move',title:'Your reviewed backup deserves the next look.',reasons:[`The renewal is ${money(-f.headroom)}/month above your private ceiling.`,`${backup.name} has a ${money(backup.base)} base rent; confirm its availability and written terms before relying on it.`,backup.differenceVsStay<0?`Moving is about ${money(-backup.differenceVsStay)} lower over the first year, including the estimated ${money(movingCost)} move.`:'Compare the complete base-rent and moving figures before deciding.'],discourageFurther:false,caution,backupPrepared:true};
+    }
+    return {choice:'negotiate',title:'Keep negotiating with a clear limit.',reasons:[`The offer is ${money(-f.headroom)}/month above your private ceiling.`,backup?(backup.baseWithinCeiling?`Keep ${backup.name} in view while you confirm its availability and written terms.`:`${backup.name} also has a base rent above your ceiling. Refine your options before treating it as a fallback.`):'Shortlist an alternative so you can judge the renewal against a real next option.'],discourageFurther:false,caution,backupPrepared:prepared};
+  }
+  function complete(choice) {
+    if(!['renew','move','negotiate'].includes(choice))return fail('Choose your next step.');
+    const f=financials(),c=comparison();
+    if(choice==='renew'&&!f.withinCeiling)return fail('This offer is above your private ceiling. Revisit the terms before choosing to renew.');
+    if(choice==='move'&&(!c.preferred||!isBackupReviewed(c.preferred.id)))return fail('Choose and review a backup before pursuing a move.');
+    if(choice==='move'&&!c.preferred.baseWithinCeiling)return fail('This backup’s base rent exceeds your private ceiling. Revisit the plan before pursuing it.');
+    if(choice==='negotiate'&&!state.sent.further)return fail('Review and approve the further request before saving that next step.');
+    const completion=freeze({id:`completion-${++state.sequence}`,choice,offer:clone(f.offer),plan:clone(state.plan),potentialAnnualBaseSavings:f.annualBaseSavings,monthlyBaseReduction:f.originalReduction,baseReductionPct:f.originalReductionPct,headroom:f.headroom,achievedTerms:f.requestedTermsMet,withinCeiling:f.withinCeiling,backup:c.preferred?clone(c.preferred):null,shortlist:clone(selectedProperties()),simulated:true,signed:false});
+    state.decision=choice;state.completion=completion;
+    return ok({completion});
+  }
+  function timeline() {
+    const entries=[
+      {id:'offer',kind:'offer',title:'Renewal arrived',value:money(original.total),detail:`${money(original.base)} base + ${money(original.amenity)} amenity`,status:'done'},
+      {id:'plan',kind:'plan',title:'You set your terms',value:money(state.plan.requestedBase)+' base',detail:'Your ceiling stayed private',status:state.planSaved?'done':'current'}
+    ];
+    const backup=preferredProperty();
+    if(backup)entries.push({id:'backup',kind:'backup',title:'You kept an exit option',value:backup.name,detail:money(backup.base)+' base · shortlisted, not reserved',status:'done'});
+    if(state.sent.initial)entries.push({id:'initial',kind:'human',title:'You approved the first ask',value:'Version '+state.sent.initial.revision,detail:state.sent.initial.edited?'Your edited wording · demo sent':'Your chosen wording · demo sent',status:'done'});
+    if(state.firstOffer)entries.push({id:'first',kind:'offer',title:'The first counteroffer',value:money(state.firstOffer.total),detail:money(state.firstOffer.base)+' base + '+money(state.firstOffer.amenity)+' amenity',status:'done'});
+    if(state.sent.followup)entries.push({id:'followup',kind:'human',title:'You shaped the follow-up',value:'Version '+state.sent.followup.revision,detail:state.sent.followup.edited?'Your edits approved and demo sent':'Your chosen wording approved and demo sent',status:'done'});
+    if(state.finalOffer)entries.push({id:'final',kind:'offer',title:financials().withinCeiling?'Your limit was met':'You assessed the final reply',value:money(state.finalOffer.total),detail:money(state.finalOffer.base)+' base · '+(state.finalOffer.amenity?'amenity retained':'amenity waived'),status:'done'});
+    if(state.completion)entries.push({id:'decision',kind:'decision',title:'You chose your next step',value:{renew:state.completion.achievedTerms?'Renew on your terms':'Renew within your limit',move:'Pursue your backup',negotiate:'Continue negotiating'}[state.completion.choice],detail:state.completion.choice==='negotiate'&&state.sent.further?(state.sent.further.edited?'Your exact edited further request approved and demo sent':'Your exact further request approved and demo sent')+' · reply pending':'Your decision · written terms still to confirm',status:'done'});
+    return entries;
+  }
+  function restart() {
+    const fresh=initialState();
+    for(const key of Object.keys(state))delete state[key];
+    Object.assign(state,fresh);
+    return ok({state});
+  }
+  return {state,current,original,properties,movingCost,deadline,tones,money,pct,property,
+    setPlan,toggleShortlist,setPreferred,setPropertyReview,setFact,getDraft,setDraft,setTone,restoreSample,sampleDraft,prepareReview,approveAndSendDemo,
+    setOutcome,previewOtherOutcome,complete,restart,selectedProperties,preferredProperty,isBackupReviewed,latestOffer,financials,comparison,recommendation,timeline};
+}
+if(typeof module!=='undefined'&&module.exports)module.exports={createHomiesModel};
+
+(()=>{
+const root=document.getElementById('homies-authority-preview');
+if(!root)return;
+const main=root.querySelector('.ha-mainui'),modal=root.querySelector('.ha-modal-root'),live=root.querySelector('.ha-live');
+const m=createHomiesModel(),s=m.state;
+const ui={page:0,resumePage:0,choice:null,review:null,modalTrigger:null,modalKind:null};
+const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cash=m.money;
+const btn=(label,action,secondary=false,disabled=false,extra='')=>`<button type="button" class="ha-btn ${secondary?'ha-secondary':''} cursor-interaction" data-act="${action}" ${disabled?'disabled':''} ${extra}>${label}</button>`;
+const link=(label,action,extra='')=>`<button type="button" class="ha-link cursor-interaction" data-act="${action}" ${extra}>${label}</button>`;
+const badge=(label,type='simulated',source='standards')=>`<button type="button" class="ha-badge ha-${type} cursor-interaction" data-act="source" data-source="${source}">${label}</button>`;
+const row=(label,value)=>`<div class="ha-row"><span>${label}</span><strong>${value}</strong></div>`;
+const insight=(heading,copy,amber=false,mark='✦')=>`<div class="ha-insight ${amber?'ha-amber':''}"><span class="ha-insight-mark" aria-hidden="true">${mark}</span><div><strong>${heading}</strong>${copy}</div></div>`;
+const signedMoney=n=>(n>0?'+':n<0?'−':'')+cash(Math.abs(n));
+const signedPct=(n,base)=>(n>0?'+':n<0?'−':'')+m.pct(Math.abs(n),base);
+const preferred=()=>m.preferredProperty();
+const within=()=>m.financials().withinCeiling;
+const currentStage=()=>ui.page===0?0:ui.page<5&&ui.page>=1?1:ui.page<9&&ui.page>=5?2:3;
+const latestPage=()=>s.finalOffer?8:s.firstOffer?6:5;
+const offerTerms=o=>`${cash(o.base)} base${o.amenity?' + '+cash(o.amenity)+' amenity':' · amenity waived'}`;
+const getRound=()=>ui.page===5?'initial':ui.page===7?'followup':null;
+function getTitle(){
+ const f=m.financials(),c=s.completion;
+ const titles=[
+  ['01 / YOUR RENEWAL','Set your ask. Keep your limit private.','I’ll help you lower the increase and keep another way forward.'],
+  ['02 / YOUR CASE · FIND OPTIONS','You have options beyond this lease.','I found these alternatives for you in the demo search. Choose the homes you would consider.'],
+  ['02 / YOUR CASE · COMPARE','A fair comparison. A stronger position.','The same 12 months of base rent, with moving counted once.'],
+  ['02 / YOUR CASE · CHECK YOUR BACKUP','Keep your next option within reach.','A shortlist gives you a next step. Confirm the details before relying on it.'],
+  ['02 / YOUR CASE · YOUR EVIDENCE','Your experience strengthens the ask.','Choose what belongs in your request. I’ll keep the wording grounded in those facts.'],
+  ['03 / YOUR NEGOTIATION · FIRST REQUEST','Make the first ask yours.','Choose a tone, edit the wording, then approve the exact message.'],
+  ['03 / YOUR NEGOTIATION · FIRST REPLY',s.firstOffer&&s.firstOffer.total<=s.plan.ceiling?'Within your limit. Your target is still ahead.':'Progress. Keep your target in view.','Here is what the first counteroffer changes—and what it still leaves to resolve.'],
+  ['03 / YOUR NEGOTIATION · FOLLOW-UP','Your words lead the next step.','Edit this follow-up. Your exact version goes into review and the demo’s sent history.'],
+  ['03 / YOUR NEGOTIATION · LATEST REPLY',f.withinCeiling?'Your ceiling is met.':'Your limit still matters.','You have a clear offer, a private limit, and another option to consider.'],
+  ['04 / YOUR DECISION','Choose what happens next.','I’ll explain the tradeoffs. You decide the direction.'],
+  ['YOUR JOURNEY',c?.choice==='renew'&&c.achievedTerms?'Your terms, achieved.':c?.choice==='renew'?'A renewal within your limit.':c?.choice==='move'?'Your next home is a choice.':'Your next move is deliberate.',c?.choice==='renew'?'You set your limits, kept alternatives in view, and chose your next step.':c?.choice==='move'?'You have a conditional backup and a practical plan to verify it.':'Your approved words are preserved. Keep your limit and alternatives in view.']
+ ];
+ return ui.page===-1?['YOUR HOME','Welcome back, Mia.',s.completion?'Your decision is saved here. Your journey and shortlist are ready to revisit.':'Your renewal, your private plan, and your alternatives—in one place.']:titles[ui.page];
+}
+function header(){
+ const stage=currentStage();
+ const nav=[['🏡','Your renewal',0],['🔎','Your case',1],['💬','Your negotiation',latestPage()],['✨','Your decision',9]];
+ const evalsButton='<button type="button" class="ha-evals-nav cursor-interaction" data-act="evals" aria-label="Evals" aria-haspopup="dialog"><span><small>REVIEW</small>Evals</span></button>';
+ return `<header class="ha-header"><button type="button" class="ha-brand cursor-interaction" data-act="home" aria-label="Homies home"><span class="ha-home-mark" aria-hidden="true">🏡</span><span class="ha-brand-copy"><span class="ha-wordmark">homies<i>.</i></span><span class="ha-tagline" style="display:block">Your home. Your Terms. Always</span></span></button><div class="ha-header-actions">${ui.page===-1?'<button type="button" class="ha-demo cursor-interaction" data-act="evals" aria-haspopup="dialog">Evals</button>':''}<button type="button" class="ha-demo cursor-interaction" data-act="demo">Demo data</button><div class="ha-account"><button type="button" class="ha-account-toggle cursor-interaction" data-act="account" aria-label="Mia’s account" aria-expanded="false" aria-controls="ha-account-options"><span>Mia</span><span class="ha-chevron" aria-hidden="true">▾</span></button><div class="ha-account-popover" id="ha-account-options" role="group" aria-label="Mia’s workspace" hidden><p>Your workspace</p><button type="button" class="cursor-interaction" data-act="home">Home</button><button type="button" class="cursor-interaction" data-page="0">Your renewal</button></div></div></div></header>${ui.page===-1?'':`<nav class="ha-nav" aria-label="Homies navigation">${nav.map(([icon,label,page],i)=>`<button type="button" class="cursor-interaction" data-page="${page}" ${stage===i?'aria-current="step"':''}><span class="ha-nav-emoji" aria-hidden="true">${icon}</span><span><small>0${i+1}</small>${label}</span></button>`).join('')}${evalsButton}</nav>`}`;
+}
+function footer(){
+ if(ui.page===-1)return '';
+ const labels=['Save my terms & explore →','Compare my shortlist →','Review my preferred backup →','Build my request →','Prepare my first request →','Review & approve →','Prepare my follow-up →','Review & approve →','Compare my choices →','Choose a direction','Back to home'];
+ const hints=['Your ceiling stays private. You approve what is shared.','Choose one or both. Availability still needs confirmation.','Compare base rent and the estimated move over the same year.','These acknowledgments record your review, not a booking.','Only selected facts are inserted into the samples.','No message is used without your approval.','Your exact first message is preserved in history.','Your edits are the version you approve.','A proposal becomes an agreement only after written confirmation.','The recommendation is guidance. The decision stays yours.','Potential savings depend on the final written terms.'];
+ let action='next',label=labels[ui.page],disabled=false;
+ if(ui.page===0){action='save-plan';if(s.planLocked)label='Explore my options →';}
+ if(ui.page===1)disabled=!s.shortlist.length;
+ if(ui.page===3)disabled=!m.isBackupReviewed();
+ if(ui.page===5||ui.page===7){const round=getRound();action=s.sent[round]?'view-reply':'review';label=s.sent[round]?'View the '+(round==='initial'?'first':'latest')+' reply →':'Review & approve →';}
+ if(ui.page===6&&s.firstOffer.total<=s.plan.ceiling){action='decision-page';label='Compare my choices →';}
+ if(ui.page===9){action='decision';disabled=!ui.choice;label=ui.choice==='renew'?'Confirm my renewal direction →':ui.choice==='move'?'Plan my next step →':ui.choice==='negotiate'?'Review another request →':'Choose a direction';}
+ if(ui.page===10)action='home';
+ return `<footer class="ha-footer"><div class="ha-footer-left">${ui.page>0&&ui.page<10?link('← Back','back'):''}<span class="ha-caption">${ui.page===10?(s.completion?.choice==='renew'?'Next: confirm written terms by December 8. No lease is signed in this demo.':s.completion?.choice==='move'?'Next: verify the home and written terms. Your renewal response is due December 8.':'Next: await a reply and keep your backup ready. Your final response is due December 8.'):hints[ui.page]}</span></div>${btn(label,action,false,disabled)}</footer>`;
+}
+function render(){
+ const [k,title,sub]=getTitle();
+ const win=ui.page===10&&s.completion?.choice==='renew'&&s.completion?.achievedTerms;
+ const pages=[renewal,discovery,comparison,diligence,evidence,()=>draftPage('initial'),firstReply,()=>draftPage('followup'),finalReply,decision,completion];
+ main.innerHTML=`<div class="ha-shell">${header()}<div class="ha-heading ${win?'ha-celebrate':''}"><div><p class="ha-kicker">${k}</p><h1>${title}</h1><p class="ha-subtitle">${sub}</p></div>${win?'<span class="ha-celebrate-mark" aria-hidden="true">✓</span>':ui.page>=0&&ui.page<10?'<button type="button" class="ha-deadline cursor-interaction" data-act="deadline"><span>Final response due</span><strong>December 8, 2026</strong></button>':''}</div><main class="ha-body" aria-label="${esc(title)}">${ui.page===-1?home():pages[ui.page]()}</main>${footer()}</div>`;
+ const editor=main.querySelector('[data-draft]');if(editor){const round=editor.dataset.draft;editor.value=s.sent[round]?.text??m.getDraft(round).text;fitEditor(editor);}
+}
+function renewal(){
+ const rise=m.original.base-m.current.base,target=m.financials();
+ return `<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><div><h2>Your ${cash(m.original.total)} renewal offer</h2><p class="ha-caption">${offerTerms(m.original)} · received November 8</p></div>${badge('Calculated','calculated','opening')}</div><div class="ha-money-pair"><div class="ha-money-box"><span class="ha-label">Current base rent</span><strong class="ha-money">${cash(m.current.base)}</strong><span class="ha-caption">per month</span></div><div class="ha-money-box"><span class="ha-label">Renewal base rent</span><strong class="ha-money">${cash(m.original.base)}</strong><span class="ha-caption">per month</span></div></div>${insight('That is '+cash(rise)+' more each month · '+m.pct(rise,m.current.base),'The base increase would add '+cash(rise*12)+' over 12 months.',true,'👀')}<div class="ha-between"><p class="ha-caption">I’ll assess every offer against your plan.</p>${link('See the numbers →','math-opening')}</div></section><section class="ha-panel ha-peach" aria-label="Your private rent plan"><h2>Your ask. Your private ceiling.</h2><div class="ha-fields"><label class="ha-field"><span class="ha-label">Requested base rent</span><span class="ha-money-input"><span aria-hidden="true">$</span><input type="number" id="ha-request" data-goal="requestedBase" min="0.01" max="2599.99" step="0.01" inputmode="decimal" value="${s.plan.requestedBase}" aria-label="Requested base rent per month" ${s.planLocked?'disabled':''}></span><small>Per month · ask for a 12-month term and the fee waived.</small></label><label class="ha-field"><span class="ha-label">Private ceiling</span><span class="ha-money-input"><span aria-hidden="true">$</span><input type="number" id="ha-ceiling" data-goal="ceiling" min="0.01" step="0.01" inputmode="decimal" value="${s.plan.ceiling}" aria-label="Private monthly ceiling" ${s.planLocked?'disabled':''}></span><small>Rent + amenity per month. For Homies only.</small></label></div><p class="ha-error" id="ha-plan-error" role="alert"></p>${insight('Your ceiling is never shared.','Your requested rent appears only in a message you approve.',false,'🔒')}<p class="ha-caption" id="ha-plan-preview">At your target: <strong>${cash(target.targetReduction)}/month less base rent</strong> than the original offer.</p>${s.planLocked?'<p class="ha-caption">These terms belong to your sent request. Start a new demo to change the plan.</p>':'<p class="ha-caption">You can edit both amounts before sending your first request.</p>'}</section></div>`;
+}
+function discovery(){
+ return `<div class="ha-between"><p class="ha-discovery-note">Studios near PATH · base rent shown consistently · ${cash(m.movingCost)} estimated moving cost, once.</p>${badge('Demo search results','simulated','discovery')}</div><div class="ha-columns ha-equal">${m.properties.map((p,i)=>{const selected=s.shortlist.includes(p.id),fits=p.base<=s.plan.ceiling;return `<article class="ha-panel ha-property ${selected?'is-shortlisted':''}"><div class="ha-property-top"><span class="ha-property-mark" aria-hidden="true">${i?'🏙️':'🏘️'}</span><div><h2>${p.name}</h2><p class="ha-caption">${p.locality} · ${p.size} sq ft studio</p></div></div><div><strong class="ha-money">${cash(p.base)}<small> base/month</small></strong><span class="ha-caption">Stated ${p.pathMinutes}-minute walk to PATH</span></div><p class="ha-discovery-note">${i?'A second option with more floor area and a stated shorter PATH walk.':'A nearby base-rent benchmark and a practical alternative to explore.'}</p><div class="ha-between"><span class="ha-badge ${fits?'ha-positive':'ha-caution'}">${fits?'Base fits your ceiling':'Base is above your ceiling'}</span>${link('Details →','property',`data-property="${p.id}"`)}</div>${btn(selected?'✓ Shortlisted':'Add to shortlist','shortlist',!selected,false,`data-property="${p.id}" aria-pressed="${selected}"`)}</article>`;}).join('')}</div><div class="ha-between"><p class="ha-caption" aria-live="polite"><strong>${s.shortlist.length} ${s.shortlist.length===1?'home':'homes'} shortlisted.</strong> These are options to verify, not reservations.</p>${s.shortlist.length?link('My shortlist is ready →','next'):''}</div>`;
+}
+function comparison(){
+ const c=m.comparison(),columns=[c.stay,...c.options];
+ const difference=n=>n===0?'Same first-year cost':cash(Math.abs(n))+(n<0?' less':' more')+' than renewing';
+ const rows=[['Base rent / month',columns.map(p=>cash(p.base))],['Base rent / 12 months',columns.map(p=>cash(p.annualBase))],['Moving · one time',columns.map(p=>p.moving?'≈ '+cash(p.moving):'$0')],['First year: base + moving',columns.map(p=>(p.moving?'≈ ':'')+cash(p.firstYear)),'ha-total'],['Difference',columns.map((p,i)=>i?difference(p.differenceVsStay):'Renewal benchmark')]];
+ return `<section class="ha-panel"><div class="ha-panel-head"><h2>Compare the homes you chose.</h2>${badge('Calculated + estimate','calculated','comparison')}</div><table aria-label="Base rent and one-time moving comparison"><thead><tr><th scope="col">Same 12-month period</th>${columns.map(p=>`<th scope="col">${p.name}${p.id==='renew'?' · renewal':''}</th>`).join('')}</tr></thead><tbody>${rows.map(([label,values,cls])=>`<tr class="${cls||''}"><th scope="row">${label}</th>${values.map((v,i)=>`<td data-home="${columns[i].name}">${v}</td>`).join('')}</tr>`).join('')}</tbody></table><div class="ha-between">${c.options.length>1?`<label class="ha-preference">My first-choice backup<select data-preferred aria-label="My first-choice backup">${c.options.map(p=>`<option value="${p.id}" ${s.preferredId===p.id?'selected':''}>${p.name}</option>`).join('')}</select></label>`:`<p class="ha-preference">My first-choice backup: <strong>${c.preferred?.name||'Choose a home first'}</strong></p>`}${link('Adjust my shortlist →','options')}</div><p class="ha-caption">${c.period}. Every cost comparison uses base rent plus estimated moving once.</p></section>`;
+}
+function diligence(){
+ const p=preferred();if(!p)return insight('Choose a backup first.','Return to your options and shortlist a home.');
+ const checks=s.propertyReviews[p.id];
+ const items=[['📍','Check the stated fit',`${p.locality} · ${p.size} sq ft studio · stated ${p.pathMinutes}-minute PATH walk.`],['📅','Confirm the move date',`Demo availability: ${p.availability}. Your current lease ends January 15.`],['🔎','Arrange a viewing','Assess the unit’s condition, noise and your actual commute.'],['🗝️','Get the terms in writing','Confirm the unit, base rent, availability and application requirements.']];
+ return `<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><div><h2>${p.name}</h2><p class="ha-caption">${cash(p.base)} base/month · ≈ ${cash(m.movingCost)} moving once</p></div>${badge('Demo listing','simulated',p.id)}</div><div class="ha-checklist">${items.map(([icon,title,copy])=>`<div class="ha-check-item"><span class="ha-check-mark" aria-hidden="true">${icon}</span><div><h3>${title}</h3><p>${copy}</p></div></div>`).join('')}</div></section><aside class="ha-panel ha-lilac"><h2>Your backup stays in view.</h2><p class="ha-muted">If renewal stays above your limit, you have a next option to verify.</p><label class="ha-check"><input type="checkbox" data-check="fit" ${checks.fit?'checked':''}><span>I’ve reviewed the stated location, size and PATH access.</span></label><label class="ha-check"><input type="checkbox" data-check="conditions" ${checks.conditions?'checked':''}><span>I’ll confirm availability and written terms before relying on this home.</span></label>${insight('Shortlisted, not reserved.','I’ll keep this home in your decision comparison. No viewing or booking has been made.',false,'🧭')}</aside></div>`;
+}
+function evidence(){
+ return `<div class="ha-columns"><section class="ha-panel"><h2>Facts behind your ask</h2><p class="ha-caption">Both begin unselected. Choose either, both, or neither.</p><div class="ha-fact"><label class="ha-check"><input type="checkbox" data-fact="water" ${s.facts.water?'checked':''}><span><strong>Hot-water disruption</strong><small>Six months of disruption, resolved in July. A past experience to ask the landlord to consider.</small></span></label>${badge('Tenant-reported','reported','water')}</div><div class="ha-fact"><label class="ha-check"><input type="checkbox" data-fact="amenities" ${s.facts.amenities?'checked':''}><span><strong>Continuing amenity gaps</strong><small>Relevant to the fee-waiver request. Specific facilities and dates still need supporting records.</small></span></label>${badge('Tenant-reported','reported','amenities')}</div><p class="ha-caption">I won’t invent a payment history or claim automatic compensation.</p></section><aside class="ha-panel ha-peach"><h2>What the evidence can support</h2><div><div class="ha-evidence-row"><span class="ha-badge">Verified</span><p><strong>None yet.</strong> No original documents have been checked.</p></div><div class="ha-evidence-row"><span class="ha-badge ha-reported">Tenant-reported</span><p>The experiences you choose to include.</p></div><div class="ha-evidence-row"><span class="ha-badge ha-calculated">Calculated</span><p>Base-rent changes and the same-year comparison.</p></div><div class="ha-evidence-row"><span class="ha-badge ha-caution">Estimate</span><p>The ${cash(m.movingCost)} one-time moving allowance.</p></div><div class="ha-evidence-row"><span class="ha-badge ha-simulated">Simulated</span><p>Search results and landlord responses.</p></div></div>${link('See the evidence standard →','standards')}</aside></div>`;
+}
+function toneControl(round){
+ const d=m.getDraft(round),sent=s.sent[round],value=sent?.tone||d.tone;
+ return `<label class="ha-tone">Tone<select data-tone="${round}" aria-label="${round==='initial'?'First request':round==='followup'?'Follow-up':'Further request'} tone" ${sent?'disabled':''}>${Object.entries(m.tones).map(([id,t])=>`<option value="${id}" ${value===id?'selected':''}>${t.label}</option>`).join('')}</select></label>`;
+}
+function draftStatus(round){const d=m.getDraft(round);return s.sent[round]?'Exact sent version · preserved':d.edited?'Edited by you · exact wording kept':'Sample draft · ready for your edits';}
+function draftPage(round){
+ const d=m.getDraft(round),sent=s.sent[round],p=preferred(),f=m.financials();
+ return `<div class="ha-columns ha-draft-grid"><section class="ha-panel ha-draft-panel"><div class="ha-panel-head"><div><h2>${round==='initial'?'Your first request':'Your follow-up'}</h2><p class="ha-caption">To: Fictional Leasing Team · ${sent?'sent in demo':'not sent'}</p></div>${toneControl(round)}</div><textarea data-draft="${round}" aria-label="${round==='initial'?'First request':'Follow-up'} draft" spellcheck="true" ${sent?'readonly':''}></textarea><div class="ha-between"><span class="ha-edit-status ${d.edited?'is-edited':''}" data-edit-status aria-live="polite">${draftStatus(round)}</span>${sent?'':link('Restore sample','restore',`data-round="${round}"`)}</div>${d.needsReview&&!sent?'<p class="ha-caption">Your plan or evidence changed. Your edits are intact; check that this wording still reflects your intent.</p>':''}</section><aside class="ha-panel ha-lilac"><h2>Your private strategy.</h2><div>${row('Your requested base',cash(s.plan.requestedBase)+'/month')}${row('Your private ceiling',cash(s.plan.ceiling)+'/month')}${row('Current offer',cash(m.latestOffer().total)+'/month')}</div><p class="ha-caption">The ceiling includes the amenity fee. It stays private.</p>${insight(round==='initial'?'You approve every word.':'Your exact words, sent.',round==='initial'?'Choose a tone, then make it yours.':'Review your edits and approve this version.',false,'✎')}<p class="ha-caption"><strong>Your exit option:</strong> ${p?p.name+' · shortlisted, not reserved.':'No backup selected yet.'}</p>${round==='followup'?link('Read your first sent message →','history','data-round="initial"'):link('Review selected evidence →','evidence')}</aside></div>`;
+}
+function sentReceipt(round){const sent=s.sent[round];return `<div class="ha-receipt"><span aria-hidden="true">✓</span><div><strong>${sent?.edited?'Your edited '+(round==='initial'?'request':'follow-up'):'Your '+(round==='initial'?'request':'follow-up')} was sent exactly as approved in the demo.</strong>${link('Read the exact message →','history',`data-round="${round}"`)}</div></div>`;}
+function firstReply(){
+ const o=s.firstOffer,f=m.financials(),p=preferred(),cut=m.original.base-o.base,head=s.plan.ceiling-o.total;
+ return `${sentReceipt('initial')}<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><h2>The first counteroffer</h2>${badge('Simulated response','simulated','first-reply')}</div><div><strong class="ha-money">${cash(o.total)}<small>/month offered</small></strong><p class="ha-caption">${offerTerms(o)}</p></div><div>${row('Base reduction vs original',cash(cut)+'/month · '+m.pct(cut,m.original.base))}${row('Base increase vs current',signedMoney(o.base-m.current.base)+'/month · '+signedPct(o.base-m.current.base,m.current.base))}${row('Potential annual base savings',cash(cut*12))}</div>${link('See each calculation →','math-first')}</section><aside class="ha-panel ${head>=0?'ha-sage':'ha-peach'}"><h2>${head>=0?'Your limit is met.':'Your ceiling still protects you.'}</h2><p>${head>=0?cash(o.total)+' is within your ceiling. Your original target and fee waiver are still worth weighing.':cash(o.total)+' remains '+cash(-head)+'/month above your private ceiling.'}</p>${insight(head>=0?'Renewing is now an option.':'You have a reason to ask again.',head>=0?'Compare the offer with your target and your shortlisted home before deciding.':'A separate follow-up can ask for '+cash(s.plan.requestedBase)+' base rent and the amenity fee waived.',head<0)}<p class="ha-caption">${p?'<strong>'+p.name+'</strong> remains shortlisted at '+cash(p.base)+' base/month. Availability is not confirmed.':'Shortlist a home to keep another path in view.'}</p>${head>=0?link('I still want to prepare a follow-up →','followup'):link('Revisit my backup →','backup')}</aside></div>`;
+}
+function finalReply(){
+ const f=m.financials(),p=preferred(),o=f.offer;
+ return `${sentReceipt('followup')}${f.withinCeiling?`<section class="ha-celebrate"><span class="ha-celebrate-mark" aria-hidden="true">✓</span><div><h2>${f.requestedTermsMet?'Your requested terms are on the table.':'Within your limit. Review the remaining terms.'}</h2><p>${cash(o.total)} per month is ${f.headroom?cash(f.headroom)+' below':'at'} your private ceiling.${f.requestedTermsMet?' Your requested base rent is met, and the amenity fee is waived.':''}</p></div></section>`:insight('This offer is still above your ceiling.',cash(o.total)+' is '+cash(-f.headroom)+'/month beyond your limit. You can keep negotiating or pursue your shortlisted backup.',true,'🧭')}<div class="ha-columns"><section class="ha-panel"><div class="ha-panel-head"><h2>${cash(o.total)}<span class="ha-caption"> /month offered</span></h2>${badge('Simulated response','simulated','final-reply')}</div><p class="ha-caption">${offerTerms(o)}</p><div><div class="ha-movement"><span>Base reduction since first counteroffer</span><strong>${cash(f.previousReduction)}/month · ${f.previousReductionPct}</strong></div><div class="ha-movement"><span>Base reduction since original offer</span><strong>${cash(f.originalReduction)}/month · ${f.originalReductionPct}</strong></div><div class="ha-movement"><span>Base change from your current lease</span><strong>${signedMoney(f.currentIncrease)}/month · ${signedPct(f.currentIncrease,m.current.base)}</strong></div></div>${link('See the calculation →','math-final')}</section><aside class="ha-panel ha-lilac"><span class="ha-label">Potential annual base savings</span><strong class="ha-money">${cash(f.annualBaseSavings)}</strong><p class="ha-caption">Vs the original demand, if these terms are accepted for 12 months.</p><p>${f.withinCeiling?'You can make this decision from a stronger position.':'Your limit gives you a clear reason to keep another path open.'}</p><p class="ha-caption">${p?'<strong>'+p.name+'</strong> is still in your shortlist. Confirm its availability before committing.':'Your next step can include shortlisting a backup.'}</p>${link('Preview the other demo reply →','other-outcome')}</aside></div>`;
+}
+function decision(){
+ const f=m.financials(),c=m.comparison(),p=c.preferred,r=m.recommendation();
+ const why=f.withinCeiling?(f.requestedTermsMet?'Your requested rent and fee waiver are met. ':'Your ceiling is met; your original requested terms are not fully met. ')+(p?(p.differenceVsStay>0?'Staying is approximately '+cash(p.differenceVsStay)+' lower over the first year than moving to '+p.name+'.':p.differenceVsStay<0?p.name+' is approximately '+cash(-p.differenceVsStay)+' lower over the first year; renewing favors staying in your familiar home.':'The illustrated first-year costs match; renewing avoids the move itself.'):'Renewing avoids a move; no backup is selected yet.'):'The offer is '+cash(-f.headroom)+'/month above your ceiling. '+(p?'Keep '+p.name+' in view while you confirm availability and written terms.':'Choose an alternative to compare before deciding.');
+ return `${insight(f.withinCeiling?'Your limit is met. I recommend renewing.':r.choice==='move'?'I’d take the next step with your backup.':'I’d keep negotiating with a clear limit.',why,!f.withinCeiling,f.withinCeiling?'✓':'🧭')}<div class="ha-between"><h3>Your next 12 months, compared</h3><span class="ha-caption">Base rent + moving once</span></div><div class="ha-cost-row"><div class="ha-cost"><span class="ha-label">Renew your current home</span><strong>${cash(c.stay.firstYear)}</strong><p class="ha-caption">${cash(c.stay.base)} base/month · no moving cost</p></div><div class="ha-cost"><span class="ha-label">${p?'Move to '+p.name:'Your backup option'}</span><strong>${p?'≈ '+cash(p.firstYear):'Choose a home'}</strong><p class="ha-caption">${p?cash(p.base)+' base/month + ≈ '+cash(m.movingCost)+' moving once':'Shortlist and review an alternative before relying on it.'}</p></div></div><div class="ha-choices"><label class="ha-choice ${r.choice==='renew'?'is-recommended':''}"><span class="ha-choice-head"><input type="radio" name="ha-decision" value="renew" ${ui.choice==='renew'?'checked':''} ${f.withinCeiling?'':'disabled'}><span>🏡 Renew</span></span><span class="ha-badge ${r.choice==='renew'?'ha-positive':'ha-caution'}">${r.choice==='renew'?'Recommended':'Above your ceiling'}</span><p>${f.withinCeiling?'Confirm the written renewal on terms that fit your private limit.':'This offer exceeds the limit you set. Revisit the terms before renewing.'}</p></label><label class="ha-choice ${r.choice==='negotiate'?'is-recommended':''}"><span class="ha-choice-head"><input type="radio" name="ha-decision" value="negotiate" ${ui.choice==='negotiate'?'checked':''}><span>💬 Negotiate further</span></span><span class="ha-badge ${f.withinCeiling?'ha-caution':r.choice==='negotiate'?'ha-positive':''}">${f.withinCeiling?'Not recommended now':r.choice==='negotiate'?'Recommended':'An available path'}</span><p>${f.withinCeiling?(f.requestedTermsMet?'Your goals are met. ':'Your ceiling is met. ')+'Another round adds delay while backup homes may become unavailable.':'Make a fresh request while keeping your ceiling and backup in view.'}</p></label><label class="ha-choice ${r.choice==='move'?'is-recommended':''}"><span class="ha-choice-head"><input type="radio" name="ha-decision" value="move" ${ui.choice==='move'?'checked':''}><span>🗝️ Pursue a move</span></span><span class="ha-badge ${r.choice==='move'?'ha-positive':''}">${r.choice==='move'?'Recommended next step':p?'Your exit option':'Choose a backup first'}</span><p>${p?p.name+' is shortlisted. Confirm the home and its written terms before committing.':'Explore the available options and choose a home you would consider.'}</p></label></div><div class="ha-between"><p class="ha-caption">${c.period}. No alternative is reserved.</p>${link('Review the property comparison →','compare')}</div>`;
+}
+function completion(){
+ const c=s.completion;if(!c)return insight('Choose your direction first.','Your decision screen will help you compare the next steps.');
+ const count=c.shortlist.length,renew=c.choice==='renew',move=c.choice==='move',moveFirstYear=c.backup?.firstYear,moveDifference=move?m.original.base*12-moveFirstYear:0;
+ const moveDifferenceText=moveDifference>0?cash(moveDifference)+' less':moveDifference<0?cash(-moveDifference)+' more':'Same estimated cost';
+ const shortTitles={offer:'Offer arrived',plan:'You set the ask',backup:'Backup shortlisted',initial:'First request',first:'First counteroffer',followup:'Your follow-up',final:'Latest terms',decision:'Your decision'};
+ const entries=m.timeline();
+ return `<div class="ha-stat-row"><div class="ha-stat"><span class="ha-label">${move?'Estimated first year of your move':renew?'Potential annual base savings':'Latest renewal: annual base reduction'}</span><strong>${move?'≈ '+cash(moveFirstYear):cash(c.potentialAnnualBaseSavings)}</strong><small>${move?cash(c.backup.base)+' base × 12 + ≈ '+cash(m.movingCost)+' moving once':cash(c.monthlyBaseReduction)+'/month · '+c.baseReductionPct+' below the original renewal base'}</small></div><div class="ha-stat"><span class="ha-label">${move?'Compared with the original renewal':'Your private ceiling'}</span><strong>${move?moveDifferenceText:c.withinCeiling?(c.headroom?cash(c.headroom)+' below':'Met exactly'):cash(-c.headroom)+' above'}</strong><small>${move?'Vs '+cash(m.original.base*12)+' original base rent over 12 months. Moving is an estimate.':c.withinCeiling?'The latest offer fits the limit you set.':'The renewal still exceeds your limit; your chosen next step reflects that.'}</small></div><div class="ha-stat"><span class="ha-label">Your alternatives</span><strong>${count} ${count===1?'home':'homes'} kept</strong><small>${c.backup?c.backup.name+' is your preferred backup.':'You can return to options to choose a backup.'} Availability needs confirmation.</small></div></div><div class="ha-between"><h2>How you got here</h2><span class="ha-badge ha-positive">${renew?'Renewal direction confirmed':move?'Move direction confirmed':'Further request sent in demo'}</span></div><ol class="ha-timeline" aria-label="Your complete renewal journey">${entries.map(e=>`<li><span class="ha-time-title">${shortTitles[e.id]||esc(e.title)}</span><strong>${e.kind==='human'?(e.id==='followup'&&s.sent.followup?.edited?'Your edited words':'Approved by you'):esc(e.value)}</strong><small>${esc(e.detail)}</small></li>`).join('')}</ol>`;
+}
+function home(){
+ const f=m.financials(),c=s.completion,p=preferred();
+ const move=c?.choice==='move',moveDifference=move?m.original.base*12-c.backup.firstYear:0;
+ const outcomeCopy=!c?'I’ll help you compare the increase, set your limits, and choose your next step.':move?(moveDifference>0?'Approximately '+cash(moveDifference)+' lower':moveDifference<0?'Approximately '+cash(-moveDifference)+' higher':'The same estimated first-year cost')+' than the original '+cash(m.original.base*12)+' annual renewal base. Confirm the home and moving quote before committing.':c.choice==='renew'?(c.achievedTerms?'Your requested terms were achieved in the demo. ':'')+cash(c.potentialAnnualBaseSavings)+' potential annual base savings versus the original demand.':'The latest renewal offer carries '+cash(c.potentialAnnualBaseSavings)+' potential annual base savings versus the original demand. Your further request is awaiting a reply.';
+ return `<div class="ha-columns"><section class="ha-panel ${c?'ha-sage':''}"><div class="ha-panel-head"><h2>${c?c.choice==='renew'?'Your renewal direction is confirmed.':move?'Your next step: explore your backup.':'Your further request was sent.' :'Your renewal is in progress.'}</h2><span class="ha-badge ${c?'ha-positive':'ha-simulated'}">${c?'Journey saved':'Demo journey'}</span></div><div><span class="ha-label">${move?'Estimated first year at '+c.backup.name:'Latest proposed rent + amenity'}</span><strong class="ha-money">${move?'≈ '+cash(c.backup.firstYear):cash(f.offer.total)}${move?'':'<small>/month</small>'}</strong><p class="ha-caption">${move?cash(c.backup.base)+' base × 12 + ≈ '+cash(m.movingCost)+' moving once':offerTerms(f.offer)}</p></div><p>${outcomeCopy}</p><div class="ha-flex">${btn(c?'View my journey →':'Continue my journey →','resume')}${link('Start a new demo','restart')}</div></section><aside class="ha-panel ha-peach"><h2>Your options stay with you.</h2>${p?`<div>${row('Preferred backup',p.name)}${row('Base rent',cash(p.base)+'/month')}${row('One-time moving estimate','≈ '+cash(m.movingCost))}</div><p class="ha-caption">Shortlisted, not reserved. Confirm availability before relying on this alternative.</p>${link('Review my shortlist →','options')}`:'<p>No home is shortlisted yet. Choose an alternative so the renewal is not your only path.</p>'+link('Explore my options →','options')}</aside></div>`;
+}
+function fitEditor(editor){if(!editor)return;editor.style.height='';const needed=editor.scrollHeight+2;if(needed>editor.clientHeight+2)editor.style.height=needed+'px';}
+function fitEditors(){root.querySelectorAll('textarea[data-draft]').forEach(fitEditor);}
+function captureEditor(){const editor=root.querySelector('textarea[data-draft]:not([readonly])');if(editor)m.setDraft(editor.dataset.draft,editor.value);}
+function savePlan(){
+ if(s.planLocked)return true;
+ const requested=main.querySelector('#ha-request'),ceiling=main.querySelector('#ha-ceiling');
+ const result=m.setPlan({requestedBase:requested?requested.value:s.plan.requestedBase,ceiling:ceiling?ceiling.value:s.plan.ceiling});
+ if(!result.ok){const error=main.querySelector('#ha-plan-error');if(error)error.textContent=result.error;requested?.focus();return false;}
+ return true;
+}
+function go(page){
+ captureEditor();
+ if(ui.page===0&&page!==0&&!savePlan())return;
+ if(page===2&&!s.shortlist.length)page=1;
+ if(page===3&&!preferred())page=1;
+ if((page===6||page===7)&&!s.sent.initial)page=5;
+ if(page===8&&!s.sent.followup)page=s.sent.initial?7:5;
+ if(page===10&&!s.completion)page=9;
+ closeModal(false);ui.page=page;if(page>=0)ui.resumePage=page;
+ render();live.textContent=getTitle()[1];
+ main.querySelector('.ha-nav [aria-current="step"]')?.focus({preventScroll:true});
+ if(root.hasAttribute('data-standalone'))root.ownerDocument.defaultView?.scrollTo({top:0,left:0,behavior:'instant'});
+}
+function showModal(title,content,actions='',kind='detail'){
+ if(!modal.firstElementChild)ui.modalTrigger=root.ownerDocument.activeElement;
+ ui.modalKind=kind;main.inert=true;
+ modal.innerHTML=`<section class="ha-dialog" role="dialog" aria-modal="true" aria-labelledby="ha-dialog-title"><div class="ha-dialog-head"><div><p class="ha-kicker">${kind==='review'?'YOUR APPROVAL':kind==='editor'?'YOUR NEXT REQUEST':'A CLOSER LOOK'}</p><h2 id="ha-dialog-title">${title}</h2></div><button type="button" class="ha-close cursor-interaction" data-act="close" aria-label="Close panel">×</button></div><div class="ha-dialog-content">${content}</div><div class="ha-dialog-actions">${actions||btn('Back to my journey','close',true)}</div></section>`;
+ modal.querySelector('.ha-close').focus({preventScroll:true});
+}
+function closeModal(restore=true){modal.innerHTML='';main.inert=false;ui.modalKind=null;if(restore&&ui.modalTrigger?.isConnected)ui.modalTrigger.focus({preventScroll:true});ui.modalTrigger=null;}
+function closeAccount(focus=false){const toggle=main.querySelector('[data-act="account"]'),popover=main.querySelector('.ha-account-popover');if(!popover||popover.hidden)return false;popover.hidden=true;toggle.setAttribute('aria-expanded','false');if(focus)toggle.focus({preventScroll:true});return true;}
+function showReview(round){
+ captureEditor();const result=m.prepareReview(round);
+ if(!result.ok){showModal('Check your request',`<p>${esc(result.error)}</p>`);return;}
+ ui.review=result.review;const d=result.review;
+ showModal(d.edited?'Approve your edited '+(round==='followup'?'follow-up':round==='initial'?'first request':'request'):'Approve this exact '+(round==='followup'?'follow-up':'request'),`<div class="ha-between"><p class="ha-caption">To: ${d.recipient}</p><span class="ha-badge ${d.edited?'ha-reported':'ha-positive'}">${d.edited?'Edited by you':'Your chosen wording'}</span></div><p class="ha-caption">${d.edited?'This is the exact text you edited.':'This is the exact wording that will be used.'} ${d.needsReview?'Your context changed; check the facts and terms before approving.':''}</p><div class="ha-letter" data-reviewed-text>${esc(d.text)}</div><label class="ha-check"><input type="checkbox" id="ha-approve-confirm"><span>I approve this exact wording and recipient.</span></label><p class="ha-error" role="alert" id="ha-review-error"></p><p class="ha-caption">This records a demo message. No real email is sent.</p>`,btn('Keep editing','keep-editing',true)+btn('Approve & send in demo','send-approved'), 'review');
+}
+function showFurther(){
+ if(!s.sent.initial){go(5);return;}
+ if(!s.sent.followup){go(7);return;}
+ if(s.sent.further){showHistory('further');return;}
+ const d=m.getDraft('further');
+ showModal('Your further request',`<div class="ha-panel-head"><p class="ha-caption">To: Fictional Leasing Team · not sent</p>${toneControl('further')}</div><textarea data-draft="further" aria-label="Further request draft" spellcheck="true"></textarea><div class="ha-between"><span class="ha-edit-status ${d.edited?'is-edited':''}" data-edit-status>${draftStatus('further')}</span>${link('Restore sample','restore','data-round="further"')}</div><p class="ha-caption">Your current offer and shortlist remain in view. This request needs a fresh approval.</p>`,btn('Keep my options open','close',true)+btn('Review this draft →','review-further'),'editor');
+ const editor=modal.querySelector('textarea');editor.value=d.text;fitEditor(editor);
+}
+function showHistory(round){const sent=s.sent[round];showModal(sent?'The exact '+(round==='initial'?'first request':round==='followup'?'follow-up':'further request')+' used':'No sent message yet',sent?`<div class="ha-between"><p class="ha-caption">To: ${sent.recipient} · sent in demo</p><span class="ha-badge ha-positive">${sent.edited?'Your edited wording':'Approved by you'}</span></div><div class="ha-letter" data-history-text>${esc(sent.text)}</div><p class="ha-caption">This record preserves the exact text you approved. Your private ceiling is not added to it.</p>`:'<p>Review and approve a request to create its sent history.</p>');}
+function showMath(stage){
+ const o=stage==='opening'?m.original:stage==='first'?s.firstOffer:m.latestOffer(),previous=stage==='opening'?null:stage==='first'?m.original:s.firstOffer;
+ const reduction=m.original.base-o.base,increase=o.base-m.current.base;
+ showModal('How the base-rent numbers work',`<p>Each rent change compares <strong>base rent only</strong>.</p><div>${row('Current base',cash(m.current.base)+'/month')}${row('Original renewal base',cash(m.original.base)+'/month')}${row('Base being reviewed',cash(o.base)+'/month')}${row('Change vs current base',signedMoney(increase)+' ÷ '+cash(m.current.base)+' = '+signedPct(increase,m.current.base))}${previous?row('Reduction vs previous offer',cash(previous.base-o.base)+' ÷ '+cash(previous.base)+' = '+m.pct(previous.base-o.base,previous.base)):''}${stage!=='opening'?row('Reduction vs original offer',cash(reduction)+' ÷ '+cash(m.original.base)+' = '+m.pct(reduction,m.original.base)):''}${row(stage==='opening'?'Increase over 12 months':'Potential reduction over 12 months',cash(stage==='opening'?increase:reduction)+' × 12 = '+cash((stage==='opening'?increase:reduction)*12))}</div><p class="ha-caption">A proposal is not money already saved. The final written terms still need confirmation.</p>`);
+}
+function showSource(name){
+ const p=m.property(name),backup=preferred();
+ if(p){showModal(p.name+' · listing details',`<dl class="ha-source"><dt>Stated details</dt><dd>${p.locality} · ${p.size} sq ft studio · ${cash(p.base)} base/month · ${p.pathMinutes}-minute PATH walk.</dd><dt>Availability</dt><dd>${p.availability} in the demo record.</dd><dt>Evidence status</dt><dd><strong>Simulated listing, not a live search result.</strong></dd><dt>Next action</dt><dd>Arrange a viewing and confirm availability, base rent and written terms.</dd></dl>`);return;}
+ const sources={
+  opening:['Your original renewal offer',cash(m.original.total)+' total: '+offerTerms(m.original)+'.','Fictional renewal record dated November 8, 2026.','Simulated source. The arithmetic is calculated.'],
+  discovery:['How I found these options','The demo search presents studios around Grove Street and Newport, with stated PATH access. You decide which to shortlist.','Two existing illustrative property records; no live market lookup was performed.','Simulated search results. Confirm availability and written terms.'],
+  comparison:['The comparison basis','12 × monthly base rent, plus the estimated '+cash(m.movingCost)+' moving cost once for each move option.','The same January 16, 2027–January 15, 2028 period for every option.','Calculated from simulated rents and a moving estimate. No unknown fees are added.'],
+  water:['The hot-water experience','Six months of disruption, resolved in July.','Mia’s tenant account in the demo scenario.','Tenant-reported. Supporting maintenance records have not been reviewed.'],
+  amenities:['The amenity experience','Continuing amenity gaps.','Mia’s tenant account in the demo scenario.','Tenant-reported. No automatic compensation entitlement is claimed.'],
+  'first-reply':['The first response',s.firstOffer?offerTerms(s.firstOffer):'A response appears after the first approved request.','Deterministic response in this demo, based on the saved rent target.','Simulated response. No real landlord has received a message.'],
+  'final-reply':['The follow-up response',s.finalOffer?offerTerms(s.finalOffer):'A response appears after the separately approved follow-up.','Your exact edited message is preserved. The demo reply follows your saved terms and selected response path.','Simulated response; it is not a prediction of how specific wording changes a real negotiation.'],
+  standards:['What each evidence label means','Verified: checked against an identifiable original source. Tenant-reported: Mia’s account. Calculated: arithmetic. Estimate: planning assumption. Simulated: fictional records or responses.','No original housing document or live listing has been verified in this demo.','Keep claims, calculations and assumptions distinct.']
+ };
+ const [title,value,basis,status]=sources[name]||sources.standards;
+ showModal(title,`<dl class="ha-source"><dt>What it means</dt><dd>${value}</dd><dt>Basis</dt><dd>${basis}</dd><dt>Status</dt><dd>${status}</dd></dl>`);
+}
+function decide(){
+ if(ui.choice==='renew'){
+  if(!within())return;
+  const f=m.financials();showModal('Confirm your renewal direction',`<p>You choose to renew at the proposed <strong>${cash(f.offer.total)}/month</strong>, subject to confirming the written terms.</p>${insight('Your next step is clear.','Check the base rent, '+(f.offer.amenity?'retained '+cash(f.offer.amenity)+' amenity fee':'amenity waiver')+' and 12-month term in writing, then respond by December 8.')}<p class="ha-caption">This records your direction. It does not sign or accept a lease.</p>`,btn('Keep considering','close',true)+btn('Confirm my direction','complete-renew'));return;
+ }
+ if(ui.choice==='move'){
+  const p=preferred();if(!p||!m.isBackupReviewed()){showModal('Get your backup ready to verify',`<p>${p?'Review '+p.name+' before pursuing the move.':'Shortlist a home before choosing to pursue a move.'} Keep your renewal response date in view.</p>`,btn(p?'Review my backup':'Choose a backup',p?'backup':'options'));return;}
+  if(p.base>s.plan.ceiling){showModal('This backup exceeds your ceiling',`<p>${p.name} has a ${cash(p.base)} base rent, above your ${cash(s.plan.ceiling)} private ceiling. Reconsider the shortlist before choosing this move.</p>`,btn('Review my shortlist','options'));return;}
+  showModal('Pursue '+p.name+' with a clear plan',`<div class="ha-checklist"><p><strong>1.</strong> Arrange a viewing and confirm the move date.</p><p><strong>2.</strong> Get the unit’s written terms and a moving quote.</p><p><strong>3.</strong> Review the application and lease before committing.</p></div><p class="ha-caption">Plan for the estimated ${cash(m.movingCost)} move once. Your renewal response is still due December 8. No home has been booked.</p>`,btn('Keep considering','close',true)+btn('Confirm my move direction','complete-move'));return;
+ }
+ if(ui.choice==='negotiate'){
+  const f=m.financials();
+  if(f.withinCeiling){showModal('You can choose another round. Here is the tradeoff.',`${insight(f.requestedTermsMet?'Your requested terms and ceiling are met.':'Your ceiling is met; your target still deserves a conscious choice.','I recommend confirming the written renewal if these terms work for you.')}<p>Another round can add delay while shortlisted homes may become unavailable. The alternatives are not reserved; further negotiation does not automatically remove them.</p><p class="ha-caption">You remain in control. A better offer is not guaranteed.</p>`,btn('Continue negotiating','further',true)+btn('Choose renewal','choose-renew'));return;}
+  showFurther();
+ }
+}
+function showEvals(){
+ showModal('Evals',`<div class="ha-between"><p><strong>10 formal scenarios</strong>, personally reviewed by Fizza.</p><span class="ha-badge">Read-only</span></div><div class="ha-eval-summary" aria-label="Recorded backend evaluation verdicts"><div class="ha-stat"><span class="ha-label">Pass</span><strong>8</strong></div><div class="ha-stat"><span class="ha-label">Needs work</span><strong>1</strong></div><div class="ha-stat"><span class="ha-label">Fail</span><strong>1</strong></div></div><section class="ha-eval-row" aria-label="Failed scenario"><div class="ha-between"><h3>Fail</h3><code>adaptive-paired-3-v01</code></div><p>Recommended an ineligible property.</p></section><section class="ha-eval-row" aria-label="Scenario needing work"><div class="ha-between"><h3>Needs work</h3><code>adaptive-paired-4-v01</code></div><p>Opened with supplicant phrasing: “Would you consider…”</p><p><strong>What changed in this demo:</strong> The professional sample uses a direct proposal: “I propose a 12-month renewal…”</p></section>${insight('The connection to Mia’s journey','Mia can rewrite the follow-up, then approve the exact version used by the demo.',false,'✎')}<p class="ha-caption ha-eval-source"><strong>Source: Fizza’s tested backend.</strong> This page only displays her review; it does not run those evaluations. The original recorded verdicts are retained.</p>`,btn('Return to where I was','close',true));
+}
+function showDemo(){if(ui.page===0&&!savePlan())return;showModal('Demo controls',`<p>This is a local, simulated journey. No live search, real email, booking or lease acceptance takes place.</p><p class="ha-caption">Your edits are preserved exactly. The demo response uses your saved requested rent and the selected path.</p>${s.finalOffer?'<p>The final response is already shown. You can preview the alternate response while preserving the first two sent messages.</p>':`<label class="ha-preference">Simulated final response<select id="ha-outcome"><option value="success" ${s.outcome==='success'?'selected':''}>Requested terms met</option><option value="hold" ${s.outcome==='hold'?'selected':''}>Landlord holds the counteroffer</option></select></label>`}`,btn('Restart demo','restart',true)+btn(s.finalOffer?'Preview other response':'Apply response path',s.finalOffer?'other-outcome':'apply-outcome'));}
+root.addEventListener('click',e=>{
+ if(!e.target.closest('.ha-account'))closeAccount();
+ const b=e.target.closest('button');if(!b||b.disabled)return;
+ if(b.dataset.page!==undefined){go(Number(b.dataset.page));return;}
+ const a=b.dataset.act;if(!a)return;
+ if(a==='evals'){showEvals();return;}
+ if(a==='account'){const p=main.querySelector('.ha-account-popover');p.hidden=!p.hidden;b.setAttribute('aria-expanded',String(!p.hidden));return;}
+ if(a==='close'){captureEditor();closeModal();return;}
+ if(a==='home'){go(-1);return;}
+ if(a==='resume'){go(s.completion?10:ui.resumePage);return;}
+ if(a==='restart'){closeModal(false);m.restart();ui.choice=null;ui.review=null;ui.page=0;ui.resumePage=0;render();live.textContent='New demo started. Your plan and shortlist have been reset.';return;}
+ if(a==='back'){go(Math.max(0,ui.page-1));return;}
+ if(a==='save-plan'){if(savePlan())go(1);return;}
+ if(a==='next'){if(ui.page===1&&!s.shortlist.length)return;if(ui.page===3&&!m.isBackupReviewed())return;go(ui.page+1);return;}
+ if(a==='options'){go(1);return;}if(a==='compare'){go(2);return;}if(a==='backup'){go(3);return;}if(a==='evidence'){go(4);return;}if(a==='followup'){go(7);return;}if(a==='decision-page'){go(9);return;}
+ if(a==='shortlist'){m.toggleShortlist(b.dataset.property);ui.choice=null;render();main.querySelector(`[data-act="shortlist"][data-property="${b.dataset.property}"]`)?.focus({preventScroll:true});return;}
+ if(a==='property'){showSource(b.dataset.property);return;}if(a==='source'){showSource(b.dataset.source);return;}if(a==='standards'){showSource('standards');return;}
+ if(a.startsWith('math-')){showMath(a.slice(5));return;}
+ if(a==='deadline'){showModal('One clear renewal-response date',`<div>${row('Original offer received','November 8, 2026')}${row('Final renewal response due','December 8, 2026')}${row('Current lease ends','January 15, 2027')}${row('New 12-month term begins','January 16, 2027')}</div><p>December 8 is the requested final-response date in the fictional renewal offer. The back-and-forth window ends then; it is separate from lease expiry.</p>`);return;}
+ if(a==='review'){showReview(getRound());return;}if(a==='review-further'){showReview('further');return;}
+ if(a==='keep-editing'){const round=ui.review?.round;if(round==='further')showFurther();else{closeModal();main.querySelector('textarea')?.focus();}return;}
+ if(a==='restore'){const round=b.dataset.round;m.restoreSample(round);if(round==='further'){showFurther();modal.querySelector('textarea').focus();}else{render();main.querySelector('textarea').focus();}return;}
+ if(a==='send-approved'){
+  const review=ui.review,result=m.approveAndSendDemo(review?.round,review,!!modal.querySelector('#ha-approve-confirm')?.checked);
+  if(!result.ok){const error=modal.querySelector('#ha-review-error');if(error)error.textContent=result.error;return;}
+  ui.choice=null;ui.review=null;if(result.sent.round==='further'){m.complete('negotiate');go(10);}else go(result.sent.round==='initial'?6:8);return;
+ }
+ if(a==='view-reply'){go(ui.page===5?6:8);return;}if(a==='history'){showHistory(b.dataset.round);return;}
+ if(a==='other-outcome'){const r=m.previewOtherOutcome();if(r.ok){ui.choice=null;go(8);}return;}
+ if(a==='decision'){decide();return;}if(a==='further'){showFurther();return;}
+ if(a==='choose-renew'){ui.choice='renew';closeModal();render();decide();return;}
+ if(a==='complete-renew'||a==='complete-move'){const result=m.complete(a==='complete-renew'?'renew':'move');if(result.ok)go(10);else showModal('Review this choice',`<p>${esc(result.error)}</p>`);return;}
+ if(a==='demo'){showDemo();return;}
+ if(a==='apply-outcome'){const value=modal.querySelector('#ha-outcome').value;const result=m.setOutcome(value);if(result.ok){ui.choice=null;closeModal();render();}return;}
+});
+root.addEventListener('change',e=>{
+ const el=e.target;
+ if(el.dataset.preferred!==undefined){m.setPreferred(el.value);ui.choice=null;render();main.querySelector('[data-preferred]')?.focus({preventScroll:true});return;}
+ if(el.dataset.check){m.setPropertyReview(s.preferredId,el.dataset.check,el.checked);render();main.querySelector(`[data-check="${el.dataset.check}"]`)?.focus({preventScroll:true});return;}
+ if(el.dataset.fact){m.setFact(el.dataset.fact,el.checked);return;}
+ if(el.dataset.tone){captureEditor();const round=el.dataset.tone;m.setTone(round,el.value);if(round==='further'){showFurther();modal.querySelector('[data-tone]')?.focus({preventScroll:true});}else{render();main.querySelector('[data-tone]')?.focus({preventScroll:true});}return;}
+ if(el.name==='ha-decision'){ui.choice=el.value;render();main.querySelector(`[name="ha-decision"][value="${ui.choice}"]`)?.focus({preventScroll:true});}
+});
+root.addEventListener('input',e=>{
+ const el=e.target;
+ if(el.dataset.draft&&!el.readOnly){m.setDraft(el.dataset.draft,el.value);const scope=ui.modalKind==='editor'?modal:main;const status=scope.querySelector('[data-edit-status]');if(status){status.textContent=draftStatus(el.dataset.draft);status.classList.add('is-edited');}fitEditor(el);}
+ if(el.dataset.goal){const target=Number(main.querySelector('#ha-request')?.value),output=main.querySelector('#ha-plan-preview');if(output&&target>0&&target<m.original.base)output.textContent='At your target: '+cash(m.original.base-target)+'/month less base rent than the original offer.';const error=main.querySelector('#ha-plan-error');if(error)error.textContent='';}
+});
+root.addEventListener('keydown',e=>{
+ if(e.key==='Escape'){if(modal.firstElementChild){captureEditor();closeModal();e.preventDefault();}else if(closeAccount(true))e.preventDefault();return;}
+ if(e.key==='Tab'&&modal.firstElementChild){const focusable=[...modal.querySelectorAll('button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled)')].filter(el=>el.getClientRects().length),first=focusable[0],last=focusable.at(-1),active=root.ownerDocument.activeElement;if(e.shiftKey&&active===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&active===last){e.preventDefault();first.focus();}}
+});
+root.addEventListener('focusout',e=>{if(e.target.closest('.ha-account')&&!e.relatedTarget?.closest('.ha-account'))closeAccount();});
+root.ownerDocument.addEventListener('click',e=>{if(!root.contains(e.target))closeAccount();});
+const view=root.ownerDocument.defaultView;
+view?.addEventListener('resize',fitEditors,{passive:true});
+if(view?.ResizeObserver){let lastWidth=0;const observer=new view.ResizeObserver(entries=>{const width=entries[0].contentRect.width;if(Math.abs(width-lastWidth)>.5){lastWidth=width;fitEditors();}});observer.observe(root);}
+render();
+})();
+
+</script>
+</body>
+</html>

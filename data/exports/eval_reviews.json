@@ -106,5 +106,14 @@
     "verdict": "Fail",
     "comment": "",
     "kind": "human"
+  },
+  {
+    "operation_id": "fizza-confirmed-restore-paired4-20261031",
+    "run_id": "adaptive-paired-4-v01",
+    "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
+    "at": "2026-10-31T20:02:53.260Z",
+    "verdict": "Needs work",
+    "comment": "Restored original verdict; prior Fail was an accidental status change during UI testing.",
+    "kind": "human"
   }
 ]
