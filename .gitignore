@@ -2,7 +2,7 @@ node_modules
 .next/
 *.tsbuildinfo
 .env*
-data/
+data/*
 backups/
 *.sqlite*
 *.db*
@@ -29,3 +29,19 @@ screenshots/
 *.pfx
 *.log
 # Source may contain local path metadata; sanitize before public sharing.
+
+# Explicitly reviewed capstone snapshot; other runtime data remains ignored.
+!data/documents/
+data/documents/*
+!data/exports/
+data/exports/*
+!/data/README.md
+!/data/documents/2b8e3a58-a4e0-46de-aab7-eb025476ddd2.txt
+!/data/exports/adaptive_benchmarks.json
+!/data/exports/case6.json
+!/data/exports/current_human_reviews.json
+!/data/exports/eval_reviews.json
+!/data/exports/journey_runs.json
+!/data/foundation.sqlite
+!/data/human-review-receipts.json
+!/data/provenance.json

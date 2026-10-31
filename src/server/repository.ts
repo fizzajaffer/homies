@@ -90,5 +90,5 @@ export class FoundationRepository{
   privateDir(target);privateDir(join(target,'documents'));try{copyFileSync(join(bundle,'foundation.sqlite'),join(target,'foundation.sqlite'));chmodSync(join(target,'foundation.sqlite'),0o600);for(const d of manifest.documents){copyFileSync(join(bundle,d.path),join(target,d.path));chmodSync(join(target,d.path),0o600);}}catch(e){rmSync(target,{recursive:true,force:true});throw e;}return target;
  }
 }
-export function defaultDataRoot(){return resolve(process.env.TENANT_DATA_DIR||join(process.cwd(),'..','foundation-data'));}
+export function defaultDataRoot(){return resolve(process.env.TENANT_DATA_DIR||join(process.cwd(),'data'));}
 export function safeFilename(name:string){return basename(name).replace(/[^a-zA-Z0-9._-]/g,'_');}

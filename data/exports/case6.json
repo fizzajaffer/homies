@@ -1,0 +1,450 @@
+{
+  "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+  "note": "All rows directly scoped to Case 6. The complete database also retains shared and indirectly referenced records. BLOB values use an explicit base64 wrapper.",
+  "tables": {
+    "cases": [
+      {
+        "id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "label": "Mia · synthetic case 6",
+        "created_at": "2026-10-25T22:21:18.326Z"
+      }
+    ],
+    "a1_memory": [],
+    "a1_runs": [],
+    "a2_audit": [],
+    "a2_cases": [],
+    "a2_history": [],
+    "a2_operations": [],
+    "a2_receipts": [],
+    "a2_runs": [],
+    "a3_preference_history": [],
+    "a3_preferences": [],
+    "a3_properties": [],
+    "approvals": [],
+    "case_agent_corrections": [],
+    "case_agent_proposals": [],
+    "case_agent_runs": [],
+    "documents": [],
+    "events": [
+      {
+        "id": 32,
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "entity_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "case-created",
+        "at": "2026-10-25T22:21:18.329Z"
+      }
+    ],
+    "fixture_sync": [
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "version": "synthetic-a2-v03",
+        "data": "{\"dates\":{\"preparation\":\"2026-11-01\",\"offer\":\"2026-11-08\",\"internalTarget\":\"2026-11-12\",\"intendedSigning\":\"2026-11-13\",\"noticeCutoff\":\"2026-11-16\",\"renewalResponse\":\"2026-12-08\",\"currentExpiry\":\"2027-01-15\",\"currentTermStart\":null,\"movePreferred\":\"2027-01-07\",\"moveLatest\":\"2027-01-15\",\"newTermStart\":\"2027-01-16\",\"newTermEnd\":\"2028-01-15\"},\"housing\":{\"currentBase\":2100,\"currentAmenity\":45,\"trash\":12,\"renewalBase\":2600,\"renewalAmenity\":45,\"openingBase\":2200,\"openingAmenity\":0,\"termMonths\":12,\"energyPeakWinter\":120,\"waterSewer\":30,\"internet\":50,\"netBiweekly\":2600,\"paychecks\":26,\"grossAnnual\":127000},\"currentTermStartStatus\":\"unknown\",\"synthetic\":true}",
+        "at": "2026-10-25T22:21:18.326Z"
+      }
+    ],
+    "journey_events": [
+      {
+        "id": "3fac8aae-94c2-4045-9310-3a7d6041a992",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "provider-output-observed",
+        "at": "2026-10-25T22:21:29.510Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-1-reply\",\"responseId\":\"resp_02408b2dc4c0a1c0006ade80df184487d2a47cd3e3756a3c44\",\"text\":\"{\\n  \\\"summary\\\": \\\"The simulated reply offers 2400 base rent plus 45 amenity for 12 months. Versus the initial 2600 base plus 45 amenity, the base concession is 200; there is no amenity concession. Base remains 200 above Mia’s private 2200 target and 135 above the 2265 base-only ceiling. Rent plus amenity totals 2445, which is 180 above the separate 2265 package ceiling, excluding trash, utilities and other costs. The reply states that the water concern remains resolved and the amenity concern remains unaddressed. This fictional offer does not establish acceptance, signing or a secured home.\\\",\\n  \\\"evidence_ids\\\": [\\n    \\\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\\\"\\n  ],\\n  \\\"candidate_ids\\\": [],\\n  \\\"facts\\\": [\\n    {\\n      \\\"field\\\": \\\"base\\\",\\n      \\\"value\\\": \\\"2400\\\",\\n      \\\"quote\\\": \\\"Base rent: 2400\\\",\\n      \\\"source_id\\\": \\\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\\\"\\n    },\\n    {\\n      \\\"field\\\": \\\"amenity\\\",\\n      \\\"value\\\": \\\"45\\\",\\n      \\\"quote\\\": \\\"Amenity fee: 45\\\",\\n      \\\"source_id\\\": \\\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\\\"\\n    },\\n    {\\n      \\\"field\\\": \\\"months\\\",\\n      \\\"value\\\": \\\"12\\\",\\n      \\\"quote\\\": \\\"Term months: 12\\\",\\n      \\\"source_id\\\": \\\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\\\"\\n    }\\n  ],\\n  \\\"next_actions\\\": [\\n    \\\"Mia should review whether to request further base-rent and amenity concessions; keep private targets, finances and strategy out of outgoing context.\\\",\\n    \\\"Confirm the current written terms, whether the existing 12 trash charge continues, all other material fees, and any offer expiry or response deadline; none is stated in the reply.\\\",\\n    \\\"Check utilities and personal expenses before assessing overall affordability; unknown costs are not zero.\\\",\\n    \\\"Require Mia’s confirmation before any changes or outgoing communication. Nothing has been sent or accepted; securing the home requires explicit external-signing confirmation.\\\"\\n  ]\\n}\",\"mode\":\"live\"}"
+      },
+      {
+        "id": "030f03cc-b80f-400d-8721-709a7310e330",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "model-execution-completed",
+        "at": "2026-10-25T22:21:29.519Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-1-reply\",\"mode\":\"live\",\"validation\":\"passed\",\"quality\":\"Human review pending\"}"
+      },
+      {
+        "id": "47eba922-cb61-43f0-8c0f-445037c57b19",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "synthetic-external-checkpoint",
+        "at": "2026-10-25T22:21:29.542Z",
+        "data": "{\"checkpoint\":1,\"operationId\":\"dual-live-properties-1\",\"landlordUnchanged\":true}"
+      },
+      {
+        "id": "e7b308c1-7c02-4234-bc7b-6148de40440e",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "provider-output-observed",
+        "at": "2026-10-25T22:21:43.646Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-1-recommend\",\"responseId\":\"resp_0b279a1641f636ca006ade80e9a70487d28711ffe3a1b0da3e\",\"text\":\"{\\n  \\\"summary\\\": \\\"Continue both renewal negotiation and alternative comparison for Mia’s review; no option currently meets all requirements. The renewal base fell from $2,600 to $2,400, a $200 concession with no amenity-fee concession. This closes 50% of the gap to the private $2,200 base target, leaving $200. Renewal base exceeds the $2,265 discovery ceiling by $135; base plus the $45 amenity fee totals $2,445, exceeding the separate package ceiling by $180. A and B pass both price screens but fail timing and PATH requirements, respectively. All evidence is synthetic, and full affordability remains incomplete.\\\",\\n  \\\"evidence_ids\\\": [\\n    \\\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\\\",\\n    \\\"property:A:v1\\\",\\n    \\\"property:B:v1\\\",\\n    \\\"property:stay:v1\\\"\\n  ],\\n  \\\"candidate_ids\\\": [],\\n  \\\"facts\\\": [],\\n  \\\"next_actions\\\": [\\n    \\\"For Mia’s review, continue exploring renewal concessions. With the amenity fee unchanged at $45, base would need to be no more than $2,220 to meet the $2,265 package ceiling. Keep private targets and strategy out of outgoing copy; nothing is sent.\\\",\\n    \\\"Continue screening studios in 07302 or 07310 for all required in-unit features, 24/7 staffed concierge or doorman, reviews, PATH access within five minutes, and availability for the January 7–15 move-in window.\\\",\\n    \\\"Recheck whether A can offer availability within the window; do not assume its January 20 date works. B remains excluded under the active five-minute PATH limit unless Mia explicitly changes that preference.\\\",\\n    \\\"Verify current terms, material fees, utilities, moving costs, review evidence, and personal affordability. Keep refundable deposits separate from nonrefundable costs; the $120 utility estimate is not a verified annual average.\\\",\\n    \\\"Obtain any offer expiry and response cutoff, which are not supplied, and Mia’s confirmation before any change or commitment.\\\"\\n  ],\\n  \\\"decision\\\": {\\n    \\\"action\\\": \\\"continue_both\\\",\\n    \\\"selected\\\": null,\\n    \\\"reasons\\\": [\\n      \\\"Staying supports continuity and has acceptable synthetic feedback; the water concern remains resolved, but the amenity concern remains unaddressed and both price ceilings fail.\\\",\\n      \\\"A has acceptable viewing feedback, required features, 24/7 staffing, and a four-minute PATH walk. Its $2,200 base and $2,230 package pass the separate price screens, but January 20 availability misses the January 15 latest move-in date.\\\",\\n      \\\"B has acceptable viewing feedback, required features, 24/7 staffing, January 7 availability, and a $1,950 base and package. Its seven-minute PATH walk fails the active five-minute limit, so its lower price does not make it eligible.\\\",\\n      \\\"Review material is a synthetic fixture rather than verified public research; staffed-entry claims do not establish neighborhood safety.\\\"\\n    ],\\n    \\\"conditions\\\": [\\n      \\\"Reassess against current evidence and Mia’s confirmed preferences before selecting an option; no requirement is waived here.\\\",\\n      \\\"Passing base and rent-plus-amenity screens does not establish complete affordability, and unknown costs are not zero.\\\",\\n      \\\"This recommendation authorizes no acceptance, outreach, payment, or signing. A home is not secured without explicit external-signing confirmation.\\\"\\n    ]\\n  }\\n}\",\"mode\":\"live\"}"
+      },
+      {
+        "id": "bd376583-76fc-4fb0-ab35-c548eb72d417",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "model-execution-completed",
+        "at": "2026-10-25T22:21:43.651Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-1-recommend\",\"mode\":\"live\",\"validation\":\"passed\",\"quality\":\"Human review pending\"}"
+      },
+      {
+        "id": "19e9fad6-b27a-4b73-a5f6-98e7f7b0ed34",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "synthetic-external-checkpoint",
+        "at": "2026-10-25T22:21:52.190Z",
+        "data": "{\"checkpoint\":2,\"operationId\":\"dual-live-properties-2\",\"landlordUnchanged\":true}"
+      },
+      {
+        "id": "57ce1e54-be86-4833-bd02-5044e3bd3aee",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "provider-output-observed",
+        "at": "2026-10-25T22:22:06.684Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-2-recommend\",\"responseId\":\"resp_08a2fffd959511d6006ade8100a53087d2ad5056ec213944ef\",\"text\":\"{\\n  \\\"summary\\\": \\\"Conditionally recommend moving to A for Mia’s review. In the synthetic version-2 assessment, A meets the recorded requirements and passes both separate budget tests: $2,200 regular base rent and $2,230 rent plus amenity, each within $2,265. The renewal’s $2,400 base and $2,445 package fail both tests. Compared with the initial $2,600 renewal base, the landlord conceded $200 in base rent and nothing on amenities, closing 50% of the gap to Mia’s $2,200 base target; $200 remains. The renewal is still $300 above the current base and package. This is a conditional comparison, not acceptance or a secured home.\\\",\\n  \\\"evidence_ids\\\": [\\n    \\\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\\\",\\n    \\\"property:A:v2\\\",\\n    \\\"property:B:v2\\\",\\n    \\\"property:stay:v2\\\"\\n  ],\\n  \\\"candidate_ids\\\": [\\\"A\\\", \\\"B\\\", \\\"stay\\\"],\\n  \\\"facts\\\": [],\\n  \\\"next_actions\\\": [\\n    \\\"Have Mia review the current A version-2 evidence and landlord version-1 reply before authorizing any change; reassess if terms or preferences change.\\\",\\n    \\\"Verify A’s current availability, lease term, full fee schedule, moving costs and deposit requirements. Confirm actual utilities rather than treating the $120 estimate or winter peak as an annual average; check personal expenses before concluding affordability.\\\",\\n    \\\"Validate the recorded PATH walk, 24/7 staffing, required features and review evidence. The supplied reviews are synthetic fixtures, not verified public reviews.\\\",\\n    \\\"Confirm any offer expiry and response cutoff, which are not supplied. Keep the renewal fallback open while A is checked; reconsider staying only if updated terms pass both budget gates.\\\",\\n    \\\"Do not send, accept, pay or sign based on this recommendation. Any outgoing draft must omit private finances and strategy; home secured requires explicit external-signing confirmation.\\\"\\n  ],\\n  \\\"decision\\\": {\\n    \\\"action\\\": \\\"conditional_move\\\",\\n    \\\"selected\\\": \\\"A\\\",\\n    \\\"reasons\\\": [\\n      \\\"A is a studio in preferred ZIP 07310 with a recorded four-minute PATH walk, within the five-minute maximum and preferred three-to-five-minute range. Its synthetic evidence records heating, cooling, dishwasher, stovetop, hot and cold water, private bath and 24/7 staffing.\\\",\\n      \\\"A is available January 7, 2027, matching the desired move-in date and preceding the January 15 latest date. Recorded viewing feedback finds the layout, natural light and building condition acceptable.\\\",\\n      \\\"B’s lower price does not overcome its seven-minute PATH walk, which fails the active requirement. Staying meets the recorded home requirements but fails both budget gates; continuity does not override those limits.\\\",\\n      \\\"After requirement gates, the supplied checked first-year nonrefundable totals favor A: $28,104 versus $29,484 for staying, a $1,380 difference. These totals include estimated utilities; A’s separate $1,000 refundable deposit is not a nonrefundable cost.\\\"\\n    ],\\n    \\\"conditions\\\": [\\n      \\\"All evidence is synthetic. Mia’s confirmation and current versions control any change; the assessment is not a real-world quality pass.\\\",\\n      \\\"Confirm current terms, availability and material costs before commitment. Unknown costs are not zero, and complete personal affordability remains unassessed.\\\",\\n      \\\"Review fixtures and security-feature claims do not establish verified review quality or guarantee neighborhood safety.\\\",\\n      \\\"No outreach, acceptance or signing is authorized or completed by this recommendation.\\\"\\n    ]\\n  }\\n}\",\"mode\":\"live\"}"
+      },
+      {
+        "id": "67fc6fbd-e4cf-48a3-ad17-ee80187d8bef",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "execution-failed",
+        "at": "2026-10-25T22:22:06.685Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-2-recommend\",\"mode\":\"live\",\"error\":\"Unsupported evidence or option\"}"
+      },
+      {
+        "id": "10962a07-8970-4c8b-9d1e-e05359dac7b7",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "provider-output-observed",
+        "at": "2026-10-25T22:24:01.625Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-2-recommend-repair\",\"responseId\":\"resp_075c8a71e95c7a7b006ade8173a86887d2919b3b8fdbb76962\",\"text\":\"{\\n  \\\"summary\\\": \\\"Conditionally recommend moving to A for Mia’s review, based on the supplied synthetic assessment—not an unconditional winner or secured home. A meets the recorded requirements and both budget tests. The renewal base fell from $2,600 to $2,400, a $200 concession closing 50% of the gap to the $2,200 base target; $200 remains. There was no amenity-fee concession. Renewal base and rent-plus-amenity are each $300 above current terms.\\\",\\n  \\\"evidence_ids\\\": [\\n    \\\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\\\",\\n    \\\"property:A:v2\\\",\\n    \\\"property:B:v2\\\",\\n    \\\"property:stay:v2\\\"\\n  ],\\n  \\\"candidate_ids\\\": [\\\"A\\\", \\\"B\\\", \\\"stay\\\"],\\n  \\\"facts\\\": [],\\n  \\\"next_actions\\\": [\\n    \\\"Have Mia review the current version-2 property evidence and version-1 landlord terms before authorizing any change; reassess if terms or preferences change.\\\",\\n    \\\"Reconfirm A’s January 7 availability, complete mandatory fees, lease terms, four-minute PATH access, required features and genuinely staffed 24/7 desk. Review package-handling concerns; supplied reviews are synthetic, not verified public reviews.\\\",\\n    \\\"Check utilities, personal expenses and upfront cash needs, including A’s separate $1,000 refundable deposit. Do not annualize the $120 utility estimate or treat unknown costs as zero.\\\",\\n    \\\"Confirm any offer expiry and response cutoff, which are not supplied. No outreach, acceptance or signing has occurred; home secured requires explicit external-signing confirmation.\\\"\\n  ],\\n  \\\"decision\\\": {\\n    \\\"action\\\": \\\"conditional_move\\\",\\n    \\\"selected\\\": \\\"A\\\",\\n    \\\"reasons\\\": [\\n      \\\"A is a studio in preferred ZIP 07310 with all recorded required features, a staffed 24/7 desk and four-minute PATH access, within the five-minute maximum and preferred three-to-five-minute range. January 7 availability fits the January 7–15 move-in window, and Mia’s synthetic viewing feedback is acceptable.\\\",\\n      \\\"A separately passes regular base-rent discovery at $2,200 versus the $2,265 ceiling and rent-plus-amenity assessment at $2,230 versus that ceiling. Staying fails both tests at $2,400 base and $2,445 rent-plus-amenity.\\\",\\n      \\\"B’s lower price does not override its seven-minute PATH walk, which fails the active hard limit.\\\",\\n      \\\"After requirement gates, A’s checked first-year nonrefundable total is $28,104 versus $29,484 for staying, a $1,380 difference. These totals include base, amenity, other mandatory monthly charges and one-time nonrefundable costs only; utilities and refundable deposits are excluded.\\\",\\n      \\\"Continuity and the resolved water concern support staying in principle, but the current renewal remains over budget and the amenity concern remains unaddressed.\\\"\\n    ],\\n    \\\"conditions\\\": [\\n      \\\"All evidence is synthetic. Mia must confirm current evidence and authorize any next step; this recommendation is not acceptance or permission to act.\\\",\\n      \\\"Complete affordability remains unestablished until material other costs, utilities and personal expenses are checked.\\\",\\n      \\\"Recorded security features are not a neighborhood safety guarantee, and synthetic review material does not establish verified review quality.\\\",\\n      \\\"Reassess if A’s availability, requirements or costs change, or if a revised renewal passes both budget tests. No home is secured without explicit external-signing confirmation.\\\"\\n    ]\\n  }\\n}\",\"mode\":\"live\"}"
+      },
+      {
+        "id": "7e0a923e-e0e8-432a-a723-b9f1d26682ae",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "model-execution-completed",
+        "at": "2026-10-25T22:24:01.626Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-2-recommend-repair\",\"mode\":\"live\",\"validation\":\"passed\",\"quality\":\"Human review pending\"}"
+      },
+      {
+        "id": "63bc3c62-3ce3-4f3e-b526-8fe16340ed01",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "provider-output-observed",
+        "at": "2026-10-25T22:24:25.096Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-3-reply\",\"responseId\":\"resp_0120809cd7e11f94006ade818cc3bc87d2952f1b2f1726dd8d\",\"text\":\"{\\n  \\\"summary\\\": \\\"The latest simulated reply offers base rent of $2,260, a $0 amenity fee and a 12-month term. Compared with the initial $2,600 base plus $45 amenity offer, concessions are $340 in base rent and $45 in amenity fees, totaling $385 monthly. The remaining gap to Mia’s private $2,200 base target is $60. Base rent and rent-plus-amenity each independently meet the $2,265 ceiling by $5; this is not a complete affordability finding. The reply states the water concern remains resolved. These terms differ from the older comparison and remain pending Mia’s review—not acceptance, signing or a secured home.\\\",\\n  \\\"evidence_ids\\\": [\\n    \\\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\\\"\\n  ],\\n  \\\"candidate_ids\\\": [],\\n  \\\"facts\\\": [\\n    {\\n      \\\"field\\\": \\\"base\\\",\\n      \\\"value\\\": \\\"2260\\\",\\n      \\\"quote\\\": \\\"Base rent: 2260\\\",\\n      \\\"source_id\\\": \\\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\\\"\\n    },\\n    {\\n      \\\"field\\\": \\\"amenity\\\",\\n      \\\"value\\\": \\\"0\\\",\\n      \\\"quote\\\": \\\"Amenity fee: 0\\\",\\n      \\\"source_id\\\": \\\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\\\"\\n    },\\n    {\\n      \\\"field\\\": \\\"months\\\",\\n      \\\"value\\\": \\\"12\\\",\\n      \\\"quote\\\": \\\"Term months: 12\\\",\\n      \\\"source_id\\\": \\\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\\\"\\n    }\\n  ],\\n  \\\"next_actions\\\": [\\n    \\\"Have Mia confirm the latest terms before updating the comparison; its earlier stay-ineligibility finding and conditional move recommendation need reassessment against current versions.\\\",\\n    \\\"Verify that the amenity waiver covers the full term, confirm other recurring and one-time charges, and obtain any offer expiry or response deadline; none is stated in this reply.\\\",\\n    \\\"Recheck utilities and personal expenses separately. Unknown costs are not zero, and the supplied winter utility estimate is not an annual average.\\\",\\n    \\\"Mia can review whether to pursue the remaining $60 base-target gap or consider these terms. Keep private finances and negotiation targets out of outgoing context; no outreach or acceptance has occurred.\\\"\\n  ]\\n}\",\"mode\":\"live\"}"
+      },
+      {
+        "id": "33a4abf4-57cd-4393-ac07-56ac2343942c",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "model-execution-completed",
+        "at": "2026-10-25T22:24:25.117Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-3-reply\",\"mode\":\"live\",\"validation\":\"passed\",\"quality\":\"Human review pending\"}"
+      },
+      {
+        "id": "7288d947-fca6-4782-a0f9-afd1d3f6da01",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "synthetic-external-checkpoint",
+        "at": "2026-10-25T22:24:25.136Z",
+        "data": "{\"checkpoint\":3,\"operationId\":\"dual-live-properties-3\",\"landlordUnchanged\":true}"
+      },
+      {
+        "id": "7a9f289c-623b-4b27-a6e7-c1f8a3ef35f7",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "provider-output-observed",
+        "at": "2026-10-25T22:24:37.525Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-3-recommend\",\"responseId\":\"resp_0cf1c95c2b3f9857006ade81993d4487d2a020fadf89cc69a8\",\"text\":\"{\\n  \\\"summary\\\": \\\"Recommend conditional stay for Mia’s review. The latest synthetic 12-month offer is $2,260 base plus $0 amenity, meeting the $2,265 rent-plus-amenity ceiling by $5. Versus the original $2,600 renewal base, the base concession is $340, with a separate $45 monthly amenity waiver. The base remains $60 above the $2,200 target; 85% of the original base-target gap is closed. Compared with current charges, base rises $160 and rent plus amenity rises $115 monthly. Full affordability remains unconfirmed.\\\",\\n  \\\"evidence_ids\\\": [\\n    \\\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\\\",\\n    \\\"property:A:v3\\\",\\n    \\\"property:B:v3\\\",\\n    \\\"property:stay:v3\\\"\\n  ],\\n  \\\"candidate_ids\\\": [\\n    \\\"stay\\\",\\n    \\\"A\\\",\\n    \\\"B\\\"\\n  ],\\n  \\\"facts\\\": [],\\n  \\\"next_actions\\\": [\\n    \\\"Have Mia review the latest landlord terms and version-3 property evidence before accepting any recommendation; verify the amenity waiver covers the full 12-month term.\\\",\\n    \\\"Confirm any offer expiry and response cutoff, which are not supplied.\\\",\\n    \\\"Check material additional costs, actual utilities and personal expenses. The $12 monthly trash charge is outside the rent-plus-amenity comparison; unknown costs are not zero.\\\",\\n    \\\"Keep alternatives open pending confirmation, applying the $2,265 regular-base discovery ceiling separately from the $2,265 rent-plus-amenity assessment and retaining all hard requirements.\\\",\\n    \\\"Do not send acceptance or initiate signing. A home is secured only after explicit external-signing confirmation.\\\"\\n  ],\\n  \\\"decision\\\": {\\n    \\\"action\\\": \\\"conditional_stay\\\",\\n    \\\"selected\\\": \\\"stay\\\",\\n    \\\"reasons\\\": [\\n      \\\"The current home meets the recorded studio, postal-code, required-feature and 24/7 staffed-desk requirements under the supplied synthetic assumptions. Its four-minute PATH walk meets the five-minute maximum and preferred three-to-five-minute range; January 7 availability fits the January 7–15 window. Feedback is acceptable, with the water concern recorded as resolved.\\\",\\n      \\\"A passes regular-base discovery at $2,200 but fails the rent-plus-amenity ceiling at $2,300 and has unresolved viewing noise concerns. Its checked first-year nonrefundable total is $28,944.\\\",\\n      \\\"B has acceptable viewing feedback, fits the availability window and costs less at $24,044 for the checked first year, but its seven-minute PATH walk fails the active five-minute maximum. Lower cost does not override that requirement.\\\",\\n      \\\"Staying has a checked first-year nonrefundable total of $27,264. Neither supplied moving option currently qualifies, so there is no qualifying lower-cost move in this comparison.\\\"\\n    ],\\n    \\\"conditions\\\": [\\n      \\\"Mia must confirm the recommendation against current evidence and terms; all supplied evidence is synthetic, not proof of a real-world offer or completed action.\\\",\\n      \\\"First-year totals include base, amenity, other mandatory monthly charges and one-time nonrefundable costs only. Utilities and refundable deposits are excluded; the $120 utility estimate is not an annual average.\\\",\\n      \\\"Reviews are synthetic fixtures, not verified public reviews. Staffed entry is a feature claim, not a safety guarantee.\\\",\\n      \\\"This recommendation authorizes no outreach, acceptance, payment or signing, and does not establish complete personal affordability.\\\"\\n    ]\\n  }\\n}\",\"mode\":\"live\"}"
+      },
+      {
+        "id": "e129a5e9-2b98-47c0-9f54-e0d8feefea14",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "kind": "model-execution-completed",
+        "at": "2026-10-25T22:24:37.525Z",
+        "data": "{\"runId\":\"dual-live-checkpoint-3-recommend\",\"mode\":\"live\",\"validation\":\"passed\",\"quality\":\"Human review pending\"}"
+      }
+    ],
+    "journey_runs": [
+      {
+        "id": "dual-live-checkpoint-1-reply",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "status": "completed",
+        "owner": "5b3913ee-1913-4deb-af79-b009a0bd562f",
+        "data": "{\"id\":\"dual-live-checkpoint-1-reply\",\"caseId\":\"8050cf7d-496a-48b3-9d0d-c2101de28387\",\"task\":\"reply\",\"mode\":\"live\",\"model\":\"gpt-6-astra\",\"promptVersion\":\"mia-journey-live-v1.2-dual\",\"status\":\"completed\",\"validation\":\"passed\",\"review\":\"pending\",\"startedAt\":\"2026-10-25T22:21:18.345Z\",\"finishedAt\":\"2026-10-25T22:21:29.517Z\",\"dependency\":\"020c7e15df44dcd7fb31f0127bd0e885f4b4aa347f3548bb9e5b1b87b8fc7e04\",\"step\":1,\"retries\":0,\"noProgress\":0,\"previousResponseId\":\"resp_02408b2dc4c0a1c0006ade80df184487d2a47cd3e3756a3c44\",\"pending\":null,\"toolResults\":[],\"result\":{\"summary\":\"The simulated reply offers 2400 base rent plus 45 amenity for 12 months. Versus the initial 2600 base plus 45 amenity, the base concession is 200; there is no amenity concession. Base remains 200 above Mia’s private 2200 target and 135 above the 2265 base-only ceiling. Rent plus amenity totals 2445, which is 180 above the separate 2265 package ceiling, excluding trash, utilities and other costs. The reply states that the water concern remains resolved and the amenity concern remains unaddressed. This fictional offer does not establish acceptance, signing or a secured home.\",\"evidence_ids\":[\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\"],\"candidate_ids\":[],\"facts\":[{\"field\":\"base\",\"value\":\"2400\",\"quote\":\"Base rent: 2400\",\"source_id\":\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\"},{\"field\":\"amenity\",\"value\":\"45\",\"quote\":\"Amenity fee: 45\",\"source_id\":\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\"},{\"field\":\"months\",\"value\":\"12\",\"quote\":\"Term months: 12\",\"source_id\":\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\"}],\"next_actions\":[\"Mia should review whether to request further base-rent and amenity concessions; keep private targets, finances and strategy out of outgoing context.\",\"Confirm the current written terms, whether the existing 12 trash charge continues, all other material fees, and any offer expiry or response deadline; none is stated in the reply.\",\"Check utilities and personal expenses before assessing overall affordability; unknown costs are not zero.\",\"Require Mia’s confirmation before any changes or outgoing communication. Nothing has been sent or accepted; securing the home requires explicit external-signing confirmation.\"]},\"error\":null,\"latencyMs\":11160,\"owner\":\"5b3913ee-1913-4deb-af79-b009a0bd562f\"}"
+      },
+      {
+        "id": "dual-live-checkpoint-1-recommend",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "status": "completed",
+        "owner": "5b3913ee-1913-4deb-af79-b009a0bd562f",
+        "data": "{\"id\":\"dual-live-checkpoint-1-recommend\",\"caseId\":\"8050cf7d-496a-48b3-9d0d-c2101de28387\",\"task\":\"recommend\",\"mode\":\"live\",\"model\":\"gpt-6-astra\",\"promptVersion\":\"mia-journey-live-v1.2-dual\",\"status\":\"completed\",\"validation\":\"passed\",\"review\":\"pending\",\"startedAt\":\"2026-10-25T22:21:29.545Z\",\"finishedAt\":\"2026-10-25T22:21:43.651Z\",\"dependency\":\"fae7e7146fbca0bf9a65e9e6c1beef7a3c2db0fa3744cc465adb4e2fee627733\",\"step\":1,\"retries\":0,\"noProgress\":0,\"previousResponseId\":\"resp_0b279a1641f636ca006ade80e9a70487d28711ffe3a1b0da3e\",\"pending\":null,\"toolResults\":[],\"result\":{\"summary\":\"Continue both renewal negotiation and alternative comparison for Mia’s review; no option currently meets all requirements. The renewal base fell from $2,600 to $2,400, a $200 concession with no amenity-fee concession. This closes 50% of the gap to the private $2,200 base target, leaving $200. Renewal base exceeds the $2,265 discovery ceiling by $135; base plus the $45 amenity fee totals $2,445, exceeding the separate package ceiling by $180. A and B pass both price screens but fail timing and PATH requirements, respectively. All evidence is synthetic, and full affordability remains incomplete.\",\"evidence_ids\":[\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\",\"property:A:v1\",\"property:B:v1\",\"property:stay:v1\"],\"candidate_ids\":[],\"facts\":[],\"next_actions\":[\"For Mia’s review, continue exploring renewal concessions. With the amenity fee unchanged at $45, base would need to be no more than $2,220 to meet the $2,265 package ceiling. Keep private targets and strategy out of outgoing copy; nothing is sent.\",\"Continue screening studios in 07302 or 07310 for all required in-unit features, 24/7 staffed concierge or doorman, reviews, PATH access within five minutes, and availability for the January 7–15 move-in window.\",\"Recheck whether A can offer availability within the window; do not assume its January 20 date works. B remains excluded under the active five-minute PATH limit unless Mia explicitly changes that preference.\",\"Verify current terms, material fees, utilities, moving costs, review evidence, and personal affordability. Keep refundable deposits separate from nonrefundable costs; the $120 utility estimate is not a verified annual average.\",\"Obtain any offer expiry and response cutoff, which are not supplied, and Mia’s confirmation before any change or commitment.\"],\"decision\":{\"action\":\"continue_both\",\"selected\":null,\"reasons\":[\"Staying supports continuity and has acceptable synthetic feedback; the water concern remains resolved, but the amenity concern remains unaddressed and both price ceilings fail.\",\"A has acceptable viewing feedback, required features, 24/7 staffing, and a four-minute PATH walk. Its $2,200 base and $2,230 package pass the separate price screens, but January 20 availability misses the January 15 latest move-in date.\",\"B has acceptable viewing feedback, required features, 24/7 staffing, January 7 availability, and a $1,950 base and package. Its seven-minute PATH walk fails the active five-minute limit, so its lower price does not make it eligible.\",\"Review material is a synthetic fixture rather than verified public research; staffed-entry claims do not establish neighborhood safety.\"],\"conditions\":[\"Reassess against current evidence and Mia’s confirmed preferences before selecting an option; no requirement is waived here.\",\"Passing base and rent-plus-amenity screens does not establish complete affordability, and unknown costs are not zero.\",\"This recommendation authorizes no acceptance, outreach, payment, or signing. A home is not secured without explicit external-signing confirmation.\"]}},\"error\":null,\"latencyMs\":14098,\"owner\":\"5b3913ee-1913-4deb-af79-b009a0bd562f\"}"
+      },
+      {
+        "id": "dual-live-checkpoint-2-recommend",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "status": "failed",
+        "owner": "5b3913ee-1913-4deb-af79-b009a0bd562f",
+        "data": "{\"id\":\"dual-live-checkpoint-2-recommend\",\"caseId\":\"8050cf7d-496a-48b3-9d0d-c2101de28387\",\"task\":\"recommend\",\"mode\":\"live\",\"model\":\"gpt-6-astra\",\"promptVersion\":\"mia-journey-live-v1.2-dual\",\"status\":\"failed\",\"validation\":\"failed\",\"review\":\"pending\",\"startedAt\":\"2026-10-25T22:21:52.196Z\",\"finishedAt\":\"2026-10-25T22:22:06.684Z\",\"dependency\":\"d17c3751d61b88e2e951ee6061b055e53cbb94058885cbbef34e725b1075c734\",\"step\":0,\"retries\":0,\"noProgress\":0,\"previousResponseId\":null,\"pending\":null,\"toolResults\":[],\"result\":null,\"error\":\"Unsupported evidence or option\",\"latencyMs\":14482,\"owner\":\"5b3913ee-1913-4deb-af79-b009a0bd562f\"}"
+      },
+      {
+        "id": "dual-live-checkpoint-2-recommend-repair",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "status": "completed",
+        "owner": "6f40a372-52dc-4ce0-9a9a-a04dd95c11c8",
+        "data": "{\"id\":\"dual-live-checkpoint-2-recommend-repair\",\"caseId\":\"8050cf7d-496a-48b3-9d0d-c2101de28387\",\"task\":\"recommend\",\"mode\":\"live\",\"model\":\"gpt-6-astra\",\"promptVersion\":\"mia-journey-live-v1.3-dual\",\"status\":\"completed\",\"validation\":\"passed\",\"review\":\"pending\",\"startedAt\":\"2026-10-25T22:23:47.383Z\",\"finishedAt\":\"2026-10-25T22:24:01.626Z\",\"dependency\":\"d17c3751d61b88e2e951ee6061b055e53cbb94058885cbbef34e725b1075c734\",\"step\":1,\"retries\":0,\"noProgress\":0,\"previousResponseId\":\"resp_075c8a71e95c7a7b006ade8173a86887d2919b3b8fdbb76962\",\"pending\":null,\"toolResults\":[],\"result\":{\"summary\":\"Conditionally recommend moving to A for Mia’s review, based on the supplied synthetic assessment—not an unconditional winner or secured home. A meets the recorded requirements and both budget tests. The renewal base fell from $2,600 to $2,400, a $200 concession closing 50% of the gap to the $2,200 base target; $200 remains. There was no amenity-fee concession. Renewal base and rent-plus-amenity are each $300 above current terms.\",\"evidence_ids\":[\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\",\"property:A:v2\",\"property:B:v2\",\"property:stay:v2\"],\"candidate_ids\":[\"A\",\"B\",\"stay\"],\"facts\":[],\"next_actions\":[\"Have Mia review the current version-2 property evidence and version-1 landlord terms before authorizing any change; reassess if terms or preferences change.\",\"Reconfirm A’s January 7 availability, complete mandatory fees, lease terms, four-minute PATH access, required features and genuinely staffed 24/7 desk. Review package-handling concerns; supplied reviews are synthetic, not verified public reviews.\",\"Check utilities, personal expenses and upfront cash needs, including A’s separate $1,000 refundable deposit. Do not annualize the $120 utility estimate or treat unknown costs as zero.\",\"Confirm any offer expiry and response cutoff, which are not supplied. No outreach, acceptance or signing has occurred; home secured requires explicit external-signing confirmation.\"],\"decision\":{\"action\":\"conditional_move\",\"selected\":\"A\",\"reasons\":[\"A is a studio in preferred ZIP 07310 with all recorded required features, a staffed 24/7 desk and four-minute PATH access, within the five-minute maximum and preferred three-to-five-minute range. January 7 availability fits the January 7–15 move-in window, and Mia’s synthetic viewing feedback is acceptable.\",\"A separately passes regular base-rent discovery at $2,200 versus the $2,265 ceiling and rent-plus-amenity assessment at $2,230 versus that ceiling. Staying fails both tests at $2,400 base and $2,445 rent-plus-amenity.\",\"B’s lower price does not override its seven-minute PATH walk, which fails the active hard limit.\",\"After requirement gates, A’s checked first-year nonrefundable total is $28,104 versus $29,484 for staying, a $1,380 difference. These totals include base, amenity, other mandatory monthly charges and one-time nonrefundable costs only; utilities and refundable deposits are excluded.\",\"Continuity and the resolved water concern support staying in principle, but the current renewal remains over budget and the amenity concern remains unaddressed.\"],\"conditions\":[\"All evidence is synthetic. Mia must confirm current evidence and authorize any next step; this recommendation is not acceptance or permission to act.\",\"Complete affordability remains unestablished until material other costs, utilities and personal expenses are checked.\",\"Recorded security features are not a neighborhood safety guarantee, and synthetic review material does not establish verified review quality.\",\"Reassess if A’s availability, requirements or costs change, or if a revised renewal passes both budget tests. No home is secured without explicit external-signing confirmation.\"]}},\"error\":null,\"latencyMs\":14229,\"owner\":\"6f40a372-52dc-4ce0-9a9a-a04dd95c11c8\"}"
+      },
+      {
+        "id": "dual-live-checkpoint-3-reply",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "status": "completed",
+        "owner": "6f40a372-52dc-4ce0-9a9a-a04dd95c11c8",
+        "data": "{\"id\":\"dual-live-checkpoint-3-reply\",\"caseId\":\"8050cf7d-496a-48b3-9d0d-c2101de28387\",\"task\":\"reply\",\"mode\":\"live\",\"model\":\"gpt-6-astra\",\"promptVersion\":\"mia-journey-live-v1.3-dual\",\"status\":\"completed\",\"validation\":\"passed\",\"review\":\"pending\",\"startedAt\":\"2026-10-25T22:24:12.632Z\",\"finishedAt\":\"2026-10-25T22:24:25.117Z\",\"dependency\":\"05ddbc240b20fdfd93631f425374f644880da86a57d5dedbac047dccbdb4f61e\",\"step\":1,\"retries\":0,\"noProgress\":0,\"previousResponseId\":\"resp_0120809cd7e11f94006ade818cc3bc87d2952f1b2f1726dd8d\",\"pending\":null,\"toolResults\":[],\"result\":{\"summary\":\"The latest simulated reply offers base rent of $2,260, a $0 amenity fee and a 12-month term. Compared with the initial $2,600 base plus $45 amenity offer, concessions are $340 in base rent and $45 in amenity fees, totaling $385 monthly. The remaining gap to Mia’s private $2,200 base target is $60. Base rent and rent-plus-amenity each independently meet the $2,265 ceiling by $5; this is not a complete affordability finding. The reply states the water concern remains resolved. These terms differ from the older comparison and remain pending Mia’s review—not acceptance, signing or a secured home.\",\"evidence_ids\":[\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\"],\"candidate_ids\":[],\"facts\":[{\"field\":\"base\",\"value\":\"2260\",\"quote\":\"Base rent: 2260\",\"source_id\":\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\"},{\"field\":\"amenity\",\"value\":\"0\",\"quote\":\"Amenity fee: 0\",\"source_id\":\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\"},{\"field\":\"months\",\"value\":\"12\",\"quote\":\"Term months: 12\",\"source_id\":\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\"}],\"next_actions\":[\"Have Mia confirm the latest terms before updating the comparison; its earlier stay-ineligibility finding and conditional move recommendation need reassessment against current versions.\",\"Verify that the amenity waiver covers the full term, confirm other recurring and one-time charges, and obtain any offer expiry or response deadline; none is stated in this reply.\",\"Recheck utilities and personal expenses separately. Unknown costs are not zero, and the supplied winter utility estimate is not an annual average.\",\"Mia can review whether to pursue the remaining $60 base-target gap or consider these terms. Keep private finances and negotiation targets out of outgoing context; no outreach or acceptance has occurred.\"]},\"error\":null,\"latencyMs\":12460,\"owner\":\"6f40a372-52dc-4ce0-9a9a-a04dd95c11c8\"}"
+      },
+      {
+        "id": "dual-live-checkpoint-3-recommend",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "status": "completed",
+        "owner": "6f40a372-52dc-4ce0-9a9a-a04dd95c11c8",
+        "data": "{\"id\":\"dual-live-checkpoint-3-recommend\",\"caseId\":\"8050cf7d-496a-48b3-9d0d-c2101de28387\",\"task\":\"recommend\",\"mode\":\"live\",\"model\":\"gpt-6-astra\",\"promptVersion\":\"mia-journey-live-v1.3-dual\",\"status\":\"completed\",\"validation\":\"passed\",\"review\":\"pending\",\"startedAt\":\"2026-10-25T22:24:25.140Z\",\"finishedAt\":\"2026-10-25T22:24:37.525Z\",\"dependency\":\"335504a3d5b11791d1a17e73ba9043bb8582d3776be8ce054e79bee6edbb38c3\",\"step\":1,\"retries\":0,\"noProgress\":0,\"previousResponseId\":\"resp_0cf1c95c2b3f9857006ade81993d4487d2a020fadf89cc69a8\",\"pending\":null,\"toolResults\":[],\"result\":{\"summary\":\"Recommend conditional stay for Mia’s review. The latest synthetic 12-month offer is $2,260 base plus $0 amenity, meeting the $2,265 rent-plus-amenity ceiling by $5. Versus the original $2,600 renewal base, the base concession is $340, with a separate $45 monthly amenity waiver. The base remains $60 above the $2,200 target; 85% of the original base-target gap is closed. Compared with current charges, base rises $160 and rent plus amenity rises $115 monthly. Full affordability remains unconfirmed.\",\"evidence_ids\":[\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\",\"property:A:v3\",\"property:B:v3\",\"property:stay:v3\"],\"candidate_ids\":[\"stay\",\"A\",\"B\"],\"facts\":[],\"next_actions\":[\"Have Mia review the latest landlord terms and version-3 property evidence before accepting any recommendation; verify the amenity waiver covers the full 12-month term.\",\"Confirm any offer expiry and response cutoff, which are not supplied.\",\"Check material additional costs, actual utilities and personal expenses. The $12 monthly trash charge is outside the rent-plus-amenity comparison; unknown costs are not zero.\",\"Keep alternatives open pending confirmation, applying the $2,265 regular-base discovery ceiling separately from the $2,265 rent-plus-amenity assessment and retaining all hard requirements.\",\"Do not send acceptance or initiate signing. A home is secured only after explicit external-signing confirmation.\"],\"decision\":{\"action\":\"conditional_stay\",\"selected\":\"stay\",\"reasons\":[\"The current home meets the recorded studio, postal-code, required-feature and 24/7 staffed-desk requirements under the supplied synthetic assumptions. Its four-minute PATH walk meets the five-minute maximum and preferred three-to-five-minute range; January 7 availability fits the January 7–15 window. Feedback is acceptable, with the water concern recorded as resolved.\",\"A passes regular-base discovery at $2,200 but fails the rent-plus-amenity ceiling at $2,300 and has unresolved viewing noise concerns. Its checked first-year nonrefundable total is $28,944.\",\"B has acceptable viewing feedback, fits the availability window and costs less at $24,044 for the checked first year, but its seven-minute PATH walk fails the active five-minute maximum. Lower cost does not override that requirement.\",\"Staying has a checked first-year nonrefundable total of $27,264. Neither supplied moving option currently qualifies, so there is no qualifying lower-cost move in this comparison.\"],\"conditions\":[\"Mia must confirm the recommendation against current evidence and terms; all supplied evidence is synthetic, not proof of a real-world offer or completed action.\",\"First-year totals include base, amenity, other mandatory monthly charges and one-time nonrefundable costs only. Utilities and refundable deposits are excluded; the $120 utility estimate is not an annual average.\",\"Reviews are synthetic fixtures, not verified public reviews. Staffed entry is a feature claim, not a safety guarantee.\",\"This recommendation authorizes no outreach, acceptance, payment or signing, and does not establish complete personal affordability.\"]}},\"error\":null,\"latencyMs\":12381,\"owner\":\"6f40a372-52dc-4ce0-9a9a-a04dd95c11c8\"}"
+      }
+    ],
+    "journey_state": [],
+    "journey_track_versions": [
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "landlord",
+        "version": 1,
+        "operation_id": "landlord:dual-live-checkpoint-1-reply",
+        "data": "{\"runId\":\"dual-live-checkpoint-1-reply\",\"values\":{\"base\":2400,\"amenity\":45,\"months\":12},\"states\":{\"base\":\"confirmed\",\"amenity\":\"confirmed\",\"months\":\"confirmed\"},\"sourceIds\":[\"d5a3d408-fe40-482f-8b4e-a797cff439c0:1\"],\"synthetic\":true}",
+        "at": "2026-10-25T22:21:29.518Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:stay",
+        "version": 1,
+        "operation_id": "dual-live-properties-1:stay",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07302\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":null,\"amenity\":null,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":0,\"refundable\":0},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Synthetic assumption authorized for this comparison: current home meets listed requirements; resolved water concern remains resolved. Mia values continuity if the terms fit.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"stay\",\"name\":\"Current synthetic studio\",\"source\":\"synthetic:stay-requirements-c1\"}",
+        "at": "2026-10-25T22:21:29.542Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 1,
+        "operation_id": "dual-live-properties-1:A",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":30,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-20\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Synthetic Mia viewing feedback: layout and natural light suit me; acceptable building condition.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c1\"}",
+        "at": "2026-10-25T22:21:29.542Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:B",
+        "version": 1,
+        "operation_id": "dual-live-properties-1:B",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":7,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":1950,\"amenity\":0,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":500,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Synthetic Mia viewing feedback: layout and natural light suit me; acceptable building condition.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"B\",\"name\":\"Synthetic lower-price studio\",\"source\":\"synthetic:property-B-c1\"}",
+        "at": "2026-10-25T22:21:29.542Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:stay",
+        "version": 2,
+        "operation_id": "dual-live-properties-2:stay",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07302\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":null,\"amenity\":null,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":0,\"refundable\":0},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Synthetic assumption authorized for this comparison: current home meets listed requirements; resolved water concern remains resolved. Mia values continuity if the terms fit.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"stay\",\"name\":\"Current synthetic studio\",\"source\":\"synthetic:stay-requirements-c2\"}",
+        "at": "2026-10-25T22:21:52.190Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 2,
+        "operation_id": "dual-live-properties-2:A",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":30,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Synthetic Mia viewing feedback: layout and natural light suit me; acceptable building condition.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c2\"}",
+        "at": "2026-10-25T22:21:52.190Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:B",
+        "version": 2,
+        "operation_id": "dual-live-properties-2:B",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":7,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":1950,\"amenity\":0,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":500,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Synthetic Mia viewing feedback: layout and natural light suit me; acceptable building condition.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"B\",\"name\":\"Synthetic lower-price studio\",\"source\":\"synthetic:property-B-c2\"}",
+        "at": "2026-10-25T22:21:52.190Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "landlord",
+        "version": 2,
+        "operation_id": "landlord:dual-live-checkpoint-3-reply",
+        "data": "{\"runId\":\"dual-live-checkpoint-3-reply\",\"values\":{\"base\":2260,\"amenity\":0,\"months\":12},\"states\":{\"base\":\"confirmed\",\"amenity\":\"confirmed\",\"months\":\"confirmed\"},\"sourceIds\":[\"b228e69f-4a28-4dcb-bcc7-e244d9116456:1\"],\"synthetic\":true}",
+        "at": "2026-10-25T22:24:25.117Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:stay",
+        "version": 3,
+        "operation_id": "dual-live-properties-3:stay",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07302\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":null,\"amenity\":null,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":0,\"refundable\":0},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Synthetic assumption authorized for this comparison: current home meets listed requirements; resolved water concern remains resolved. Mia values continuity if the terms fit.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"stay\",\"name\":\"Current synthetic studio\",\"source\":\"synthetic:stay-requirements-c3\"}",
+        "at": "2026-10-25T22:24:25.136Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 3,
+        "operation_id": "dual-live-properties-3:A",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"concern\",\"text\":\"Synthetic later viewing feedback: noise during the viewing would be difficult for me; reconsider unless resolved.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-25T22:24:25.136Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:B",
+        "version": 3,
+        "operation_id": "dual-live-properties-3:B",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":7,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":1950,\"amenity\":0,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":500,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Synthetic Mia viewing feedback: layout and natural light suit me; acceptable building condition.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"B\",\"name\":\"Synthetic lower-price studio\",\"source\":\"synthetic:property-B-c3\"}",
+        "at": "2026-10-25T22:24:25.136Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 4,
+        "operation_id": "e68af25c-db07-4862-b440-398449eae7e1",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"concern\",\"text\":\"Mia flags a property concern; details need clarification before treating this as acceptable.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-30T00:45:32.637Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 5,
+        "operation_id": "a0ae79ff-b775-4187-b4fa-495ad3813ac2",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"concern\",\"text\":\"Mia flags a property concern; details need clarification before treating this as acceptable.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-30T00:45:33.304Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 6,
+        "operation_id": "3bb15183-3e23-49f3-abfd-1e72e5c53096",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"concern\",\"text\":\"Mia flags a property concern; details need clarification before treating this as acceptable.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-30T00:45:33.853Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 7,
+        "operation_id": "95c4e143-5a4f-434b-9221-edf68f005f60",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Mia marks this property acceptable for further review; other requirements and consent remain separate.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-30T00:45:34.871Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 8,
+        "operation_id": "76926fbb-8a02-48b4-bfd6-9f1686ea740e",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Mia marks this property acceptable for further review; other requirements and consent remain separate.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-30T00:45:36.157Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 9,
+        "operation_id": "8f5ac191-fe69-4361-8763-aa6d90bced0a",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"concern\",\"text\":\"Mia flags a property concern; details need clarification before treating this as acceptable.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-30T00:45:36.696Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 10,
+        "operation_id": "69cc67d7-ea04-42e4-89de-afd75a564ad7",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Mia marks this property acceptable for further review; other requirements and consent remain separate.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-30T00:45:39.250Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 11,
+        "operation_id": "0e145241-73db-4af8-b616-60ff7425d805",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"concern\",\"text\":\"Mia flags a property concern; details need clarification before treating this as acceptable.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-30T00:45:41.634Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 12,
+        "operation_id": "1ce31967-e1e0-4827-85bc-9bdda50b4164",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"concern\",\"text\":\"Mia flags a property concern; details need clarification before treating this as acceptable.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-30T00:45:43.527Z"
+      },
+      {
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "track": "property:A",
+        "version": 13,
+        "operation_id": "1f6630ca-12e4-4dc8-a46a-ed77f9413dd7",
+        "data": "{\"synthetic\":true,\"status\":\"confirmed\",\"asOf\":\"2026-10-25T22:15:00Z\",\"zip\":\"07310\",\"unit\":\"studio\",\"pathMinutes\":4,\"staffed24\":true,\"features\":{\"heating\":true,\"cooling\":true,\"dishwasher\":true,\"stovetop\":true,\"hot water\":true,\"cold water\":true,\"private bath\":true},\"costs\":{\"base\":2200,\"amenity\":100,\"otherMonthly\":12,\"utilitiesEstimate\":120,\"oneTime\":1200,\"refundable\":1000},\"availableFrom\":\"2027-01-07\",\"feedback\":{\"verdict\":\"acceptable\",\"text\":\"Mia marks this property acceptable for further review; other requirements and consent remain separate.\"},\"reviews\":\"Synthetic review fixture: mixed comments about package handling; no verified public review retrieval.\",\"securityFeatures\":\"Synthetic property statement: staffed desk24/7 and controlled entry. This is a feature claim, not a neighborhood safety guarantee.\",\"id\":\"A\",\"name\":\"Synthetic Riverside studio\",\"source\":\"synthetic:property-A-c3\"}",
+        "at": "2026-10-30T00:45:44.193Z"
+      }
+    ],
+    "journey_uploads": [
+      {
+        "id": "d5a3d408-fe40-482f-8b4e-a797cff439c0",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "name": "synthetic-dual-landlord-1.eml",
+        "mime": "text/plain",
+        "sha256": "bf3ad1d33fb38800f9cc4eb30cf2e8aeef93518e976eda7302b9dd4ae3b1e148",
+        "bytes": {
+          "encoding": "base64",
+          "value": "U1lOVEhFVElDIERFTU8gTEFORExPUkQgUkVTUE9OU0Ug4oCUIGNoZWNrcG9pbnQgMQpCYXNlIHJlbnQ6IDI0MDAKQW1lbml0eSBmZWU6IDQ1ClRlcm0gbW9udGhzOiAxMgpXYXRlciBjb25jZXJuIHJlbWFpbnMgcmVzb2x2ZWQuIEFtZW5pdHkgY29uY2VybiByZW1haW5zIHVuYWRkcmVzc2VkLgpGaWN0aW9uYWwgb2ZmZXIgZm9yIE1pYSByZXZpZXcsIG5vdCBhY2NlcHRhbmNlIG9yIHNpZ25pbmcuCg=="
+        },
+        "text": "[\"SYNTHETIC DEMO LANDLORD RESPONSE — checkpoint 1\\nBase rent: 2400\\nAmenity fee: 45\\nTerm months: 12\\nWater concern remains resolved. Amenity concern remains unaddressed.\\nFictional offer for Mia review, not acceptance or signing.\\n\"]",
+        "at": "2026-10-25T22:21:18.341Z"
+      },
+      {
+        "id": "b228e69f-4a28-4dcb-bcc7-e244d9116456",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "name": "synthetic-dual-landlord-3.eml",
+        "mime": "text/plain",
+        "sha256": "d1a9d6e898d897942cbd20452eed63705ec5180c9ba38927fc411eadf4a7a5d8",
+        "bytes": {
+          "encoding": "base64",
+          "value": "U1lOVEhFVElDIERFTU8gTEFORExPUkQgUkVTUE9OU0Ug4oCUIGNoZWNrcG9pbnQgMwpCYXNlIHJlbnQ6IDIyNjAKQW1lbml0eSBmZWU6IDAKVGVybSBtb250aHM6IDEyCldhdGVyIGNvbmNlcm4gcmVtYWlucyByZXNvbHZlZC4gQW1lbml0eSB3YWl2ZXIgbm93IG9mZmVyZWQuCkZpY3Rpb25hbCBvZmZlciBmb3IgTWlhIHJldmlldywgbm90IGFjY2VwdGFuY2Ugb3Igc2lnbmluZy4K"
+        },
+        "text": "[\"SYNTHETIC DEMO LANDLORD RESPONSE — checkpoint 3\\nBase rent: 2260\\nAmenity fee: 0\\nTerm months: 12\\nWater concern remains resolved. Amenity waiver now offered.\\nFictional offer for Mia review, not acceptance or signing.\\n\"]",
+        "at": "2026-10-25T22:24:12.626Z"
+      }
+    ],
+    "operations": [],
+    "record_history": [
+      {
+        "record_id": "78ceab71-e9e1-43ae-9648-c9441c71f65e",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "group_name": "search-profile",
+        "version": 1,
+        "data": "{\"city\":\"Jersey City\",\"currentPostalCode\":\"07302\",\"searchPostalCodes\":[\"07302\",\"07310\"],\"unitType\":\"studio\",\"mustHaves\":[\"heating\",\"cooling\",\"dishwasher\",\"stovetop\",\"hot water\",\"cold water\",\"private bath\",\"24/7 staffed concierge or doorman\",\"PATH access\",\"reviews\"],\"maxBase\":null,\"baseDiscoveryCeiling\":2265,\"maxRentAndMandatoryFees\":2277,\"leaseExpiry\":\"2027-01-15\",\"moveInDate\":\"2027-01-07\",\"moveInLatestDate\":\"2027-01-15\",\"staffedConciergeOrDoorman24HoursRequired\":true,\"pathWalkPreferredMinMinutes\":3,\"pathWalkPreferredMinutes\":5,\"pathWalkMaxMinutes\":5,\"pathWalkExpansionMaxMinutes\":10,\"pathWalkExpansionRequiresApproval\":true,\"pathWalkExpansionEvidence\":\"additional-verified-candidate-count\"}",
+        "at": "2026-10-25T22:21:18.326Z"
+      },
+      {
+        "record_id": "448ba2f7-3adb-480f-a58e-38b1903059bd",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "group_name": "private-finance",
+        "version": 1,
+        "data": "{\"grossAnnual\":127000,\"payFrequency\":\"biweekly\",\"netMonthly\":5633.33,\"comfortCeiling\":null,\"targetBase\":2200,\"rentAndFeesCeiling\":2265,\"preferredIncreaseStrictlyBelow\":100,\"hardIncreaseCeiling\":120}",
+        "at": "2026-10-25T22:21:18.329Z"
+      },
+      {
+        "record_id": "92c79d77-71fd-4c09-924c-0f846a35f0d9",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "group_name": "housing-case",
+        "version": 1,
+        "data": "{\"currentBase\":2100,\"currentFee\":45,\"renewalBase\":2600,\"renewalFee\":45,\"termMonths\":12,\"responseDeadline\":\"2026-12-08\",\"status\":\"renewal-received\"}",
+        "at": "2026-10-25T22:21:18.329Z"
+      }
+    ],
+    "records": [
+      {
+        "id": "78ceab71-e9e1-43ae-9648-c9441c71f65e",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "group_name": "search-profile",
+        "version": 1,
+        "data": "{\"city\":\"Jersey City\",\"currentPostalCode\":\"07302\",\"searchPostalCodes\":[\"07302\",\"07310\"],\"unitType\":\"studio\",\"mustHaves\":[\"heating\",\"cooling\",\"dishwasher\",\"stovetop\",\"hot water\",\"cold water\",\"private bath\",\"24/7 staffed concierge or doorman\",\"PATH access\",\"reviews\"],\"maxBase\":null,\"baseDiscoveryCeiling\":2265,\"maxRentAndMandatoryFees\":2277,\"leaseExpiry\":\"2027-01-15\",\"moveInDate\":\"2027-01-07\",\"moveInLatestDate\":\"2027-01-15\",\"staffedConciergeOrDoorman24HoursRequired\":true,\"pathWalkPreferredMinMinutes\":3,\"pathWalkPreferredMinutes\":5,\"pathWalkMaxMinutes\":5,\"pathWalkExpansionMaxMinutes\":10,\"pathWalkExpansionRequiresApproval\":true,\"pathWalkExpansionEvidence\":\"additional-verified-candidate-count\"}",
+        "updated_at": "2026-10-25T22:21:18.326Z"
+      },
+      {
+        "id": "448ba2f7-3adb-480f-a58e-38b1903059bd",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "group_name": "private-finance",
+        "version": 1,
+        "data": "{\"grossAnnual\":127000,\"payFrequency\":\"biweekly\",\"netMonthly\":5633.33,\"comfortCeiling\":null,\"targetBase\":2200,\"rentAndFeesCeiling\":2265,\"preferredIncreaseStrictlyBelow\":100,\"hardIncreaseCeiling\":120}",
+        "updated_at": "2026-10-25T22:21:18.329Z"
+      },
+      {
+        "id": "92c79d77-71fd-4c09-924c-0f846a35f0d9",
+        "case_id": "8050cf7d-496a-48b3-9d0d-c2101de28387",
+        "group_name": "housing-case",
+        "version": 1,
+        "data": "{\"currentBase\":2100,\"currentFee\":45,\"renewalBase\":2600,\"renewalFee\":45,\"termMonths\":12,\"responseDeadline\":\"2026-12-08\",\"status\":\"renewal-received\"}",
+        "updated_at": "2026-10-25T22:21:18.329Z"
+      }
+    ],
+    "runs": []
+  }
+}

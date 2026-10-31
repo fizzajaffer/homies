@@ -1,12 +1,21 @@
-# Tenant demo — shared foundation, mocked A1 and simulated A3
+# Homies — final capstone snapshot
 
 The active app includes the approved shared-storage foundation and A1 v0.5 deterministic mock workflow at `/a1`. Paid/model API calls, live research, A2 execution, real outreach and hosting remain disabled. A3 v0.2 simulated coordination is available at `/a3`. Earlier UI code remains in `src/preserved/`; it is not routed or imported by the active app. Old browser-only demo storage has not been deleted or silently imported as confirmed case facts.
 
+## Final submission — October 31, 2026
+
+`main` includes console Pass 1 and committed Pass 2 from `console-warm-pass` (`65a1e7b`), plus the recorded database and evidence under [`data/`](data/README.md). The rejected interactive Initial Offer wizard was not found in the working tree, branches, stashes, or reachable commits and is not part of this submission. Initial Offer remains a read-only recorded checkpoint.
+
+The complete data snapshot includes all 10 human-reviewed benchmark runs, their full review history, 17 recorded journey runs, and Case 6. See [current human verdicts](data/exports/current_human_reviews.json): 8 Pass and 2 Fail, with prior verdicts preserved. The 229 offline automated tests passed before and after the fast-forward to `main`; final data-integration validation is recorded in `docs/FINAL_SUBMISSION.md`. These are different measures: automated tests do not certify model quality.
+
+The sections below include historical implementation notes. Their old counts, pending-review statements, and external data paths describe earlier checkpoints; the final snapshot and data instructions here take precedence.
+
 ## Open and run
 
-From this `tenant-demo` directory:
+From the cloned `homies` repository (Node 24.21.0):
 
 ```sh
+npm ci
 npm run build
 npm run start
 ```
@@ -15,14 +24,11 @@ Open http://127.0.0.1:3000. Node 24.21.0 provides built-in SQLite; no database p
 
 ## Durable data location
 
-Default: `../foundation-data/` beside this app, outside build and temporary folders. Actual Mac path:
-`../foundation-data/`
+Default: `./data/` inside the repository. It includes a consistent `foundation.sqlite`, referenced `documents/`, human-review receipts, and readable evaluation exports. See [`data/README.md`](data/README.md) for counts, provenance, and preserved human verdicts.
 
-- `foundation.sqlite`: cases, current records, history, approvals/dependencies, operation IDs, runs/checkpoints/error/cost history and event metadata. Operation results store version references rather than duplicating private record contents.
-- `documents/`: immutable synthetic source bytes, identified by UUID and SHA-256.
-- `backups/`: consistent SQLite snapshots, matching documents, checksum manifests and downloadable tar bundles.
+`TENANT_DATA_DIR` overrides the default; an existing `.env.local` may still point at the original working-data directory. Changing the variable does not migrate data. For a persistent deployment, copy the committed snapshot to an initially empty writable volume and point `TENANT_DATA_DIR` there. Keep one app server per database. Never replace a non-empty runtime directory with a fresh snapshot.
 
-This directory persists across app restarts and rebuilds. There is no scheduled expiry or reset. Folders use mode 0700 and database/document/export files 0600. Data/backups/secrets are excluded by workspace and app `.gitignore` files. This is OS-user privacy, not encryption or production authentication. Do not move/delete this directory when rebuilding the app. `TENANT_DATA_DIR` can point to another durable directory for a deliberate migration; changing it does not automatically move existing data.
+The original source remains unchanged at `/Users/fizzajaffer/Documents/Codex/2026-10-25/task-4/working-data`. New backups, SQLite sidecars, credentials, and unreviewed data files remain ignored. The app uses local SQLite and loopback-only owner APIs; public hosting needs a separate authentication and storage review. No deployment is performed by this closeout.
 
 ## Record groups and access boundaries
 
@@ -70,7 +76,7 @@ Restore never overwrites an existing non-empty destination. Extract a backup tar
 node --experimental-strip-types scripts/foundation-storage.ts restore /absolute/extracted/bundle /absolute/empty/restore-directory
 ```
 
-The restore validates the manifest, paths, SQLite integrity and document hashes before copying. To use a restored copy, stop the server and deliberately set `TENANT_DATA_DIR` to that directory before starting it. Keep the original intact. Backups stored only on this Mac protect against accidental changes, not losing the Mac; an off-device destination requires a later decision. No external upload has occurred.
+The restore validates the manifest, paths, SQLite integrity and document hashes before copying. To use a restored copy, stop the server and deliberately set `TENANT_DATA_DIR` to that directory before starting it. Keep the original intact. The reviewed final snapshot is included in Git for off-device preservation. Local backup bundles may include private configuration and remain outside Git.
 
 ## Verification
 
@@ -103,12 +109,12 @@ Open http://127.0.0.1:3000/a3 on this Mac. Select a current A1 synthetic candida
 
 ## A2 first local checkpoint
 
-Open `http://127.0.0.1:3000/a2` after `npm run build && npm run start`. It is fully mocked, with explicit manual review/copy/send records and no model or external transport. See `A2_VERIFICATION.md` for exact test coverage, limitations and the historical A1 budget-policy discussion. `npm test` includes the A2 tests and previous regressions. Saved SQLite/documents remain in `../foundation-data`; do not remove that directory when rebuilding.
+Open `http://127.0.0.1:3000/a2` after `npm run build && npm run start`. It is fully mocked, with explicit manual review/copy/send records and no model or external transport. See `A2_VERIFICATION.md` for exact test coverage, limitations and the historical A1 budget-policy discussion. `npm test` includes the A2 tests and previous regressions. Saved SQLite/documents default to `./data`; retain runtime data when rebuilding.
 
 Latest policy: A1 discovers by advertised regular base rent <= $2,265, with additional fees visible separately. A2 checks base + amenity against its separate $2,265 ceiling. See `CORRECTIONS_VERIFICATION.md` for the final 133-test evidence and A2 semantic/sent-record fixes.
 
 ## Portable live configuration
 
-Default use is synthetic/mock. Live use requires explicit authorization and existing budget guards. Configure `TENANT_OPENAI_KEY_FILE` to a private local key file (owner-only permissions), and `TENANT_PRIOR_LEDGER_PATH` to the existing pooled-budget ledger. Missing configuration fails closed; it does not assume zero prior spend. Keep these files outside Git. `TENANT_DATA_DIR` can locate local SQLite data. No credentials, database, saved private evidence, or prior Git history are included in this publication snapshot. Historical verification reports describe the original local runs, not results reproduced by cloning this repository.
+Default use is synthetic/mock. Live use requires explicit authorization and existing budget guards. Configure `TENANT_OPENAI_KEY_FILE` to a private local key file (owner-only permissions), and `TENANT_PRIOR_LEDGER_PATH` to the existing pooled-budget ledger. Missing configuration fails closed; it does not assume zero prior spend. Keep these files outside Git. `TENANT_DATA_DIR` can locate local SQLite data. Credentials and the original pre-publication Git history remain excluded. The reviewed synthetic database and its evidence are now included in `data/`. Historical verification reports describe the original local runs, not results reproduced by cloning this repository.
 
-Publication validation: all 211 offline automated tests and TypeScript typecheck passed after restoring the exact approved instruction artifact and the reviewed synthetic rubric fixture. The original approved first-name header is retained with permission. Historical paid-run outputs and databases remain excluded; offline tests do not independently reproduce live model results.
+Original publication validation passed 211 offline tests. The final console branch passes 229 tests, with the exact approved instruction artifact and reviewed synthetic rubric fixture retained. Recorded historical model outputs and human reviews are now preserved in the database; offline tests do not independently reproduce live model results.

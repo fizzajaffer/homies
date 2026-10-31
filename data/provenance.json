@@ -1,0 +1,229 @@
+{
+  "snapshot_date": "2026-10-31",
+  "source": "/Users/fizzajaffer/Documents/Codex/2026-10-25/task-4/working-data",
+  "method": "SQLite online backup from a read-only source connection, including committed WAL records; every table compared with source in rowid order.",
+  "source_database_modified": false,
+  "integrity_check": "ok",
+  "foreign_key_check": [],
+  "sqlite_user_version": 13,
+  "tables": {
+    "a1_evidence": {
+      "rows": 479,
+      "sha256": "a0120c76da9fe5caa634ad48fa84be404e154da2a8b5566d2c682215a22a7124"
+    },
+    "a1_memory": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "a1_runs": {
+      "rows": 12,
+      "sha256": "8a67813142dce2ba45f504887d79c9164100088bd4a8c7683c079bf9bb8376c4"
+    },
+    "a1_trace": {
+      "rows": 131,
+      "sha256": "60bde709a5e3a0a25ac24c30c3c7c7a0237a9bffc7d3263cd404237ef4f87ca4"
+    },
+    "a2_audit": {
+      "rows": 31,
+      "sha256": "be406dd18198f8e55c4bfbc80c22c486c16a83f90404881e6b4ad2aff12d87c1"
+    },
+    "a2_cases": {
+      "rows": 3,
+      "sha256": "6a106d5df08f8d5a374de9568ee5bcab45f7bac8dcf0808d8da38dc14fc77325"
+    },
+    "a2_history": {
+      "rows": 17,
+      "sha256": "0b2964d2cc92c11c22e36ba8beb18579793abe3245b7c70bb2c391a6adf5b561"
+    },
+    "a2_operations": {
+      "rows": 14,
+      "sha256": "5f5bff341cae1b62be343e4f22badf51873c87a88d638b84736f5115e882c59f"
+    },
+    "a2_receipts": {
+      "rows": 3,
+      "sha256": "10ec573c992f4c94a0119de38697bcbb8a4864bc9e17800d859a4e4ba625a7b3"
+    },
+    "a2_runs": {
+      "rows": 4,
+      "sha256": "4da409bacc4d9b086a837e21a200979054b457fb802e6863076111192f2ee735"
+    },
+    "a3_audit": {
+      "rows": 31,
+      "sha256": "022956489bfb86ffcd06e91cdb00e3e9333c8dd036498c2966e446ddd5c6bc40"
+    },
+    "a3_ledger": {
+      "rows": 22,
+      "sha256": "b9e70de2abcc8c018b039a49a91d03eaad70e31daeb6433e0cfa50e332bf773b"
+    },
+    "a3_outbox": {
+      "rows": 9,
+      "sha256": "6cfefe3ddf791ef705f6cecb6a07e381bd95e4633c0fc5f490d1aa4eb74d2f93"
+    },
+    "a3_preference_history": {
+      "rows": 4,
+      "sha256": "be689559e9aef5de2094bbda0c81d54c6024d5acf677ae47c66a4d1ff35a908a"
+    },
+    "a3_preference_operations": {
+      "rows": 4,
+      "sha256": "b22f0b8af4659460531bc1e98a234c3c803dd899e49a4b9acb202ca327d56e89"
+    },
+    "a3_preferences": {
+      "rows": 3,
+      "sha256": "49b62ebcdef1fe81473ee6b795557ffa811333855e7a0559517cd1ce65167ff5"
+    },
+    "a3_properties": {
+      "rows": 9,
+      "sha256": "8046899b8ae49d6f92293c4d61acf0894e5d67a1c8174a888794ccf269c3f951"
+    },
+    "a3_receipts": {
+      "rows": 5,
+      "sha256": "2e87a2cd669a3bacbc4f13a52f0a895b7825478782c55db05a1735df731a2eb8"
+    },
+    "a3_snapshots": {
+      "rows": 31,
+      "sha256": "6d7db503878037f7c075431d46e9b105225ee3c4a0ce4fdc8deee9ed2947edd2"
+    },
+    "adaptive_benchmarks": {
+      "rows": 10,
+      "sha256": "ece1e77b8a24d61f996023837b916e3483e860c06dce6345c86da507c619f5b1"
+    },
+    "api_calls": {
+      "rows": 24,
+      "sha256": "73bbf60ec882bab1d76e2909151c14fa1a40d4750bf1f0d8ea4b98501bfd680b"
+    },
+    "api_grants": {
+      "rows": 1,
+      "sha256": "ed4cf129bc079606fa3493b6c843cf3b855466e55d814ed896744eebab8e7cb3"
+    },
+    "approval_dependencies": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "approvals": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "case_agent_corrections": {
+      "rows": 3,
+      "sha256": "25577b8616f4965b61a71a67e194e14f3cff3564c93287557869f1621929168e"
+    },
+    "case_agent_proposals": {
+      "rows": 1,
+      "sha256": "953c21e781c98b69cb6bf42dc59be1b1d662eee2ce63549f5d461edd08236598"
+    },
+    "case_agent_runs": {
+      "rows": 4,
+      "sha256": "1f4a533fa4a07b5dd325ad4ce346612a57c206e7a621e459dc4c9eb4015707ed"
+    },
+    "case_agent_steps": {
+      "rows": 17,
+      "sha256": "0a21ec39ffdcf9d878fde460f2d6eba26388986aa7a63eb8bfdc9336e804f0e2"
+    },
+    "cases": {
+      "rows": 7,
+      "sha256": "eff7135c5376da3dd3d78c96b2e98a9a071af8bea0ae1fe4e0edd41844b8eea1"
+    },
+    "documents": {
+      "rows": 1,
+      "sha256": "4dcc37b4fea543f7ebe7400ce8502179d7213ce37961afcc34948c94d595e46c"
+    },
+    "eval_reviews": {
+      "rows": 12,
+      "sha256": "8641f577f8458a215165768fc5a2017fefd495464f62690b15c62780a77d878f"
+    },
+    "events": {
+      "rows": 33,
+      "sha256": "3fe4180e1ea81228afe9a31eeee4137b779ba5fd6e65093e486c6eb448d9ca8e"
+    },
+    "fixture_sync": {
+      "rows": 7,
+      "sha256": "887bfef5d5e3fe03a135d8e00fdfd6b5f2f26d24b945ac85c1d7b1baadf06fd4"
+    },
+    "journey_events": {
+      "rows": 52,
+      "sha256": "6e7775f6d17c90d2cea383156ef9d25427dc7ea9b52571385cf6dc7e91db0823"
+    },
+    "journey_runs": {
+      "rows": 17,
+      "sha256": "37d57f17d12b0416cdfb6af5cbe6e5eede05c2244739444f0048b30ac571ab96"
+    },
+    "journey_state": {
+      "rows": 2,
+      "sha256": "25bc9d23a10357b4ce50fd9666b9951d511405fd9d2606f7e840c9f411a60897"
+    },
+    "journey_track_versions": {
+      "rows": 21,
+      "sha256": "c1c705e63d02d8992f4a3a06c4a91abfc4abb10eb5244efb983935bc559c789e"
+    },
+    "journey_uploads": {
+      "rows": 5,
+      "sha256": "e44eeb68dbf833cc983914a4ba335d430c5205fe8880ad1fa70efb984110bbdc"
+    },
+    "legal_source_snapshots": {
+      "rows": 5,
+      "sha256": "95402593c73c506e85adb297e71ee2c4fbd09f89bb85fff21844c65cce3a1be4"
+    },
+    "operations": {
+      "rows": 30,
+      "sha256": "a6e01097c416191592414264eb3ebfb0b078c4d4e9d8c0a9edb771b9a197ee1d"
+    },
+    "record_history": {
+      "rows": 40,
+      "sha256": "ca7408ff8d8219b83c52b9c2d90da797bcd80dcbdcbe8afd4c5bde63c3735b75"
+    },
+    "records": {
+      "rows": 22,
+      "sha256": "693243d0b242e176a30176da36095a724f40319f1e185a1a017fec4bff9ed2d6"
+    },
+    "run_history": {
+      "rows": 5,
+      "sha256": "b87800541cfb1a81a26de7a1170743d560e28993bb4ae1c46f2583ae48180c03"
+    },
+    "run_steps": {
+      "rows": 2,
+      "sha256": "1a9e2b91c011623b67fc38a4e0b20ff06c8085fc5f7bf184c2108de229e19ec5"
+    },
+    "runs": {
+      "rows": 1,
+      "sha256": "489d4b9d93da19d428df443300e5b961fc9f881f06ac30d731db1066891affbf"
+    },
+    "sqlite_sequence": {
+      "rows": 5,
+      "sha256": "2cfc83770e1014c0c59b1fbab1e8b845d31306f74768449eba0133fca4555be4"
+    }
+  },
+  "files": {
+    "documents/2b8e3a58-a4e0-46de-aab7-eb025476ddd2.txt": {
+      "bytes": 161,
+      "sha256": "f144e674338803a48d3075938e128a10184fe8ea25629d6cc13ff66d09b504e7"
+    },
+    "exports/adaptive_benchmarks.json": {
+      "bytes": 196461,
+      "sha256": "60bd84728f5850082c4908a5ccae4b31941a618ab5e3f9ba4dd7ff3393d3c531"
+    },
+    "exports/case6.json": {
+      "bytes": 75642,
+      "sha256": "91a6f65ebd50814e487810209365d0d3030bee8df0f1d11c039f6ed61ce9b940"
+    },
+    "exports/current_human_reviews.json": {
+      "bytes": 17642,
+      "sha256": "029982f07599495e81c28921c29817c974a81a68b968a31d00f8b3840c10ce4b"
+    },
+    "exports/eval_reviews.json": {
+      "bytes": 8298,
+      "sha256": "f186190e2a6c0a97b483832cfd30d2e473972c5167f6aa99b06eaed5eeef21f8"
+    },
+    "exports/journey_runs.json": {
+      "bytes": 38072,
+      "sha256": "351e6b3d76b75673b4884bfd97d56f933250cb5a791ec86212d4b911558ad981"
+    },
+    "foundation.sqlite": {
+      "bytes": 2887680,
+      "sha256": "37cebdb04896932be9b9b2337c6c956bbb47146f4560b8ecbf49ec4998e97be3"
+    },
+    "human-review-receipts.json": {
+      "bytes": 7577,
+      "sha256": "9596a8926d25c3fc0f33f7fb3543158703badd841371ed8b18ce5e7331f094fe"
+    }
+  }
+}

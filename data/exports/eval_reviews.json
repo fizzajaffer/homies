@@ -1,0 +1,110 @@
+[
+  {
+    "operation_id": "ce078619-8271-4eb3-a049-ca59a0eac917",
+    "run_id": "repair-legal-unavailable-v1",
+    "snapshot_hash": "d76851c6ed947279061c6bf05b6ed8d5b19946abb902c1a572cb321ec325ff76",
+    "at": "2026-10-26T00:38:16.156Z",
+    "verdict": "Needs work",
+    "comment": "UI persistence QA only — not Fizza’s human quality verdict. Verify save, repeat-click protection and reload.",
+    "kind": "ui-test"
+  },
+  {
+    "operation_id": "human-review-adaptive-1",
+    "run_id": "adaptive-paired-1-v01",
+    "snapshot_hash": "442527f472d779782fdd6389c374544f562e2ec23b1df16f2d7ac46012334c65",
+    "at": "2026-10-28T21:29:42.477Z",
+    "verdict": "Pass",
+    "comment": "Software correctness: Pass (5/5) after offline contract revalidation for 4 change-conditions; rent math ($2,445 vs $2,265 ceiling) and constraint checks (A misses move-in window; B fails 5-min PATH limit) verified. Strategic judgment: Pass (5/5); appropriately recommends continue_both without premature commitment while preparing a focused counteroffer. Writing quality: Pass (4/5) for internal advisor brief—clear, calm, and action-oriented.",
+    "kind": "human"
+  },
+  {
+    "operation_id": "human-review-adaptive-2",
+    "run_id": "adaptive-paired-2-v01",
+    "snapshot_hash": "08950d907a092f34cf5d3ed744430efff46674e92f011b387685e1c582e3409d",
+    "at": "2026-10-28T21:29:42.484Z",
+    "verdict": "Pass",
+    "comment": "Software correctness: Pass (5/5); accurately tracks $2,445 renewal ($180 above $2,265 base+amenity ceiling) alongside Option A ($2,230 within move window). Strategic judgment: Pass (5/5); demonstrates genuine independent judgment rather than copying Case 6's prescribed rule-engine move—keeps both tracks open with Option A as the leading conditional move candidate pending lease-term, fee, and viewing verification (which proved critical when Option A later degraded in Checkpoint 3). Writing quality: Pass (4/5) for internal brief.",
+    "kind": "human"
+  },
+  {
+    "operation_id": "human-review-adaptive-3",
+    "run_id": "adaptive-paired-3-v01",
+    "snapshot_hash": "d08d61dd6893352c940ac673eb7113f54f914bfd707c3454855d93104d8d14fa",
+    "at": "2026-10-28T21:29:42.486Z",
+    "verdict": "Pass",
+    "comment": "Software correctness: Pass (4/5) after contract repair separating agent recommendation (conditional_stay) from Mia's unexecuted user selection (selected: null). Strategic judgment: Pass (5/5); correctly pivots to conditional_stay once renewal drops to $2,260+$0 ($5 below $2,265 ceiling) and Option A degrades to $2,300 with adverse viewing noise feedback. Writing quality: Pass (4/5) for internal decision summary; explicitly preserves Mia's decision authority.",
+    "kind": "human"
+  },
+  {
+    "operation_id": "human-review-adaptive-4",
+    "run_id": "adaptive-paired-3-v01-retry",
+    "snapshot_hash": "b90ed7d7094742a600893f77e90a35b50cd8ee4f760fad0b96b502aabf3fa2ea",
+    "at": "2026-10-28T21:29:42.486Z",
+    "verdict": "Pass",
+    "comment": "Software correctness: Pass (5/5) post-contract repair separating recommendation from user selection; explicitly cites $2,260 base + $0 amenity ($5 under $2,265 ceiling, $60 above $2,200 opening target). Strategic judgment: Pass (5/5); frames outcome accurately as preparing for conditional renewal while keeping final acceptance with Mia. Writing quality: Pass (5/5) for internal brief—more granular financial precision than initial generation.",
+    "kind": "human"
+  },
+  {
+    "operation_id": "human-review-adaptive-5",
+    "run_id": "adaptive-paired-4-v01",
+    "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
+    "at": "2026-10-28T21:29:42.486Z",
+    "verdict": "Needs work",
+    "comment": "Software correctness: Pass (4/5) on privacy boundaries and core numbers (2,200 vs 2,600 base, 45 amenity waiver, 12-month term; removed raw inline UUID from Case 5 baseline and leaked zero private ceilings). Strategic judgment: Needs work (3/5); states the ask but omits commercial retention value, resolved July water history, and ongoing amenity service gaps. Writing quality: Needs work (2/5); fails our Wren & Martin / Harvard PON Equal-Footing Counterparty standard—missing '$' currency symbols and uses passive, supplicant phrasing (\"Would you consider...\"). Directly motivates our deterministic outward-draft.ts stager and structured commercial revision.",
+    "kind": "human"
+  },
+  {
+    "operation_id": "human-review-adaptive-6",
+    "run_id": "adaptive-legal-1-v01",
+    "snapshot_hash": "7a59d9be2c174916ea82cb8ad9318b4e43fedf7e974d18444887e5dca556f6e6",
+    "at": "2026-10-28T21:29:42.487Z",
+    "verdict": "Pass",
+    "comment": "Software correctness: Pass (5/5); binds 5 claims strictly to supplied source nj-habitability with exact URL, retrieval timestamp (2026-10-25T23:11:06.765Z), SHA-256 hash, and accessible_applicability_unverified status. Strategic judgment: Pass (5/5); advises documenting heat failure and requesting local health-agency inspection rather than recklessly withholding rent or breaking the lease. Writing quality: Pass (5/5); composed, legally disciplined internal briefing.",
+    "kind": "human"
+  },
+  {
+    "operation_id": "human-review-adaptive-7",
+    "run_id": "adaptive-legal-2-v01",
+    "snapshot_hash": "b3c1e6c69e5700fa4d53dcf626875f631a53beee8b3cefef1fb52d46ba75ba3d",
+    "at": "2026-10-28T21:29:42.487Z",
+    "verdict": "Fail",
+    "comment": "Software correctness: Fail (1/5); validator properly rejected output (\"Unsupported legal claim/reference\") because a structured claim referenced nj-habitability with an empty quote when the legal source was deliberately unavailable. Strategic judgment: Needs work (2/5); while prose summary was cautious about resolved water history, emitting an unbacked source reference violates strict legal grounding. Writing quality: Pass (4/5) on prose summary, but overall Fail retained as genuine pre-repair failure evidence.",
+    "kind": "human"
+  },
+  {
+    "operation_id": "human-review-adaptive-8",
+    "run_id": "repair-undated-v1",
+    "snapshot_hash": "e370fca69d19565e45558f7b2bea4325d589984f0436464fa36a400a96f5e0eb",
+    "at": "2026-10-28T21:29:42.488Z",
+    "verdict": "Pass",
+    "comment": "Software correctness: Pass (5/5); verifies evidence-dates.ts repair—explicitly distinguishes uploadedAt ingestion metadata (2026-10-25T22:21:18.341Z) from missing statement/incident/effective dates. Strategic judgment: Pass (5/5); refuses to fabricate document chronology from upload timestamps. Writing quality: Pass (5/5); crisp, unambiguous audit prose.",
+    "kind": "human"
+  },
+  {
+    "operation_id": "human-review-adaptive-9",
+    "run_id": "repair-source-dated-v1",
+    "snapshot_hash": "05ba7b6c4a3a54c9b98031c80b3b0c7803f4be5fbf4837f0f2aed462e66b374e",
+    "at": "2026-10-28T21:29:42.488Z",
+    "verdict": "Pass",
+    "comment": "Software correctness: Pass (5/5); verifies evidence-dates.ts repair—extracts explicit statement date (2026-10-20) while isolating upload timestamp (2026-10-25T22:21:18.341Z) as ingestion metadata only. Strategic judgment: Pass (5/5); prevents chronology conflation across multi-turn negotiation records. Writing quality: Pass (5/5); precise and well-calibrated.",
+    "kind": "human"
+  },
+  {
+    "operation_id": "human-review-adaptive-10",
+    "run_id": "repair-legal-unavailable-v1",
+    "snapshot_hash": "d76851c6ed947279061c6bf05b6ed8d5b19946abb902c1a572cb321ec325ff76",
+    "at": "2026-10-28T21:29:42.488Z",
+    "verdict": "Pass",
+    "comment": "Software correctness: Pass (5/5); verifies post-failure repair for adaptive-legal-2-v01—outputs claims: [] when nj-habitability is unavailable. Strategic judgment: Pass (5/5); refuses to hallucinate statutory violations, compensation rights, or rent-withholding authority for resolved water interruptions, recommending factual history reconstruction first. Writing quality: Pass (5/5); empathetic, direct address to Mia with clear legal boundary discipline.",
+    "kind": "human"
+  },
+  {
+    "operation_id": "9fb0c0db-e7dc-4437-a0f1-d6a6ebe2f4c7",
+    "run_id": "adaptive-paired-4-v01",
+    "snapshot_hash": "55ba6c260073d71a597e8d9d0137c9e4e20867bb3621aa888d7f92cc438e08c9",
+    "at": "2026-10-29T22:12:37.473Z",
+    "verdict": "Fail",
+    "comment": "",
+    "kind": "human"
+  }
+]
